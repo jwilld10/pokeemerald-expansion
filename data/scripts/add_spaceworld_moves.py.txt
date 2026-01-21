@@ -1,0 +1,95 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import re
+
+REPO = Path.home() / "mega_crystal_world/pokeemerald-expansion_clean"
+
+MOVES = [
+    "MOVE_PSYCHIC_M",
+    "MOVE_COIN_HURL",
+    "MOVE_ROCK_HEAD",
+    "MOVE_MEGAPHONE",
+    "MOVE_CROSS_CUTTER",
+    "MOVE_CONVERSION2",
+]
+
+# ------------------------------------------------------------------
+# 1. Add MOVE_* constants
+# ------------------------------------------------------------------
+moves_h = REPO / "include/constants/moves.h"
+text = moves_h.read_text()
+
+if "/* Spaceworld prototype moves */" not in text:
+    insert = "\n/* Spaceworld prototype moves */\n"
+    for m in MOVES:
+        insert += f"#define {m} (NUM_MOVES + {MOVES.index(m)})\n"
+
+    text = re.sub(
+        r"(#define NUM_MOVES\s+\d+)",
+        r"\1" + insert,
+        text,
+        count=1,
+    )
+    moves_h.write_text(text)
+
+# ------------------------------------------------------------------
+# 2. Extend NUM_MOVES
+# ------------------------------------------------------------------
+text = moves_h.read_text()
+m = re.search(r"#define NUM_MOVES\s+(\d+)", text)
+if m:
+    base = int(m.group(1))
+    new = base + len(MOVES)
+    text = re.sub(
+        r"#define NUM_MOVES\s+\d+",
+        f"#define NUM_MOVES {new}",
+        text,
+        count=1,
+    )
+    moves_h.write_text(text)
+
+# ------------------------------------------------------------------
+# 3. Add battle move stubs
+# ------------------------------------------------------------------
+battle_moves = REPO / "src/data/battle_moves.h"
+text = battle_moves.read_text()
+
+if "Spaceworld prototype moves" not in text:
+    insert = "\n    /* Spaceworld prototype moves */\n"
+    for m in MOVES:
+        insert += (
+            "    ["
+            + m
+            + "] = {\n"
+              "        .effect = EFFECT_HIT,\n"
+              "        .power = 50,\n"
+              "        .type = TYPE_NORMAL,\n"
+              "        .accuracy = 100,\n"
+              "        .pp = 15,\n"
+              "        .secondaryEffectChance = 0,\n"
+              "        .target = MOVE_TARGET_SELECTED,\n"
+              "        .priority = 0,\n"
+              "        .flags = FLAG_MAKES_CONTACT,\n"
+              "    },\n"
+        )
+
+    text = re.sub(r"(};\s*$)", insert + r"\1", text, flags=re.S)
+    battle_moves.write_text(text)
+
+# ------------------------------------------------------------------
+# 4. Add placeholder descriptions
+# ------------------------------------------------------------------
+desc_h = REPO / "src/data/text/move_descriptions.h"
+text = desc_h.read_text()
+
+for m in MOVES:
+    name = m.replace("MOVE_", "").replace("_", " ").title()
+    key = f"{m}_DESCRIPTION"
+    if key not in text:
+        text += (
+            f'\nstatic const u8 {key}[] = _("{name} (Spaceworld prototype).");\n'
+        )
+
+desc_h.write_text(text)
+
+print("Spaceworld moves added as real engine moves.")

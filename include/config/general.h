@@ -47,6 +47,11 @@
 #if MODERN || defined(BUGFIX)
 #ifndef UBFIX
 #define UBFIX
+#define DEBUG 1
+#define DEBUG_MENU 1
+#define DEBUG_BATTLE_MENU 1
+#define DEBUG_OVERWORLD_MENU 1
+#define DEBUG_BUILD 1
 #endif
 #endif
 

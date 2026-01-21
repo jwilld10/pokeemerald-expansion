@@ -1,0 +1,34 @@
+== TOP fatal errors (first 60) ==
+6086529:src/data/pokemon/species_info.h:255:10: fatal error: data/pokemon/spaceworld_generated/spaceworld_species_info.h: No such file or directory
+
+== TOP errors (first 120) ==
+6095734:<stdin>/src/pokemon.c:221287: error: unknown character U+40
+6141542:src/data/pokemon/spaceworld_generated/spaceworld_learnsets.h:52:14: error: 'MOVE_PSYCHIC_M' undeclared here (not in a function); did you mean 'TYPE_PSYCHIC'?
+6141957:src/data/pokemon/spaceworld_generated/spaceworld_learnsets.h:219:14: error: 'MOVE_COIN_HURL' undeclared here (not in a function)
+6142359:src/data/pokemon/spaceworld_generated/spaceworld_learnsets.h:956:14: error: 'MOVE_ROCK_HEAD' undeclared here (not in a function)
+6142743:src/data/pokemon/spaceworld_generated/spaceworld_learnsets.h:1193:14: error: 'MOVE_MEGAPHONE' undeclared here (not in a function)
+6143262:src/data/pokemon/spaceworld_generated/spaceworld_learnsets.h:2296:14: error: 'MOVE_CROSS_CUTTER' undeclared here (not in a function)
+6143694:src/data/pokemon/spaceworld_generated/spaceworld_learnsets.h:2374:14: error: 'MOVE_CONVERSION2' undeclared here (not in a function); did you mean 'EFFECT_CONVERSION_2'?
+6143758:src/data/pokemon/species_info.h:254: error: expected expression at end of input
+
+== UNIQUE error messages (first 120) ==
+error: 'MOVE_COIN_HURL' undeclared here (not in a function)
+error: 'MOVE_CONVERSION2' undeclared here (not in a function); did you mean 'EFFECT_CONVERSION_2'?
+error: 'MOVE_CROSS_CUTTER' undeclared here (not in a function)
+error: 'MOVE_MEGAPHONE' undeclared here (not in a function)
+error: 'MOVE_PSYCHIC_M' undeclared here (not in a function); did you mean 'TYPE_PSYCHIC'?
+error: 'MOVE_ROCK_HEAD' undeclared here (not in a function)
+error: expected expression at end of input
+error: unknown character U+40
+fatal error: data/pokemon/spaceworld_generated/spaceworld_species_info.h: No such file or directory
+
+== MOST common error locations (top 40) ==
+      1 6143758:src/data/pokemon/species_info.h
+      1 6143694:src/data/pokemon/spaceworld_generated/spaceworld_learnsets.h
+      1 6143262:src/data/pokemon/spaceworld_generated/spaceworld_learnsets.h
+      1 6142743:src/data/pokemon/spaceworld_generated/spaceworld_learnsets.h
+      1 6142359:src/data/pokemon/spaceworld_generated/spaceworld_learnsets.h
+      1 6141957:src/data/pokemon/spaceworld_generated/spaceworld_learnsets.h
+      1 6141542:src/data/pokemon/spaceworld_generated/spaceworld_learnsets.h
+      1 6095734:<stdin>/src/pokemon.c
+      1 6086529:src/data/pokemon/species_info.h

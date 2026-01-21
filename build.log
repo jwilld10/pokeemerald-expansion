@@ -1,0 +1,10 @@
+tools/scaninc/scaninc -M build/emerald/src/data/graphics/spaceworld_icons.d -I include -I tools/agbcc/include src/data/graphics/spaceworld_icons.c
+/usr/lib/gcc/arm-none-eabi/13.2.1/cc1 -quiet <flags> -o build/emerald/src/data/graphics/spaceworld_icons.o src/data/graphics/spaceworld_icons.c
+Memory region         Used Size  Region Size  %age Used
+           EWRAM:      227972 B       256 KB     86.96%
+           IWRAM:       28680 B        32 KB     87.52%
+             ROM:    25383124 B        32 MB     75.65%
+cd build/emerald && arm-none-eabi-ld -Map ../../pokeemerald.map --print-memory-usage --gc-sections -T ../../ld_script_modern.ld -o ../../pokeemerald.elf <objs> <libs> | cat
+tools/gbafix/gbafix pokeemerald.elf -t"POKEMON EMER" -cBPEE -m01 -r0 --silent
+arm-none-eabi-objcopy -O binary pokeemerald.elf pokeemerald.gba
+tools/gbafix/gbafix pokeemerald.gba -p --silent

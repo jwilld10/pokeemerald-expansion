@@ -1,0 +1,44 @@
+#include "global.h"
+#include "data/graphics/spaceworld_icons.h"
+
+const u8 gSwIcon_Bat[] = INCBIN_U8("graphics/spaceworld/icons/bat.4bpp");
+const u8 gSwIcon_Bigmon[] = INCBIN_U8("graphics/spaceworld/icons/bigmon.4bpp");
+const u8 gSwIcon_Bipetal[] = INCBIN_U8("graphics/spaceworld/icons/bipetal.4bpp");
+const u8 gSwIcon_Bird[] = INCBIN_U8("graphics/spaceworld/icons/bird.4bpp");
+const u8 gSwIcon_Blob[] = INCBIN_U8("graphics/spaceworld/icons/blob.4bpp");
+const u8 gSwIcon_Bug[] = INCBIN_U8("graphics/spaceworld/icons/bug.4bpp");
+const u8 gSwIcon_Bulbasaur[] = INCBIN_U8("graphics/spaceworld/icons/bulbasaur.4bpp");
+const u8 gSwIcon_Caterpillar[] = INCBIN_U8("graphics/spaceworld/icons/caterpillar.4bpp");
+const u8 gSwIcon_Charmander[] = INCBIN_U8("graphics/spaceworld/icons/charmander.4bpp");
+const u8 gSwIcon_Clefairy[] = INCBIN_U8("graphics/spaceworld/icons/clefairy.4bpp");
+const u8 gSwIcon_Diglett[] = INCBIN_U8("graphics/spaceworld/icons/diglett.4bpp");
+const u8 gSwIcon_Egg[] = INCBIN_U8("graphics/spaceworld/icons/egg.4bpp");
+const u8 gSwIcon_Equine[] = INCBIN_U8("graphics/spaceworld/icons/equine.4bpp");
+const u8 gSwIcon_Fighter[] = INCBIN_U8("graphics/spaceworld/icons/fighter.4bpp");
+const u8 gSwIcon_Fish[] = INCBIN_U8("graphics/spaceworld/icons/fish.4bpp");
+const u8 gSwIcon_Fox[] = INCBIN_U8("graphics/spaceworld/icons/fox.4bpp");
+const u8 gSwIcon_Geodude[] = INCBIN_U8("graphics/spaceworld/icons/geodude.4bpp");
+const u8 gSwIcon_Ghost[] = INCBIN_U8("graphics/spaceworld/icons/ghost.4bpp");
+const u8 gSwIcon_Gyarados[] = INCBIN_U8("graphics/spaceworld/icons/gyarados.4bpp");
+const u8 gSwIcon_HoOh[] = INCBIN_U8("graphics/spaceworld/icons/ho_oh.4bpp");
+const u8 gSwIcon_Humanshape[] = INCBIN_U8("graphics/spaceworld/icons/humanshape.4bpp");
+const u8 gSwIcon_Item[] = INCBIN_U8("graphics/spaceworld/icons/item.4bpp");
+const u8 gSwIcon_Jellyfish[] = INCBIN_U8("graphics/spaceworld/icons/jellyfish.4bpp");
+const u8 gSwIcon_Jigglypuff[] = INCBIN_U8("graphics/spaceworld/icons/jigglypuff.4bpp");
+const u8 gSwIcon_Lapras[] = INCBIN_U8("graphics/spaceworld/icons/lapras.4bpp");
+const u8 gSwIcon_Lugia[] = INCBIN_U8("graphics/spaceworld/icons/lugia.4bpp");
+const u8 gSwIcon_Mail[] = INCBIN_U8("graphics/spaceworld/icons/mail.4bpp");
+const u8 gSwIcon_MailBig[] = INCBIN_U8("graphics/spaceworld/icons/mail_big.4bpp");
+const u8 gSwIcon_Monster[] = INCBIN_U8("graphics/spaceworld/icons/monster.4bpp");
+const u8 gSwIcon_Moth[] = INCBIN_U8("graphics/spaceworld/icons/moth.4bpp");
+const u8 gSwIcon_Oddish[] = INCBIN_U8("graphics/spaceworld/icons/oddish.4bpp");
+const u8 gSwIcon_Pikachu[] = INCBIN_U8("graphics/spaceworld/icons/pikachu.4bpp");
+const u8 gSwIcon_Poliwag[] = INCBIN_U8("graphics/spaceworld/icons/poliwag.4bpp");
+const u8 gSwIcon_Serpent[] = INCBIN_U8("graphics/spaceworld/icons/serpent.4bpp");
+const u8 gSwIcon_Shell[] = INCBIN_U8("graphics/spaceworld/icons/shell.4bpp");
+const u8 gSwIcon_Slowpoke[] = INCBIN_U8("graphics/spaceworld/icons/slowpoke.4bpp");
+const u8 gSwIcon_Snorlax[] = INCBIN_U8("graphics/spaceworld/icons/snorlax.4bpp");
+const u8 gSwIcon_Squirtle[] = INCBIN_U8("graphics/spaceworld/icons/squirtle.4bpp");
+const u8 gSwIcon_Staryu[] = INCBIN_U8("graphics/spaceworld/icons/staryu.4bpp");
+const u8 gSwIcon_Unown[] = INCBIN_U8("graphics/spaceworld/icons/unown.4bpp");
+const u8 gSwIcon_Voltorb[] = INCBIN_U8("graphics/spaceworld/icons/voltorb.4bpp");

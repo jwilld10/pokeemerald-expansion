@@ -1,4 +1,8 @@
 #include "constants/abilities.h"
+#include "spaceworld_generated/spaceworld_learnsets.h"
+#include "spaceworld_generated/spaceworld_dex_text.h"
+#include "data/graphics/spaceworld_pokemon_gfx.h"
+#include "data/graphics/spaceworld_icons.h"
 #include "species_info/shared_dex_text.h"
 #include "species_info/shared_front_pic_anims.h"
 
@@ -160,6 +164,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
     #include "species_info/gen_7_families.h"
     #include "species_info/gen_8_families.h"
     #include "species_info/gen_9_families.h"
+    #include "spaceworld_generated/spaceworld_species_info.h"
 
     [SPECIES_EGG] =
     {
@@ -248,3 +253,4 @@ const struct SpeciesInfo gSpeciesInfo[] =
     },
     */
 };
+

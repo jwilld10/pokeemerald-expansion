@@ -1,0 +1,3 @@
+[submodule "tools/spaceworld_source"]
+	path = tools/spaceworld_source
+	url = https://github.com/SoupPotato/gold97.git

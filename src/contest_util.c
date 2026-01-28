@@ -1127,7 +1127,10 @@ static void LoadAllContestMonIconPalettes(void)
     for (i = 0; i < CONTESTANT_COUNT; i++)
     {
         species = gContestMons[i].species;
-        LoadPalette(gMonIconPalettes[gSpeciesInfo[GetIconSpecies(species, 0)].iconPalIndex], BG_PLTT_ID(10 + i), PLTT_SIZE_4BPP);
+        /* DISABLED: BG palette slot collision (can cause UI boxes / wrong colors).
+ * Use OBJ icon palettes or a dedicated safe BG region if you truly need BG.
+ */
+/* LoadPalette(gMonIconPalettes[gSpeciesInfo[GetIconSpecies(species, 0)].iconPalIndex], BG_PLTT_ID(9 + i), PLTT_SIZE_4BPP); */
     }
 }
 

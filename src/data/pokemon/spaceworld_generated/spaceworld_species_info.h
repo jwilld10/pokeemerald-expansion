@@ -31,6 +31,7 @@
     .paletteFemale = gSwMonPalette_Abra,
     .shinyPaletteFemale = gSwMonShinyPalette_Abra,
     .iconSprite = gSwIcon_Humanshape,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_AERODACTYL_SPACEWORLD] =
@@ -66,6 +67,7 @@
     .paletteFemale = gSwMonPalette_Aerodactyl,
     .shinyPaletteFemale = gSwMonShinyPalette_Aerodactyl,
     .iconSprite = gSwIcon_Bird,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_AIPOM_SPACEWORLD] =
@@ -101,6 +103,7 @@
     .paletteFemale = gSwMonPalette_Aipom,
     .shinyPaletteFemale = gSwMonShinyPalette_Aipom,
     .iconSprite = gSwIcon_Monster,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_ALAKAZAM_SPACEWORLD] =
@@ -136,6 +139,7 @@
     .paletteFemale = gSwMonPalette_Alakazam,
     .shinyPaletteFemale = gSwMonShinyPalette_Alakazam,
     .iconSprite = gSwIcon_Humanshape,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_AMPHAROS_SPACEWORLD] =
@@ -171,6 +175,7 @@
     .paletteFemale = gSwMonPalette_Ampharos,
     .shinyPaletteFemale = gSwMonShinyPalette_Ampharos,
     .iconSprite = gSwIcon_Monster,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_ANCHORAGE_SPACEWORLD] =
@@ -206,6 +211,7 @@
     .paletteFemale = gSwMonPalette_Anchorage,
     .shinyPaletteFemale = gSwMonShinyPalette_Anchorage,
     .iconSprite = gSwIcon_Fish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_AQUALLO_SPACEWORLD] =
@@ -241,6 +247,7 @@
     .paletteFemale = gSwMonPalette_Aquallo,
     .shinyPaletteFemale = gSwMonShinyPalette_Aquallo,
     .iconSprite = gSwIcon_Lapras,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_AQUARIUS_SPACEWORLD] =
@@ -276,6 +283,7 @@
     .paletteFemale = gSwMonPalette_Aquarius,
     .shinyPaletteFemale = gSwMonShinyPalette_Aquarius,
     .iconSprite = gSwIcon_Lapras,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_ARBOK_SPACEWORLD] =
@@ -311,6 +319,7 @@
     .paletteFemale = gSwMonPalette_Arbok,
     .shinyPaletteFemale = gSwMonShinyPalette_Arbok,
     .iconSprite = gSwIcon_Serpent,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_ARCANINE_SPACEWORLD] =
@@ -346,6 +355,7 @@
     .paletteFemale = gSwMonPalette_Arcanine,
     .shinyPaletteFemale = gSwMonShinyPalette_Arcanine,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_ARTICUNO_SPACEWORLD] =
@@ -381,6 +391,7 @@
     .paletteFemale = gSwMonPalette_Articuno,
     .shinyPaletteFemale = gSwMonShinyPalette_Articuno,
     .iconSprite = gSwIcon_Bird,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_AZUMARILL_SPACEWORLD] =
@@ -413,6 +424,7 @@
     .palette = gSwMonPalette_Azumarill,
     .shinyPalette = gSwMonShinyPalette_Azumarill,
     .iconSprite = gSwIcon_Clefairy,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_BALLERINE_SPACEWORLD] =
@@ -447,6 +459,7 @@
     .palette = gSwMonPalette_Ballerine,
     .shinyPalette = gSwMonShinyPalette_Ballerine,
     .iconSprite = gSwIcon_Humanshape,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_BEEDRILL_SPACEWORLD] =
@@ -482,6 +495,7 @@
     .paletteFemale = gSwMonPalette_Beedrill,
     .shinyPaletteFemale = gSwMonShinyPalette_Beedrill,
     .iconSprite = gSwIcon_Bug,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_BELLOSSOM_SPACEWORLD] =
@@ -517,6 +531,7 @@
     .paletteFemale = gSwMonPalette_Bellossom,
     .shinyPaletteFemale = gSwMonShinyPalette_Bellossom,
     .iconSprite = gSwIcon_Oddish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_BELLRUN_SPACEWORLD] =
@@ -552,6 +567,7 @@
     .paletteFemale = gSwMonPalette_Bellrun,
     .shinyPaletteFemale = gSwMonShinyPalette_Bellrun,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_BELLSPROUT_SPACEWORLD] =
@@ -587,6 +603,7 @@
     .paletteFemale = gSwMonPalette_Bellsprout,
     .shinyPaletteFemale = gSwMonShinyPalette_Bellsprout,
     .iconSprite = gSwIcon_Oddish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_BELMITT_SPACEWORLD] =
@@ -622,6 +639,7 @@
     .paletteFemale = gSwMonPalette_Belmitt,
     .shinyPaletteFemale = gSwMonShinyPalette_Belmitt,
     .iconSprite = gSwIcon_Oddish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_BLASTOISE_SPACEWORLD] =
@@ -657,6 +675,7 @@
     .paletteFemale = gSwMonPalette_Blastoise,
     .shinyPaletteFemale = gSwMonShinyPalette_Blastoise,
     .iconSprite = gSwIcon_Squirtle,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_BLISSEY_SPACEWORLD] =
@@ -692,6 +711,7 @@
     .paletteFemale = gSwMonPalette_Blissey,
     .shinyPaletteFemale = gSwMonShinyPalette_Blissey,
     .iconSprite = gSwIcon_Clefairy,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_BOMSHEAL_SPACEWORLD] =
@@ -727,6 +747,7 @@
     .paletteFemale = gSwMonPalette_Bomsheal,
     .shinyPaletteFemale = gSwMonShinyPalette_Bomsheal,
     .iconSprite = gSwIcon_Lapras,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_BULBASAUR_SPACEWORLD] =
@@ -762,6 +783,7 @@
     .paletteFemale = gSwMonPalette_Bulbasaur,
     .shinyPaletteFemale = gSwMonShinyPalette_Bulbasaur,
     .iconSprite = gSwIcon_Bulbasaur,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_BUTTERFREE_SPACEWORLD] =
@@ -797,6 +819,7 @@
     .paletteFemale = gSwMonPalette_Butterfree,
     .shinyPaletteFemale = gSwMonShinyPalette_Butterfree,
     .iconSprite = gSwIcon_Moth,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_CATERPIE_SPACEWORLD] =
@@ -832,6 +855,7 @@
     .paletteFemale = gSwMonPalette_Caterpie,
     .shinyPaletteFemale = gSwMonShinyPalette_Caterpie,
     .iconSprite = gSwIcon_Caterpillar,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_CHANSEY_SPACEWORLD] =
@@ -867,6 +891,7 @@
     .paletteFemale = gSwMonPalette_Chansey,
     .shinyPaletteFemale = gSwMonShinyPalette_Chansey,
     .iconSprite = gSwIcon_Clefairy,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_CHARIZARD_SPACEWORLD] =
@@ -902,6 +927,7 @@
     .paletteFemale = gSwMonPalette_Charizard,
     .shinyPaletteFemale = gSwMonShinyPalette_Charizard,
     .iconSprite = gSwIcon_Bigmon,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_CHARMANDER_SPACEWORLD] =
@@ -937,6 +963,7 @@
     .paletteFemale = gSwMonPalette_Charmander,
     .shinyPaletteFemale = gSwMonShinyPalette_Charmander,
     .iconSprite = gSwIcon_Charmander,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_CHARMELEON_SPACEWORLD] =
@@ -972,6 +999,7 @@
     .paletteFemale = gSwMonPalette_Charmeleon,
     .shinyPaletteFemale = gSwMonShinyPalette_Charmeleon,
     .iconSprite = gSwIcon_Charmander,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_CHIKORITA_SPACEWORLD] =
@@ -1007,6 +1035,7 @@
     .paletteFemale = gSwMonPalette_Chikorita,
     .shinyPaletteFemale = gSwMonShinyPalette_Chikorita,
     .iconSprite = gSwIcon_Oddish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_CHIX_SPACEWORLD] =
@@ -1042,6 +1071,7 @@
     .paletteFemale = gSwMonPalette_Chix,
     .shinyPaletteFemale = gSwMonShinyPalette_Chix,
     .iconSprite = gSwIcon_Bird,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_CLEFABLE_SPACEWORLD] =
@@ -1077,6 +1107,7 @@
     .paletteFemale = gSwMonPalette_Clefable,
     .shinyPaletteFemale = gSwMonShinyPalette_Clefable,
     .iconSprite = gSwIcon_Clefairy,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_CLEFAIRY_SPACEWORLD] =
@@ -1112,6 +1143,7 @@
     .paletteFemale = gSwMonPalette_Clefairy,
     .shinyPaletteFemale = gSwMonShinyPalette_Clefairy,
     .iconSprite = gSwIcon_Clefairy,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_CLEFFA_SPACEWORLD] =
@@ -1147,6 +1179,7 @@
     .paletteFemale = gSwMonPalette_Cleffa,
     .shinyPaletteFemale = gSwMonShinyPalette_Cleffa,
     .iconSprite = gSwIcon_Clefairy,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_CLOYSTER_SPACEWORLD] =
@@ -1182,6 +1215,7 @@
     .paletteFemale = gSwMonPalette_Cloyster,
     .shinyPaletteFemale = gSwMonShinyPalette_Cloyster,
     .iconSprite = gSwIcon_Shell,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_CORASUN_SPACEWORLD] =
@@ -1217,6 +1251,7 @@
     .paletteFemale = gSwMonPalette_Corasun,
     .shinyPaletteFemale = gSwMonShinyPalette_Corasun,
     .iconSprite = gSwIcon_Fish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_CROBAT_SPACEWORLD] =
@@ -1252,6 +1287,7 @@
     .paletteFemale = gSwMonPalette_Crobat,
     .shinyPaletteFemale = gSwMonShinyPalette_Crobat,
     .iconSprite = gSwIcon_Bat,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_CRUIZE_SPACEWORLD] =
@@ -1287,6 +1323,7 @@
     .paletteFemale = gSwMonPalette_Cruize,
     .shinyPaletteFemale = gSwMonShinyPalette_Cruize,
     .iconSprite = gSwIcon_Lapras,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_CUBONE_SPACEWORLD] =
@@ -1322,6 +1359,7 @@
     .paletteFemale = gSwMonPalette_Cubone,
     .shinyPaletteFemale = gSwMonShinyPalette_Cubone,
     .iconSprite = gSwIcon_Monster,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_DELIBIRD_SPACEWORLD] =
@@ -1357,6 +1395,7 @@
     .paletteFemale = gSwMonPalette_Delibird,
     .shinyPaletteFemale = gSwMonShinyPalette_Delibird,
     .iconSprite = gSwIcon_Bird,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_DEWGONG_SPACEWORLD] =
@@ -1392,6 +1431,7 @@
     .paletteFemale = gSwMonPalette_Dewgong,
     .shinyPaletteFemale = gSwMonShinyPalette_Dewgong,
     .iconSprite = gSwIcon_Lapras,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_DIGLETT_SPACEWORLD] =
@@ -1427,6 +1467,7 @@
     .paletteFemale = gSwMonPalette_Diglett,
     .shinyPaletteFemale = gSwMonShinyPalette_Diglett,
     .iconSprite = gSwIcon_Diglett,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_DITTO_SPACEWORLD] =
@@ -1462,6 +1503,7 @@
     .paletteFemale = gSwMonPalette_Ditto,
     .shinyPaletteFemale = gSwMonShinyPalette_Ditto,
     .iconSprite = gSwIcon_Blob,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_DODRIO_SPACEWORLD] =
@@ -1497,6 +1539,7 @@
     .paletteFemale = gSwMonPalette_Dodrio,
     .shinyPaletteFemale = gSwMonShinyPalette_Dodrio,
     .iconSprite = gSwIcon_Bird,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_DODUO_SPACEWORLD] =
@@ -1532,6 +1575,7 @@
     .paletteFemale = gSwMonPalette_Doduo,
     .shinyPaletteFemale = gSwMonShinyPalette_Doduo,
     .iconSprite = gSwIcon_Bird,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_DONPHAN_SPACEWORLD] =
@@ -1567,6 +1611,7 @@
     .paletteFemale = gSwMonPalette_Donphan,
     .shinyPaletteFemale = gSwMonShinyPalette_Donphan,
     .iconSprite = gSwIcon_Equine,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_DRAGONAIR_SPACEWORLD] =
@@ -1602,6 +1647,7 @@
     .paletteFemale = gSwMonPalette_Dragonair,
     .shinyPaletteFemale = gSwMonShinyPalette_Dragonair,
     .iconSprite = gSwIcon_Serpent,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_DRAGONITE_SPACEWORLD] =
@@ -1637,6 +1683,7 @@
     .paletteFemale = gSwMonPalette_Dragonite,
     .shinyPaletteFemale = gSwMonShinyPalette_Dragonite,
     .iconSprite = gSwIcon_Bigmon,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_DRATINI_SPACEWORLD] =
@@ -1672,6 +1719,7 @@
     .paletteFemale = gSwMonPalette_Dratini,
     .shinyPaletteFemale = gSwMonShinyPalette_Dratini,
     .iconSprite = gSwIcon_Serpent,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_DROWZEE_SPACEWORLD] =
@@ -1707,6 +1755,7 @@
     .paletteFemale = gSwMonPalette_Drowzee,
     .shinyPaletteFemale = gSwMonShinyPalette_Drowzee,
     .iconSprite = gSwIcon_Humanshape,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_DUGTRIO_SPACEWORLD] =
@@ -1742,6 +1791,7 @@
     .paletteFemale = gSwMonPalette_Dugtrio,
     .shinyPaletteFemale = gSwMonShinyPalette_Dugtrio,
     .iconSprite = gSwIcon_Diglett,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_DYNABEAR_SPACEWORLD] =
@@ -1777,6 +1827,7 @@
     .paletteFemale = gSwMonPalette_Dynabear,
     .shinyPaletteFemale = gSwMonShinyPalette_Dynabear,
     .iconSprite = gSwIcon_Monster,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_EEVEE_SPACEWORLD] =
@@ -1812,6 +1863,7 @@
     .paletteFemale = gSwMonPalette_Eevee,
     .shinyPaletteFemale = gSwMonShinyPalette_Eevee,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_EKANS_SPACEWORLD] =
@@ -1847,6 +1899,7 @@
     .paletteFemale = gSwMonPalette_Ekans,
     .shinyPaletteFemale = gSwMonShinyPalette_Ekans,
     .iconSprite = gSwIcon_Serpent,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_ELEBABE_SPACEWORLD] =
@@ -1882,6 +1935,7 @@
     .paletteFemale = gSwMonPalette_Elebabe,
     .shinyPaletteFemale = gSwMonShinyPalette_Elebabe,
     .iconSprite = gSwIcon_Humanshape,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_ELECTABUZZ_SPACEWORLD] =
@@ -1917,6 +1971,7 @@
     .paletteFemale = gSwMonPalette_Electabuzz,
     .shinyPaletteFemale = gSwMonShinyPalette_Electabuzz,
     .iconSprite = gSwIcon_Humanshape,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_ELECTRODE_SPACEWORLD] =
@@ -1952,6 +2007,7 @@
     .paletteFemale = gSwMonPalette_Electrode,
     .shinyPaletteFemale = gSwMonShinyPalette_Electrode,
     .iconSprite = gSwIcon_Voltorb,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_ENTEI_SPACEWORLD] =
@@ -1984,6 +2040,7 @@
     .palette = gSwMonPalette_Entei,
     .shinyPalette = gSwMonShinyPalette_Entei,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_ESPEON_SPACEWORLD] =
@@ -2019,6 +2076,7 @@
     .paletteFemale = gSwMonPalette_Espeon,
     .shinyPaletteFemale = gSwMonShinyPalette_Espeon,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_EXEGGCUTE_SPACEWORLD] =
@@ -2054,6 +2112,7 @@
     .paletteFemale = gSwMonPalette_Exeggcute,
     .shinyPaletteFemale = gSwMonShinyPalette_Exeggcute,
     .iconSprite = gSwIcon_Oddish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_EXEGGUTOR_SPACEWORLD] =
@@ -2089,6 +2148,7 @@
     .paletteFemale = gSwMonPalette_Exeggutor,
     .shinyPaletteFemale = gSwMonShinyPalette_Exeggutor,
     .iconSprite = gSwIcon_Oddish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_FARFETCH_D_SPACEWORLD] =
@@ -2124,6 +2184,7 @@
     .paletteFemale = gSwMonPalette_FarfetchD,
     .shinyPaletteFemale = gSwMonShinyPalette_FarfetchD,
     .iconSprite = gSwIcon_Bird,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_FEAROW_SPACEWORLD] =
@@ -2159,6 +2220,7 @@
     .paletteFemale = gSwMonPalette_Fearow,
     .shinyPaletteFemale = gSwMonShinyPalette_Fearow,
     .iconSprite = gSwIcon_Bird,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_FLAAFFY_SPACEWORLD] =
@@ -2194,6 +2256,7 @@
     .paletteFemale = gSwMonPalette_Flaaffy,
     .shinyPaletteFemale = gSwMonShinyPalette_Flaaffy,
     .iconSprite = gSwIcon_Monster,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_FLAMBEAR_SPACEWORLD] =
@@ -2229,6 +2292,7 @@
     .paletteFemale = gSwMonPalette_Flambear,
     .shinyPaletteFemale = gSwMonShinyPalette_Flambear,
     .iconSprite = gSwIcon_Monster,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_FLAREON_SPACEWORLD] =
@@ -2264,6 +2328,7 @@
     .paletteFemale = gSwMonPalette_Flareon,
     .shinyPaletteFemale = gSwMonShinyPalette_Flareon,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_GASTLY_SPACEWORLD] =
@@ -2299,6 +2364,7 @@
     .paletteFemale = gSwMonPalette_Gastly,
     .shinyPaletteFemale = gSwMonShinyPalette_Gastly,
     .iconSprite = gSwIcon_Ghost,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_GELANIA_SPACEWORLD] =
@@ -2333,6 +2399,7 @@
     .palette = gSwMonPalette_Gelania,
     .shinyPalette = gSwMonShinyPalette_Gelania,
     .iconSprite = gSwIcon_Oddish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_GENGAR_SPACEWORLD] =
@@ -2368,6 +2435,7 @@
     .paletteFemale = gSwMonPalette_Gengar,
     .shinyPaletteFemale = gSwMonShinyPalette_Gengar,
     .iconSprite = gSwIcon_Ghost,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_GEODUDE_SPACEWORLD] =
@@ -2403,6 +2471,7 @@
     .paletteFemale = gSwMonPalette_Geodude,
     .shinyPaletteFemale = gSwMonShinyPalette_Geodude,
     .iconSprite = gSwIcon_Geodude,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_GIRAFARIG_SPACEWORLD] =
@@ -2438,6 +2507,7 @@
     .paletteFemale = gSwMonPalette_Girafarig,
     .shinyPaletteFemale = gSwMonShinyPalette_Girafarig,
     .iconSprite = gSwIcon_Equine,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_GLOOM_SPACEWORLD] =
@@ -2473,6 +2543,7 @@
     .paletteFemale = gSwMonPalette_Gloom,
     .shinyPaletteFemale = gSwMonShinyPalette_Gloom,
     .iconSprite = gSwIcon_Oddish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_GOLBAT_SPACEWORLD] =
@@ -2508,6 +2579,7 @@
     .paletteFemale = gSwMonPalette_Golbat,
     .shinyPaletteFemale = gSwMonShinyPalette_Golbat,
     .iconSprite = gSwIcon_Bat,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_GOLDEEN_SPACEWORLD] =
@@ -2543,6 +2615,7 @@
     .paletteFemale = gSwMonPalette_Goldeen,
     .shinyPaletteFemale = gSwMonShinyPalette_Goldeen,
     .iconSprite = gSwIcon_Fish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_GOLDUCK_SPACEWORLD] =
@@ -2578,6 +2651,7 @@
     .paletteFemale = gSwMonPalette_Golduck,
     .shinyPaletteFemale = gSwMonShinyPalette_Golduck,
     .iconSprite = gSwIcon_Monster,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_GOLEM_SPACEWORLD] =
@@ -2613,6 +2687,7 @@
     .paletteFemale = gSwMonPalette_Golem,
     .shinyPaletteFemale = gSwMonShinyPalette_Golem,
     .iconSprite = gSwIcon_Geodude,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_GRAVELER_SPACEWORLD] =
@@ -2648,6 +2723,7 @@
     .paletteFemale = gSwMonPalette_Graveler,
     .shinyPaletteFemale = gSwMonShinyPalette_Graveler,
     .iconSprite = gSwIcon_Geodude,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_GRIMBY_SPACEWORLD] =
@@ -2683,6 +2759,7 @@
     .paletteFemale = gSwMonPalette_Grimby,
     .shinyPaletteFemale = gSwMonShinyPalette_Grimby,
     .iconSprite = gSwIcon_Blob,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_GRIMER_SPACEWORLD] =
@@ -2718,6 +2795,7 @@
     .paletteFemale = gSwMonPalette_Grimer,
     .shinyPaletteFemale = gSwMonShinyPalette_Grimer,
     .iconSprite = gSwIcon_Blob,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_GROTESS_SPACEWORLD] =
@@ -2753,6 +2831,7 @@
     .paletteFemale = gSwMonPalette_Grotess,
     .shinyPaletteFemale = gSwMonShinyPalette_Grotess,
     .iconSprite = gSwIcon_Serpent,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_GROWLITHE_SPACEWORLD] =
@@ -2788,6 +2867,7 @@
     .paletteFemale = gSwMonPalette_Growlithe,
     .shinyPaletteFemale = gSwMonShinyPalette_Growlithe,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_GUPGOLD_SPACEWORLD] =
@@ -2823,6 +2903,7 @@
     .paletteFemale = gSwMonPalette_Gupgold,
     .shinyPaletteFemale = gSwMonShinyPalette_Gupgold,
     .iconSprite = gSwIcon_Fish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_GYARADOS_SPACEWORLD] =
@@ -2858,6 +2939,7 @@
     .paletteFemale = gSwMonPalette_Gyarados,
     .shinyPaletteFemale = gSwMonShinyPalette_Gyarados,
     .iconSprite = gSwIcon_Gyarados,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_HAUNTER_SPACEWORLD] =
@@ -2893,6 +2975,7 @@
     .paletteFemale = gSwMonPalette_Haunter,
     .shinyPaletteFemale = gSwMonShinyPalette_Haunter,
     .iconSprite = gSwIcon_Ghost,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_HITMONCHAN_SPACEWORLD] =
@@ -2928,6 +3011,7 @@
     .paletteFemale = gSwMonPalette_Hitmonchan,
     .shinyPaletteFemale = gSwMonShinyPalette_Hitmonchan,
     .iconSprite = gSwIcon_Fighter,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_HITMONLEE_SPACEWORLD] =
@@ -2963,6 +3047,7 @@
     .paletteFemale = gSwMonPalette_Hitmonlee,
     .shinyPaletteFemale = gSwMonShinyPalette_Hitmonlee,
     .iconSprite = gSwIcon_Fighter,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_HITMONTOP_SPACEWORLD] =
@@ -2998,6 +3083,7 @@
     .paletteFemale = gSwMonPalette_Hitmontop,
     .shinyPaletteFemale = gSwMonShinyPalette_Hitmontop,
     .iconSprite = gSwIcon_Fighter,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_HO_OH_SPACEWORLD] =
@@ -3033,6 +3119,7 @@
     .paletteFemale = gSwMonPalette_HoOh,
     .shinyPaletteFemale = gSwMonShinyPalette_HoOh,
     .iconSprite = gSwIcon_HoOh,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_HOOTHOOT_SPACEWORLD] =
@@ -3068,6 +3155,7 @@
     .paletteFemale = gSwMonPalette_Hoothoot,
     .shinyPaletteFemale = gSwMonShinyPalette_Hoothoot,
     .iconSprite = gSwIcon_Bird,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_HOPPIP_SPACEWORLD] =
@@ -3103,6 +3191,7 @@
     .paletteFemale = gSwMonPalette_Hoppip,
     .shinyPaletteFemale = gSwMonShinyPalette_Hoppip,
     .iconSprite = gSwIcon_Oddish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_HORSEA_SPACEWORLD] =
@@ -3138,6 +3227,7 @@
     .paletteFemale = gSwMonPalette_Horsea,
     .shinyPaletteFemale = gSwMonShinyPalette_Horsea,
     .iconSprite = gSwIcon_Fish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_HOUNDOOM_SPACEWORLD] =
@@ -3173,6 +3263,7 @@
     .paletteFemale = gSwMonPalette_Houndoom,
     .shinyPaletteFemale = gSwMonShinyPalette_Houndoom,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_HOUNDOUR_SPACEWORLD] =
@@ -3208,6 +3299,7 @@
     .paletteFemale = gSwMonPalette_Houndour,
     .shinyPaletteFemale = gSwMonShinyPalette_Houndour,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_HYPNO_SPACEWORLD] =
@@ -3243,6 +3335,7 @@
     .paletteFemale = gSwMonPalette_Hypno,
     .shinyPaletteFemale = gSwMonShinyPalette_Hypno,
     .iconSprite = gSwIcon_Humanshape,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_IGGLYBUFF_SPACEWORLD] =
@@ -3278,6 +3371,7 @@
     .paletteFemale = gSwMonPalette_Igglybuff,
     .shinyPaletteFemale = gSwMonShinyPalette_Igglybuff,
     .iconSprite = gSwIcon_Jigglypuff,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_IVYSAUR_SPACEWORLD] =
@@ -3313,6 +3407,7 @@
     .paletteFemale = gSwMonPalette_Ivysaur,
     .shinyPaletteFemale = gSwMonShinyPalette_Ivysaur,
     .iconSprite = gSwIcon_Bulbasaur,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_JIGGLYPUFF_SPACEWORLD] =
@@ -3348,6 +3443,7 @@
     .paletteFemale = gSwMonPalette_Jigglypuff,
     .shinyPaletteFemale = gSwMonShinyPalette_Jigglypuff,
     .iconSprite = gSwIcon_Jigglypuff,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_JOLTEON_SPACEWORLD] =
@@ -3383,6 +3479,7 @@
     .paletteFemale = gSwMonPalette_Jolteon,
     .shinyPaletteFemale = gSwMonShinyPalette_Jolteon,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_JUMPLUFF_SPACEWORLD] =
@@ -3418,6 +3515,7 @@
     .paletteFemale = gSwMonPalette_Jumpluff,
     .shinyPaletteFemale = gSwMonShinyPalette_Jumpluff,
     .iconSprite = gSwIcon_Oddish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_JYNX_SPACEWORLD] =
@@ -3453,6 +3551,7 @@
     .paletteFemale = gSwMonPalette_Jynx,
     .shinyPaletteFemale = gSwMonShinyPalette_Jynx,
     .iconSprite = gSwIcon_Humanshape,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_KABUTO_SPACEWORLD] =
@@ -3488,6 +3587,7 @@
     .paletteFemale = gSwMonPalette_Kabuto,
     .shinyPaletteFemale = gSwMonShinyPalette_Kabuto,
     .iconSprite = gSwIcon_Shell,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_KABUTOPS_SPACEWORLD] =
@@ -3523,6 +3623,7 @@
     .paletteFemale = gSwMonPalette_Kabutops,
     .shinyPaletteFemale = gSwMonShinyPalette_Kabutops,
     .iconSprite = gSwIcon_Shell,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_KADABRA_SPACEWORLD] =
@@ -3558,6 +3659,7 @@
     .paletteFemale = gSwMonPalette_Kadabra,
     .shinyPaletteFemale = gSwMonShinyPalette_Kadabra,
     .iconSprite = gSwIcon_Humanshape,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_KAKUNA_SPACEWORLD] =
@@ -3593,6 +3695,7 @@
     .paletteFemale = gSwMonPalette_Kakuna,
     .shinyPaletteFemale = gSwMonShinyPalette_Kakuna,
     .iconSprite = gSwIcon_Caterpillar,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_KANGASKHAN_SPACEWORLD] =
@@ -3628,6 +3731,7 @@
     .paletteFemale = gSwMonPalette_Kangaskhan,
     .shinyPaletteFemale = gSwMonShinyPalette_Kangaskhan,
     .iconSprite = gSwIcon_Monster,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_KINGDRA_SPACEWORLD] =
@@ -3663,6 +3767,7 @@
     .paletteFemale = gSwMonPalette_Kingdra,
     .shinyPaletteFemale = gSwMonShinyPalette_Kingdra,
     .iconSprite = gSwIcon_Bigmon,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_KINGLER_SPACEWORLD] =
@@ -3698,6 +3803,7 @@
     .paletteFemale = gSwMonPalette_Kingler,
     .shinyPaletteFemale = gSwMonShinyPalette_Kingler,
     .iconSprite = gSwIcon_Shell,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_KOFFING_SPACEWORLD] =
@@ -3733,6 +3839,7 @@
     .paletteFemale = gSwMonPalette_Koffing,
     .shinyPaletteFemale = gSwMonShinyPalette_Koffing,
     .iconSprite = gSwIcon_Blob,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_KOTORA_SPACEWORLD] =
@@ -3768,6 +3875,7 @@
     .paletteFemale = gSwMonPalette_Kotora,
     .shinyPaletteFemale = gSwMonShinyPalette_Kotora,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_KRABBY_SPACEWORLD] =
@@ -3803,6 +3911,7 @@
     .paletteFemale = gSwMonPalette_Krabby,
     .shinyPaletteFemale = gSwMonShinyPalette_Krabby,
     .iconSprite = gSwIcon_Shell,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_KURSTRAW_SPACEWORLD] =
@@ -3838,6 +3947,7 @@
     .paletteFemale = gSwMonPalette_Kurstraw,
     .shinyPaletteFemale = gSwMonShinyPalette_Kurstraw,
     .iconSprite = gSwIcon_Ghost,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_LAPRAS_SPACEWORLD] =
@@ -3873,6 +3983,7 @@
     .paletteFemale = gSwMonPalette_Lapras,
     .shinyPaletteFemale = gSwMonShinyPalette_Lapras,
     .iconSprite = gSwIcon_Lapras,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_LEAFEON_SPACEWORLD] =
@@ -3908,6 +4019,7 @@
     .paletteFemale = gSwMonPalette_Leafeon,
     .shinyPaletteFemale = gSwMonShinyPalette_Leafeon,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_LEDYBA_SPACEWORLD] =
@@ -3943,6 +4055,7 @@
     .paletteFemale = gSwMonPalette_Ledyba,
     .shinyPaletteFemale = gSwMonShinyPalette_Ledyba,
     .iconSprite = gSwIcon_Bug,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_LICKILORD_SPACEWORLD] =
@@ -3978,6 +4091,7 @@
     .paletteFemale = gSwMonPalette_Lickilord,
     .shinyPaletteFemale = gSwMonShinyPalette_Lickilord,
     .iconSprite = gSwIcon_Monster,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_LICKITUNG_SPACEWORLD] =
@@ -4013,6 +4127,7 @@
     .paletteFemale = gSwMonPalette_Lickitung,
     .shinyPaletteFemale = gSwMonShinyPalette_Lickitung,
     .iconSprite = gSwIcon_Monster,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_LUGIA_SPACEWORLD] =
@@ -4048,6 +4163,7 @@
     .paletteFemale = gSwMonPalette_Lugia,
     .shinyPaletteFemale = gSwMonShinyPalette_Lugia,
     .iconSprite = gSwIcon_Lugia,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_MACHAMP_SPACEWORLD] =
@@ -4083,6 +4199,7 @@
     .paletteFemale = gSwMonPalette_Machamp,
     .shinyPaletteFemale = gSwMonShinyPalette_Machamp,
     .iconSprite = gSwIcon_Fighter,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_MACHOKE_SPACEWORLD] =
@@ -4118,6 +4235,7 @@
     .paletteFemale = gSwMonPalette_Machoke,
     .shinyPaletteFemale = gSwMonShinyPalette_Machoke,
     .iconSprite = gSwIcon_Fighter,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_MACHOP_SPACEWORLD] =
@@ -4153,6 +4271,7 @@
     .paletteFemale = gSwMonPalette_Machop,
     .shinyPaletteFemale = gSwMonShinyPalette_Machop,
     .iconSprite = gSwIcon_Fighter,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_MADAME_SPACEWORLD] =
@@ -4188,6 +4307,7 @@
     .paletteFemale = gSwMonPalette_Madame,
     .shinyPaletteFemale = gSwMonShinyPalette_Madame,
     .iconSprite = gSwIcon_Bird,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_MAGBY_SPACEWORLD] =
@@ -4223,6 +4343,7 @@
     .paletteFemale = gSwMonPalette_Magby,
     .shinyPaletteFemale = gSwMonShinyPalette_Magby,
     .iconSprite = gSwIcon_Humanshape,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_MAGIKARP_SPACEWORLD] =
@@ -4258,6 +4379,7 @@
     .paletteFemale = gSwMonPalette_Magikarp,
     .shinyPaletteFemale = gSwMonShinyPalette_Magikarp,
     .iconSprite = gSwIcon_Fish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_MAGMAR_SPACEWORLD] =
@@ -4293,6 +4415,7 @@
     .paletteFemale = gSwMonPalette_Magmar,
     .shinyPaletteFemale = gSwMonShinyPalette_Magmar,
     .iconSprite = gSwIcon_Humanshape,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_MAGNEMITE_SPACEWORLD] =
@@ -4328,6 +4451,7 @@
     .paletteFemale = gSwMonPalette_Magnemite,
     .shinyPaletteFemale = gSwMonShinyPalette_Magnemite,
     .iconSprite = gSwIcon_Voltorb,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_MAGNETON_SPACEWORLD] =
@@ -4363,6 +4487,7 @@
     .paletteFemale = gSwMonPalette_Magneton,
     .shinyPaletteFemale = gSwMonShinyPalette_Magneton,
     .iconSprite = gSwIcon_Voltorb,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_MANKEY_SPACEWORLD] =
@@ -4398,6 +4523,7 @@
     .paletteFemale = gSwMonPalette_Mankey,
     .shinyPaletteFemale = gSwMonShinyPalette_Mankey,
     .iconSprite = gSwIcon_Fighter,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_MAREEP_SPACEWORLD] =
@@ -4433,6 +4559,7 @@
     .paletteFemale = gSwMonPalette_Mareep,
     .shinyPaletteFemale = gSwMonShinyPalette_Mareep,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_MARILL_SPACEWORLD] =
@@ -4468,6 +4595,7 @@
     .paletteFemale = gSwMonPalette_Marill,
     .shinyPaletteFemale = gSwMonShinyPalette_Marill,
     .iconSprite = gSwIcon_Clefairy,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_MAROWAK_SPACEWORLD] =
@@ -4503,6 +4631,7 @@
     .paletteFemale = gSwMonPalette_Marowak,
     .shinyPaletteFemale = gSwMonShinyPalette_Marowak,
     .iconSprite = gSwIcon_Monster,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_MEGANIUM_SPACEWORLD] =
@@ -4537,6 +4666,7 @@
     .palette = gSwMonPalette_Blossomite,
     .shinyPalette = gSwMonShinyPalette_Blossomite,
     .iconSprite = gSwIcon_Oddish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_MEOWTH_SPACEWORLD] =
@@ -4572,6 +4702,7 @@
     .paletteFemale = gSwMonPalette_Meowth,
     .shinyPaletteFemale = gSwMonShinyPalette_Meowth,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_METAPOD_SPACEWORLD] =
@@ -4607,6 +4738,7 @@
     .paletteFemale = gSwMonPalette_Metapod,
     .shinyPaletteFemale = gSwMonShinyPalette_Metapod,
     .iconSprite = gSwIcon_Caterpillar,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_METTO_SPACEWORLD] =
@@ -4642,6 +4774,7 @@
     .paletteFemale = gSwMonPalette_Metto,
     .shinyPaletteFemale = gSwMonShinyPalette_Metto,
     .iconSprite = gSwIcon_Blob,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_MEW_SPACEWORLD] =
@@ -4677,6 +4810,7 @@
     .paletteFemale = gSwMonPalette_Mew,
     .shinyPaletteFemale = gSwMonShinyPalette_Mew,
     .iconSprite = gSwIcon_Humanshape,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_MEWTWO_SPACEWORLD] =
@@ -4712,6 +4846,7 @@
     .paletteFemale = gSwMonPalette_Mewtwo,
     .shinyPaletteFemale = gSwMonShinyPalette_Mewtwo,
     .iconSprite = gSwIcon_Humanshape,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_MILTANK_SPACEWORLD] =
@@ -4747,6 +4882,7 @@
     .paletteFemale = gSwMonPalette_Miltank,
     .shinyPaletteFemale = gSwMonShinyPalette_Miltank,
     .iconSprite = gSwIcon_Equine,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_MOLTRES_SPACEWORLD] =
@@ -4782,6 +4918,7 @@
     .paletteFemale = gSwMonPalette_Moltres,
     .shinyPaletteFemale = gSwMonShinyPalette_Moltres,
     .iconSprite = gSwIcon_Bird,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_MR_MIME_SPACEWORLD] =
@@ -4817,6 +4954,7 @@
     .paletteFemale = gSwMonPalette_MrMime,
     .shinyPaletteFemale = gSwMonShinyPalette_MrMime,
     .iconSprite = gSwIcon_Humanshape,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_MUK_SPACEWORLD] =
@@ -4852,6 +4990,7 @@
     .paletteFemale = gSwMonPalette_Muk,
     .shinyPaletteFemale = gSwMonShinyPalette_Muk,
     .iconSprite = gSwIcon_Blob,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_MURKROW_SPACEWORLD] =
@@ -4887,6 +5026,7 @@
     .paletteFemale = gSwMonPalette_Murkrow,
     .shinyPaletteFemale = gSwMonShinyPalette_Murkrow,
     .iconSprite = gSwIcon_Bird,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_NATU_SPACEWORLD] =
@@ -4922,6 +5062,7 @@
     .paletteFemale = gSwMonPalette_Natu,
     .shinyPaletteFemale = gSwMonShinyPalette_Natu,
     .iconSprite = gSwIcon_Bird,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_NIDOKING_SPACEWORLD] =
@@ -4957,6 +5098,7 @@
     .paletteFemale = gSwMonPalette_Nidoking,
     .shinyPaletteFemale = gSwMonShinyPalette_Nidoking,
     .iconSprite = gSwIcon_Monster,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_NIDOQUEEN_SPACEWORLD] =
@@ -4992,6 +5134,7 @@
     .paletteFemale = gSwMonPalette_Nidoqueen,
     .shinyPaletteFemale = gSwMonShinyPalette_Nidoqueen,
     .iconSprite = gSwIcon_Monster,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_NIDORAN_F_SPACEWORLD] =
@@ -5027,6 +5170,7 @@
     .paletteFemale = gSwMonPalette_NidoranF,
     .shinyPaletteFemale = gSwMonShinyPalette_NidoranF,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_NIDORAN_M_SPACEWORLD] =
@@ -5062,6 +5206,7 @@
     .paletteFemale = gSwMonPalette_NidoranM,
     .shinyPaletteFemale = gSwMonShinyPalette_NidoranM,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_NIDORINA_SPACEWORLD] =
@@ -5097,6 +5242,7 @@
     .paletteFemale = gSwMonPalette_Nidorina,
     .shinyPaletteFemale = gSwMonShinyPalette_Nidorina,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_NIDORINO_SPACEWORLD] =
@@ -5132,6 +5278,7 @@
     .paletteFemale = gSwMonPalette_Nidorino,
     .shinyPaletteFemale = gSwMonShinyPalette_Nidorino,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_NINETALES_SPACEWORLD] =
@@ -5167,6 +5314,7 @@
     .paletteFemale = gSwMonPalette_Ninetales,
     .shinyPaletteFemale = gSwMonShinyPalette_Ninetales,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_NOCTOWL_SPACEWORLD] =
@@ -5202,6 +5350,7 @@
     .paletteFemale = gSwMonPalette_Noctowl,
     .shinyPaletteFemale = gSwMonShinyPalette_Noctowl,
     .iconSprite = gSwIcon_Bird,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_NUMBPUFF_SPACEWORLD] =
@@ -5237,6 +5386,7 @@
     .paletteFemale = gSwMonPalette_Numbpuff,
     .shinyPaletteFemale = gSwMonShinyPalette_Numbpuff,
     .iconSprite = gSwIcon_Fish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_NYANYA_SPACEWORLD] =
@@ -5272,6 +5422,7 @@
     .paletteFemale = gSwMonPalette_Nyanya,
     .shinyPaletteFemale = gSwMonShinyPalette_Nyanya,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_OCTILLERY_SPACEWORLD] =
@@ -5307,6 +5458,7 @@
     .paletteFemale = gSwMonPalette_Octillery,
     .shinyPaletteFemale = gSwMonShinyPalette_Octillery,
     .iconSprite = gSwIcon_Fish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_ODDISH_SPACEWORLD] =
@@ -5342,6 +5494,7 @@
     .paletteFemale = gSwMonPalette_Oddish,
     .shinyPaletteFemale = gSwMonShinyPalette_Oddish,
     .iconSprite = gSwIcon_Oddish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_OMANYTE_SPACEWORLD] =
@@ -5377,6 +5530,7 @@
     .paletteFemale = gSwMonPalette_Omanyte,
     .shinyPaletteFemale = gSwMonShinyPalette_Omanyte,
     .iconSprite = gSwIcon_Shell,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_OMASTAR_SPACEWORLD] =
@@ -5412,6 +5566,7 @@
     .paletteFemale = gSwMonPalette_Omastar,
     .shinyPaletteFemale = gSwMonShinyPalette_Omastar,
     .iconSprite = gSwIcon_Shell,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_ONIX_SPACEWORLD] =
@@ -5447,6 +5602,7 @@
     .paletteFemale = gSwMonPalette_Onix,
     .shinyPaletteFemale = gSwMonShinyPalette_Onix,
     .iconSprite = gSwIcon_Serpent,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_PANGSHI_SPACEWORLD] =
@@ -5482,6 +5638,7 @@
     .paletteFemale = gSwMonPalette_Pangshi,
     .shinyPaletteFemale = gSwMonShinyPalette_Pangshi,
     .iconSprite = gSwIcon_Ghost,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_PARAMITE_SPACEWORLD] =
@@ -5517,6 +5674,7 @@
     .paletteFemale = gSwMonPalette_Paramite,
     .shinyPaletteFemale = gSwMonShinyPalette_Paramite,
     .iconSprite = gSwIcon_Bug,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_PARAS_SPACEWORLD] =
@@ -5552,6 +5710,7 @@
     .paletteFemale = gSwMonPalette_Paras,
     .shinyPaletteFemale = gSwMonShinyPalette_Paras,
     .iconSprite = gSwIcon_Bug,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_PARASECT_SPACEWORLD] =
@@ -5587,6 +5746,7 @@
     .paletteFemale = gSwMonPalette_Parasect,
     .shinyPaletteFemale = gSwMonShinyPalette_Parasect,
     .iconSprite = gSwIcon_Bug,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_PERSIAN_SPACEWORLD] =
@@ -5622,6 +5782,7 @@
     .paletteFemale = gSwMonPalette_Persian,
     .shinyPaletteFemale = gSwMonShinyPalette_Persian,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_PETAMOLE_SPACEWORLD] =
@@ -5656,6 +5817,7 @@
     .palette = gSwMonPalette_Petamole,
     .shinyPalette = gSwMonShinyPalette_Petamole,
     .iconSprite = gSwIcon_Oddish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_PETICORN_SPACEWORLD] =
@@ -5691,6 +5853,7 @@
     .paletteFemale = gSwMonPalette_Peticorn,
     .shinyPaletteFemale = gSwMonShinyPalette_Peticorn,
     .iconSprite = gSwIcon_Equine,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_PHANPY_SPACEWORLD] =
@@ -5726,6 +5889,7 @@
     .paletteFemale = gSwMonPalette_Phanpy,
     .shinyPaletteFemale = gSwMonShinyPalette_Phanpy,
     .iconSprite = gSwIcon_Equine,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_PICHU_SPACEWORLD] =
@@ -5761,6 +5925,7 @@
     .paletteFemale = gSwMonPalette_Pichu,
     .shinyPaletteFemale = gSwMonShinyPalette_Pichu,
     .iconSprite = gSwIcon_Pikachu,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_PIDGEOT_SPACEWORLD] =
@@ -5796,6 +5961,7 @@
     .paletteFemale = gSwMonPalette_Pidgeot,
     .shinyPaletteFemale = gSwMonShinyPalette_Pidgeot,
     .iconSprite = gSwIcon_Bird,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_PIDGEOTTO_SPACEWORLD] =
@@ -5831,6 +5997,7 @@
     .paletteFemale = gSwMonPalette_Pidgeotto,
     .shinyPaletteFemale = gSwMonShinyPalette_Pidgeotto,
     .iconSprite = gSwIcon_Bird,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_PIDGEY_SPACEWORLD] =
@@ -5866,6 +6033,7 @@
     .paletteFemale = gSwMonPalette_Pidgey,
     .shinyPaletteFemale = gSwMonShinyPalette_Pidgey,
     .iconSprite = gSwIcon_Bird,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_PIKACHU_SPACEWORLD] =
@@ -5901,6 +6069,7 @@
     .paletteFemale = gSwMonPalette_Pikachu,
     .shinyPaletteFemale = gSwMonShinyPalette_Pikachu,
     .iconSprite = gSwIcon_Pikachu,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_PINSIR_SPACEWORLD] =
@@ -5936,6 +6105,7 @@
     .paletteFemale = gSwMonPalette_Pinsir,
     .shinyPaletteFemale = gSwMonShinyPalette_Pinsir,
     .iconSprite = gSwIcon_Bug,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_POLITOED_SPACEWORLD] =
@@ -5971,6 +6141,7 @@
     .paletteFemale = gSwMonPalette_Politoed,
     .shinyPaletteFemale = gSwMonShinyPalette_Politoed,
     .iconSprite = gSwIcon_Poliwag,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_POLIWAG_SPACEWORLD] =
@@ -6006,6 +6177,7 @@
     .paletteFemale = gSwMonPalette_Poliwag,
     .shinyPaletteFemale = gSwMonShinyPalette_Poliwag,
     .iconSprite = gSwIcon_Poliwag,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_POLIWHIRL_SPACEWORLD] =
@@ -6041,6 +6213,7 @@
     .paletteFemale = gSwMonPalette_Poliwhirl,
     .shinyPaletteFemale = gSwMonShinyPalette_Poliwhirl,
     .iconSprite = gSwIcon_Poliwag,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_POLIWRATH_SPACEWORLD] =
@@ -6076,6 +6249,7 @@
     .paletteFemale = gSwMonPalette_Poliwrath,
     .shinyPaletteFemale = gSwMonShinyPalette_Poliwrath,
     .iconSprite = gSwIcon_Poliwag,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_PONYTA_SPACEWORLD] =
@@ -6111,6 +6285,7 @@
     .paletteFemale = gSwMonPalette_Ponyta,
     .shinyPaletteFemale = gSwMonShinyPalette_Ponyta,
     .iconSprite = gSwIcon_Equine,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_PORYGON_SPACEWORLD] =
@@ -6146,6 +6321,7 @@
     .paletteFemale = gSwMonPalette_Porygon,
     .shinyPaletteFemale = gSwMonShinyPalette_Porygon,
     .iconSprite = gSwIcon_Voltorb,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_PORYGON2_SPACEWORLD] =
@@ -6181,6 +6357,7 @@
     .paletteFemale = gSwMonPalette_Porygon2,
     .shinyPaletteFemale = gSwMonShinyPalette_Porygon2,
     .iconSprite = gSwIcon_Voltorb,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_PRAXE_SPACEWORLD] =
@@ -6216,6 +6393,7 @@
     .paletteFemale = gSwMonPalette_Praxe,
     .shinyPaletteFemale = gSwMonShinyPalette_Praxe,
     .iconSprite = gSwIcon_Bug,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_PRIMEAPE_SPACEWORLD] =
@@ -6251,6 +6429,7 @@
     .paletteFemale = gSwMonPalette_Primeape,
     .shinyPaletteFemale = gSwMonShinyPalette_Primeape,
     .iconSprite = gSwIcon_Fighter,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_PSYDUCK_SPACEWORLD] =
@@ -6286,6 +6465,7 @@
     .paletteFemale = gSwMonPalette_Psyduck,
     .shinyPaletteFemale = gSwMonShinyPalette_Psyduck,
     .iconSprite = gSwIcon_Monster,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_PUDDIPUP_SPACEWORLD] =
@@ -6321,6 +6501,7 @@
     .paletteFemale = gSwMonPalette_Puddipup,
     .shinyPaletteFemale = gSwMonShinyPalette_Puddipup,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_QUAGSIRE_SPACEWORLD] =
@@ -6356,6 +6537,7 @@
     .paletteFemale = gSwMonPalette_Quagsire,
     .shinyPaletteFemale = gSwMonShinyPalette_Quagsire,
     .iconSprite = gSwIcon_Fish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_QWILFISH_SPACEWORLD] =
@@ -6391,6 +6573,7 @@
     .paletteFemale = gSwMonPalette_Qwilfish,
     .shinyPaletteFemale = gSwMonShinyPalette_Qwilfish,
     .iconSprite = gSwIcon_Fish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_RAICHU_SPACEWORLD] =
@@ -6426,6 +6609,7 @@
     .paletteFemale = gSwMonPalette_Raichu,
     .shinyPaletteFemale = gSwMonShinyPalette_Raichu,
     .iconSprite = gSwIcon_Pikachu,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_RAIKOU_SPACEWORLD] =
@@ -6458,6 +6642,7 @@
     .palette = gSwMonPalette_Raikou,
     .shinyPalette = gSwMonShinyPalette_Raikou,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_RAITORA_SPACEWORLD] =
@@ -6493,6 +6678,7 @@
     .paletteFemale = gSwMonPalette_Raitora,
     .shinyPaletteFemale = gSwMonShinyPalette_Raitora,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_RAPIDASH_SPACEWORLD] =
@@ -6528,6 +6714,7 @@
     .paletteFemale = gSwMonPalette_Rapidash,
     .shinyPaletteFemale = gSwMonShinyPalette_Rapidash,
     .iconSprite = gSwIcon_Equine,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_RATICATE_SPACEWORLD] =
@@ -6563,6 +6750,7 @@
     .paletteFemale = gSwMonPalette_Raticate,
     .shinyPaletteFemale = gSwMonShinyPalette_Raticate,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_RATTATA_SPACEWORLD] =
@@ -6598,6 +6786,7 @@
     .paletteFemale = gSwMonPalette_Rattata,
     .shinyPaletteFemale = gSwMonShinyPalette_Rattata,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_RAYLEEP_SPACEWORLD] =
@@ -6633,6 +6822,7 @@
     .paletteFemale = gSwMonPalette_Rayleep,
     .shinyPaletteFemale = gSwMonShinyPalette_Rayleep,
     .iconSprite = gSwIcon_Fish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_REMORAID_SPACEWORLD] =
@@ -6668,6 +6858,7 @@
     .paletteFemale = gSwMonPalette_Remoraid,
     .shinyPaletteFemale = gSwMonShinyPalette_Remoraid,
     .iconSprite = gSwIcon_Fish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_RHYDON_SPACEWORLD] =
@@ -6703,6 +6894,7 @@
     .paletteFemale = gSwMonPalette_Rhydon,
     .shinyPaletteFemale = gSwMonShinyPalette_Rhydon,
     .iconSprite = gSwIcon_Monster,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_RHYHORN_SPACEWORLD] =
@@ -6738,6 +6930,7 @@
     .paletteFemale = gSwMonPalette_Rhyhorn,
     .shinyPaletteFemale = gSwMonShinyPalette_Rhyhorn,
     .iconSprite = gSwIcon_Equine,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_RINRING_SPACEWORLD] =
@@ -6773,6 +6966,7 @@
     .paletteFemale = gSwMonPalette_Rinring,
     .shinyPaletteFemale = gSwMonShinyPalette_Rinring,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_SANDSHREW_SPACEWORLD] =
@@ -6808,6 +7002,7 @@
     .paletteFemale = gSwMonPalette_Sandshrew,
     .shinyPaletteFemale = gSwMonShinyPalette_Sandshrew,
     .iconSprite = gSwIcon_Monster,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_SANDSLASH_SPACEWORLD] =
@@ -6843,6 +7038,7 @@
     .paletteFemale = gSwMonPalette_Sandslash,
     .shinyPaletteFemale = gSwMonShinyPalette_Sandslash,
     .iconSprite = gSwIcon_Monster,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_SCIZOR_SPACEWORLD] =
@@ -6878,6 +7074,7 @@
     .paletteFemale = gSwMonPalette_Scizor,
     .shinyPaletteFemale = gSwMonShinyPalette_Scizor,
     .iconSprite = gSwIcon_Bug,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_SCYTHER_SPACEWORLD] =
@@ -6913,6 +7110,7 @@
     .paletteFemale = gSwMonPalette_Scyther,
     .shinyPaletteFemale = gSwMonShinyPalette_Scyther,
     .iconSprite = gSwIcon_Bug,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_SEADRA_SPACEWORLD] =
@@ -6948,6 +7146,7 @@
     .paletteFemale = gSwMonPalette_Seadra,
     .shinyPaletteFemale = gSwMonShinyPalette_Seadra,
     .iconSprite = gSwIcon_Fish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_SEAKING_SPACEWORLD] =
@@ -6983,6 +7182,7 @@
     .paletteFemale = gSwMonPalette_Seaking,
     .shinyPaletteFemale = gSwMonShinyPalette_Seaking,
     .iconSprite = gSwIcon_Fish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_SEEL_SPACEWORLD] =
@@ -7018,6 +7218,7 @@
     .paletteFemale = gSwMonPalette_Seel,
     .shinyPaletteFemale = gSwMonShinyPalette_Seel,
     .iconSprite = gSwIcon_Lapras,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_SHELLDER_SPACEWORLD] =
@@ -7053,6 +7254,7 @@
     .paletteFemale = gSwMonPalette_Shellder,
     .shinyPaletteFemale = gSwMonShinyPalette_Shellder,
     .iconSprite = gSwIcon_Shell,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_SKARMORY_SPACEWORLD] =
@@ -7088,6 +7290,7 @@
     .paletteFemale = gSwMonPalette_Skarmory,
     .shinyPaletteFemale = gSwMonShinyPalette_Skarmory,
     .iconSprite = gSwIcon_Bird,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_SKIPLOOM_SPACEWORLD] =
@@ -7123,6 +7326,7 @@
     .paletteFemale = gSwMonPalette_Skiploom,
     .shinyPaletteFemale = gSwMonShinyPalette_Skiploom,
     .iconSprite = gSwIcon_Oddish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_SLOWBRO_SPACEWORLD] =
@@ -7158,6 +7362,7 @@
     .paletteFemale = gSwMonPalette_Slowbro,
     .shinyPaletteFemale = gSwMonShinyPalette_Slowbro,
     .iconSprite = gSwIcon_Slowpoke,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_SLOWKING_SPACEWORLD] =
@@ -7193,6 +7398,7 @@
     .paletteFemale = gSwMonPalette_Slowking,
     .shinyPaletteFemale = gSwMonShinyPalette_Slowking,
     .iconSprite = gSwIcon_Slowpoke,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_SLOWPOKE_SPACEWORLD] =
@@ -7228,6 +7434,7 @@
     .paletteFemale = gSwMonPalette_Slowpoke,
     .shinyPaletteFemale = gSwMonShinyPalette_Slowpoke,
     .iconSprite = gSwIcon_Slowpoke,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_SMEARGLE_SPACEWORLD] =
@@ -7263,6 +7470,7 @@
     .paletteFemale = gSwMonPalette_Smeargle,
     .shinyPaletteFemale = gSwMonShinyPalette_Smeargle,
     .iconSprite = gSwIcon_Monster,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_SMOOCHUM_SPACEWORLD] =
@@ -7298,6 +7506,7 @@
     .paletteFemale = gSwMonPalette_Smoochum,
     .shinyPaletteFemale = gSwMonShinyPalette_Smoochum,
     .iconSprite = gSwIcon_Humanshape,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_SNEASEL_SPACEWORLD] =
@@ -7333,6 +7542,7 @@
     .paletteFemale = gSwMonPalette_Sneasel,
     .shinyPaletteFemale = gSwMonShinyPalette_Sneasel,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_SNORLAX_SPACEWORLD] =
@@ -7368,6 +7578,7 @@
     .paletteFemale = gSwMonPalette_Snorlax,
     .shinyPaletteFemale = gSwMonShinyPalette_Snorlax,
     .iconSprite = gSwIcon_Snorlax,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_SNUBBULL_SPACEWORLD] =
@@ -7403,6 +7614,7 @@
     .paletteFemale = gSwMonPalette_Snubbull,
     .shinyPaletteFemale = gSwMonShinyPalette_Snubbull,
     .iconSprite = gSwIcon_Monster,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_SPEAROW_SPACEWORLD] =
@@ -7438,6 +7650,7 @@
     .paletteFemale = gSwMonPalette_Spearow,
     .shinyPaletteFemale = gSwMonShinyPalette_Spearow,
     .iconSprite = gSwIcon_Bird,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_SPINARAK_SPACEWORLD] =
@@ -7470,6 +7683,7 @@
     .palette = gSwMonPalette_Spinarak,
     .shinyPalette = gSwMonShinyPalette_Spinarak,
     .iconSprite = gSwIcon_Bug,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_SQUIRTLE_SPACEWORLD] =
@@ -7505,6 +7719,7 @@
     .paletteFemale = gSwMonPalette_Squirtle,
     .shinyPaletteFemale = gSwMonShinyPalette_Squirtle,
     .iconSprite = gSwIcon_Squirtle,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_STARMIE_SPACEWORLD] =
@@ -7540,6 +7755,7 @@
     .paletteFemale = gSwMonPalette_Starmie,
     .shinyPaletteFemale = gSwMonShinyPalette_Starmie,
     .iconSprite = gSwIcon_Staryu,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_STARYU_SPACEWORLD] =
@@ -7575,6 +7791,7 @@
     .paletteFemale = gSwMonPalette_Staryu,
     .shinyPaletteFemale = gSwMonShinyPalette_Staryu,
     .iconSprite = gSwIcon_Staryu,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_STEELIX_SPACEWORLD] =
@@ -7610,6 +7827,7 @@
     .paletteFemale = gSwMonPalette_Steelix,
     .shinyPaletteFemale = gSwMonShinyPalette_Steelix,
     .iconSprite = gSwIcon_Serpent,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_SUICUNE_SPACEWORLD] =
@@ -7642,6 +7860,7 @@
     .palette = gSwMonPalette_Suicune,
     .shinyPalette = gSwMonShinyPalette_Suicune,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_SUNFLORA_SPACEWORLD] =
@@ -7677,6 +7896,7 @@
     .paletteFemale = gSwMonPalette_Sunflora,
     .shinyPaletteFemale = gSwMonShinyPalette_Sunflora,
     .iconSprite = gSwIcon_Oddish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_TANGELA_SPACEWORLD] =
@@ -7712,6 +7932,7 @@
     .paletteFemale = gSwMonPalette_Tangela,
     .shinyPaletteFemale = gSwMonShinyPalette_Tangela,
     .iconSprite = gSwIcon_Oddish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_TANGTRIP_SPACEWORLD] =
@@ -7746,6 +7967,7 @@
     .palette = gSwMonPalette_Tangtrip,
     .shinyPalette = gSwMonShinyPalette_Tangtrip,
     .iconSprite = gSwIcon_Oddish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_TAUROS_SPACEWORLD] =
@@ -7781,6 +8003,7 @@
     .paletteFemale = gSwMonPalette_Tauros,
     .shinyPaletteFemale = gSwMonShinyPalette_Tauros,
     .iconSprite = gSwIcon_Equine,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_TENTACOOL_SPACEWORLD] =
@@ -7816,6 +8039,7 @@
     .paletteFemale = gSwMonPalette_Tentacool,
     .shinyPaletteFemale = gSwMonShinyPalette_Tentacool,
     .iconSprite = gSwIcon_Jellyfish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_TENTACRUEL_SPACEWORLD] =
@@ -7851,6 +8075,7 @@
     .paletteFemale = gSwMonPalette_Tentacruel,
     .shinyPaletteFemale = gSwMonShinyPalette_Tentacruel,
     .iconSprite = gSwIcon_Jellyfish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_TOGEPI_SPACEWORLD] =
@@ -7886,6 +8111,7 @@
     .paletteFemale = gSwMonPalette_Togepi,
     .shinyPaletteFemale = gSwMonShinyPalette_Togepi,
     .iconSprite = gSwIcon_Clefairy,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_TRIPSTAR_SPACEWORLD] =
@@ -7921,6 +8147,7 @@
     .paletteFemale = gSwMonPalette_Tripstar,
     .shinyPaletteFemale = gSwMonShinyPalette_Tripstar,
     .iconSprite = gSwIcon_Bug,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_TRITALES_SPACEWORLD] =
@@ -7956,6 +8183,7 @@
     .paletteFemale = gSwMonPalette_Tritales,
     .shinyPaletteFemale = gSwMonShinyPalette_Tritales,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_TUHEAD_SPACEWORLD] =
@@ -7991,6 +8219,7 @@
     .paletteFemale = gSwMonPalette_Tuhead,
     .shinyPaletteFemale = gSwMonShinyPalette_Tuhead,
     .iconSprite = gSwIcon_Bug,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_TURBAN_SPACEWORLD] =
@@ -8026,6 +8255,7 @@
     .paletteFemale = gSwMonPalette_Turban,
     .shinyPaletteFemale = gSwMonShinyPalette_Turban,
     .iconSprite = gSwIcon_Shell,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_TWINZ_SPACEWORLD] =
@@ -8061,6 +8291,7 @@
     .paletteFemale = gSwMonPalette_Twinz,
     .shinyPaletteFemale = gSwMonShinyPalette_Twinz,
     .iconSprite = gSwIcon_Ghost,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_TYROGUE_SPACEWORLD] =
@@ -8096,6 +8327,7 @@
     .paletteFemale = gSwMonPalette_Tyrogue,
     .shinyPaletteFemale = gSwMonShinyPalette_Tyrogue,
     .iconSprite = gSwIcon_Fighter,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_UMBREON_SPACEWORLD] =
@@ -8131,6 +8363,7 @@
     .paletteFemale = gSwMonPalette_Umbreon,
     .shinyPaletteFemale = gSwMonShinyPalette_Umbreon,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_UNOWN_SPACEWORLD] =
@@ -8163,6 +8396,7 @@
     .palette = gSwMonPalette_Unown,
     .shinyPalette = gSwMonShinyPalette_Unown,
     .iconSprite = gSwIcon_Unown,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_VAPOREON_SPACEWORLD] =
@@ -8198,6 +8432,7 @@
     .paletteFemale = gSwMonPalette_Vaporeon,
     .shinyPaletteFemale = gSwMonShinyPalette_Vaporeon,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_VENOMOTH_SPACEWORLD] =
@@ -8233,6 +8468,7 @@
     .paletteFemale = gSwMonPalette_Venomoth,
     .shinyPaletteFemale = gSwMonShinyPalette_Venomoth,
     .iconSprite = gSwIcon_Moth,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_VENONAT_SPACEWORLD] =
@@ -8268,6 +8504,7 @@
     .paletteFemale = gSwMonPalette_Venonat,
     .shinyPaletteFemale = gSwMonShinyPalette_Venonat,
     .iconSprite = gSwIcon_Caterpillar,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_VENUSAUR_SPACEWORLD] =
@@ -8303,6 +8540,7 @@
     .paletteFemale = gSwMonPalette_Venusaur,
     .shinyPaletteFemale = gSwMonShinyPalette_Venusaur,
     .iconSprite = gSwIcon_Bulbasaur,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_VICTREEBEL_SPACEWORLD] =
@@ -8338,6 +8576,7 @@
     .paletteFemale = gSwMonPalette_Victreebel,
     .shinyPaletteFemale = gSwMonShinyPalette_Victreebel,
     .iconSprite = gSwIcon_Oddish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_VILEPLUME_SPACEWORLD] =
@@ -8373,6 +8612,7 @@
     .paletteFemale = gSwMonPalette_Vileplume,
     .shinyPaletteFemale = gSwMonShinyPalette_Vileplume,
     .iconSprite = gSwIcon_Oddish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_VOLBEAR_SPACEWORLD] =
@@ -8408,6 +8648,7 @@
     .paletteFemale = gSwMonPalette_Volbear,
     .shinyPaletteFemale = gSwMonShinyPalette_Volbear,
     .iconSprite = gSwIcon_Monster,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_VOLTORB_SPACEWORLD] =
@@ -8443,6 +8684,7 @@
     .paletteFemale = gSwMonPalette_Voltorb,
     .shinyPaletteFemale = gSwMonShinyPalette_Voltorb,
     .iconSprite = gSwIcon_Voltorb,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_VULPIX_SPACEWORLD] =
@@ -8478,6 +8720,7 @@
     .paletteFemale = gSwMonPalette_Vulpix,
     .shinyPaletteFemale = gSwMonShinyPalette_Vulpix,
     .iconSprite = gSwIcon_Fox,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_WARTORTLE_SPACEWORLD] =
@@ -8513,6 +8756,7 @@
     .paletteFemale = gSwMonPalette_Wartortle,
     .shinyPaletteFemale = gSwMonShinyPalette_Wartortle,
     .iconSprite = gSwIcon_Squirtle,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_WARWOLF_SPACEWORLD] =
@@ -8548,6 +8792,7 @@
     .paletteFemale = gSwMonPalette_Warwolf,
     .shinyPaletteFemale = gSwMonShinyPalette_Warwolf,
     .iconSprite = gSwIcon_Monster,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_WEEDLE_SPACEWORLD] =
@@ -8583,6 +8828,7 @@
     .paletteFemale = gSwMonPalette_Weedle,
     .shinyPaletteFemale = gSwMonShinyPalette_Weedle,
     .iconSprite = gSwIcon_Caterpillar,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_WEEPINBELL_SPACEWORLD] =
@@ -8618,6 +8864,7 @@
     .paletteFemale = gSwMonPalette_Weepinbell,
     .shinyPaletteFemale = gSwMonShinyPalette_Weepinbell,
     .iconSprite = gSwIcon_Oddish,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_WEEZING_SPACEWORLD] =
@@ -8653,6 +8900,7 @@
     .paletteFemale = gSwMonPalette_Weezing,
     .shinyPaletteFemale = gSwMonShinyPalette_Weezing,
     .iconSprite = gSwIcon_Blob,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_WIGGLYTUFF_SPACEWORLD] =
@@ -8688,6 +8936,7 @@
     .paletteFemale = gSwMonPalette_Wigglytuff,
     .shinyPaletteFemale = gSwMonShinyPalette_Wigglytuff,
     .iconSprite = gSwIcon_Jigglypuff,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_WOLFAN_SPACEWORLD] =
@@ -8723,6 +8972,7 @@
     .paletteFemale = gSwMonPalette_Wolfan,
     .shinyPaletteFemale = gSwMonShinyPalette_Wolfan,
     .iconSprite = gSwIcon_Monster,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_XATU_SPACEWORLD] =
@@ -8758,6 +9008,7 @@
     .paletteFemale = gSwMonPalette_Xatu,
     .shinyPaletteFemale = gSwMonShinyPalette_Xatu,
     .iconSprite = gSwIcon_Bird,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_ZAPDOS_SPACEWORLD] =
@@ -8793,6 +9044,7 @@
     .paletteFemale = gSwMonPalette_Zapdos,
     .shinyPaletteFemale = gSwMonShinyPalette_Zapdos,
     .iconSprite = gSwIcon_Bird,
+    .iconPalIndex = 6,
 },
 
 [SPECIES_ZUBAT_SPACEWORLD] =
@@ -8828,4 +9080,5 @@
     .paletteFemale = gSwMonPalette_Zubat,
     .shinyPaletteFemale = gSwMonShinyPalette_Zubat,
     .iconSprite = gSwIcon_Bat,
+    .iconPalIndex = 6,
 },

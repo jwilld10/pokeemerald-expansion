@@ -8226,7 +8226,10 @@ static bool8 MultiMove_Start(void)
     {
     case 0:
         HideBg(0);
-        TryLoadAllMonIconPalettesAtOffset(BG_PLTT_ID(8));
+        /* DISABLED: this stomps BG palettes used by Storage UI (boxes/artifacts).
+ * Icons should use OBJ sprite palettes instead of BG slots 9..15.
+ */
+TryLoadAllMonIconPalettesAtOffset(BG_PLTT_ID(5));
         sMultiMove->state++;
         break;
     case 1:

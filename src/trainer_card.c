@@ -1379,7 +1379,9 @@ static void LoadMonIconGfx(void)
         TintPalette_SepiaTone(sData->monIconPal, 96);
         break;
     }
-    LoadPalette(sData->monIconPal, BG_PLTT_ID(5), 6 * PLTT_SIZE_4BPP);
+    /* DISABLED: BG icon palette load clobbers UI palettes (causes boxes everywhere)
+       LoadPalette(sData->monIconPal, BG_PLTT_ID(10), 6 * PLTT_SIZE_4BPP);
+    */
 
     for (i = 0; i < PARTY_SIZE; i++)
     {

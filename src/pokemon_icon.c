@@ -4,6 +4,9 @@
 #include "palette.h"
 #include "pokemon_sprite_visualizer.h"
 #include "pokemon_icon.h"
+
+// Spaceworld icon pal6 (hard-wired)
+static const u16 sSpaceworldIconPal6[] = INCBIN_U16("graphics/pokemon/icon_palettes/spaceworld_icon_pal6.gbapal");
 #include "sprite.h"
 #include "data.h"
 #include "constants/pokemon_icon.h"
@@ -29,6 +32,8 @@ const struct SpritePalette gMonIconPaletteTable[] =
     { gMonIconPalettes[3], POKE_ICON_BASE_PAL_TAG + 3 },
     { gMonIconPalettes[4], POKE_ICON_BASE_PAL_TAG + 4 },
     { gMonIconPalettes[5], POKE_ICON_BASE_PAL_TAG + 5 },
+    { sSpaceworldIconPal6, POKE_ICON_BASE_PAL_TAG + 6 },
+
 };
 
 static const struct OamData sMonIconOamData =
@@ -328,6 +333,11 @@ u8 GetMonIconPaletteIndexFromSpecies(u16 species)
 
 const u16 *GetValidMonIconPalettePtr(u16 species)
 {
+    // Spaceworld: force palette 6 from external gbapal
+    u16 swPalIndex = gSpeciesInfo[SanitizeSpeciesId(species)].iconPalIndex;
+    if (swPalIndex == 6)
+        return sSpaceworldIconPal6;
+
     return gMonIconPaletteTable[gSpeciesInfo[SanitizeSpeciesId(species)].iconPalIndex].data;
 }
 

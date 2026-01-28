@@ -57,3 +57,9 @@ tools/compresSmol/compresSmolTilemap
 *.fastSmol
 *.smolTM
 __pycache__
+
+# Spaceworld temporary backups & previews
+*.bak
+*.bak_*
+*.pal
+spaceworld_previews_*/

@@ -63,3 +63,8 @@ __pycache__
 *.bak_*
 *.pal
 spaceworld_previews_*/
+
+# Spaceworld tooling logs
+*.log
+build.log
+spaceworld_*.log

@@ -98,6 +98,8 @@
 
 #define FLIP    0
 #define NO_FLIP 1
+#include "data/pokemon/level_up_learnsets_bw3g.h"
+
 
 const struct SpeciesInfo gSpeciesInfo[] =
 {
@@ -164,6 +166,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
     #include "species_info/gen_7_families.h"
     #include "species_info/gen_8_families.h"
     #include "species_info/gen_9_families.h"
+#include "species_info/bw3g_families.h"
     #include "spaceworld_generated/spaceworld_species_info.h"
 
     [SPECIES_EGG] =

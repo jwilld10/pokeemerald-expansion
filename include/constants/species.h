@@ -1924,7 +1924,7 @@
 #define SPECIES_ZAPDOS_SPACEWORLD                     1801
 #define SPECIES_ZUBAT_SPACEWORLD                      1802
 
-#define SPECIES_EGG                                     (SPECIES_ZUBAT_SPACEWORLD + 1)
+#define SPECIES_EGG                                     (SPECIES_GENESIS_MON_BW3G + 1)
 #define NUM_SPECIES SPECIES_EGG
 
 #define SPECIES_SHINY_TAG 5000

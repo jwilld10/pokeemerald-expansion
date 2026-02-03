@@ -69,6 +69,9 @@
 #include "constants/union_room.h"
 #include "constants/weather.h"
 
+extern const u8 *const gBw3gSpeciesNames[NUM_SPECIES];
+
+
 #define FRIENDSHIP_EVO_THRESHOLD ((P_FRIENDSHIP_EVO_THRESHOLD >= GEN_8) ? 160 : 220)
 
 struct SpeciesItem
@@ -3460,6 +3463,15 @@ bool8 IsPokemonStorageFull(void)
 const u8 *GetSpeciesName(u16 species)
 {
     species = SanitizeSpeciesId(species);
+
+    // BW3G overlay takes priority if present
+    if (species < NUM_SPECIES
+        && gBw3gSpeciesNames[species] != NULL
+        && gBw3gSpeciesNames[species][0] != 0)
+    {
+        return gBw3gSpeciesNames[species];
+    }
+
     if (gSpeciesInfo[species].speciesName[0] == 0)
         return gSpeciesInfo[SPECIES_NONE].speciesName;
     return gSpeciesInfo[species].speciesName;

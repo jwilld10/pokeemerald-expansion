@@ -4,9 +4,12 @@
 #include "palette.h"
 #include "pokemon_sprite_visualizer.h"
 #include "pokemon_icon.h"
+#include "data/graphics/bw3g_mon_icons_table_generated.h"
 
 // Spaceworld icon pal6 (hard-wired)
 static const u16 sSpaceworldIconPal6[] = INCBIN_U16("graphics/pokemon/icon_palettes/spaceworld_icon_pal6.gbapal");
+
+static const u16 sBw3gIconPal7[] = INCBIN_U16("graphics/pokemon/icon_palettes/pal7.gbapal");
 #include "sprite.h"
 #include "data.h"
 #include "constants/pokemon_icon.h"
@@ -32,9 +35,10 @@ const struct SpritePalette gMonIconPaletteTable[] =
     { gMonIconPalettes[3], POKE_ICON_BASE_PAL_TAG + 3 },
     { gMonIconPalettes[4], POKE_ICON_BASE_PAL_TAG + 4 },
     { gMonIconPalettes[5], POKE_ICON_BASE_PAL_TAG + 5 },
-    { sSpaceworldIconPal6, POKE_ICON_BASE_PAL_TAG + 6 },
-
+    { gMonIconPalettes[6], POKE_ICON_BASE_PAL_TAG + 6 },
+    { sBw3gIconPal7,       POKE_ICON_BASE_PAL_TAG + 7 },
 };
+
 
 static const struct OamData sMonIconOamData =
 {
@@ -153,6 +157,10 @@ u8 CreateMonIcon(u16 species, void (*callback)(struct Sprite *), s16 x, s16 y, u
     };
     species = SanitizeSpeciesId(species);
 
+    // BW3G: force icon palette 7
+    if (species >= SPECIES_SNIVY_BW3G && species <= SPECIES_GENESIS_MON_BW3G)
+        iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + 7;
+
     if (species > NUM_SPECIES)
         iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG;
 #if P_GENDER_DIFFERENCES
@@ -182,6 +190,10 @@ u8 CreateMonIconNoPersonality(u16 species, void (*callback)(struct Sprite *), s1
     };
 
     iconTemplate.image = GetMonIconTiles(species, 0);
+    // BW3G: force icon palette 7
+    species = SanitizeSpeciesId(species);
+    if (species >= SPECIES_SNIVY_BW3G && species <= SPECIES_GENESIS_MON_BW3G)
+        iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + 7;
     spriteId = CreateMonIconSprite(&iconTemplate, x, y, subpriority);
 
     UpdateMonIconFrame(&gSprites[spriteId]);
@@ -212,6 +224,18 @@ u16 GetIconSpeciesNoPersonality(u16 species)
     if (MailSpeciesToSpecies(species, &species) == SPECIES_UNOWN)
         return species += SPECIES_UNOWN_B; // TODO
     return GetIconSpecies(species, 0);
+}
+
+static const u8 *GetBw3gMonIconTiles(u16 species)
+{
+    u16 idx = species - SPECIES_SNIVY_BW3G;
+    const u8 *icon = sBw3gMonIconTable[idx];
+
+    // GENESIS_MON placeholder fallback
+    if (icon == NULL)
+        icon = sBw3gMonIconTable[SPECIES_GENESECT_BW3G - SPECIES_SNIVY_BW3G];
+
+    return icon;
 }
 
 const u8 *GetMonIconPtr(u16 species, u32 personality)
@@ -295,6 +319,11 @@ const u8 *GetMonIconTiles(u16 species, u32 personality)
     if (species > NUM_SPECIES)
         species = SPECIES_NONE;
 
+    // BW3G override: prevent jumbled icons by using explicit species->icon table
+    if (species >= SPECIES_SNIVY_BW3G && species <= SPECIES_GENESIS_MON_BW3G)
+        return GetBw3gMonIconTiles(species);
+
+
 #if P_GENDER_DIFFERENCES
     if (gSpeciesInfo[species].iconSpriteFemale != NULL && IsPersonalityFemale(species, personality))
         iconSprite = gSpeciesInfo[species].iconSpriteFemale;
@@ -323,16 +352,25 @@ void TryLoadAllMonIconPalettesAtOffset(u16 offset)
 
 u8 GetValidMonIconPalIndex(u16 species)
 {
+    species = SanitizeSpeciesId(species);
+    if (species >= SPECIES_SNIVY_BW3G && species <= SPECIES_GENESIS_MON_BW3G)
+        return 7;
     return gSpeciesInfo[SanitizeSpeciesId(species)].iconPalIndex;
 }
 
 u8 GetMonIconPaletteIndexFromSpecies(u16 species)
 {
+    species = SanitizeSpeciesId(species);
+    if (species >= SPECIES_SNIVY_BW3G && species <= SPECIES_GENESIS_MON_BW3G)
+        return 7;
     return gSpeciesInfo[SanitizeSpeciesId(species)].iconPalIndex;
 }
 
 const u16 *GetValidMonIconPalettePtr(u16 species)
 {
+    species = SanitizeSpeciesId(species);
+    if (species >= SPECIES_SNIVY_BW3G && species <= SPECIES_GENESIS_MON_BW3G)
+        return gMonIconPaletteTable[7].data;
     // Spaceworld: force palette 6 from external gbapal
     u16 swPalIndex = gSpeciesInfo[SanitizeSpeciesId(species)].iconPalIndex;
     if (swPalIndex == 6)

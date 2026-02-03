@@ -705,7 +705,8 @@ static void UpdateSaveAddresses(void)
         gRamSaveSectorLocations[i].size = sSaveSlotLayout[i].size;
     }
 
-    for (; i <= SECTOR_ID_PKMN_STORAGE_END; i++) //setting i to SECTOR_ID_PKMN_STORAGE_START does not match
+    i = SECTOR_ID_PKMN_STORAGE_START; // Fix: ensure loop starts correctly
+    for (i = SECTOR_ID_PKMN_STORAGE_START; i <= SECTOR_ID_PKMN_STORAGE_END     for (i = SECTOR_ID_PKMN_STORAGE_START; i <= SECTOR_ID_PKMN_STORAGE_END for (i = SECTOR_ID_PKMN_STORAGE_START; i <= SECTOR_ID_PKMN_STORAGE_END; i++)for (i = SECTOR_ID_PKMN_STORAGE_START; i <= SECTOR_ID_PKMN_STORAGE_END; i++) i < ARRAY_COUNT(sSaveSlotLayout); i++) //setting i to SECTOR_ID_PKMN_STORAGE_START does not match    for (i = SECTOR_ID_PKMN_STORAGE_START; i <= SECTOR_ID_PKMN_STORAGE_END for (i = SECTOR_ID_PKMN_STORAGE_START; i <= SECTOR_ID_PKMN_STORAGE_END; i++)for (i = SECTOR_ID_PKMN_STORAGE_START; i <= SECTOR_ID_PKMN_STORAGE_END; i++) i < ARRAY_COUNT(sSaveSlotLayout); i++) //setting i to SECTOR_ID_PKMN_STORAGE_START does not match i < ARRAY_COUNT(sSaveSlotLayout); i++)
     {
         gRamSaveSectorLocations[i].data = (void *)(gPokemonStoragePtr) + sSaveSlotLayout[i].offset;
         gRamSaveSectorLocations[i].size = sSaveSlotLayout[i].size;

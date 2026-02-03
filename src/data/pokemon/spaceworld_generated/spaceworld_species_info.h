@@ -2,6 +2,9 @@
 {
     .speciesName = _("Abra"),
     .categoryName = _("Spaceworld"),
+        .height = 211, // approx from sprite bbox
+        .weight = 430, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_PSYCHIC, TYPE_PSYCHIC),
     .baseHP = 25,
     .baseAttack = 20,
@@ -38,6 +41,9 @@
 {
     .speciesName = _("Aerodactyl"),
     .categoryName = _("Spaceworld"),
+        .height = 511, // approx from sprite bbox
+        .weight = 1300, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_ROCK, TYPE_FLYING),
     .baseHP = 80,
     .baseAttack = 105,
@@ -74,6 +80,9 @@
 {
     .speciesName = _("Aipom"),
     .categoryName = _("Spaceworld"),
+        .height = 207, // approx from sprite bbox
+        .weight = 250, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_NORMAL),
     .baseHP = 55,
     .baseAttack = 70,
@@ -110,6 +119,9 @@
 {
     .speciesName = _("Alakazam"),
     .categoryName = _("Spaceworld"),
+        .height = 411, // approx from sprite bbox
+        .weight = 1060, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_PSYCHIC, TYPE_PSYCHIC),
     .baseHP = 55,
     .baseAttack = 50,
@@ -146,6 +158,9 @@
 {
     .speciesName = _("Ampharos"),
     .categoryName = _("Spaceworld"),
+        .height = 407, // approx from sprite bbox
+        .weight = 1360, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_ELECTRIC, TYPE_ELECTRIC),
     .baseHP = 90,
     .baseAttack = 75,
@@ -182,6 +197,9 @@
 {
     .speciesName = _("Anchorage"),
     .categoryName = _("Spaceworld"),
+        .height = 311, // approx from sprite bbox
+        .weight = 360, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_STEEL),
     .baseHP = 55,
     .baseAttack = 80,
@@ -218,6 +236,9 @@
 {
     .speciesName = _("Aquallo"),
     .categoryName = _("Spaceworld"),
+        .height = 304, // approx from sprite bbox
+        .weight = 910, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_WATER),
     .baseHP = 75,
     .baseAttack = 60,
@@ -254,6 +275,9 @@
 {
     .speciesName = _("Aquarius"),
     .categoryName = _("Spaceworld"),
+        .height = 702, // approx from sprite bbox
+        .weight = 2170, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_WATER),
     .baseHP = 100,
     .baseAttack = 80,
@@ -290,6 +314,9 @@
 {
     .speciesName = _("Arbok"),
     .categoryName = _("Spaceworld"),
+        .height = 1106, // approx from sprite bbox
+        .weight = 1430, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_POISON, TYPE_POISON),
     .baseHP = 60,
     .baseAttack = 85,
@@ -326,6 +353,9 @@
 {
     .speciesName = _("Arcanine"),
     .categoryName = _("Spaceworld"),
+        .height = 603, // approx from sprite bbox
+        .weight = 3420, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_FIRE, TYPE_FIRE),
     .baseHP = 90,
     .baseAttack = 110,
@@ -362,6 +392,9 @@
 {
     .speciesName = _("Articuno"),
     .categoryName = _("Spaceworld"),
+        .height = 507, // approx from sprite bbox
+        .weight = 1220, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_ICE, TYPE_FLYING),
     .baseHP = 90,
     .baseAttack = 85,
@@ -398,6 +431,9 @@
 {
     .speciesName = _("Azumarill"),
     .categoryName = _("Spaceworld"),
+        .height = 207, // approx from sprite bbox
+        .weight = 630, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_WATER),
     .baseHP = 100,
     .baseAttack = 50,
@@ -460,12 +496,17 @@
     .shinyPalette = gSwMonShinyPalette_Ballerine,
     .iconSprite = gSwIcon_Humanshape,
     .iconPalIndex = 6,
+        .height = 205, // approx from sprite bbox
+        .weight = 430, // approx from sprite bbox
 },
 
 [SPECIES_BEEDRILL_SPACEWORLD] =
 {
     .speciesName = _("Beedrill"),
     .categoryName = _("Spaceworld"),
+        .height = 303, // approx from sprite bbox
+        .weight = 650, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_BUG, TYPE_POISON),
     .baseHP = 65,
     .baseAttack = 80,
@@ -502,6 +543,9 @@
 {
     .speciesName = _("Bellossom"),
     .categoryName = _("Spaceworld"),
+        .height = 104, // approx from sprite bbox
+        .weight = 130, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GRASS, TYPE_POISON),
     .baseHP = 75,
     .baseAttack = 80,
@@ -568,12 +612,18 @@
     .shinyPaletteFemale = gSwMonShinyPalette_Bellrun,
     .iconSprite = gSwIcon_Fox,
     .iconPalIndex = 6,
+    .height = 250, // approx from sprite bbox
+    .weight = 1168, // approx from sprite bbox
+
 },
 
 [SPECIES_BELLSPROUT_SPACEWORLD] =
 {
     .speciesName = _("Bellsprout"),
     .categoryName = _("Spaceworld"),
+        .height = 204, // approx from sprite bbox
+        .weight = 90, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GRASS, TYPE_POISON),
     .baseHP = 50,
     .baseAttack = 75,
@@ -640,12 +690,18 @@
     .shinyPaletteFemale = gSwMonShinyPalette_Belmitt,
     .iconSprite = gSwIcon_Oddish,
     .iconPalIndex = 6,
+    .height = 250, // approx from sprite bbox
+    .weight = 1688, // approx from sprite bbox
+
 },
 
 [SPECIES_BLASTOISE_SPACEWORLD] =
 {
     .speciesName = _("Blastoise"),
     .categoryName = _("Spaceworld"),
+        .height = 503, // approx from sprite bbox
+        .weight = 1890, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_WATER),
     .baseHP = 79,
     .baseAttack = 83,
@@ -682,6 +738,9 @@
 {
     .speciesName = _("Blissey"),
     .categoryName = _("Spaceworld"),
+        .height = 411, // approx from sprite bbox
+        .weight = 1030, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_NORMAL),
     .baseHP = 255,
     .baseAttack = 10,
@@ -748,12 +807,18 @@
     .shinyPaletteFemale = gSwMonShinyPalette_Bomsheal,
     .iconSprite = gSwIcon_Lapras,
     .iconPalIndex = 6,
+    .height = 250, // approx from sprite bbox
+    .weight = 1168, // approx from sprite bbox
+
 },
 
 [SPECIES_BULBASAUR_SPACEWORLD] =
 {
     .speciesName = _("Bulbasaur"),
     .categoryName = _("Spaceworld"),
+        .height = 204, // approx from sprite bbox
+        .weight = 150, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GRASS, TYPE_POISON),
     .baseHP = 45,
     .baseAttack = 49,
@@ -790,6 +855,9 @@
 {
     .speciesName = _("Butterfree"),
     .categoryName = _("Spaceworld"),
+        .height = 307, // approx from sprite bbox
+        .weight = 710, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_BUG, TYPE_FLYING),
     .baseHP = 60,
     .baseAttack = 45,
@@ -826,6 +894,9 @@
 {
     .speciesName = _("Caterpie"),
     .categoryName = _("Spaceworld"),
+        .height = 100, // approx from sprite bbox
+        .weight = 60, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_BUG, TYPE_BUG),
     .baseHP = 45,
     .baseAttack = 30,
@@ -862,6 +933,9 @@
 {
     .speciesName = _("Chansey"),
     .categoryName = _("Spaceworld"),
+        .height = 307, // approx from sprite bbox
+        .weight = 760, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_NORMAL),
     .baseHP = 250,
     .baseAttack = 5,
@@ -898,6 +972,9 @@
 {
     .speciesName = _("Charizard"),
     .categoryName = _("Spaceworld"),
+        .height = 507, // approx from sprite bbox
+        .weight = 2000, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_FIRE, TYPE_FLYING),
     .baseHP = 78,
     .baseAttack = 84,
@@ -934,6 +1011,9 @@
 {
     .speciesName = _("Charmander"),
     .categoryName = _("Spaceworld"),
+        .height = 200, // approx from sprite bbox
+        .weight = 190, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_FIRE, TYPE_FIRE),
     .baseHP = 39,
     .baseAttack = 52,
@@ -970,6 +1050,9 @@
 {
     .speciesName = _("Charmeleon"),
     .categoryName = _("Spaceworld"),
+        .height = 307, // approx from sprite bbox
+        .weight = 420, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_FIRE, TYPE_FIRE),
     .baseHP = 58,
     .baseAttack = 64,
@@ -1006,6 +1089,9 @@
 {
     .speciesName = _("Chikorita"),
     .categoryName = _("Spaceworld"),
+        .height = 211, // approx from sprite bbox
+        .weight = 140, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GRASS, TYPE_GRASS),
     .baseHP = 45,
     .baseAttack = 49,
@@ -1042,6 +1128,9 @@
 {
     .speciesName = _("Chix"),
     .categoryName = _("Spaceworld"),
+        .height = 203, // approx from sprite bbox
+        .weight = 450, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_FLYING),
     .baseHP = 30,
     .baseAttack = 65,
@@ -1078,6 +1167,9 @@
 {
     .speciesName = _("Clefable"),
     .categoryName = _("Spaceworld"),
+        .height = 403, // approx from sprite bbox
+        .weight = 880, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_NORMAL),
     .baseHP = 95,
     .baseAttack = 70,
@@ -1114,6 +1206,9 @@
 {
     .speciesName = _("Clefairy"),
     .categoryName = _("Spaceworld"),
+        .height = 200, // approx from sprite bbox
+        .weight = 170, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_NORMAL),
     .baseHP = 70,
     .baseAttack = 45,
@@ -1150,6 +1245,9 @@
 {
     .speciesName = _("Cleffa"),
     .categoryName = _("Spaceworld"),
+        .height = 100, // approx from sprite bbox
+        .weight = 70, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_NORMAL),
     .baseHP = 50,
     .baseAttack = 35,
@@ -1186,6 +1284,9 @@
 {
     .speciesName = _("Cloyster"),
     .categoryName = _("Spaceworld"),
+        .height = 411, // approx from sprite bbox
+        .weight = 2920, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_ICE),
     .baseHP = 50,
     .baseAttack = 95,
@@ -1252,12 +1353,18 @@
     .shinyPaletteFemale = gSwMonShinyPalette_Corasun,
     .iconSprite = gSwIcon_Fish,
     .iconPalIndex = 6,
+    .height = 157, // approx from sprite bbox
+    .weight = 293, // approx from sprite bbox
+
 },
 
 [SPECIES_CROBAT_SPACEWORLD] =
 {
     .speciesName = _("Crobat"),
     .categoryName = _("Spaceworld"),
+        .height = 511, // approx from sprite bbox
+        .weight = 1650, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_POISON, TYPE_FLYING),
     .baseHP = 85,
     .baseAttack = 90,
@@ -1324,12 +1431,18 @@
     .shinyPaletteFemale = gSwMonShinyPalette_Cruize,
     .iconSprite = gSwIcon_Lapras,
     .iconPalIndex = 6,
+    .height = 112, // approx from sprite bbox
+    .weight = 118, // approx from sprite bbox
+
 },
 
 [SPECIES_CUBONE_SPACEWORLD] =
 {
     .speciesName = _("Cubone"),
     .categoryName = _("Spaceworld"),
+        .height = 104, // approx from sprite bbox
+        .weight = 140, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GROUND, TYPE_GROUND),
     .baseHP = 50,
     .baseAttack = 50,
@@ -1366,6 +1479,9 @@
 {
     .speciesName = _("Delibird"),
     .categoryName = _("Spaceworld"),
+        .height = 211, // approx from sprite bbox
+        .weight = 350, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_ICE),
     .baseHP = 45,
     .baseAttack = 55,
@@ -1402,6 +1518,9 @@
 {
     .speciesName = _("Dewgong"),
     .categoryName = _("Spaceworld"),
+        .height = 507, // approx from sprite bbox
+        .weight = 2650, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_ICE),
     .baseHP = 90,
     .baseAttack = 70,
@@ -1438,6 +1557,9 @@
 {
     .speciesName = _("Diglett"),
     .categoryName = _("Spaceworld"),
+        .height = 8, // approx from sprite bbox
+        .weight = 20, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GROUND, TYPE_GROUND),
     .baseHP = 10,
     .baseAttack = 55,
@@ -1474,6 +1596,9 @@
 {
     .speciesName = _("Ditto"),
     .categoryName = _("Spaceworld"),
+        .height = 100, // approx from sprite bbox
+        .weight = 90, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_NORMAL),
     .baseHP = 48,
     .baseAttack = 48,
@@ -1510,6 +1635,9 @@
 {
     .speciesName = _("Dodrio"),
     .categoryName = _("Spaceworld"),
+        .height = 511, // approx from sprite bbox
+        .weight = 1880, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_FLYING),
     .baseHP = 60,
     .baseAttack = 110,
@@ -1546,6 +1674,9 @@
 {
     .speciesName = _("Doduo"),
     .categoryName = _("Spaceworld"),
+        .height = 407, // approx from sprite bbox
+        .weight = 860, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_FLYING),
     .baseHP = 35,
     .baseAttack = 85,
@@ -1582,6 +1713,9 @@
 {
     .speciesName = _("Donphan"),
     .categoryName = _("Spaceworld"),
+        .height = 307, // approx from sprite bbox
+        .weight = 2650, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GROUND, TYPE_GROUND),
     .baseHP = 90,
     .baseAttack = 120,
@@ -1618,6 +1752,9 @@
 {
     .speciesName = _("Dragonair"),
     .categoryName = _("Spaceworld"),
+        .height = 1301, // approx from sprite bbox
+        .weight = 360, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_DRAGON, TYPE_DRAGON),
     .baseHP = 61,
     .baseAttack = 84,
@@ -1654,6 +1791,9 @@
 {
     .speciesName = _("Dragonite"),
     .categoryName = _("Spaceworld"),
+        .height = 703, // approx from sprite bbox
+        .weight = 4630, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_DRAGON, TYPE_FLYING),
     .baseHP = 91,
     .baseAttack = 134,
@@ -1690,6 +1830,9 @@
 {
     .speciesName = _("Dratini"),
     .categoryName = _("Spaceworld"),
+        .height = 511, // approx from sprite bbox
+        .weight = 70, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_DRAGON, TYPE_DRAGON),
     .baseHP = 41,
     .baseAttack = 64,
@@ -1726,6 +1869,9 @@
 {
     .speciesName = _("Drowzee"),
     .categoryName = _("Spaceworld"),
+        .height = 303, // approx from sprite bbox
+        .weight = 710, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_PSYCHIC, TYPE_PSYCHIC),
     .baseHP = 60,
     .baseAttack = 48,
@@ -1762,6 +1908,9 @@
 {
     .speciesName = _("Dugtrio"),
     .categoryName = _("Spaceworld"),
+        .height = 204, // approx from sprite bbox
+        .weight = 730, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GROUND, TYPE_GROUND),
     .baseHP = 35,
     .baseAttack = 80,
@@ -1798,6 +1947,9 @@
 {
     .speciesName = _("Dynabear"),
     .categoryName = _("Spaceworld"),
+        .height = 511, // approx from sprite bbox
+        .weight = 2180, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_FIRE, TYPE_FIRE),
     .baseHP = 85,
     .baseAttack = 103,
@@ -1834,6 +1986,9 @@
 {
     .speciesName = _("Eevee"),
     .categoryName = _("Spaceworld"),
+        .height = 100, // approx from sprite bbox
+        .weight = 140, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_NORMAL),
     .baseHP = 55,
     .baseAttack = 55,
@@ -1870,6 +2025,9 @@
 {
     .speciesName = _("Ekans"),
     .categoryName = _("Spaceworld"),
+        .height = 607, // approx from sprite bbox
+        .weight = 150, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_POISON, TYPE_POISON),
     .baseHP = 35,
     .baseAttack = 60,
@@ -1936,12 +2094,18 @@
     .shinyPaletteFemale = gSwMonShinyPalette_Elebabe,
     .iconSprite = gSwIcon_Humanshape,
     .iconPalIndex = 6,
+    .height = 157, // approx from sprite bbox
+    .weight = 293, // approx from sprite bbox
+
 },
 
 [SPECIES_ELECTABUZZ_SPACEWORLD] =
 {
     .speciesName = _("Electabuzz"),
     .categoryName = _("Spaceworld"),
+        .height = 307, // approx from sprite bbox
+        .weight = 660, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_ELECTRIC, TYPE_ELECTRIC),
     .baseHP = 65,
     .baseAttack = 83,
@@ -1978,6 +2142,9 @@
 {
     .speciesName = _("Electrode"),
     .categoryName = _("Spaceworld"),
+        .height = 311, // approx from sprite bbox
+        .weight = 1470, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_ELECTRIC, TYPE_ELECTRIC),
     .baseHP = 60,
     .baseAttack = 50,
@@ -2014,6 +2181,9 @@
 {
     .speciesName = _("Entei"),
     .categoryName = _("Spaceworld"),
+        .height = 607, // approx from sprite bbox
+        .weight = 4370, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_FIRE, TYPE_FIRE),
     .baseHP = 115,
     .baseAttack = 115,
@@ -2047,6 +2217,9 @@
 {
     .speciesName = _("Espeon"),
     .categoryName = _("Spaceworld"),
+        .height = 211, // approx from sprite bbox
+        .weight = 580, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_PSYCHIC, TYPE_PSYCHIC),
     .baseHP = 65,
     .baseAttack = 65,
@@ -2083,6 +2256,9 @@
 {
     .speciesName = _("Exeggcute"),
     .categoryName = _("Spaceworld"),
+        .height = 104, // approx from sprite bbox
+        .weight = 60, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GRASS, TYPE_PSYCHIC),
     .baseHP = 60,
     .baseAttack = 40,
@@ -2119,6 +2295,9 @@
 {
     .speciesName = _("Exeggutor"),
     .categoryName = _("Spaceworld"),
+        .height = 607, // approx from sprite bbox
+        .weight = 2650, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GRASS, TYPE_PSYCHIC),
     .baseHP = 95,
     .baseAttack = 95,
@@ -2185,12 +2364,17 @@
     .shinyPaletteFemale = gSwMonShinyPalette_FarfetchD,
     .iconSprite = gSwIcon_Bird,
     .iconPalIndex = 6,
+        .height = 207, // approx from sprite bbox
+        .weight = 330, // approx from sprite bbox
 },
 
 [SPECIES_FEAROW_SPACEWORLD] =
 {
     .speciesName = _("Fearow"),
     .categoryName = _("Spaceworld"),
+        .height = 311, // approx from sprite bbox
+        .weight = 840, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_FLYING),
     .baseHP = 65,
     .baseAttack = 90,
@@ -2227,6 +2411,9 @@
 {
     .speciesName = _("Flaaffy"),
     .categoryName = _("Spaceworld"),
+        .height = 207, // approx from sprite bbox
+        .weight = 290, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_ELECTRIC, TYPE_ELECTRIC),
     .baseHP = 70,
     .baseAttack = 55,
@@ -2263,6 +2450,9 @@
 {
     .speciesName = _("Flambear"),
     .categoryName = _("Spaceworld"),
+        .height = 201, // approx from sprite bbox
+        .weight = 220, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_FIRE, TYPE_FIRE),
     .baseHP = 45,
     .baseAttack = 54,
@@ -2299,6 +2489,9 @@
 {
     .speciesName = _("Flareon"),
     .categoryName = _("Spaceworld"),
+        .height = 211, // approx from sprite bbox
+        .weight = 550, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_FIRE, TYPE_FIRE),
     .baseHP = 65,
     .baseAttack = 130,
@@ -2335,6 +2528,9 @@
 {
     .speciesName = _("Gastly"),
     .categoryName = _("Spaceworld"),
+        .height = 403, // approx from sprite bbox
+        .weight = 2, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GHOST, TYPE_POISON),
     .baseHP = 30,
     .baseAttack = 35,
@@ -2400,12 +2596,18 @@
     .shinyPalette = gSwMonShinyPalette_Gelania,
     .iconSprite = gSwIcon_Oddish,
     .iconPalIndex = 6,
+    .height = 250, // approx from sprite bbox
+    .weight = 1580, // approx from sprite bbox
+
 },
 
 [SPECIES_GENGAR_SPACEWORLD] =
 {
     .speciesName = _("Gengar"),
     .categoryName = _("Spaceworld"),
+        .height = 411, // approx from sprite bbox
+        .weight = 890, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GHOST, TYPE_POISON),
     .baseHP = 60,
     .baseAttack = 65,
@@ -2442,6 +2644,9 @@
 {
     .speciesName = _("Geodude"),
     .categoryName = _("Spaceworld"),
+        .height = 104, // approx from sprite bbox
+        .weight = 440, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_ROCK, TYPE_GROUND),
     .baseHP = 40,
     .baseAttack = 80,
@@ -2478,6 +2683,9 @@
 {
     .speciesName = _("Girafarig"),
     .categoryName = _("Spaceworld"),
+        .height = 411, // approx from sprite bbox
+        .weight = 910, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_DARK, TYPE_NORMAL),
     .baseHP = 70,
     .baseAttack = 90,
@@ -2514,6 +2722,9 @@
 {
     .speciesName = _("Gloom"),
     .categoryName = _("Spaceworld"),
+        .height = 207, // approx from sprite bbox
+        .weight = 190, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GRASS, TYPE_POISON),
     .baseHP = 60,
     .baseAttack = 65,
@@ -2550,6 +2761,9 @@
 {
     .speciesName = _("Golbat"),
     .categoryName = _("Spaceworld"),
+        .height = 503, // approx from sprite bbox
+        .weight = 1210, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_POISON, TYPE_FLYING),
     .baseHP = 75,
     .baseAttack = 80,
@@ -2586,6 +2800,9 @@
 {
     .speciesName = _("Goldeen"),
     .categoryName = _("Spaceworld"),
+        .height = 200, // approx from sprite bbox
+        .weight = 330, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_WATER),
     .baseHP = 45,
     .baseAttack = 67,
@@ -2622,6 +2839,9 @@
 {
     .speciesName = _("Golduck"),
     .categoryName = _("Spaceworld"),
+        .height = 507, // approx from sprite bbox
+        .weight = 1690, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_WATER),
     .baseHP = 80,
     .baseAttack = 82,
@@ -2658,6 +2878,9 @@
 {
     .speciesName = _("Golem"),
     .categoryName = _("Spaceworld"),
+        .height = 407, // approx from sprite bbox
+        .weight = 6620, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_ROCK, TYPE_GROUND),
     .baseHP = 80,
     .baseAttack = 110,
@@ -2694,6 +2917,9 @@
 {
     .speciesName = _("Graveler"),
     .categoryName = _("Spaceworld"),
+        .height = 303, // approx from sprite bbox
+        .weight = 2320, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_ROCK, TYPE_GROUND),
     .baseHP = 55,
     .baseAttack = 95,
@@ -2730,6 +2956,9 @@
 {
     .speciesName = _("Grimby"),
     .categoryName = _("Spaceworld"),
+        .height = 101, // approx from sprite bbox
+        .weight = 400, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_POISON, TYPE_POISON),
     .baseHP = 60,
     .baseAttack = 70,
@@ -2766,6 +2995,9 @@
 {
     .speciesName = _("Grimer"),
     .categoryName = _("Spaceworld"),
+        .height = 211, // approx from sprite bbox
+        .weight = 660, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_POISON, TYPE_POISON),
     .baseHP = 80,
     .baseAttack = 80,
@@ -2802,6 +3034,9 @@
 {
     .speciesName = _("Grotess"),
     .categoryName = _("Spaceworld"),
+        .height = 207, // approx from sprite bbox
+        .weight = 720, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_STEEL),
     .baseHP = 75,
     .baseAttack = 75,
@@ -2838,6 +3073,9 @@
 {
     .speciesName = _("Growlithe"),
     .categoryName = _("Spaceworld"),
+        .height = 204, // approx from sprite bbox
+        .weight = 420, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_FIRE, TYPE_FIRE),
     .baseHP = 55,
     .baseAttack = 70,
@@ -2904,12 +3142,18 @@
     .shinyPaletteFemale = gSwMonShinyPalette_Gupgold,
     .iconSprite = gSwIcon_Fish,
     .iconPalIndex = 6,
+    .height = 135, // approx from sprite bbox
+    .weight = 207, // approx from sprite bbox
+
 },
 
 [SPECIES_GYARADOS_SPACEWORLD] =
 {
     .speciesName = _("Gyarados"),
     .categoryName = _("Spaceworld"),
+        .height = 2104, // approx from sprite bbox
+        .weight = 5180, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_FLYING),
     .baseHP = 95,
     .baseAttack = 125,
@@ -2946,6 +3190,9 @@
 {
     .speciesName = _("Haunter"),
     .categoryName = _("Spaceworld"),
+        .height = 503, // approx from sprite bbox
+        .weight = 2, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GHOST, TYPE_POISON),
     .baseHP = 45,
     .baseAttack = 50,
@@ -2982,6 +3229,9 @@
 {
     .speciesName = _("Hitmonchan"),
     .categoryName = _("Spaceworld"),
+        .height = 407, // approx from sprite bbox
+        .weight = 1110, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_FIGHTING, TYPE_FIGHTING),
     .baseHP = 50,
     .baseAttack = 105,
@@ -3018,6 +3268,9 @@
 {
     .speciesName = _("Hitmonlee"),
     .categoryName = _("Spaceworld"),
+        .height = 411, // approx from sprite bbox
+        .weight = 1100, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_FIGHTING, TYPE_FIGHTING),
     .baseHP = 50,
     .baseAttack = 120,
@@ -3054,6 +3307,9 @@
 {
     .speciesName = _("Hitmontop"),
     .categoryName = _("Spaceworld"),
+        .height = 407, // approx from sprite bbox
+        .weight = 1060, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_FIGHTING, TYPE_FIGHTING),
     .baseHP = 50,
     .baseAttack = 95,
@@ -3120,12 +3376,17 @@
     .shinyPaletteFemale = gSwMonShinyPalette_HoOh,
     .iconSprite = gSwIcon_HoOh,
     .iconPalIndex = 6,
+        .height = 1206, // approx from sprite bbox
+        .weight = 4390, // approx from sprite bbox
 },
 
 [SPECIES_HOOTHOOT_SPACEWORLD] =
 {
     .speciesName = _("Hoothoot"),
     .categoryName = _("Spaceworld"),
+        .height = 204, // approx from sprite bbox
+        .weight = 470, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_FLYING, TYPE_FLYING),
     .baseHP = 60,
     .baseAttack = 30,
@@ -3162,6 +3423,9 @@
 {
     .speciesName = _("Hoppip"),
     .categoryName = _("Spaceworld"),
+        .height = 104, // approx from sprite bbox
+        .weight = 10, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GRASS, TYPE_FLYING),
     .baseHP = 35,
     .baseAttack = 35,
@@ -3198,6 +3462,9 @@
 {
     .speciesName = _("Horsea"),
     .categoryName = _("Spaceworld"),
+        .height = 104, // approx from sprite bbox
+        .weight = 180, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_WATER),
     .baseHP = 30,
     .baseAttack = 40,
@@ -3234,6 +3501,9 @@
 {
     .speciesName = _("Houndoom"),
     .categoryName = _("Spaceworld"),
+        .height = 407, // approx from sprite bbox
+        .weight = 770, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_DARK, TYPE_FIRE),
     .baseHP = 75,
     .baseAttack = 90,
@@ -3270,6 +3540,9 @@
 {
     .speciesName = _("Houndour"),
     .categoryName = _("Spaceworld"),
+        .height = 200, // approx from sprite bbox
+        .weight = 240, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_DARK, TYPE_FIRE),
     .baseHP = 45,
     .baseAttack = 60,
@@ -3306,6 +3579,9 @@
 {
     .speciesName = _("Hypno"),
     .categoryName = _("Spaceworld"),
+        .height = 503, // approx from sprite bbox
+        .weight = 1670, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_PSYCHIC, TYPE_PSYCHIC),
     .baseHP = 85,
     .baseAttack = 73,
@@ -3342,6 +3618,9 @@
 {
     .speciesName = _("Igglybuff"),
     .categoryName = _("Spaceworld"),
+        .height = 100, // approx from sprite bbox
+        .weight = 20, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_NORMAL),
     .baseHP = 95,
     .baseAttack = 35,
@@ -3378,6 +3657,9 @@
 {
     .speciesName = _("Ivysaur"),
     .categoryName = _("Spaceworld"),
+        .height = 303, // approx from sprite bbox
+        .weight = 290, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GRASS, TYPE_POISON),
     .baseHP = 60,
     .baseAttack = 62,
@@ -3414,6 +3696,9 @@
 {
     .speciesName = _("Jigglypuff"),
     .categoryName = _("Spaceworld"),
+        .height = 108, // approx from sprite bbox
+        .weight = 120, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_NORMAL),
     .baseHP = 115,
     .baseAttack = 45,
@@ -3450,6 +3735,9 @@
 {
     .speciesName = _("Jolteon"),
     .categoryName = _("Spaceworld"),
+        .height = 207, // approx from sprite bbox
+        .weight = 540, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_ELECTRIC, TYPE_ELECTRIC),
     .baseHP = 65,
     .baseAttack = 65,
@@ -3486,6 +3774,9 @@
 {
     .speciesName = _("Jumpluff"),
     .categoryName = _("Spaceworld"),
+        .height = 207, // approx from sprite bbox
+        .weight = 70, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GRASS, TYPE_FLYING),
     .baseHP = 75,
     .baseAttack = 55,
@@ -3522,6 +3813,9 @@
 {
     .speciesName = _("Jynx"),
     .categoryName = _("Spaceworld"),
+        .height = 407, // approx from sprite bbox
+        .weight = 900, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_ICE, TYPE_PSYCHIC),
     .baseHP = 65,
     .baseAttack = 50,
@@ -3558,6 +3852,9 @@
 {
     .speciesName = _("Kabuto"),
     .categoryName = _("Spaceworld"),
+        .height = 108, // approx from sprite bbox
+        .weight = 250, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_ROCK, TYPE_WATER),
     .baseHP = 30,
     .baseAttack = 80,
@@ -3594,6 +3891,9 @@
 {
     .speciesName = _("Kabutops"),
     .categoryName = _("Spaceworld"),
+        .height = 403, // approx from sprite bbox
+        .weight = 890, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_ROCK, TYPE_WATER),
     .baseHP = 60,
     .baseAttack = 115,
@@ -3630,6 +3930,9 @@
 {
     .speciesName = _("Kadabra"),
     .categoryName = _("Spaceworld"),
+        .height = 403, // approx from sprite bbox
+        .weight = 1250, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_PSYCHIC, TYPE_PSYCHIC),
     .baseHP = 40,
     .baseAttack = 35,
@@ -3666,6 +3969,9 @@
 {
     .speciesName = _("Kakuna"),
     .categoryName = _("Spaceworld"),
+        .height = 200, // approx from sprite bbox
+        .weight = 220, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_BUG, TYPE_POISON),
     .baseHP = 45,
     .baseAttack = 25,
@@ -3702,6 +4008,9 @@
 {
     .speciesName = _("Kangaskhan"),
     .categoryName = _("Spaceworld"),
+        .height = 703, // approx from sprite bbox
+        .weight = 1760, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_NORMAL),
     .baseHP = 105,
     .baseAttack = 95,
@@ -3738,6 +4047,9 @@
 {
     .speciesName = _("Kingdra"),
     .categoryName = _("Spaceworld"),
+        .height = 511, // approx from sprite bbox
+        .weight = 3350, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_DRAGON),
     .baseHP = 75,
     .baseAttack = 95,
@@ -3774,6 +4086,9 @@
 {
     .speciesName = _("Kingler"),
     .categoryName = _("Spaceworld"),
+        .height = 403, // approx from sprite bbox
+        .weight = 1320, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_WATER),
     .baseHP = 55,
     .baseAttack = 130,
@@ -3810,6 +4125,9 @@
 {
     .speciesName = _("Koffing"),
     .categoryName = _("Spaceworld"),
+        .height = 200, // approx from sprite bbox
+        .weight = 20, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_POISON, TYPE_POISON),
     .baseHP = 40,
     .baseAttack = 65,
@@ -3846,6 +4164,9 @@
 {
     .speciesName = _("Kotora"),
     .categoryName = _("Spaceworld"),
+        .height = 203, // approx from sprite bbox
+        .weight = 470, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_ELECTRIC, TYPE_ELECTRIC),
     .baseHP = 80,
     .baseAttack = 55,
@@ -3882,6 +4203,9 @@
 {
     .speciesName = _("Krabby"),
     .categoryName = _("Spaceworld"),
+        .height = 104, // approx from sprite bbox
+        .weight = 140, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_WATER),
     .baseHP = 30,
     .baseAttack = 105,
@@ -3948,12 +4272,18 @@
     .shinyPaletteFemale = gSwMonShinyPalette_Kurstraw,
     .iconSprite = gSwIcon_Ghost,
     .iconPalIndex = 6,
+    .height = 250, // approx from sprite bbox
+    .weight = 689, // approx from sprite bbox
+
 },
 
 [SPECIES_LAPRAS_SPACEWORLD] =
 {
     .speciesName = _("Lapras"),
     .categoryName = _("Spaceworld"),
+        .height = 802, // approx from sprite bbox
+        .weight = 4850, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_ICE),
     .baseHP = 130,
     .baseAttack = 85,
@@ -3990,6 +4320,9 @@
 {
     .speciesName = _("Leafeon"),
     .categoryName = _("Spaceworld"),
+        .height = 211, // approx from sprite bbox
+        .weight = 580, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GRASS, TYPE_GRASS),
     .baseHP = 65,
     .baseAttack = 60,
@@ -4026,6 +4359,9 @@
 {
     .speciesName = _("Ledyba"),
     .categoryName = _("Spaceworld"),
+        .height = 303, // approx from sprite bbox
+        .weight = 240, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_BUG, TYPE_FLYING),
     .baseHP = 40,
     .baseAttack = 40,
@@ -4092,12 +4428,17 @@
     .shinyPaletteFemale = gSwMonShinyPalette_Lickilord,
     .iconSprite = gSwIcon_Monster,
     .iconPalIndex = 6,
+        .height = 409, // approx from sprite bbox
+        .weight = 1720, // approx from sprite bbox
 },
 
 [SPECIES_LICKITUNG_SPACEWORLD] =
 {
     .speciesName = _("Lickitung"),
     .categoryName = _("Spaceworld"),
+        .height = 311, // approx from sprite bbox
+        .weight = 1440, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_NORMAL),
     .baseHP = 90,
     .baseAttack = 55,
@@ -4134,6 +4475,9 @@
 {
     .speciesName = _("Lugia"),
     .categoryName = _("Spaceworld"),
+        .height = 1701, // approx from sprite bbox
+        .weight = 4760, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_PSYCHIC, TYPE_FLYING),
     .baseHP = 106,
     .baseAttack = 90,
@@ -4170,6 +4514,9 @@
 {
     .speciesName = _("Machamp"),
     .categoryName = _("Spaceworld"),
+        .height = 503, // approx from sprite bbox
+        .weight = 2870, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_FIGHTING, TYPE_FIGHTING),
     .baseHP = 90,
     .baseAttack = 130,
@@ -4206,6 +4553,9 @@
 {
     .speciesName = _("Machoke"),
     .categoryName = _("Spaceworld"),
+        .height = 411, // approx from sprite bbox
+        .weight = 1550, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_FIGHTING, TYPE_FIGHTING),
     .baseHP = 80,
     .baseAttack = 100,
@@ -4242,6 +4592,9 @@
 {
     .speciesName = _("Machop"),
     .categoryName = _("Spaceworld"),
+        .height = 207, // approx from sprite bbox
+        .weight = 430, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_FIGHTING, TYPE_FIGHTING),
     .baseHP = 70,
     .baseAttack = 80,
@@ -4278,6 +4631,9 @@
 {
     .speciesName = _("Madame"),
     .categoryName = _("Spaceworld"),
+        .height = 401, // approx from sprite bbox
+        .weight = 710, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_FLYING),
     .baseHP = 67,
     .baseAttack = 105,
@@ -4314,6 +4670,9 @@
 {
     .speciesName = _("Magby"),
     .categoryName = _("Spaceworld"),
+        .height = 204, // approx from sprite bbox
+        .weight = 470, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_FIRE, TYPE_FIRE),
     .baseHP = 45,
     .baseAttack = 75,
@@ -4350,6 +4709,9 @@
 {
     .speciesName = _("Magikarp"),
     .categoryName = _("Spaceworld"),
+        .height = 211, // approx from sprite bbox
+        .weight = 220, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_WATER),
     .baseHP = 20,
     .baseAttack = 10,
@@ -4386,6 +4748,9 @@
 {
     .speciesName = _("Magmar"),
     .categoryName = _("Spaceworld"),
+        .height = 403, // approx from sprite bbox
+        .weight = 980, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_FIRE, TYPE_FIRE),
     .baseHP = 65,
     .baseAttack = 95,
@@ -4422,6 +4787,9 @@
 {
     .speciesName = _("Magnemite"),
     .categoryName = _("Spaceworld"),
+        .height = 100, // approx from sprite bbox
+        .weight = 130, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_ELECTRIC, TYPE_STEEL),
     .baseHP = 25,
     .baseAttack = 35,
@@ -4458,6 +4826,9 @@
 {
     .speciesName = _("Magneton"),
     .categoryName = _("Spaceworld"),
+        .height = 303, // approx from sprite bbox
+        .weight = 1320, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_ELECTRIC, TYPE_STEEL),
     .baseHP = 50,
     .baseAttack = 60,
@@ -4494,6 +4865,9 @@
 {
     .speciesName = _("Mankey"),
     .categoryName = _("Spaceworld"),
+        .height = 108, // approx from sprite bbox
+        .weight = 620, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_FIGHTING, TYPE_FIGHTING),
     .baseHP = 40,
     .baseAttack = 80,
@@ -4530,6 +4904,9 @@
 {
     .speciesName = _("Mareep"),
     .categoryName = _("Spaceworld"),
+        .height = 200, // approx from sprite bbox
+        .weight = 170, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_ELECTRIC, TYPE_ELECTRIC),
     .baseHP = 55,
     .baseAttack = 40,
@@ -4566,6 +4943,9 @@
 {
     .speciesName = _("Marill"),
     .categoryName = _("Spaceworld"),
+        .height = 104, // approx from sprite bbox
+        .weight = 190, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_WATER),
     .baseHP = 70,
     .baseAttack = 20,
@@ -4602,6 +4982,9 @@
 {
     .speciesName = _("Marowak"),
     .categoryName = _("Spaceworld"),
+        .height = 303, // approx from sprite bbox
+        .weight = 990, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GROUND, TYPE_GROUND),
     .baseHP = 60,
     .baseAttack = 80,
@@ -4638,6 +5021,9 @@
 {
     .speciesName = _("Meganium"),
     .categoryName = _("Spaceworld"),
+        .height = 511, // approx from sprite bbox
+        .weight = 2220, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GRASS, TYPE_GRASS),
     .baseHP = 80,
     .baseAttack = 82,
@@ -4673,6 +5059,9 @@
 {
     .speciesName = _("Meowth"),
     .categoryName = _("Spaceworld"),
+        .height = 104, // approx from sprite bbox
+        .weight = 90, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_NORMAL),
     .baseHP = 40,
     .baseAttack = 45,
@@ -4709,6 +5098,9 @@
 {
     .speciesName = _("Metapod"),
     .categoryName = _("Spaceworld"),
+        .height = 204, // approx from sprite bbox
+        .weight = 220, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_BUG, TYPE_BUG),
     .baseHP = 50,
     .baseAttack = 20,
@@ -4775,12 +5167,18 @@
     .shinyPaletteFemale = gSwMonShinyPalette_Metto,
     .iconSprite = gSwIcon_Blob,
     .iconPalIndex = 6,
+    .height = 250, // approx from sprite bbox
+    .weight = 1104, // approx from sprite bbox
+
 },
 
 [SPECIES_MEW_SPACEWORLD] =
 {
     .speciesName = _("Mew"),
     .categoryName = _("Spaceworld"),
+        .height = 104, // approx from sprite bbox
+        .weight = 90, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_PSYCHIC, TYPE_PSYCHIC),
     .baseHP = 100,
     .baseAttack = 100,
@@ -4817,6 +5215,9 @@
 {
     .speciesName = _("Mewtwo"),
     .categoryName = _("Spaceworld"),
+        .height = 607, // approx from sprite bbox
+        .weight = 2690, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_PSYCHIC, TYPE_PSYCHIC),
     .baseHP = 106,
     .baseAttack = 110,
@@ -4853,6 +5254,9 @@
 {
     .speciesName = _("Miltank"),
     .categoryName = _("Spaceworld"),
+        .height = 311, // approx from sprite bbox
+        .weight = 1660, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_NORMAL),
     .baseHP = 95,
     .baseAttack = 80,
@@ -4889,6 +5293,9 @@
 {
     .speciesName = _("Moltres"),
     .categoryName = _("Spaceworld"),
+        .height = 607, // approx from sprite bbox
+        .weight = 1320, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_FIRE, TYPE_FLYING),
     .baseHP = 90,
     .baseAttack = 100,
@@ -4955,12 +5362,17 @@
     .shinyPaletteFemale = gSwMonShinyPalette_MrMime,
     .iconSprite = gSwIcon_Humanshape,
     .iconPalIndex = 6,
+    .height = 13, // approx from sprite bbox
+    .weight = 545, // approx from sprite bbox
 },
 
 [SPECIES_MUK_SPACEWORLD] =
 {
     .speciesName = _("Muk"),
     .categoryName = _("Spaceworld"),
+        .height = 311, // approx from sprite bbox
+        .weight = 660, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_POISON, TYPE_POISON),
     .baseHP = 105,
     .baseAttack = 105,
@@ -4997,6 +5409,9 @@
 {
     .speciesName = _("Murkrow"),
     .categoryName = _("Spaceworld"),
+        .height = 108, // approx from sprite bbox
+        .weight = 50, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_DARK, TYPE_FLYING),
     .baseHP = 60,
     .baseAttack = 85,
@@ -5033,6 +5448,9 @@
 {
     .speciesName = _("Natu"),
     .categoryName = _("Spaceworld"),
+        .height = 8, // approx from sprite bbox
+        .weight = 40, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_FLYING, TYPE_PSYCHIC),
     .baseHP = 40,
     .baseAttack = 50,
@@ -5069,6 +5487,9 @@
 {
     .speciesName = _("Nidoking"),
     .categoryName = _("Spaceworld"),
+        .height = 407, // approx from sprite bbox
+        .weight = 1370, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_POISON, TYPE_GROUND),
     .baseHP = 81,
     .baseAttack = 92,
@@ -5105,6 +5526,9 @@
 {
     .speciesName = _("Nidoqueen"),
     .categoryName = _("Spaceworld"),
+        .height = 403, // approx from sprite bbox
+        .weight = 1320, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_POISON, TYPE_GROUND),
     .baseHP = 90,
     .baseAttack = 82,
@@ -5171,6 +5595,8 @@
     .shinyPaletteFemale = gSwMonShinyPalette_NidoranF,
     .iconSprite = gSwIcon_Fox,
     .iconPalIndex = 6,
+        .height = 104, // approx from sprite bbox
+        .weight = 150, // approx from sprite bbox
 },
 
 [SPECIES_NIDORAN_M_SPACEWORLD] =
@@ -5207,12 +5633,17 @@
     .shinyPaletteFemale = gSwMonShinyPalette_NidoranM,
     .iconSprite = gSwIcon_Fox,
     .iconPalIndex = 6,
+        .height = 108, // approx from sprite bbox
+        .weight = 200, // approx from sprite bbox
 },
 
 [SPECIES_NIDORINA_SPACEWORLD] =
 {
     .speciesName = _("Nidorina"),
     .categoryName = _("Spaceworld"),
+        .height = 207, // approx from sprite bbox
+        .weight = 440, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_POISON, TYPE_POISON),
     .baseHP = 70,
     .baseAttack = 62,
@@ -5249,6 +5680,9 @@
 {
     .speciesName = _("Nidorino"),
     .categoryName = _("Spaceworld"),
+        .height = 211, // approx from sprite bbox
+        .weight = 430, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_POISON, TYPE_POISON),
     .baseHP = 61,
     .baseAttack = 72,
@@ -5285,6 +5719,9 @@
 {
     .speciesName = _("Ninetales"),
     .categoryName = _("Spaceworld"),
+        .height = 307, // approx from sprite bbox
+        .weight = 440, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_FIRE, TYPE_FIRE),
     .baseHP = 73,
     .baseAttack = 76,
@@ -5321,6 +5758,9 @@
 {
     .speciesName = _("Noctowl"),
     .categoryName = _("Spaceworld"),
+        .height = 503, // approx from sprite bbox
+        .weight = 900, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_FLYING, TYPE_FLYING),
     .baseHP = 100,
     .baseAttack = 50,
@@ -5357,6 +5797,9 @@
 {
     .speciesName = _("Numbpuff"),
     .categoryName = _("Spaceworld"),
+        .height = 211, // approx from sprite bbox
+        .weight = 180, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_ELECTRIC),
     .baseHP = 90,
     .baseAttack = 112,
@@ -5423,12 +5866,18 @@
     .shinyPaletteFemale = gSwMonShinyPalette_Nyanya,
     .iconSprite = gSwIcon_Fox,
     .iconPalIndex = 6,
+    .height = 135, // approx from sprite bbox
+    .weight = 207, // approx from sprite bbox
+
 },
 
 [SPECIES_OCTILLERY_SPACEWORLD] =
 {
     .speciesName = _("Octillery"),
     .categoryName = _("Spaceworld"),
+        .height = 211, // approx from sprite bbox
+        .weight = 630, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_WATER),
     .baseHP = 75,
     .baseAttack = 105,
@@ -5465,6 +5914,9 @@
 {
     .speciesName = _("Oddish"),
     .categoryName = _("Spaceworld"),
+        .height = 108, // approx from sprite bbox
+        .weight = 120, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GRASS, TYPE_POISON),
     .baseHP = 45,
     .baseAttack = 50,
@@ -5501,6 +5953,9 @@
 {
     .speciesName = _("Omanyte"),
     .categoryName = _("Spaceworld"),
+        .height = 104, // approx from sprite bbox
+        .weight = 170, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_ROCK, TYPE_WATER),
     .baseHP = 35,
     .baseAttack = 40,
@@ -5537,6 +5992,9 @@
 {
     .speciesName = _("Omastar"),
     .categoryName = _("Spaceworld"),
+        .height = 303, // approx from sprite bbox
+        .weight = 770, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_ROCK, TYPE_WATER),
     .baseHP = 70,
     .baseAttack = 60,
@@ -5573,6 +6031,9 @@
 {
     .speciesName = _("Onix"),
     .categoryName = _("Spaceworld"),
+        .height = 2810, // approx from sprite bbox
+        .weight = 4630, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_ROCK, TYPE_GROUND),
     .baseHP = 35,
     .baseAttack = 45,
@@ -5639,6 +6100,9 @@
     .shinyPaletteFemale = gSwMonShinyPalette_Pangshi,
     .iconSprite = gSwIcon_Ghost,
     .iconPalIndex = 6,
+    .height = 250, // approx from sprite bbox
+    .weight = 1168, // approx from sprite bbox
+
 },
 
 [SPECIES_PARAMITE_SPACEWORLD] =
@@ -5675,12 +6139,18 @@
     .shinyPaletteFemale = gSwMonShinyPalette_Paramite,
     .iconSprite = gSwIcon_Bug,
     .iconPalIndex = 6,
+    .height = 220, // approx from sprite bbox
+    .weight = 537, // approx from sprite bbox
+
 },
 
 [SPECIES_PARAS_SPACEWORLD] =
 {
     .speciesName = _("Paras"),
     .categoryName = _("Spaceworld"),
+        .height = 100, // approx from sprite bbox
+        .weight = 120, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_BUG, TYPE_GRASS),
     .baseHP = 35,
     .baseAttack = 70,
@@ -5717,6 +6187,9 @@
 {
     .speciesName = _("Parasect"),
     .categoryName = _("Spaceworld"),
+        .height = 303, // approx from sprite bbox
+        .weight = 650, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_BUG, TYPE_GRASS),
     .baseHP = 60,
     .baseAttack = 95,
@@ -5753,6 +6226,9 @@
 {
     .speciesName = _("Persian"),
     .categoryName = _("Spaceworld"),
+        .height = 303, // approx from sprite bbox
+        .weight = 710, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_NORMAL),
     .baseHP = 65,
     .baseAttack = 70,
@@ -5818,6 +6294,9 @@
     .shinyPalette = gSwMonShinyPalette_Petamole,
     .iconSprite = gSwIcon_Oddish,
     .iconPalIndex = 6,
+    .height = 250, // approx from sprite bbox
+    .weight = 1104, // approx from sprite bbox
+
 },
 
 [SPECIES_PETICORN_SPACEWORLD] =
@@ -5854,12 +6333,18 @@
     .shinyPaletteFemale = gSwMonShinyPalette_Peticorn,
     .iconSprite = gSwIcon_Equine,
     .iconPalIndex = 6,
+    .height = 240, // approx from sprite bbox
+    .weight = 614, // approx from sprite bbox
+
 },
 
 [SPECIES_PHANPY_SPACEWORLD] =
 {
     .speciesName = _("Phanpy"),
     .categoryName = _("Spaceworld"),
+        .height = 108, // approx from sprite bbox
+        .weight = 740, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GROUND, TYPE_GROUND),
     .baseHP = 90,
     .baseAttack = 60,
@@ -5896,6 +6381,9 @@
 {
     .speciesName = _("Pichu"),
     .categoryName = _("Spaceworld"),
+        .height = 100, // approx from sprite bbox
+        .weight = 40, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_ELECTRIC, TYPE_ELECTRIC),
     .baseHP = 30,
     .baseAttack = 40,
@@ -5932,6 +6420,9 @@
 {
     .speciesName = _("Pidgeot"),
     .categoryName = _("Spaceworld"),
+        .height = 411, // approx from sprite bbox
+        .weight = 870, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_FLYING),
     .baseHP = 83,
     .baseAttack = 80,
@@ -5968,6 +6459,9 @@
 {
     .speciesName = _("Pidgeotto"),
     .categoryName = _("Spaceworld"),
+        .height = 307, // approx from sprite bbox
+        .weight = 660, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_FLYING),
     .baseHP = 63,
     .baseAttack = 60,
@@ -6004,6 +6498,9 @@
 {
     .speciesName = _("Pidgey"),
     .categoryName = _("Spaceworld"),
+        .height = 100, // approx from sprite bbox
+        .weight = 40, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_FLYING),
     .baseHP = 40,
     .baseAttack = 45,
@@ -6040,6 +6537,9 @@
 {
     .speciesName = _("Pikachu"),
     .categoryName = _("Spaceworld"),
+        .height = 104, // approx from sprite bbox
+        .weight = 130, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_ELECTRIC, TYPE_ELECTRIC),
     .baseHP = 35,
     .baseAttack = 55,
@@ -6076,6 +6576,9 @@
 {
     .speciesName = _("Pinsir"),
     .categoryName = _("Spaceworld"),
+        .height = 411, // approx from sprite bbox
+        .weight = 1210, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_BUG, TYPE_BUG),
     .baseHP = 65,
     .baseAttack = 125,
@@ -6112,6 +6615,9 @@
 {
     .speciesName = _("Politoed"),
     .categoryName = _("Spaceworld"),
+        .height = 307, // approx from sprite bbox
+        .weight = 750, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_WATER),
     .baseHP = 90,
     .baseAttack = 75,
@@ -6148,6 +6654,9 @@
 {
     .speciesName = _("Poliwag"),
     .categoryName = _("Spaceworld"),
+        .height = 200, // approx from sprite bbox
+        .weight = 270, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_WATER),
     .baseHP = 40,
     .baseAttack = 50,
@@ -6184,6 +6693,9 @@
 {
     .speciesName = _("Poliwhirl"),
     .categoryName = _("Spaceworld"),
+        .height = 303, // approx from sprite bbox
+        .weight = 440, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_WATER),
     .baseHP = 65,
     .baseAttack = 65,
@@ -6220,6 +6732,9 @@
 {
     .speciesName = _("Poliwrath"),
     .categoryName = _("Spaceworld"),
+        .height = 403, // approx from sprite bbox
+        .weight = 1190, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_FIGHTING),
     .baseHP = 90,
     .baseAttack = 85,
@@ -6256,6 +6771,9 @@
 {
     .speciesName = _("Ponyta"),
     .categoryName = _("Spaceworld"),
+        .height = 303, // approx from sprite bbox
+        .weight = 660, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_FIRE, TYPE_FIRE),
     .baseHP = 50,
     .baseAttack = 85,
@@ -6292,6 +6810,9 @@
 {
     .speciesName = _("Porygon"),
     .categoryName = _("Spaceworld"),
+        .height = 207, // approx from sprite bbox
+        .weight = 800, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_NORMAL),
     .baseHP = 65,
     .baseAttack = 60,
@@ -6328,6 +6849,9 @@
 {
     .speciesName = _("Porygon2"),
     .categoryName = _("Spaceworld"),
+        .height = 200, // approx from sprite bbox
+        .weight = 720, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_NORMAL),
     .baseHP = 85,
     .baseAttack = 80,
@@ -6394,12 +6918,18 @@
     .shinyPaletteFemale = gSwMonShinyPalette_Praxe,
     .iconSprite = gSwIcon_Bug,
     .iconPalIndex = 6,
+    .height = 250, // approx from sprite bbox
+    .weight = 1634, // approx from sprite bbox
+
 },
 
 [SPECIES_PRIMEAPE_SPACEWORLD] =
 {
     .speciesName = _("Primeape"),
     .categoryName = _("Spaceworld"),
+        .height = 303, // approx from sprite bbox
+        .weight = 710, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_FIGHTING, TYPE_FIGHTING),
     .baseHP = 65,
     .baseAttack = 105,
@@ -6436,6 +6966,9 @@
 {
     .speciesName = _("Psyduck"),
     .categoryName = _("Spaceworld"),
+        .height = 207, // approx from sprite bbox
+        .weight = 430, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_WATER),
     .baseHP = 50,
     .baseAttack = 52,
@@ -6502,12 +7035,18 @@
     .shinyPaletteFemale = gSwMonShinyPalette_Puddipup,
     .iconSprite = gSwIcon_Fox,
     .iconPalIndex = 6,
+    .height = 112, // approx from sprite bbox
+    .weight = 118, // approx from sprite bbox
+
 },
 
 [SPECIES_QUAGSIRE_SPACEWORLD] =
 {
     .speciesName = _("Quagsire"),
     .categoryName = _("Spaceworld"),
+        .height = 407, // approx from sprite bbox
+        .weight = 1650, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_GROUND),
     .baseHP = 95,
     .baseAttack = 85,
@@ -6544,6 +7083,9 @@
 {
     .speciesName = _("Qwilfish"),
     .categoryName = _("Spaceworld"),
+        .height = 108, // approx from sprite bbox
+        .weight = 90, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_WATER),
     .baseHP = 65,
     .baseAttack = 85,
@@ -6580,6 +7122,9 @@
 {
     .speciesName = _("Raichu"),
     .categoryName = _("Spaceworld"),
+        .height = 207, // approx from sprite bbox
+        .weight = 660, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_ELECTRIC, TYPE_ELECTRIC),
     .baseHP = 60,
     .baseAttack = 90,
@@ -6616,6 +7161,9 @@
 {
     .speciesName = _("Raikou"),
     .categoryName = _("Spaceworld"),
+        .height = 603, // approx from sprite bbox
+        .weight = 3920, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_ELECTRIC, TYPE_ELECTRIC),
     .baseHP = 90,
     .baseAttack = 85,
@@ -6649,6 +7197,9 @@
 {
     .speciesName = _("Raitora"),
     .categoryName = _("Spaceworld"),
+        .height = 501, // approx from sprite bbox
+        .weight = 1520, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_ELECTRIC, TYPE_ELECTRIC),
     .baseHP = 115,
     .baseAttack = 85,
@@ -6685,6 +7236,9 @@
 {
     .speciesName = _("Rapidash"),
     .categoryName = _("Spaceworld"),
+        .height = 507, // approx from sprite bbox
+        .weight = 2090, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_FIRE, TYPE_FIRE),
     .baseHP = 65,
     .baseAttack = 100,
@@ -6721,6 +7275,9 @@
 {
     .speciesName = _("Raticate"),
     .categoryName = _("Spaceworld"),
+        .height = 204, // approx from sprite bbox
+        .weight = 410, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_NORMAL),
     .baseHP = 55,
     .baseAttack = 81,
@@ -6757,6 +7314,9 @@
 {
     .speciesName = _("Rattata"),
     .categoryName = _("Spaceworld"),
+        .height = 100, // approx from sprite bbox
+        .weight = 80, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_NORMAL),
     .baseHP = 30,
     .baseAttack = 56,
@@ -6793,6 +7353,9 @@
 {
     .speciesName = _("Rayleep"),
     .categoryName = _("Spaceworld"),
+        .height = 611, // approx from sprite bbox
+        .weight = 4850, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_FLYING),
     .baseHP = 65,
     .baseAttack = 40,
@@ -6829,6 +7392,9 @@
 {
     .speciesName = _("Remoraid"),
     .categoryName = _("Spaceworld"),
+        .height = 200, // approx from sprite bbox
+        .weight = 260, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_WATER),
     .baseHP = 35,
     .baseAttack = 65,
@@ -6865,6 +7431,9 @@
 {
     .speciesName = _("Rhydon"),
     .categoryName = _("Spaceworld"),
+        .height = 603, // approx from sprite bbox
+        .weight = 2650, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GROUND, TYPE_ROCK),
     .baseHP = 105,
     .baseAttack = 130,
@@ -6901,6 +7470,9 @@
 {
     .speciesName = _("Rhyhorn"),
     .categoryName = _("Spaceworld"),
+        .height = 303, // approx from sprite bbox
+        .weight = 2540, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GROUND, TYPE_ROCK),
     .baseHP = 80,
     .baseAttack = 85,
@@ -6937,6 +7509,9 @@
 {
     .speciesName = _("Rinring"),
     .categoryName = _("Spaceworld"),
+        .height = 109, // approx from sprite bbox
+        .weight = 220, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_DARK, TYPE_DARK),
     .baseHP = 45,
     .baseAttack = 55,
@@ -6973,6 +7548,9 @@
 {
     .speciesName = _("Sandshrew"),
     .categoryName = _("Spaceworld"),
+        .height = 200, // approx from sprite bbox
+        .weight = 260, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GROUND, TYPE_GROUND),
     .baseHP = 50,
     .baseAttack = 75,
@@ -7009,6 +7587,9 @@
 {
     .speciesName = _("Sandslash"),
     .categoryName = _("Spaceworld"),
+        .height = 303, // approx from sprite bbox
+        .weight = 650, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GROUND, TYPE_GROUND),
     .baseHP = 75,
     .baseAttack = 100,
@@ -7045,6 +7626,9 @@
 {
     .speciesName = _("Scizor"),
     .categoryName = _("Spaceworld"),
+        .height = 511, // approx from sprite bbox
+        .weight = 2600, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_BUG, TYPE_FLYING),
     .baseHP = 70,
     .baseAttack = 130,
@@ -7081,6 +7665,9 @@
 {
     .speciesName = _("Scyther"),
     .categoryName = _("Spaceworld"),
+        .height = 411, // approx from sprite bbox
+        .weight = 1230, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_BUG, TYPE_FLYING),
     .baseHP = 70,
     .baseAttack = 110,
@@ -7117,6 +7704,9 @@
 {
     .speciesName = _("Seadra"),
     .categoryName = _("Spaceworld"),
+        .height = 311, // approx from sprite bbox
+        .weight = 550, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_WATER),
     .baseHP = 55,
     .baseAttack = 65,
@@ -7153,6 +7743,9 @@
 {
     .speciesName = _("Seaking"),
     .categoryName = _("Spaceworld"),
+        .height = 403, // approx from sprite bbox
+        .weight = 860, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_WATER),
     .baseHP = 80,
     .baseAttack = 92,
@@ -7189,6 +7782,9 @@
 {
     .speciesName = _("Seel"),
     .categoryName = _("Spaceworld"),
+        .height = 307, // approx from sprite bbox
+        .weight = 1980, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_WATER),
     .baseHP = 65,
     .baseAttack = 45,
@@ -7225,6 +7821,9 @@
 {
     .speciesName = _("Shellder"),
     .categoryName = _("Spaceworld"),
+        .height = 100, // approx from sprite bbox
+        .weight = 90, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_WATER),
     .baseHP = 30,
     .baseAttack = 65,
@@ -7261,6 +7860,9 @@
 {
     .speciesName = _("Skarmory"),
     .categoryName = _("Spaceworld"),
+        .height = 507, // approx from sprite bbox
+        .weight = 1110, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_STEEL, TYPE_FLYING),
     .baseHP = 65,
     .baseAttack = 80,
@@ -7297,6 +7899,9 @@
 {
     .speciesName = _("Skiploom"),
     .categoryName = _("Spaceworld"),
+        .height = 200, // approx from sprite bbox
+        .weight = 20, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GRASS, TYPE_FLYING),
     .baseHP = 55,
     .baseAttack = 45,
@@ -7333,6 +7938,9 @@
 {
     .speciesName = _("Slowbro"),
     .categoryName = _("Spaceworld"),
+        .height = 503, // approx from sprite bbox
+        .weight = 1730, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_PSYCHIC),
     .baseHP = 95,
     .baseAttack = 75,
@@ -7369,6 +7977,9 @@
 {
     .speciesName = _("Slowking"),
     .categoryName = _("Spaceworld"),
+        .height = 607, // approx from sprite bbox
+        .weight = 1750, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_PSYCHIC),
     .baseHP = 95,
     .baseAttack = 75,
@@ -7405,6 +8016,9 @@
 {
     .speciesName = _("Slowpoke"),
     .categoryName = _("Spaceworld"),
+        .height = 311, // approx from sprite bbox
+        .weight = 790, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_PSYCHIC),
     .baseHP = 90,
     .baseAttack = 65,
@@ -7441,6 +8055,9 @@
 {
     .speciesName = _("Smeargle"),
     .categoryName = _("Spaceworld"),
+        .height = 311, // approx from sprite bbox
+        .weight = 1280, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_NORMAL),
     .baseHP = 55,
     .baseAttack = 20,
@@ -7477,6 +8094,9 @@
 {
     .speciesName = _("Smoochum"),
     .categoryName = _("Spaceworld"),
+        .height = 104, // approx from sprite bbox
+        .weight = 130, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_ICE, TYPE_ICE),
     .baseHP = 45,
     .baseAttack = 30,
@@ -7513,6 +8133,9 @@
 {
     .speciesName = _("Sneasel"),
     .categoryName = _("Spaceworld"),
+        .height = 211, // approx from sprite bbox
+        .weight = 620, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_DARK, TYPE_ICE),
     .baseHP = 55,
     .baseAttack = 95,
@@ -7549,6 +8172,9 @@
 {
     .speciesName = _("Snorlax"),
     .categoryName = _("Spaceworld"),
+        .height = 611, // approx from sprite bbox
+        .weight = 10140, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_NORMAL),
     .baseHP = 160,
     .baseAttack = 110,
@@ -7585,6 +8211,9 @@
 {
     .speciesName = _("Snubbull"),
     .categoryName = _("Spaceworld"),
+        .height = 200, // approx from sprite bbox
+        .weight = 170, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_PSYCHIC, TYPE_PSYCHIC),
     .baseHP = 90,
     .baseAttack = 120,
@@ -7621,6 +8250,9 @@
 {
     .speciesName = _("Spearow"),
     .categoryName = _("Spaceworld"),
+        .height = 100, // approx from sprite bbox
+        .weight = 40, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_FLYING),
     .baseHP = 40,
     .baseAttack = 60,
@@ -7657,6 +8289,9 @@
 {
     .speciesName = _("Spinarak"),
     .categoryName = _("Spaceworld"),
+        .height = 108, // approx from sprite bbox
+        .weight = 190, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_BUG, TYPE_POISON),
     .baseHP = 40,
     .baseAttack = 60,
@@ -7690,6 +8325,9 @@
 {
     .speciesName = _("Squirtle"),
     .categoryName = _("Spaceworld"),
+        .height = 108, // approx from sprite bbox
+        .weight = 200, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_WATER),
     .baseHP = 44,
     .baseAttack = 48,
@@ -7726,6 +8364,9 @@
 {
     .speciesName = _("Starmie"),
     .categoryName = _("Spaceworld"),
+        .height = 307, // approx from sprite bbox
+        .weight = 1760, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_PSYCHIC),
     .baseHP = 60,
     .baseAttack = 75,
@@ -7762,6 +8403,9 @@
 {
     .speciesName = _("Staryu"),
     .categoryName = _("Spaceworld"),
+        .height = 207, // approx from sprite bbox
+        .weight = 760, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_WATER),
     .baseHP = 30,
     .baseAttack = 45,
@@ -7798,6 +8442,9 @@
 {
     .speciesName = _("Steelix"),
     .categoryName = _("Spaceworld"),
+        .height = 3002, // approx from sprite bbox
+        .weight = 8820, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_STEEL, TYPE_GROUND),
     .baseHP = 75,
     .baseAttack = 85,
@@ -7834,6 +8481,9 @@
 {
     .speciesName = _("Suicune"),
     .categoryName = _("Spaceworld"),
+        .height = 607, // approx from sprite bbox
+        .weight = 4120, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_WATER),
     .baseHP = 100,
     .baseAttack = 75,
@@ -7867,6 +8517,9 @@
 {
     .speciesName = _("Sunflora"),
     .categoryName = _("Spaceworld"),
+        .height = 207, // approx from sprite bbox
+        .weight = 190, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GRASS, TYPE_PSYCHIC),
     .baseHP = 75,
     .baseAttack = 75,
@@ -7903,6 +8556,9 @@
 {
     .speciesName = _("Tangela"),
     .categoryName = _("Spaceworld"),
+        .height = 303, // approx from sprite bbox
+        .weight = 770, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GRASS, TYPE_GRASS),
     .baseHP = 65,
     .baseAttack = 55,
@@ -7968,12 +8624,18 @@
     .shinyPalette = gSwMonShinyPalette_Tangtrip,
     .iconSprite = gSwIcon_Oddish,
     .iconPalIndex = 6,
+    .height = 157, // approx from sprite bbox
+    .weight = 293, // approx from sprite bbox
+
 },
 
 [SPECIES_TAUROS_SPACEWORLD] =
 {
     .speciesName = _("Tauros"),
     .categoryName = _("Spaceworld"),
+        .height = 407, // approx from sprite bbox
+        .weight = 1950, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_NORMAL),
     .baseHP = 75,
     .baseAttack = 100,
@@ -8010,6 +8672,9 @@
 {
     .speciesName = _("Tentacool"),
     .categoryName = _("Spaceworld"),
+        .height = 211, // approx from sprite bbox
+        .weight = 1000, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_POISON),
     .baseHP = 40,
     .baseAttack = 40,
@@ -8046,6 +8711,9 @@
 {
     .speciesName = _("Tentacruel"),
     .categoryName = _("Spaceworld"),
+        .height = 503, // approx from sprite bbox
+        .weight = 1210, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_POISON),
     .baseHP = 80,
     .baseAttack = 70,
@@ -8082,6 +8750,9 @@
 {
     .speciesName = _("Togepi"),
     .categoryName = _("Spaceworld"),
+        .height = 100, // approx from sprite bbox
+        .weight = 30, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_NORMAL),
     .baseHP = 55,
     .baseAttack = 40,
@@ -8148,12 +8819,18 @@
     .shinyPaletteFemale = gSwMonShinyPalette_Tripstar,
     .iconSprite = gSwIcon_Bug,
     .iconPalIndex = 6,
+    .height = 135, // approx from sprite bbox
+    .weight = 207, // approx from sprite bbox
+
 },
 
 [SPECIES_TRITALES_SPACEWORLD] =
 {
     .speciesName = _("Tritales"),
     .categoryName = _("Spaceworld"),
+        .height = 170, // approx from sprite bbox
+        .weight = 170, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_FIRE, TYPE_FIRE),
     .baseHP = 25,
     .baseAttack = 28,
@@ -8190,6 +8867,9 @@
 {
     .speciesName = _("Tuhead"),
     .categoryName = _("Spaceworld"),
+        .height = 307, // approx from sprite bbox
+        .weight = 740, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_BUG, TYPE_POISON),
     .baseHP = 70,
     .baseAttack = 90,
@@ -8226,6 +8906,9 @@
 {
     .speciesName = _("Turban"),
     .categoryName = _("Spaceworld"),
+        .height = 401, // approx from sprite bbox
+        .weight = 1380, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_POISON),
     .baseHP = 80,
     .baseAttack = 90,
@@ -8292,12 +8975,17 @@
     .shinyPaletteFemale = gSwMonShinyPalette_Twinz,
     .iconSprite = gSwIcon_Ghost,
     .iconPalIndex = 6,
+    .height = 0, // approx from sprite bbox
+    .weight = 0, // approx from sprite bbox
 },
 
 [SPECIES_TYROGUE_SPACEWORLD] =
 {
     .speciesName = _("Tyrogue"),
     .categoryName = _("Spaceworld"),
+        .height = 204, // approx from sprite bbox
+        .weight = 460, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_FIGHTING, TYPE_FIGHTING),
     .baseHP = 35,
     .baseAttack = 35,
@@ -8334,6 +9022,9 @@
 {
     .speciesName = _("Umbreon"),
     .categoryName = _("Spaceworld"),
+        .height = 303, // approx from sprite bbox
+        .weight = 600, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_POISON, TYPE_POISON),
     .baseHP = 95,
     .baseAttack = 65,
@@ -8370,6 +9061,9 @@
 {
     .speciesName = _("Unown"),
     .categoryName = _("Spaceworld"),
+        .height = 108, // approx from sprite bbox
+        .weight = 110, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_PSYCHIC, TYPE_PSYCHIC),
     .baseHP = 48,
     .baseAttack = 72,
@@ -8403,6 +9097,9 @@
 {
     .speciesName = _("Vaporeon"),
     .categoryName = _("Spaceworld"),
+        .height = 303, // approx from sprite bbox
+        .weight = 640, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_WATER),
     .baseHP = 130,
     .baseAttack = 65,
@@ -8439,6 +9136,9 @@
 {
     .speciesName = _("Venomoth"),
     .categoryName = _("Spaceworld"),
+        .height = 411, // approx from sprite bbox
+        .weight = 280, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_BUG, TYPE_POISON),
     .baseHP = 70,
     .baseAttack = 65,
@@ -8475,6 +9175,9 @@
 {
     .speciesName = _("Venonat"),
     .categoryName = _("Spaceworld"),
+        .height = 303, // approx from sprite bbox
+        .weight = 660, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_BUG, TYPE_POISON),
     .baseHP = 60,
     .baseAttack = 55,
@@ -8511,6 +9214,9 @@
 {
     .speciesName = _("Venusaur"),
     .categoryName = _("Spaceworld"),
+        .height = 607, // approx from sprite bbox
+        .weight = 2210, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GRASS, TYPE_POISON),
     .baseHP = 80,
     .baseAttack = 82,
@@ -8547,6 +9253,9 @@
 {
     .speciesName = _("Victreebel"),
     .categoryName = _("Spaceworld"),
+        .height = 507, // approx from sprite bbox
+        .weight = 340, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GRASS, TYPE_POISON),
     .baseHP = 80,
     .baseAttack = 105,
@@ -8583,6 +9292,9 @@
 {
     .speciesName = _("Vileplume"),
     .categoryName = _("Spaceworld"),
+        .height = 311, // approx from sprite bbox
+        .weight = 410, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GRASS, TYPE_POISON),
     .baseHP = 75,
     .baseAttack = 80,
@@ -8619,6 +9331,9 @@
 {
     .speciesName = _("Volbear"),
     .categoryName = _("Spaceworld"),
+        .height = 305, // approx from sprite bbox
+        .weight = 720, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_FIRE, TYPE_FIRE),
     .baseHP = 63,
     .baseAttack = 70,
@@ -8655,6 +9370,9 @@
 {
     .speciesName = _("Voltorb"),
     .categoryName = _("Spaceworld"),
+        .height = 108, // approx from sprite bbox
+        .weight = 230, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_ELECTRIC, TYPE_ELECTRIC),
     .baseHP = 40,
     .baseAttack = 30,
@@ -8691,6 +9409,9 @@
 {
     .speciesName = _("Vulpix"),
     .categoryName = _("Spaceworld"),
+        .height = 200, // approx from sprite bbox
+        .weight = 220, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_FIRE, TYPE_FIRE),
     .baseHP = 38,
     .baseAttack = 41,
@@ -8727,6 +9448,9 @@
 {
     .speciesName = _("Wartortle"),
     .categoryName = _("Spaceworld"),
+        .height = 303, // approx from sprite bbox
+        .weight = 500, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_WATER, TYPE_WATER),
     .baseHP = 59,
     .baseAttack = 63,
@@ -8793,12 +9517,17 @@
     .shinyPaletteFemale = gSwMonShinyPalette_Warwolf,
     .iconSprite = gSwIcon_Monster,
     .iconPalIndex = 6,
+    .height = 0, // approx from sprite bbox
+    .weight = 0, // approx from sprite bbox
 },
 
 [SPECIES_WEEDLE_SPACEWORLD] =
 {
     .speciesName = _("Weedle"),
     .categoryName = _("Spaceworld"),
+        .height = 100, // approx from sprite bbox
+        .weight = 70, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_BUG, TYPE_POISON),
     .baseHP = 40,
     .baseAttack = 35,
@@ -8835,6 +9564,9 @@
 {
     .speciesName = _("Weepinbell"),
     .categoryName = _("Spaceworld"),
+        .height = 303, // approx from sprite bbox
+        .weight = 140, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_GRASS, TYPE_POISON),
     .baseHP = 65,
     .baseAttack = 90,
@@ -8871,6 +9603,9 @@
 {
     .speciesName = _("Weezing"),
     .categoryName = _("Spaceworld"),
+        .height = 311, // approx from sprite bbox
+        .weight = 210, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_POISON, TYPE_POISON),
     .baseHP = 65,
     .baseAttack = 90,
@@ -8907,6 +9642,9 @@
 {
     .speciesName = _("Wigglytuff"),
     .categoryName = _("Spaceworld"),
+        .height = 303, // approx from sprite bbox
+        .weight = 260, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_NORMAL, TYPE_NORMAL),
     .baseHP = 140,
     .baseAttack = 70,
@@ -8943,6 +9681,9 @@
 {
     .speciesName = _("Wolfan"),
     .categoryName = _("Spaceworld"),
+        .height = 203, // approx from sprite bbox
+        .weight = 750, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_ICE, TYPE_ICE),
     .baseHP = 70,
     .baseAttack = 60,
@@ -8979,6 +9720,9 @@
 {
     .speciesName = _("Xatu"),
     .categoryName = _("Spaceworld"),
+        .height = 411, // approx from sprite bbox
+        .weight = 330, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_FLYING, TYPE_PSYCHIC),
     .baseHP = 65,
     .baseAttack = 75,
@@ -9015,6 +9759,9 @@
 {
     .speciesName = _("Zapdos"),
     .categoryName = _("Spaceworld"),
+        .height = 503, // approx from sprite bbox
+        .weight = 1160, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_ELECTRIC, TYPE_FLYING),
     .baseHP = 90,
     .baseAttack = 90,
@@ -9051,6 +9798,9 @@
 {
     .speciesName = _("Zubat"),
     .categoryName = _("Spaceworld"),
+        .height = 207, // approx from sprite bbox
+        .weight = 170, // approx from sprite bbox
+
     .types = MON_TYPES(TYPE_POISON, TYPE_FLYING),
     .baseHP = 40,
     .baseAttack = 45,

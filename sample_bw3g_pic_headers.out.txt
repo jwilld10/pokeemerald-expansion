@@ -1,0 +1,20 @@
+== First 10 INCBIN paths found in src/bw3g_pokemon_pics.c ==
+graphics/bw3g/pokemon/snivy/front.animated.2bpp.lz
+graphics/bw3g/pokemon/snivy/back.2bpp.lz
+graphics/bw3g/pokemon/snivy/normal.gbapal
+graphics/bw3g/pokemon/snivy/shiny.gbapal
+graphics/bw3g/pokemon/servine/front.animated.2bpp.lz
+graphics/bw3g/pokemon/servine/back.2bpp.lz
+graphics/bw3g/pokemon/servine/normal.gbapal
+graphics/bw3g/pokemon/servine/shiny.gbapal
+graphics/bw3g/pokemon/serperior/front.animated.2bpp.lz
+graphics/bw3g/pokemon/serperior/back.2bpp.lz
+total: 1008
+
+== First byte + size of a few BW3G front/back samples ==
+graphics/bw3g/pokemon/snivy/front.animated.2bpp.lz  first4= 6921f013  size= 250
+graphics/bw3g/pokemon/servine/front.animated.2bpp.lz  first4= ec310101  size= 313
+graphics/bw3g/pokemon/serperior/front.animated.2bpp.lz  first4= ec2b2106  size= 530
+graphics/bw3g/pokemon/snivy/back.2bpp.lz  first4= ec752103  size= 239
+graphics/bw3g/pokemon/servine/back.2bpp.lz  first4= ec632106  size= 232
+graphics/bw3g/pokemon/serperior/back.2bpp.lz  first4= 63071c3c  size= 300

@@ -1,0 +1,76 @@
+== Repo ==
+/home/jwilld10/decomps/pokeemerald-expansion_clean
+
+============================================================
+1) Find where gMonFrontPic_Bulbasaur is defined (non-BW3G)
+============================================================
+src/data/graphics/pokemon.h:23:    const u32 gMonFrontPic_Bulbasaur[] = INCBIN_U32("graphics/pokemon/bulbasaur/anim_front.4bpp.smol");
+src/data/graphics/pokemon.h:28:    const u32 gMonFrontPic_Bulbasaur[] = INCBIN_U32("graphics/pokemon/bulbasaur/anim_front_gba.4bpp.smol");
+src/data/pokemon/species_info/gen_1_families.h:42:        .frontPic = gMonFrontPic_Bulbasaur,
+
+============================================================
+2) Find INCBIN references to graphics/pokemon (non-BW3G)
+============================================================
+src/pokemon_icon.c:10:static const u16 sSpaceworldIconPal6[] = INCBIN_U16("graphics/pokemon/icon_palettes/spaceworld_icon_pal6.gbapal");
+src/pokemon_icon.c:12:static const u16 sBw3gIconPal7[] = INCBIN_U16("graphics/pokemon/icon_palettes/pal7.gbapal");
+src/graphics.c:485:const u16 gBattleAnimSpritePal_IvyCudgelGrass[] = INCBIN_U16("graphics/pokemon/ogerpon/normal.gbapal");
+src/graphics.c:486:const u16 gBattleAnimSpritePal_IvyCudgelFire[] = INCBIN_U16("graphics/pokemon/ogerpon/hearthflame/normal.gbapal");
+src/graphics.c:487:const u16 gBattleAnimSpritePal_IvyCudgelRock[] = INCBIN_U16("graphics/pokemon/ogerpon/cornerstone/normal.gbapal");
+src/graphics.c:488:const u16 gBattleAnimSpritePal_IvyCudgelWater[] = INCBIN_U16("graphics/pokemon/ogerpon/wellspring/normal.gbapal");
+src/graphics.c:2087:    INCBIN_U16("graphics/pokemon/icon_palettes/pal0.gbapal"),
+src/graphics.c:2088:    INCBIN_U16("graphics/pokemon/icon_palettes/pal1.gbapal"),
+src/graphics.c:2089:    INCBIN_U16("graphics/pokemon/icon_palettes/pal2.gbapal"),
+src/graphics.c:2090:    INCBIN_U16("graphics/pokemon/icon_palettes/pal3.gbapal"),
+src/graphics.c:2091:    INCBIN_U16("graphics/pokemon/icon_palettes/pal4.gbapal"),
+src/graphics.c:2092:    INCBIN_U16("graphics/pokemon/icon_palettes/pal5.gbapal"),
+src/graphics.c:2093:    INCBIN_U16("graphics/pokemon/icon_palettes/spaceworld_icon_pal6.gbapal"),
+src/pokemon.c:372:    {.x = 16, .y =  7, .image = INCBIN_U16("graphics/pokemon/spinda/spots/spot_0.1bpp")},
+src/pokemon.c:373:    {.x = 40, .y =  8, .image = INCBIN_U16("graphics/pokemon/spinda/spots/spot_1.1bpp")},
+src/pokemon.c:374:    {.x = 22, .y = 25, .image = INCBIN_U16("graphics/pokemon/spinda/spots/spot_2.1bpp")},
+src/pokemon.c:375:    {.x = 34, .y = 26, .image = INCBIN_U16("graphics/pokemon/spinda/spots/spot_3.1bpp")}
+src/egg_hatch.c:86:static const u16 sEggPalette[]  = INCBIN_U16("graphics/pokemon/egg/normal.gbapal");
+src/egg_hatch.c:87:static const u8 sEggHatchTiles[] = INCBIN_U8("graphics/pokemon/egg/hatch.4bpp");
+src/egg_hatch.c:88:static const u8 sEggShardTiles[] = INCBIN_U8("graphics/pokemon/egg/shard.4bpp");
+src/data/graphics/pokemon.h:7:const u32 gMonFrontPic_CircledQuestionMark[] = INCBIN_U32("graphics/pokemon/question_mark/circled/anim_front.4bpp.smol");
+src/data/graphics/pokemon.h:8:const u32 gMonBackPic_CircledQuestionMark[] = INCBIN_U32("graphics/pokemon/question_mark/circled/back.4bpp.smol");
+src/data/graphics/pokemon.h:9:const u16 gMonPalette_CircledQuestionMark[] = INCBIN_U16("graphics/pokemon/question_mark/circled/normal.gbapal");
+src/data/graphics/pokemon.h:10:const u16 gMonShinyPalette_CircledQuestionMark[] = INCBIN_U16("graphics/pokemon/question_mark/circled/shiny.gbapal");
+src/data/graphics/pokemon.h:11:const u8 gMonIcon_QuestionMark[] = INCBIN_U8("graphics/pokemon/question_mark/icon.4bpp");
+src/data/graphics/pokemon.h:14:    const u8 gMonFootprint_QuestionMark[] = INCBIN_U8("graphics/pokemon/question_mark/footprint.1bpp");
+src/data/graphics/pokemon.h:16:    const u8 gMonFootprint_QuestionMark[] = INCBIN_U8("graphics/pokemon/question_mark/footprint_gba.1bpp");
+src/data/graphics/pokemon.h:19:const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_mark/overworld.4bpp");
+src/data/graphics/pokemon.h:23:    const u32 gMonFrontPic_Bulbasaur[] = INCBIN_U32("graphics/pokemon/bulbasaur/anim_front.4bpp.smol");
+src/data/graphics/pokemon.h:24:    const u16 gMonPalette_Bulbasaur[] = INCBIN_U16("graphics/pokemon/bulbasaur/normal.gbapal");
+src/data/graphics/pokemon.h:25:    const u32 gMonBackPic_Bulbasaur[] = INCBIN_U32("graphics/pokemon/bulbasaur/back.4bpp.smol");
+src/data/graphics/pokemon.h:26:    const u16 gMonShinyPalette_Bulbasaur[] = INCBIN_U16("graphics/pokemon/bulbasaur/shiny.gbapal");
+src/data/graphics/pokemon.h:28:    const u32 gMonFrontPic_Bulbasaur[] = INCBIN_U32("graphics/pokemon/bulbasaur/anim_front_gba.4bpp.smol");
+src/data/graphics/pokemon.h:29:    const u16 gMonPalette_Bulbasaur[] = INCBIN_U16("graphics/pokemon/bulbasaur/normal_gba.gbapal");
+src/data/graphics/pokemon.h:30:    const u32 gMonBackPic_Bulbasaur[] = INCBIN_U32("graphics/pokemon/bulbasaur/back_gba.4bpp.smol");
+src/data/graphics/pokemon.h:31:    const u16 gMonShinyPalette_Bulbasaur[] = INCBIN_U16("graphics/pokemon/bulbasaur/shiny_gba.gbapal");
+src/data/graphics/pokemon.h:34:    const u8 gMonIcon_Bulbasaur[] = INCBIN_U8("graphics/pokemon/bulbasaur/icon.4bpp");
+src/data/graphics/pokemon.h:36:    const u8 gMonIcon_Bulbasaur[] = INCBIN_U8("graphics/pokemon/bulbasaur/icon_gba.4bpp");
+src/data/graphics/pokemon.h:39:    const u8 gMonFootprint_Bulbasaur[] = INCBIN_U8("graphics/pokemon/bulbasaur/footprint.1bpp");
+src/data/graphics/pokemon.h:42:    const u32 gObjectEventPic_Bulbasaur[] = INCBIN_COMP("graphics/pokemon/bulbasaur/overworld.4bpp");
+src/data/graphics/pokemon.h:44:    const u16 gOverworldPalette_Bulbasaur[] = INCBIN_U16("graphics/pokemon/bulbasaur/overworld_normal.gbapal");
+src/data/graphics/pokemon.h:45:    const u16 gShinyOverworldPalette_Bulbasaur[] = INCBIN_U16("graphics/pokemon/bulbasaur/overworld_shiny.gbapal");
+src/data/graphics/pokemon.h:50:    const u32 gMonFrontPic_Ivysaur[] = INCBIN_U32("graphics/pokemon/ivysaur/anim_front.4bpp.smol");
+src/data/graphics/pokemon.h:51:    const u16 gMonPalette_Ivysaur[] = INCBIN_U16("graphics/pokemon/ivysaur/normal.gbapal");
+src/data/graphics/pokemon.h:52:    const u32 gMonBackPic_Ivysaur[] = INCBIN_U32("graphics/pokemon/ivysaur/back.4bpp.smol");
+src/data/graphics/pokemon.h:53:    const u16 gMonShinyPalette_Ivysaur[] = INCBIN_U16("graphics/pokemon/ivysaur/shiny.gbapal");
+src/data/graphics/pokemon.h:55:    const u32 gMonFrontPic_Ivysaur[] = INCBIN_U32("graphics/pokemon/ivysaur/anim_front_gba.4bpp.smol");
+src/data/graphics/pokemon.h:56:    const u16 gMonPalette_Ivysaur[] = INCBIN_U16("graphics/pokemon/ivysaur/normal_gba.gbapal");
+src/data/graphics/pokemon.h:57:    const u32 gMonBackPic_Ivysaur[] = INCBIN_U32("graphics/pokemon/ivysaur/back_gba.4bpp.smol");
+src/data/graphics/pokemon.h:58:    const u16 gMonShinyPalette_Ivysaur[] = INCBIN_U16("graphics/pokemon/ivysaur/shiny_gba.gbapal");
+
+============================================================
+3) Find any *.lz / *.4bpp.lz files under graphics/pokemon
+============================================================
+
+============================================================
+4) Show header bytes for first 10 compressed-looking pokemon pic files
+============================================================
+found: 0
+
+============================================================
+DONE - paste output back
+============================================================

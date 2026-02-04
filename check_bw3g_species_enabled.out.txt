@@ -1,0 +1,344 @@
+== Repo ==
+/home/jwilld10/decomps/pokeemerald-expansion_clean
+
+============================================================
+1) Find IsSpeciesEnabled and SanitizeSpeciesId
+============================================================
+src/pokemon_icon.c:158:    species = SanitizeSpeciesId(species);
+src/pokemon_icon.c:194:    species = SanitizeSpeciesId(species);
+src/pokemon_icon.c:206:    species = SanitizeSpeciesId(species);
+src/pokemon_icon.c:222:    species = SanitizeSpeciesId(species);
+src/pokemon_icon.c:262:    palIndex = gSpeciesInfo[SanitizeSpeciesId(species)].iconPalIndex;
+src/pokemon_icon.c:269:    u8 palIndex = gSpeciesInfo[SanitizeSpeciesId(species)].iconPalIndex;
+src/pokemon_icon.c:277:    species = SanitizeSpeciesId(species);
+src/pokemon_icon.c:299:    palIndex = gSpeciesInfo[SanitizeSpeciesId(species)].iconPalIndex;
+src/pokemon_icon.c:306:    palIndex = gSpeciesInfo[SanitizeSpeciesId(species)].iconPalIndex;
+src/pokemon_icon.c:355:    species = SanitizeSpeciesId(species);
+src/pokemon_icon.c:358:    return gSpeciesInfo[SanitizeSpeciesId(species)].iconPalIndex;
+src/pokemon_icon.c:363:    species = SanitizeSpeciesId(species);
+src/pokemon_icon.c:366:    return gSpeciesInfo[SanitizeSpeciesId(species)].iconPalIndex;
+src/pokemon_icon.c:371:    species = SanitizeSpeciesId(species);
+src/pokemon_icon.c:375:    u16 swPalIndex = gSpeciesInfo[SanitizeSpeciesId(species)].iconPalIndex;
+src/pokemon_icon.c:379:    return gMonIconPaletteTable[gSpeciesInfo[SanitizeSpeciesId(species)].iconPalIndex].data;
+src/script_pokemon_util.c:298:        if (gSpeciesInfo[SanitizeSpeciesId(GetMonData(&gPlayerParty[partyIndex], MON_DATA_SPECIES))].isMythical)
+src/pokemon_jump.c:525:    return gSpeciesInfo[SanitizeSpeciesId(species)].pokemonJumpType;
+src/battle_anim_mons.c:146:    species = SanitizeSpeciesId(species);
+src/battle_anim_mons.c:186:            species = SanitizeSpeciesId(species);
+src/battle_anim_mons.c:2107:        species = SanitizeSpeciesId(species);
+src/battle_anim_mons.c:2129:        species = SanitizeSpeciesId(species);
+src/trainer_pokemon_sprites.c:186:    species = SanitizeSpeciesId(species);
+src/battle_script_commands.c:15505:            if (SanitizeSpeciesId(evolutions[i].targetSpecies) == SPECIES_NONE)
+src/pokemon.c:2124:        speciesTag = SanitizeSpeciesId(speciesTag);
+src/pokemon.c:3465:    species = SanitizeSpeciesId(species);
+src/pokemon.c:3482:    species = SanitizeSpeciesId(species);
+src/pokemon.c:3490:    species = SanitizeSpeciesId(species);
+src/pokemon.c:3498:    return gSpeciesInfo[SanitizeSpeciesId(species)].height;
+src/pokemon.c:3503:    return gSpeciesInfo[SanitizeSpeciesId(species)].weight;
+src/pokemon.c:3508:    return gSpeciesInfo[SanitizeSpeciesId(species)].types[slot];
+src/pokemon.c:3513:    return gSpeciesInfo[SanitizeSpeciesId(species)].abilities[slot];
+src/pokemon.c:3518:    return gSpeciesInfo[SanitizeSpeciesId(species)].baseHP;
+src/pokemon.c:3523:    return gSpeciesInfo[SanitizeSpeciesId(species)].baseAttack;
+src/pokemon.c:3528:    return gSpeciesInfo[SanitizeSpeciesId(species)].baseDefense;
+src/pokemon.c:3533:    return gSpeciesInfo[SanitizeSpeciesId(species)].baseSpAttack;
+src/pokemon.c:3538:    return gSpeciesInfo[SanitizeSpeciesId(species)].baseSpDefense;
+src/pokemon.c:3543:    return gSpeciesInfo[SanitizeSpeciesId(species)].baseSpeed;
+src/pokemon.c:3568:    const struct LevelUpMove *learnset = gSpeciesInfo[SanitizeSpeciesId(species)].levelUpLearnset;
+src/pokemon.c:3576:    const u16 *learnset = gSpeciesInfo[SanitizeSpeciesId(species)].teachableLearnset;
+src/pokemon.c:3584:    const u16 *learnset = gSpeciesInfo[SanitizeSpeciesId(species)].eggMoveLearnset;
+src/pokemon.c:3592:    const struct Evolution *evolutions = gSpeciesInfo[SanitizeSpeciesId(species)].evolutions;
+src/pokemon.c:3600:    const u16 *formTable = gSpeciesInfo[SanitizeSpeciesId(species)].formSpeciesIdTable;
+src/pokemon.c:3608:    const struct FormChange *formChanges = gSpeciesInfo[SanitizeSpeciesId(species)].formChangeTable;
+src/pokemon.c:4779:            if (SanitizeSpeciesId(evolutions[i].targetSpecies) == SPECIES_NONE)
+src/pokemon.c:4809:            if (SanitizeSpeciesId(evolutions[i].targetSpecies) == SPECIES_NONE)
+src/pokemon.c:4834:            if (SanitizeSpeciesId(evolutions[i].targetSpecies) == SPECIES_NONE)
+src/pokemon.c:4862:            if (SanitizeSpeciesId(evolutions[i].targetSpecies) == SPECIES_NONE)
+src/pokemon.c:4887:            if (SanitizeSpeciesId(evolutions[i].targetSpecies) == SPECIES_NONE)
+src/pokemon.c:4911:            if (SanitizeSpeciesId(evolutions[i].targetSpecies) == SPECIES_NONE)
+src/pokemon.c:4952:        if (SanitizeSpeciesId(evolutions[i].targetSpecies) == SPECIES_NONE)
+src/pokemon.c:5005:    species = SanitizeSpeciesId(species);
+src/pokemon.c:6212:    species = SanitizeSpeciesId(species);
+src/pokemon.c:7192:u16 SanitizeSpeciesId(u16 species)
+src/pokemon.c:7194:    if (species > NUM_SPECIES || !IsSpeciesEnabled(species))
+src/pokemon.c:7200:bool32 IsSpeciesEnabled(u16 species)
+src/pokemon.c:7339:    species = SanitizeSpeciesId(species);
+src/pokemon.c:7356:            if (SanitizeSpeciesId(evolutions[j].targetSpecies) == species)
+src/battle_gfx_sfx_util.c:1256:    u16 transformSpecies = SanitizeSpeciesId(gBattleSpritesDataPtr->battlerData[battler].transformSpecies);
+src/battle_gfx_sfx_util.c:1329:        if (gSpeciesInfo[SanitizeSpeciesId(species)].suppressEnemyShadow == FALSE)
+src/battle_gfx_sfx_util.c:1354:        if (gSpeciesInfo[SanitizeSpeciesId(species)].enemyMonElevation != 0)
+include/pokemon.h:903:u16 SanitizeSpeciesId(u16 species);
+include/pokemon.h:904:bool32 IsSpeciesEnabled(u16 species);
+src/decompress.c:1129:    species = SanitizeSpeciesId(species);
+src/battle_util.c:7917:             && SanitizeSpeciesId(evolutions[i].targetSpecies) != SPECIES_NONE)
+src/daycare.c:507:            if (!IsSpeciesEnabled(j))
+src/daycare.c:514:                if (SanitizeSpeciesId(evolutions[k].targetSpecies) == species)
+src/pokemon_sprite_visualizer.c:725:    u16 species = SanitizeSpeciesId(data->currentmonId);
+src/pokemon_sprite_visualizer.c:742:    u16 species = SanitizeSpeciesId(data->currentmonId);
+src/pokemon_sprite_visualizer.c:756:    species = SanitizeSpeciesId(species);
+src/pokemon_sprite_visualizer.c:842:    u16 species = SanitizeSpeciesId(data->currentmonId);
+src/pokemon_sprite_visualizer.c:1046:    u16 species = SanitizeSpeciesId(data->currentmonId);
+src/pokemon_sprite_visualizer.c:1274:            species = SanitizeSpeciesId(data->currentmonId);
+src/pokemon_sprite_visualizer.c:1394:    u16 species = SanitizeSpeciesId(data->currentmonId);
+src/pokemon_sprite_visualizer.c:1407:    u16 species = SanitizeSpeciesId(data->currentmonId);
+src/pokemon_sprite_visualizer.c:1497:    u16 species = SanitizeSpeciesId(data->currentmonId);
+src/pokemon_sprite_visualizer.c:1668:    u16 species = SanitizeSpeciesId(data->currentmonId);
+src/pokemon_sprite_visualizer.c:1945:    u16 species = SanitizeSpeciesId(data->currentmonId);
+src/pokedex.c:4821:    footprintGfx = gSpeciesInfo[SanitizeSpeciesId(species)].footprint;
+src/battle_main.c:2715:    species = SanitizeSpeciesId(species);
+
+============================================================
+2) Dump IsSpeciesEnabled definition (best effort)
+============================================================
+include/pokemon.h:904:bool32 IsSpeciesEnabled(u16 species);
+src/pokemon.c:7200:bool32 IsSpeciesEnabled(u16 species)
+
+-- Extracting IsSpeciesEnabled from include/pokemon.h --
+bool32 IsSpeciesEnabled(u16 species);
+enum PokemonCry GetCryIdBySpecies(u16 species);
+u16 GetSpeciesPreEvolution(u16 species);
+void HealPokemon(struct Pokemon *mon);
+void HealBoxPokemon(struct BoxPokemon *boxMon);
+void UpdateDaysPassedSinceFormChange(u16 days);
+void TrySetDayLimitToFormChange(struct Pokemon *mon);
+enum Type CheckDynamicMoveType(struct Pokemon *mon, u32 move, u32 battler, enum MonState state);
+uq4_12_t GetDynamaxLevelHPMultiplier(u32 dynamaxLevel, bool32 inverseMultiplier);
+u32 GetRegionalFormByRegion(u32 species, u32 region);
+bool32 IsSpeciesForeignRegionalForm(u32 species, u32 currentRegion);
+enum Type GetTeraTypeFromPersonality(struct Pokemon *mon);
+bool8 ShouldSkipFriendshipChange(void);
+struct Pokemon *GetSavedPlayerPartyMon(u32 index);
+u8 *GetSavedPlayerPartyCount(void);
+void SavePlayerPartyMon(u32 index, struct Pokemon *mon);
+bool32 IsSpeciesOfType(u32 species, enum Type type);
+
+#endif // GUARD_POKEMON_H
+
+============================================================
+3) Look for species enabled tables/flags
+============================================================
+include/config/species_enabled.h:1:#ifndef GUARD_CONFIG_SPECIES_ENABLED_H
+include/config/species_enabled.h:2:#define GUARD_CONFIG_SPECIES_ENABLED_H
+include/config/species_enabled.h:606:#endif // GUARD_CONFIG_SPECIES_ENABLED_H
+include/config/pokemon.h:53:#define P_CRIES_ENABLED                  TRUE        // If TRUE, Pokémon will have cries. Disabling this saves around a LOT of ROM space (over 25%!), but instead we recommend disabling individual unused Pokémon families in include/config/species_enabled.h.
+include/config/pokemon.h:76:#include "config/species_enabled.h"
+include/pokemon.h:904:bool32 IsSpeciesEnabled(u16 species);
+src/pokemon.c:7194:    if (species > NUM_SPECIES || !IsSpeciesEnabled(species))
+src/pokemon.c:7200:bool32 IsSpeciesEnabled(u16 species)
+src/daycare.c:507:            if (!IsSpeciesEnabled(j))
+
+============================================================
+4) Check whether BW3G species appear in any enable lists
+============================================================
+src/pokemon_icon.c:161:    if (species >= SPECIES_SNIVY_BW3G && species <= SPECIES_GENESIS_MON_BW3G)
+src/pokemon_icon.c:195:    if (species >= SPECIES_SNIVY_BW3G && species <= SPECIES_GENESIS_MON_BW3G)
+src/pokemon_icon.c:231:    u16 idx = species - SPECIES_SNIVY_BW3G;
+src/pokemon_icon.c:236:        icon = sBw3gMonIconTable[SPECIES_GENESECT_BW3G - SPECIES_SNIVY_BW3G];
+src/pokemon_icon.c:323:    if (species >= SPECIES_SNIVY_BW3G && species <= SPECIES_GENESIS_MON_BW3G)
+src/pokemon_icon.c:356:    if (species >= SPECIES_SNIVY_BW3G && species <= SPECIES_GENESIS_MON_BW3G)
+src/pokemon_icon.c:364:    if (species >= SPECIES_SNIVY_BW3G && species <= SPECIES_GENESIS_MON_BW3G)
+src/pokemon_icon.c:372:    if (species >= SPECIES_SNIVY_BW3G && species <= SPECIES_GENESIS_MON_BW3G)
+include/constants/species_bw3g.h:1:#ifndef GUARD_CONSTANTS_SPECIES_BW3G_H
+include/constants/species_bw3g.h:2:#define GUARD_CONSTANTS_SPECIES_BW3G_H
+include/constants/species_bw3g.h:7:#define SPECIES_SNIVY_BW3G (SPECIES_ZUBAT_SPACEWORLD + 1)
+include/constants/species_bw3g.h:8:#define SPECIES_SERVINE_BW3G (SPECIES_SNIVY_BW3G + 1)
+include/constants/species_bw3g.h:9:#define SPECIES_SERPERIOR_BW3G (SPECIES_SERVINE_BW3G + 1)
+include/constants/species_bw3g.h:10:#define SPECIES_TEPIG_BW3G (SPECIES_SERPERIOR_BW3G + 1)
+include/constants/species_bw3g.h:11:#define SPECIES_PIGNITE_BW3G (SPECIES_TEPIG_BW3G + 1)
+include/constants/species_bw3g.h:12:#define SPECIES_EMBOAR_BW3G (SPECIES_PIGNITE_BW3G + 1)
+include/constants/species_bw3g.h:13:#define SPECIES_OSHAWOTT_BW3G (SPECIES_EMBOAR_BW3G + 1)
+include/constants/species_bw3g.h:14:#define SPECIES_DEWOTT_BW3G (SPECIES_OSHAWOTT_BW3G + 1)
+include/constants/species_bw3g.h:15:#define SPECIES_SAMUROTT_BW3G (SPECIES_DEWOTT_BW3G + 1)
+include/constants/species_bw3g.h:16:#define SPECIES_PATRAT_BW3G (SPECIES_SAMUROTT_BW3G + 1)
+include/constants/species_bw3g.h:17:#define SPECIES_WATCHOG_BW3G (SPECIES_PATRAT_BW3G + 1)
+include/constants/species_bw3g.h:18:#define SPECIES_PURRLOIN_BW3G (SPECIES_WATCHOG_BW3G + 1)
+include/constants/species_bw3g.h:19:#define SPECIES_LIEPARD_BW3G (SPECIES_PURRLOIN_BW3G + 1)
+include/constants/species_bw3g.h:20:#define SPECIES_PIDOVE_BW3G (SPECIES_LIEPARD_BW3G + 1)
+include/constants/species_bw3g.h:21:#define SPECIES_TRANQUILL_BW3G (SPECIES_PIDOVE_BW3G + 1)
+include/constants/species_bw3g.h:22:#define SPECIES_UNFEZANT_BW3G (SPECIES_TRANQUILL_BW3G + 1)
+include/constants/species_bw3g.h:23:#define SPECIES_IGGLYBUFF_BW3G (SPECIES_UNFEZANT_BW3G + 1)
+include/constants/species_bw3g.h:24:#define SPECIES_JIGGLYPUFF_BW3G (SPECIES_IGGLYBUFF_BW3G + 1)
+include/constants/species_bw3g.h:25:#define SPECIES_WIGGLYTUFF_BW3G (SPECIES_JIGGLYPUFF_BW3G + 1)
+include/constants/species_bw3g.h:26:#define SPECIES_AZURILL_BW3G (SPECIES_WIGGLYTUFF_BW3G + 1)
+include/constants/species_bw3g.h:27:#define SPECIES_MARILL_BW3G (SPECIES_AZURILL_BW3G + 1)
+include/constants/species_bw3g.h:28:#define SPECIES_AZUMARILL_BW3G (SPECIES_MARILL_BW3G + 1)
+include/constants/species_bw3g.h:29:#define SPECIES_SEWADDLE_BW3G (SPECIES_AZUMARILL_BW3G + 1)
+include/constants/species_bw3g.h:30:#define SPECIES_SWADLOON_BW3G (SPECIES_SEWADDLE_BW3G + 1)
+include/constants/species_bw3g.h:31:#define SPECIES_LEAVANNY_BW3G (SPECIES_SWADLOON_BW3G + 1)
+include/constants/species_bw3g.h:32:#define SPECIES_VENIPEDE_BW3G (SPECIES_LEAVANNY_BW3G + 1)
+include/constants/species_bw3g.h:33:#define SPECIES_WHIRLIPEDE_BW3G (SPECIES_VENIPEDE_BW3G + 1)
+include/constants/species_bw3g.h:34:#define SPECIES_SCOLIPEDE_BW3G (SPECIES_WHIRLIPEDE_BW3G + 1)
+include/constants/species_bw3g.h:35:#define SPECIES_LILLIPUP_BW3G (SPECIES_SCOLIPEDE_BW3G + 1)
+include/constants/species_bw3g.h:36:#define SPECIES_HERDIER_BW3G (SPECIES_LILLIPUP_BW3G + 1)
+include/constants/species_bw3g.h:37:#define SPECIES_STOUTLAND_BW3G (SPECIES_HERDIER_BW3G + 1)
+include/constants/species_bw3g.h:38:#define SPECIES_TYMPOLE_BW3G (SPECIES_STOUTLAND_BW3G + 1)
+include/constants/species_bw3g.h:39:#define SPECIES_PALPITOAD_BW3G (SPECIES_TYMPOLE_BW3G + 1)
+include/constants/species_bw3g.h:40:#define SPECIES_SEISMITOAD_BW3G (SPECIES_PALPITOAD_BW3G + 1)
+include/constants/species_bw3g.h:41:#define SPECIES_ZUBAT_BW3G (SPECIES_SEISMITOAD_BW3G + 1)
+include/constants/species_bw3g.h:42:#define SPECIES_GOLBAT_BW3G (SPECIES_ZUBAT_BW3G + 1)
+include/constants/species_bw3g.h:43:#define SPECIES_CROBAT_BW3G (SPECIES_GOLBAT_BW3G + 1)
+include/constants/species_bw3g.h:44:#define SPECIES_WOOBAT_BW3G (SPECIES_CROBAT_BW3G + 1)
+include/constants/species_bw3g.h:45:#define SPECIES_SWOOBAT_BW3G (SPECIES_WOOBAT_BW3G + 1)
+include/constants/species_bw3g.h:46:#define SPECIES_ROGGENROLA_BW3G (SPECIES_SWOOBAT_BW3G + 1)
+include/constants/species_bw3g.h:47:#define SPECIES_BOLDORE_BW3G (SPECIES_ROGGENROLA_BW3G + 1)
+include/constants/species_bw3g.h:48:#define SPECIES_GIGALITH_BW3G (SPECIES_BOLDORE_BW3G + 1)
+include/constants/species_bw3g.h:49:#define SPECIES_CLEFFA_BW3G (SPECIES_GIGALITH_BW3G + 1)
+include/constants/species_bw3g.h:50:#define SPECIES_CLEFAIRY_BW3G (SPECIES_CLEFFA_BW3G + 1)
+include/constants/species_bw3g.h:51:#define SPECIES_CLEFABLE_BW3G (SPECIES_CLEFAIRY_BW3G + 1)
+include/constants/species_bw3g.h:52:#define SPECIES_MUNNA_BW3G (SPECIES_CLEFABLE_BW3G + 1)
+include/constants/species_bw3g.h:53:#define SPECIES_MUSHARNA_BW3G (SPECIES_MUNNA_BW3G + 1)
+include/constants/species_bw3g.h:54:#define SPECIES_RUFFLET_BW3G (SPECIES_MUSHARNA_BW3G + 1)
+include/constants/species_bw3g.h:55:#define SPECIES_BRAVIARY_BW3G (SPECIES_RUFFLET_BW3G + 1)
+include/constants/species_bw3g.h:56:#define SPECIES_VULLABY_BW3G (SPECIES_BRAVIARY_BW3G + 1)
+include/constants/species_bw3g.h:57:#define SPECIES_MANDIBUZZ_BW3G (SPECIES_VULLABY_BW3G + 1)
+include/constants/species_bw3g.h:58:#define SPECIES_BUDEW_BW3G (SPECIES_MANDIBUZZ_BW3G + 1)
+include/constants/species_bw3g.h:59:#define SPECIES_ROSELIA_BW3G (SPECIES_BUDEW_BW3G + 1)
+include/constants/species_bw3g.h:60:#define SPECIES_ROSERADE_BW3G (SPECIES_ROSELIA_BW3G + 1)
+include/constants/species_bw3g.h:61:#define SPECIES_FOONGUS_BW3G (SPECIES_ROSERADE_BW3G + 1)
+include/constants/species_bw3g.h:62:#define SPECIES_AMOONGUSS_BW3G (SPECIES_FOONGUS_BW3G + 1)
+include/constants/species_bw3g.h:63:#define SPECIES_RALTS_BW3G (SPECIES_AMOONGUSS_BW3G + 1)
+include/constants/species_bw3g.h:64:#define SPECIES_KIRLIA_BW3G (SPECIES_RALTS_BW3G + 1)
+include/constants/species_bw3g.h:65:#define SPECIES_GARDEVOIR_BW3G (SPECIES_KIRLIA_BW3G + 1)
+include/constants/species_bw3g.h:66:#define SPECIES_GALLADE_BW3G (SPECIES_GARDEVOIR_BW3G + 1)
+include/constants/species_bw3g.h:67:#define SPECIES_BLITZLE_BW3G (SPECIES_GALLADE_BW3G + 1)
+include/constants/species_bw3g.h:68:#define SPECIES_ZEBSTRIKA_BW3G (SPECIES_BLITZLE_BW3G + 1)
+include/constants/species_bw3g.h:69:#define SPECIES_MAREEP_BW3G (SPECIES_ZEBSTRIKA_BW3G + 1)
+include/constants/species_bw3g.h:70:#define SPECIES_FLAAFFY_BW3G (SPECIES_MAREEP_BW3G + 1)
+include/constants/species_bw3g.h:71:#define SPECIES_AMPHAROS_BW3G (SPECIES_FLAAFFY_BW3G + 1)
+include/constants/species_bw3g.h:72:#define SPECIES_DRILBUR_BW3G (SPECIES_AMPHAROS_BW3G + 1)
+include/constants/species_bw3g.h:73:#define SPECIES_EXCADRILL_BW3G (SPECIES_DRILBUR_BW3G + 1)
+include/constants/species_bw3g.h:74:#define SPECIES_SNUBBULL_BW3G (SPECIES_EXCADRILL_BW3G + 1)
+include/constants/species_bw3g.h:75:#define SPECIES_GRANBULL_BW3G (SPECIES_SNUBBULL_BW3G + 1)
+include/constants/species_bw3g.h:76:#define SPECIES_RIOLU_BW3G (SPECIES_GRANBULL_BW3G + 1)
+include/constants/species_bw3g.h:77:#define SPECIES_LUCARIO_BW3G (SPECIES_RIOLU_BW3G + 1)
+include/constants/species_bw3g.h:78:#define SPECIES_TIMBURR_BW3G (SPECIES_LUCARIO_BW3G + 1)
+include/constants/species_bw3g.h:79:#define SPECIES_GURDURR_BW3G (SPECIES_TIMBURR_BW3G + 1)
+include/constants/species_bw3g.h:80:#define SPECIES_CONKELDURR_BW3G (SPECIES_GURDURR_BW3G + 1)
+include/constants/species_bw3g.h:81:#define SPECIES_ARON_BW3G (SPECIES_CONKELDURR_BW3G + 1)
+include/constants/species_bw3g.h:82:#define SPECIES_LAIRON_BW3G (SPECIES_ARON_BW3G + 1)
+include/constants/species_bw3g.h:83:#define SPECIES_AGGRON_BW3G (SPECIES_LAIRON_BW3G + 1)
+include/constants/species_bw3g.h:84:#define SPECIES_ONIX_BW3G (SPECIES_AGGRON_BW3G + 1)
+include/constants/species_bw3g.h:85:#define SPECIES_STEELIX_BW3G (SPECIES_ONIX_BW3G + 1)
+include/constants/species_bw3g.h:86:#define SPECIES_NOSEPASS_BW3G (SPECIES_STEELIX_BW3G + 1)
+include/constants/species_bw3g.h:87:#define SPECIES_PROBOPASS_BW3G (SPECIES_NOSEPASS_BW3G + 1)
+include/constants/species_bw3g.h:88:#define SPECIES_MAWILE_BW3G (SPECIES_PROBOPASS_BW3G + 1)
+include/constants/species_bw3g.h:89:#define SPECIES_DWEBBLE_BW3G (SPECIES_MAWILE_BW3G + 1)
+include/constants/species_bw3g.h:90:#define SPECIES_CRUSTLE_BW3G (SPECIES_DWEBBLE_BW3G + 1)
+include/constants/species_bw3g.h:91:#define SPECIES_DRIFLOON_BW3G (SPECIES_CRUSTLE_BW3G + 1)
+include/constants/species_bw3g.h:92:#define SPECIES_DRIFBLIM_BW3G (SPECIES_DRIFLOON_BW3G + 1)
+include/constants/species_bw3g.h:93:#define SPECIES_MEDITITE_BW3G (SPECIES_DRIFBLIM_BW3G + 1)
+include/constants/species_bw3g.h:94:#define SPECIES_MEDICHAM_BW3G (SPECIES_MEDITITE_BW3G + 1)
+include/constants/species_bw3g.h:95:#define SPECIES_HOUNDOUR_BW3G (SPECIES_MEDICHAM_BW3G + 1)
+include/constants/species_bw3g.h:96:#define SPECIES_HOUNDOOM_BW3G (SPECIES_HOUNDOUR_BW3G + 1)
+include/constants/species_bw3g.h:97:#define SPECIES_YAMASK_BW3G (SPECIES_HOUNDOOM_BW3G + 1)
+include/constants/species_bw3g.h:98:#define SPECIES_COFAGRIGUS_BW3G (SPECIES_YAMASK_BW3G + 1)
+include/constants/species_bw3g.h:99:#define SPECIES_GASTLY_BW3G (SPECIES_COFAGRIGUS_BW3G + 1)
+include/constants/species_bw3g.h:100:#define SPECIES_HAUNTER_BW3G (SPECIES_GASTLY_BW3G + 1)
+include/constants/species_bw3g.h:101:#define SPECIES_GENGAR_BW3G (SPECIES_HAUNTER_BW3G + 1)
+include/constants/species_bw3g.h:102:#define SPECIES_LITWICK_BW3G (SPECIES_GENGAR_BW3G + 1)
+include/constants/species_bw3g.h:103:#define SPECIES_LAMPENT_BW3G (SPECIES_LITWICK_BW3G + 1)
+include/constants/species_bw3g.h:104:#define SPECIES_CHANDELURE_BW3G (SPECIES_LAMPENT_BW3G + 1)
+include/constants/species_bw3g.h:105:#define SPECIES_COTTONEE_BW3G (SPECIES_CHANDELURE_BW3G + 1)
+include/constants/species_bw3g.h:106:#define SPECIES_WHIMSICOTT_BW3G (SPECIES_COTTONEE_BW3G + 1)
+include/constants/species_bw3g.h:107:#define SPECIES_PETILIL_BW3G (SPECIES_WHIMSICOTT_BW3G + 1)
+include/constants/species_bw3g.h:108:#define SPECIES_LILLIGANT_BW3G (SPECIES_PETILIL_BW3G + 1)
+include/constants/species_bw3g.h:109:#define SPECIES_YANMA_BW3G (SPECIES_LILLIGANT_BW3G + 1)
+include/constants/species_bw3g.h:110:#define SPECIES_YANMEGA_BW3G (SPECIES_YANMA_BW3G + 1)
+include/constants/species_bw3g.h:111:#define SPECIES_SHROOMISH_BW3G (SPECIES_YANMEGA_BW3G + 1)
+include/constants/species_bw3g.h:112:#define SPECIES_BRELOOM_BW3G (SPECIES_SHROOMISH_BW3G + 1)
+include/constants/species_bw3g.h:113:#define SPECIES_JOLTIK_BW3G (SPECIES_BRELOOM_BW3G + 1)
+include/constants/species_bw3g.h:114:#define SPECIES_GALVANTULA_BW3G (SPECIES_JOLTIK_BW3G + 1)
+include/constants/species_bw3g.h:115:#define SPECIES_SPIRITOMB_BW3G (SPECIES_GALVANTULA_BW3G + 1)
+include/constants/species_bw3g.h:116:#define SPECIES_ZORUA_BW3G (SPECIES_SPIRITOMB_BW3G + 1)
+include/constants/species_bw3g.h:117:#define SPECIES_ZOROARK_BW3G (SPECIES_ZORUA_BW3G + 1)
+include/constants/species_bw3g.h:118:#define SPECIES_TRUBBISH_BW3G (SPECIES_ZOROARK_BW3G + 1)
+include/constants/species_bw3g.h:119:#define SPECIES_GARBODOR_BW3G (SPECIES_TRUBBISH_BW3G + 1)
+include/constants/species_bw3g.h:120:#define SPECIES_MAGNEMITE_BW3G (SPECIES_GARBODOR_BW3G + 1)
+include/constants/species_bw3g.h:121:#define SPECIES_MAGNETON_BW3G (SPECIES_MAGNEMITE_BW3G + 1)
+include/constants/species_bw3g.h:122:#define SPECIES_MAGNEZONE_BW3G (SPECIES_MAGNETON_BW3G + 1)
+include/constants/species_bw3g.h:123:#define SPECIES_GOTHITA_BW3G (SPECIES_MAGNEZONE_BW3G + 1)
+include/constants/species_bw3g.h:124:#define SPECIES_GOTHORITA_BW3G (SPECIES_GOTHITA_BW3G + 1)
+include/constants/species_bw3g.h:125:#define SPECIES_GOTHITELLE_BW3G (SPECIES_GOTHORITA_BW3G + 1)
+include/constants/species_bw3g.h:126:#define SPECIES_SOLOSIS_BW3G (SPECIES_GOTHITELLE_BW3G + 1)
+include/constants/species_bw3g.h:127:#define SPECIES_DUOSION_BW3G (SPECIES_SOLOSIS_BW3G + 1)
+include/constants/species_bw3g.h:128:#define SPECIES_REUNICLUS_BW3G (SPECIES_DUOSION_BW3G + 1)
+include/constants/species_bw3g.h:129:#define SPECIES_DEERLING_BW3G (SPECIES_REUNICLUS_BW3G + 1)
+include/constants/species_bw3g.h:130:#define SPECIES_SAWSBUCK_BW3G (SPECIES_DEERLING_BW3G + 1)
+include/constants/species_bw3g.h:131:#define SPECIES_KARRABLAST_BW3G (SPECIES_SAWSBUCK_BW3G + 1)
+include/constants/species_bw3g.h:132:#define SPECIES_ESCAVALIER_BW3G (SPECIES_KARRABLAST_BW3G + 1)
+include/constants/species_bw3g.h:133:#define SPECIES_SHELMET_BW3G (SPECIES_ESCAVALIER_BW3G + 1)
+include/constants/species_bw3g.h:134:#define SPECIES_ACCELGOR_BW3G (SPECIES_SHELMET_BW3G + 1)
+include/constants/species_bw3g.h:135:#define SPECIES_FERROSEED_BW3G (SPECIES_ACCELGOR_BW3G + 1)
+include/constants/species_bw3g.h:136:#define SPECIES_FERROTHORN_BW3G (SPECIES_FERROSEED_BW3G + 1)
+include/constants/species_bw3g.h:137:#define SPECIES_BASCULIN_BW3G (SPECIES_FERROTHORN_BW3G + 1)
+include/constants/species_bw3g.h:138:#define SPECIES_REMORAID_BW3G (SPECIES_BASCULIN_BW3G + 1)
+include/constants/species_bw3g.h:139:#define SPECIES_OCTILLERY_BW3G (SPECIES_REMORAID_BW3G + 1)
+include/constants/species_bw3g.h:140:#define SPECIES_DARUMAKA_BW3G (SPECIES_OCTILLERY_BW3G + 1)
+include/constants/species_bw3g.h:141:#define SPECIES_DARMANITAN_BW3G (SPECIES_DARUMAKA_BW3G + 1)
+include/constants/species_bw3g.h:142:#define SPECIES_ELEKID_BW3G (SPECIES_DARMANITAN_BW3G + 1)
+include/constants/species_bw3g.h:143:#define SPECIES_ELECTABUZZ_BW3G (SPECIES_ELEKID_BW3G + 1)
+include/constants/species_bw3g.h:144:#define SPECIES_ELECTIVIRE_BW3G (SPECIES_ELECTABUZZ_BW3G + 1)
+include/constants/species_bw3g.h:145:#define SPECIES_MAGBY_BW3G (SPECIES_ELECTIVIRE_BW3G + 1)
+include/constants/species_bw3g.h:146:#define SPECIES_MAGMAR_BW3G (SPECIES_MAGBY_BW3G + 1)
+include/constants/species_bw3g.h:147:#define SPECIES_MAGMORTAR_BW3G (SPECIES_MAGMAR_BW3G + 1)
+include/constants/species_bw3g.h:148:#define SPECIES_SANDILE_BW3G (SPECIES_MAGMORTAR_BW3G + 1)
+include/constants/species_bw3g.h:149:#define SPECIES_KROKOROK_BW3G (SPECIES_SANDILE_BW3G + 1)
+include/constants/species_bw3g.h:150:#define SPECIES_KROOKODILE_BW3G (SPECIES_KROKOROK_BW3G + 1)
+include/constants/species_bw3g.h:151:#define SPECIES_SKORUPI_BW3G (SPECIES_KROOKODILE_BW3G + 1)
+include/constants/species_bw3g.h:152:#define SPECIES_DRAPION_BW3G (SPECIES_SKORUPI_BW3G + 1)
+include/constants/species_bw3g.h:153:#define SPECIES_TRAPINCH_BW3G (SPECIES_DRAPION_BW3G + 1)
+include/constants/species_bw3g.h:154:#define SPECIES_VIBRAVA_BW3G (SPECIES_TRAPINCH_BW3G + 1)
+include/constants/species_bw3g.h:155:#define SPECIES_FLYGON_BW3G (SPECIES_VIBRAVA_BW3G + 1)
+include/constants/species_bw3g.h:156:#define SPECIES_SCRAGGY_BW3G (SPECIES_FLYGON_BW3G + 1)
+include/constants/species_bw3g.h:157:#define SPECIES_SCRAFTY_BW3G (SPECIES_SCRAGGY_BW3G + 1)
+include/constants/species_bw3g.h:158:#define SPECIES_NUMEL_BW3G (SPECIES_SCRAFTY_BW3G + 1)
+include/constants/species_bw3g.h:159:#define SPECIES_CAMERUPT_BW3G (SPECIES_NUMEL_BW3G + 1)
+include/constants/species_bw3g.h:160:#define SPECIES_MARACTUS_BW3G (SPECIES_CAMERUPT_BW3G + 1)
+include/constants/species_bw3g.h:161:#define SPECIES_GLIGAR_BW3G (SPECIES_MARACTUS_BW3G + 1)
+include/constants/species_bw3g.h:162:#define SPECIES_GLISCOR_BW3G (SPECIES_GLIGAR_BW3G + 1)
+include/constants/species_bw3g.h:163:#define SPECIES_BALTOY_BW3G (SPECIES_GLISCOR_BW3G + 1)
+include/constants/species_bw3g.h:164:#define SPECIES_CLAYDOL_BW3G (SPECIES_BALTOY_BW3G + 1)
+include/constants/species_bw3g.h:165:#define SPECIES_SIGILYPH_BW3G (SPECIES_CLAYDOL_BW3G + 1)
+include/constants/species_bw3g.h:166:#define SPECIES_GOLETT_BW3G (SPECIES_SIGILYPH_BW3G + 1)
+include/constants/species_bw3g.h:167:#define SPECIES_GOLURK_BW3G (SPECIES_GOLETT_BW3G + 1)
+include/constants/species_bw3g.h:168:#define SPECIES_TIRTOUGA_BW3G (SPECIES_GOLURK_BW3G + 1)
+include/constants/species_bw3g.h:169:#define SPECIES_CARRACOSTA_BW3G (SPECIES_TIRTOUGA_BW3G + 1)
+include/constants/species_bw3g.h:170:#define SPECIES_ARCHEN_BW3G (SPECIES_CARRACOSTA_BW3G + 1)
+include/constants/species_bw3g.h:171:#define SPECIES_ARCHEOPS_BW3G (SPECIES_ARCHEN_BW3G + 1)
+include/constants/species_bw3g.h:172:#define SPECIES_FRILLISH_BW3G (SPECIES_ARCHEOPS_BW3G + 1)
+include/constants/species_bw3g.h:173:#define SPECIES_JELLICENT_BW3G (SPECIES_FRILLISH_BW3G + 1)
+include/constants/species_bw3g.h:174:#define SPECIES_EMOLGA_BW3G (SPECIES_JELLICENT_BW3G + 1)
+include/constants/species_bw3g.h:175:#define SPECIES_VULPIX_BW3G (SPECIES_EMOLGA_BW3G + 1)
+include/constants/species_bw3g.h:176:#define SPECIES_NINETALES_BW3G (SPECIES_VULPIX_BW3G + 1)
+include/constants/species_bw3g.h:177:#define SPECIES_DUCKLETT_BW3G (SPECIES_NINETALES_BW3G + 1)
+include/constants/species_bw3g.h:178:#define SPECIES_SWANNA_BW3G (SPECIES_DUCKLETT_BW3G + 1)
+include/constants/species_bw3g.h:179:#define SPECIES_SWABLU_BW3G (SPECIES_SWANNA_BW3G + 1)
+include/constants/species_bw3g.h:180:#define SPECIES_ALTARIA_BW3G (SPECIES_SWABLU_BW3G + 1)
+include/constants/species_bw3g.h:181:#define SPECIES_AUDINO_BW3G (SPECIES_ALTARIA_BW3G + 1)
+include/constants/species_bw3g.h:182:#define SPECIES_EEVEE_BW3G (SPECIES_AUDINO_BW3G + 1)
+include/constants/species_bw3g.h:183:#define SPECIES_VAPOREON_BW3G (SPECIES_EEVEE_BW3G + 1)
+include/constants/species_bw3g.h:184:#define SPECIES_JOLTEON_BW3G (SPECIES_VAPOREON_BW3G + 1)
+include/constants/species_bw3g.h:185:#define SPECIES_FLAREON_BW3G (SPECIES_JOLTEON_BW3G + 1)
+include/constants/species_bw3g.h:186:#define SPECIES_ESPEON_BW3G (SPECIES_FLAREON_BW3G + 1)
+include/constants/species_bw3g.h:187:#define SPECIES_UMBREON_BW3G (SPECIES_ESPEON_BW3G + 1)
+include/constants/species_bw3g.h:188:#define SPECIES_LEAFEON_BW3G (SPECIES_UMBREON_BW3G + 1)
+include/constants/species_bw3g.h:189:#define SPECIES_GLACEON_BW3G (SPECIES_LEAFEON_BW3G + 1)
+include/constants/species_bw3g.h:190:#define SPECIES_SYLVEON_BW3G (SPECIES_GLACEON_BW3G + 1)
+include/constants/species_bw3g.h:191:#define SPECIES_CROAGUNK_BW3G (SPECIES_SYLVEON_BW3G + 1)
+include/constants/species_bw3g.h:192:#define SPECIES_TOXICROAK_BW3G (SPECIES_CROAGUNK_BW3G + 1)
+include/constants/species_bw3g.h:193:#define SPECIES_HEATMOR_BW3G (SPECIES_TOXICROAK_BW3G + 1)
+include/constants/species_bw3g.h:194:#define SPECIES_DURANT_BW3G (SPECIES_HEATMOR_BW3G + 1)
+include/constants/species_bw3g.h:195:#define SPECIES_KOFFING_BW3G (SPECIES_DURANT_BW3G + 1)
+include/constants/species_bw3g.h:196:#define SPECIES_WEEZING_BW3G (SPECIES_KOFFING_BW3G + 1)
+
+============================================================
+5) Confirm NUM_SPECIES and where it's defined
+============================================================
+include/constants/species.h:1929:#define SPECIES_EGG                                     (SPECIES_GENESIS_MON_BW3G + 1)
+include/constants/species.h:1930:#define NUM_SPECIES SPECIES_EGG
+include/constants/species.h:1929:#define SPECIES_EGG                                     (SPECIES_GENESIS_MON_BW3G + 1)
+include/constants/species.h:1930:#define NUM_SPECIES SPECIES_EGG
+include/global.h:255:    u8 dexNavSearchLevels[NUM_SPECIES];
+include/pokemon.h:658:extern const struct Fusion *const gFusionTablePointers[NUM_SPECIES];
+
+============================================================
+DONE - paste output back
+============================================================

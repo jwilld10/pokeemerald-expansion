@@ -1,0 +1,13 @@
+== Locate a vanilla gMonFrontPic_ definition and inspect its INCBIN file ==
+
+Found definition line:
+src/bw3g_pokemon_pics.c:6:ALIGNED(4) const u8 gMonFrontPic_SNIVYBw3g[] = INCBIN_U8("graphics/bw3g/pokemon/snivy/front.animated.2bpp.lz");
+
+From file: src/bw3g_pokemon_pics.c (line 6)
+
+Definition text:
+ALIGNED(4) const u8 gMonFrontPic_SNIVYBw3g[] = INCBIN_U8("graphics/bw3g/pokemon/snivy/front.animated.2bpp.lz");
+
+INCBIN path: graphics/bw3g/pokemon/snivy/front.animated.2bpp.lz
+first byte: 69 (0x10 means GBA LZ77)
+size: 250

@@ -1,0 +1,7 @@
+== Auditing BW3G pic asset references in src/bw3g_pokemon_pics.c ==
+
+------------------------------------------------------------
+1) Count references by type
+------------------------------------------------------------
+2bpp.lz refs: 504
+.smol refs:   0

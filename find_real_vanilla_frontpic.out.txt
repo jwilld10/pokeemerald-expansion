@@ -1,0 +1,5 @@
+== Searching for a NON-BW3G gMonFrontPic_* definition that uses .4bpp.lz ==
+
+Could not find a vanilla gMonFrontPic_* .4bpp.lz definition via that pattern.
+Trying a broader search for .4bpp.lz INCBIN under graphics/pokemon/ ...
+ERROR: still couldn't find a vanilla .4bpp.lz INCBIN reference.

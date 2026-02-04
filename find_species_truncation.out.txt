@@ -1,0 +1,121 @@
+== Likely u8 truncation sites for species IDs ==
+
+-- u8 variables named species/monSpecies/etc --
+src/battle_anim_electric.c:899:    u8 sp = gTasks[taskId].data[2];
+src/trainer_card.c:1356:                u8 monSpecies = GetMonIconPaletteIndexFromSpecies(sData->trainerCard.monSpecies[i]);
+src/apprentice.c:204:    u8 species[APPRENTICE_SPECIES_COUNT];
+
+-- casts to u8 around SPECIES_ or species vars --
+
+-- CreateMon / GiveMon call sites (look for u8 params or casts) --
+src/script_pokemon_util.c:122:        CreateMon(&gEnemyParty[0], species, level, USE_RANDOM_IVS, 0, 0, OT_ID_PLAYER_ID, 0);
+src/script_pokemon_util.c:140:        CreateMon(&gEnemyParty[0], species1, level1, 32, 0, 0, OT_ID_PLAYER_ID, 0);
+src/script_pokemon_util.c:151:        CreateMon(&gEnemyParty[1], species2, level2, 32, 0, 0, OT_ID_PLAYER_ID, 0);
+src/script_pokemon_util.c:479:u32 ScriptGiveMon(u16 species, u8 level, u16 item)
+src/frontier_util.c:2598:        CreateMon(&gEnemyParty[monPartyId],
+src/pokemon.c:1032:void CreateMon(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV, u8 hasFixedPersonality, u32 fixedPersonality, u8 otIdType, u32 fixedOtId)
+src/pokemon.c:1036:    CreateBoxMon(&mon->box, species, level, fixedIV, hasFixedPersonality, fixedPersonality, otIdType, fixedOtId);
+src/pokemon.c:1043:void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, u8 hasFixedPersonality, u32 fixedPersonality, u8 otIdType, u32 fixedOtId)
+src/pokemon.c:1234:    CreateMon(mon, species, level, fixedIV, TRUE, personality, OT_ID_PLAYER_ID, 0);
+src/pokemon.c:1264:    CreateMon(mon, species, level, fixedIV, TRUE, personality, OT_ID_PLAYER_ID, 0);
+src/pokemon.c:1279:    CreateMon(mon, species, level, USE_RANDOM_IVS, TRUE, personality, OT_ID_PRESET, otId);
+src/pokemon.c:1284:    CreateMon(mon, species, level, 0, TRUE, personality, OT_ID_PLAYER_ID, 0);
+src/pokemon.c:1291:    CreateMon(mon, species, level, 0, FALSE, 0, OT_ID_PRESET, otId);
+src/pokemon.c:1308:    CreateMon(mon, species, level, fixedIV, FALSE, 0, OT_ID_PLAYER_ID, 0);
+src/pokemon.c:1340:    CreateMon(mon, src->species, src->level, 0, TRUE, src->personality, OT_ID_PRESET, src->otId);
+src/pokemon.c:1402:    CreateMon(mon, src->species, level, 0, TRUE, src->personality, OT_ID_PRESET, src->otId);
+src/pokemon.c:1458:    CreateMon(mon,
+src/pokemon.c:1494:    CreateMon(mon, species, level, fixedIV, TRUE, i, OT_ID_PRESET, otId);
+src/pokemon.c:1556:    CreateMon(mon, species, level, fixedIV, hasFixedPersonality, fixedPersonality, otIdType, fixedOtId);
+src/pokemon.c:3404:            CreateMon(&gEnemyParty[i],
+src/field_specials.c:1463:    CreateMon(&gPlayerParty[0], SPECIES_ZIGZAGOON, 7, USE_RANDOM_IVS, FALSE, 0, OT_ID_PLAYER_ID, 0);
+src/battle_setup.c:881:    ScriptGiveMon(starterMon, 5, ITEM_NONE);
+src/debug.c:2368:            ScriptGiveMon(sDebugMonData->species, gTasks[taskId].tInput, ITEM_NONE);
+src/debug.c:3123:    CreateBoxMon(&boxMon, species, 100, USE_RANDOM_IVS, FALSE, personality, OT_ID_PLAYER_ID, 0);
+src/debug.c:3161:                CreateBoxMon(&boxMon, species, 100, USE_RANDOM_IVS, FALSE, 0, OT_ID_PLAYER_ID, 0);
+src/pokemon_storage_system.c:9570:        CreateBoxMon(&gPokemonStoragePtr->boxes[boxId][boxPosition],
+src/trade.c:468:            CreateMon(&gEnemyParty[i], SPECIES_NONE, 0, USE_RANDOM_IVS, FALSE, 0, OT_ID_PLAYER_ID, 0);
+src/trade.c:4542:    CreateMon(pokemon, inGameTrade->species, level, USE_RANDOM_IVS, TRUE, inGameTrade->personality, OT_ID_PRESET, inGameTrade->otId);
+src/daycare.c:1114:    CreateMon(mon, species, EGG_HATCH_LEVEL, USE_RANDOM_IVS, FALSE, 0, OT_ID_PLAYER_ID, 0);
+src/daycare.c:1141:    CreateMon(mon, species, EGG_HATCH_LEVEL, USE_RANDOM_IVS, TRUE, personality, OT_ID_PLAYER_ID, 0);
+src/battle_controllers.c:92:        CreateMon(&gEnemyParty[0], SPECIES_ZIGZAGOON, 2, USE_RANDOM_IVS, 0, 0, OT_ID_PLAYER_ID, 0);
+src/roamer.c:103:    CreateMon(&gEnemyParty[0], species, level, USE_RANDOM_IVS, FALSE, 0, OT_ID_PLAYER_ID, 0);
+src/battle_tower.c:1587:    CreateMon(dst, fmon->species, level, fixedIV, TRUE, personality, OT_ID_PRESET, otID);
+src/battle_tower.c:3015:            CreateMon(&gPlayerParty[i + 3], partyData[i].species, partyData[i].lvl, 0, TRUE, personality, OT_ID_PRESET, otID);
+src/egg_hatch.c:340:    CreateMon(temp, species, EGG_HATCH_LEVEL, USE_RANDOM_IVS, TRUE, personality, OT_ID_PLAYER_ID, 0);
+src/battle_main.c:1943:            CreateMon(&party[i], partyData[monIndex].species, partyData[monIndex].lvl, 0, TRUE, personalityValue, otIdType, fixedOtId);
+
+-- Common debug/starter menus --
+src/contest_ai.c:78:static void ContestAICmd_check_combo_starter(void);
+src/contest_ai.c:79:static void ContestAICmd_if_combo_starter(void);
+src/contest_ai.c:80:static void ContestAICmd_if_not_combo_starter(void);
+src/contest_ai.c:92:static void ContestAICmd_get_used_combo_starter(void);
+src/contest_ai.c:93:static void ContestAICmd_if_used_combo_starter_less_than(void);
+src/contest_ai.c:94:static void ContestAICmd_if_used_combo_starter_more_than(void);
+src/contest_ai.c:95:static void ContestAICmd_if_used_combo_starter_eq(void);
+src/contest_ai.c:96:static void ContestAICmd_if_used_combo_starter_not_eq(void);
+src/contest_ai.c:219:    ContestAICmd_check_combo_starter,                 // 0x40
+src/contest_ai.c:220:    ContestAICmd_if_combo_starter,                    // 0x41
+src/contest_ai.c:221:    ContestAICmd_if_not_combo_starter,                // 0x42
+src/contest_ai.c:233:    ContestAICmd_get_used_combo_starter,              // 0x4E
+src/contest_ai.c:234:    ContestAICmd_if_used_combo_starter_less_than,     // 0x4F
+src/contest_ai.c:235:    ContestAICmd_if_used_combo_starter_more_than,     // 0x50
+src/contest_ai.c:236:    ContestAICmd_if_used_combo_starter_eq,            // 0x51
+src/contest_ai.c:237:    ContestAICmd_if_used_combo_starter_not_eq,        // 0x52
+src/contest_ai.c:1025:static void ContestAICmd_check_combo_starter(void)
+src/contest_ai.c:1051:static void ContestAICmd_if_combo_starter(void)
+src/contest_ai.c:1053:    ContestAICmd_check_combo_starter();
+src/contest_ai.c:1061:static void ContestAICmd_if_not_combo_starter(void)
+src/contest_ai.c:1063:    ContestAICmd_check_combo_starter();
+src/contest_ai.c:1200:static void ContestAICmd_get_used_combo_starter(void)
+src/contest_ai.c:1212:static void ContestAICmd_if_used_combo_starter_less_than(void)
+src/contest_ai.c:1214:    ContestAICmd_get_used_combo_starter();
+src/contest_ai.c:1222:static void ContestAICmd_if_used_combo_starter_more_than(void)
+src/contest_ai.c:1224:    ContestAICmd_get_used_combo_starter();
+src/contest_ai.c:1232:static void ContestAICmd_if_used_combo_starter_eq(void)
+src/contest_ai.c:1234:    ContestAICmd_get_used_combo_starter();
+src/contest_ai.c:1242:static void ContestAICmd_if_used_combo_starter_not_eq(void)
+src/contest_ai.c:1244:    ContestAICmd_get_used_combo_starter();
+src/save_failed_screen.c:14:#include "starter_choose.h"
+src/battle_factory_screen.c:27:#include "starter_choose.h"
+src/credits.c:17:#include "starter_choose.h"
+src/credits.c:1545:    enum NationalDexOrder starter = SpeciesToNationalPokedexNum(GetStarterPokemon(VarGet(VAR_STARTER_MON)));
+src/credits.c:1565:    // Cap the number of Pokémon we care about to NUM_MON_SLIDES, the max we show in the credits scene (-1 for the starter)
+src/credits.c:1604:        // Ensure the last Pokémon is our starter
+src/credits.c:1605:        sCreditsData->monToShow[NUM_MON_SLIDES - 1] = starter;
+src/credits.c:1609:        // Check to see if our starter has already appeared in this list, break if it has
+src/credits.c:1610:        for (dexNum = 0; sCreditsData->monToShow[dexNum] != starter && dexNum < NUM_MON_SLIDES; dexNum++);
+src/credits.c:1612:        // If it has, swap it with the last Pokémon, to ensure our starter is the last image
+src/credits.c:1616:            sCreditsData->monToShow[NUM_MON_SLIDES - 1] = starter;
+src/credits.c:1620:            // Ensure the last Pokémon is our starter
+src/credits.c:1621:            sCreditsData->monToShow[NUM_MON_SLIDES - 1] = starter;
+src/field_specials.c:45:#include "starter_choose.h"
+src/field_specials.c:1477:    u16 starter = GetStarterPokemon(VarGet(VAR_STARTER_MON));
+src/field_specials.c:1481:        if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG, NULL) == starter)
+src/starter_choose.c:16:#include "starter_choose.h"
+src/starter_choose.c:29:// Position of the sprite of the selected starter Pokémon
+src/starter_choose.c:54:const u16 gBirchBagGrass_Pal[] = INCBIN_U16("graphics/starter_choose/tiles.gbapal");
+src/starter_choose.c:55:static const u16 sPokeballSelection_Pal[] = INCBIN_U16("graphics/starter_choose/pokeball_selection.gbapal");
+src/starter_choose.c:56:static const u16 sStarterCircle_Pal[] = INCBIN_U16("graphics/starter_choose/starter_circle.gbapal");
+src/starter_choose.c:57:const u32 gBirchBagTilemap[] = INCBIN_U32("graphics/starter_choose/birch_bag.bin.smolTM");
+src/starter_choose.c:58:const u32 gBirchGrassTilemap[] = INCBIN_U32("graphics/starter_choose/birch_grass.bin.smolTM");
+src/starter_choose.c:59:const u32 gBirchBagGrass_Gfx[] = INCBIN_U32("graphics/starter_choose/tiles.4bpp.smol");
+src/starter_choose.c:60:const u32 gPokeballSelection_Gfx[] = INCBIN_U32("graphics/starter_choose/pokeball_selection.4bpp.smol");
+src/starter_choose.c:61:static const u32 sStarterCircle_Gfx[] = INCBIN_U32("graphics/starter_choose/starter_circle.4bpp.smol");
+src/starter_choose.c:545:        // Return the starter choice and exit.
+src/mystery_event_script.c:313:bool8 MEScrCmd_givepokemon(struct ScriptContext *ctx)
+src/battle_setup.c:17:#include "starter_choose.h"
+src/battle_setup.c:877:    u16 starterMon;
+src/battle_setup.c:880:    starterMon = GetStarterPokemon(gSpecialVar_Result);
+src/battle_setup.c:881:    ScriptGiveMon(starterMon, 5, ITEM_NONE);
+src/data/graphics/pokemon.h:1095:    const u8 gMonIcon_PikachuStarter[] = INCBIN_U8("graphics/pokemon/pikachu/starter/icon.4bpp");
+src/data/graphics/pokemon.h:1097:    const u8 gMonIcon_PikachuStarterF[] = INCBIN_U8("graphics/pokemon/pikachu/starter/iconf.4bpp");
+src/data/graphics/pokemon.h:16764:    const u32 gMonFrontPic_Sewaddle[] = INCBIN_U32("graphics/pokemon/sewaddle/anim_front.4bpp.smol");
+src/data/graphics/pokemon.h:16765:    const u16 gMonPalette_Sewaddle[] = INCBIN_U16("graphics/pokemon/sewaddle/normal.gbapal");
+src/data/graphics/pokemon.h:16766:    const u32 gMonBackPic_Sewaddle[] = INCBIN_U32("graphics/pokemon/sewaddle/back.4bpp.smol");
+src/data/graphics/pokemon.h:16767:    const u16 gMonShinyPalette_Sewaddle[] = INCBIN_U16("graphics/pokemon/sewaddle/shiny.gbapal");
+src/data/graphics/pokemon.h:16768:    const u8 gMonIcon_Sewaddle[] = INCBIN_U8("graphics/pokemon/sewaddle/icon.4bpp");
+src/data/graphics/pokemon.h:16770:    const u8 gMonFootprint_Sewaddle[] = INCBIN_U8("graphics/pokemon/sewaddle/footprint.1bpp");
+src/data/graphics/pokemon.h:16773:    const u32 gObjectEventPic_Sewaddle[] = INCBIN_COMP("graphics/pokemon/sewaddle/overworld.4bpp");
+src/data/graphics/pokemon.h:16775:    const u16 gOverworldPalette_Sewaddle[] = INCBIN_U16("graphics/pokemon/sewaddle/overworld_normal.gbapal");
+src/data/graphics/pokemon.h:16776:    const u16 gShinyOverworldPalette_Sewaddle[] = INCBIN_U16("graphics/pokemon/sewaddle/overworld_shiny.gbapal");

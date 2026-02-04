@@ -1,0 +1,18 @@
+Backup created: src/bw3g_pokemon_pics.c.bak_u32_20260204_112412
+Patched src/bw3g_pokemon_pics.c
+Replacements:
+  INCBIN_U8(smol)->INCBIN_U32(smol): 504
+  const u8 Front/Back -> const u32 (ALIGNED form): 504
+  const u8 Front/Back -> const u32 (non-ALIGNED form): 0
+
+Quick sanity sample (first 10 front pic defs):
+6:ALIGNED(4) const u32 gMonFrontPic_SNIVYBw3g[] = INCBIN_U32("graphics/bw3g/pokemon/snivy/anim_front.4bpp.smol");
+11:ALIGNED(4) const u32 gMonFrontPic_SERVINEBw3g[] = INCBIN_U32("graphics/bw3g/pokemon/servine/anim_front.4bpp.smol");
+16:ALIGNED(4) const u32 gMonFrontPic_SERPERIORBw3g[] = INCBIN_U32("graphics/bw3g/pokemon/serperior/anim_front.4bpp.smol");
+21:ALIGNED(4) const u32 gMonFrontPic_TEPIGBw3g[] = INCBIN_U32("graphics/bw3g/pokemon/tepig/anim_front.4bpp.smol");
+26:ALIGNED(4) const u32 gMonFrontPic_PIGNITEBw3g[] = INCBIN_U32("graphics/bw3g/pokemon/pignite/anim_front.4bpp.smol");
+31:ALIGNED(4) const u32 gMonFrontPic_EMBOARBw3g[] = INCBIN_U32("graphics/bw3g/pokemon/emboar/anim_front.4bpp.smol");
+36:ALIGNED(4) const u32 gMonFrontPic_OSHAWOTTBw3g[] = INCBIN_U32("graphics/bw3g/pokemon/oshawott/anim_front.4bpp.smol");
+41:ALIGNED(4) const u32 gMonFrontPic_DEWOTTBw3g[] = INCBIN_U32("graphics/bw3g/pokemon/dewott/anim_front.4bpp.smol");
+46:ALIGNED(4) const u32 gMonFrontPic_SAMUROTTBw3g[] = INCBIN_U32("graphics/bw3g/pokemon/samurott/anim_front.4bpp.smol");
+51:ALIGNED(4) const u32 gMonFrontPic_PATRATBw3g[] = INCBIN_U32("graphics/bw3g/pokemon/patrat/anim_front.4bpp.smol");

@@ -1,0 +1,9 @@
+== Discovering how this repo builds vanilla anim_front/back .smol files ==
+
+---- make -n graphics/pokemon/bulbasaur/anim_front.4bpp.smol ----
+make: 'graphics/pokemon/bulbasaur/anim_front.4bpp.smol' is up to date.
+
+---- make -n graphics/pokemon/bulbasaur/back.4bpp.smol ----
+make: 'graphics/pokemon/bulbasaur/back.4bpp.smol' is up to date.
+
+DONE. Paste this output back; it shows the exact toolchain to replicate for BW3G.

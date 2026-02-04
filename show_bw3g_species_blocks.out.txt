@@ -1,0 +1,67 @@
+== Showing SPECIES_SKARMORY_BW3G block (with key fields) ==
+    [SPECIES_SKARMORY_BW3G] =
+    {
+        .expYield = 168,
+        .catchRate = 25,
+        .types = { TYPE_STEEL, TYPE_FLYING },
+        .baseSpDefense = 5,
+        .baseSpAttack = 5,
+        .baseSpeed = 25,
+        .baseDefense = 100,
+        .baseAttack = 168,
+        .baseHP = 25,
+        .iconSprite = gBw3gMonIcon_Skarmory,
+        .iconPalIndex = 7,
+        .frontPic = (const u32 *)gMonFrontPic_SKARMORYBw3g,
+        .frontPicSize = MON_COORDS_SIZE(40, 40),
+        .frontPicYOffset = 0,
+        .backPic = (const u32 *)gMonBackPic_SKARMORYBw3g,
+        .backPicSize = MON_COORDS_SIZE(48, 48),
+        .backPicYOffset = 0,
+        .palette = (const u16 *)gMonPalette_SKARMORYBw3g,
+        .shinyPalette = (const u16 *)gMonShinyPalette_SKARMORYBw3g,
+    .categoryName = _("ARMOR BIRD"),
+    .height = 507,
+    .weight = 1110,
+    .levelUpLearnset = sSkarmoryLevelUpLearnsetBw3g,
+        .description = sBw3gDexText_SKARMORY,
+    },
+
+== Showing SPECIES_GENESECT_BW3G block (with key fields) ==
+    [SPECIES_GENESECT_BW3G] =
+    {
+        .expYield = 255,
+        .catchRate = 3,
+        .types = { TYPE_BUG, TYPE_STEEL },
+        .baseSpDefense = 5,
+        .baseSpAttack = 5,
+        .baseSpeed = 80,
+        .baseDefense = 100,
+        .baseAttack = 255,
+        .baseHP = 3,
+        .iconSprite = gBw3gMonIcon_Genesect,
+        .iconPalIndex = 7,
+        .frontPic = (const u32 *)gMonFrontPic_GENESECTBw3g,
+        .frontPicSize = MON_COORDS_SIZE(40, 40),
+        .frontPicYOffset = 0,
+        .backPic = (const u32 *)gMonBackPic_GENESECTBw3g,
+        .backPicSize = MON_COORDS_SIZE(48, 48),
+        .backPicYOffset = 0,
+        .palette = (const u16 *)gMonPalette_GENESECTBw3g,
+        .shinyPalette = (const u16 *)gMonShinyPalette_GENESECTBw3g,
+    .categoryName = _("PALEOZOIC"),
+    .height = 411,
+    .weight = 1819,
+    .levelUpLearnset = sGenesectLevelUpLearnsetBw3g,
+        .description = sBw3gDexText_GENESECT,
+    },
+
+== Grep for the exact symbol names used by those blocks in your pics/icons files ==
+include/data/pokemon/bw3g_generated/bw3g_pokemon_pics.h:800:extern const u32 gMonFrontPic_SKARMORYBw3g[];
+include/data/pokemon/bw3g_generated/bw3g_pokemon_pics.h:801:extern const u32 gMonBackPic_SKARMORYBw3g[];
+include/data/pokemon/bw3g_generated/bw3g_pokemon_pics.h:1012:extern const u32 gMonFrontPic_GENESECTBw3g[];
+include/data/pokemon/bw3g_generated/bw3g_pokemon_pics.h:1013:extern const u32 gMonBackPic_GENESECTBw3g[];
+src/bw3g_pokemon_pics.c:996:ALIGNED(4) const u32 gMonFrontPic_SKARMORYBw3g[] = INCBIN_U32("graphics/bw3g/pokemon/skarmory/anim_front.4bpp.smol");
+src/bw3g_pokemon_pics.c:997:ALIGNED(4) const u32 gMonBackPic_SKARMORYBw3g[] = INCBIN_U32("graphics/bw3g/pokemon/skarmory/back.4bpp.smol");
+src/bw3g_pokemon_pics.c:1261:ALIGNED(4) const u32 gMonFrontPic_GENESECTBw3g[] = INCBIN_U32("graphics/bw3g/pokemon/genesect/anim_front.4bpp.smol");
+src/bw3g_pokemon_pics.c:1262:ALIGNED(4) const u32 gMonBackPic_GENESECTBw3g[] = INCBIN_U32("graphics/bw3g/pokemon/genesect/back.4bpp.smol");

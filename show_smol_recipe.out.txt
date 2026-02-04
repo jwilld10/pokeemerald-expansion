@@ -1,0 +1,406 @@
+== Forcing make to show the recipe (make -nB) ==
+
+---- graphics/pokemon/bulbasaur/anim_front.4bpp.smol ----
+tools/scaninc/scaninc -M build/emerald/data/sound_data.d -I include -I "" data/sound_data.s
+tools/jsonproc/jsonproc src/data/region_map/region_map_sections.json src/data/region_map/region_map_sections.constants.json.txt include/constants/region_map_sections.h
+tools/scaninc/scaninc -M build/emerald/data/mystery_gift.d -I include -I "" data/mystery_gift.s
+tools/scaninc/scaninc -M build/emerald/data/mystery_event_script_cmd_table.d -I include -I "" data/mystery_event_script_cmd_table.s
+tools/scaninc/scaninc -M build/emerald/data/multiboot_pokemon_colosseum.d -I include -I "" data/multiboot_pokemon_colosseum.s
+tools/scaninc/scaninc -M build/emerald/data/multiboot_ereader.d -I include -I "" data/multiboot_ereader.s
+tools/scaninc/scaninc -M build/emerald/data/multiboot_berry_glitch_fix.d -I include -I "" data/multiboot_berry_glitch_fix.s
+tools/scaninc/scaninc -M build/emerald/data/field_effect_scripts.d -I include -I "" data/field_effect_scripts.s
+tools/jsonproc/jsonproc src/data/heal_locations.json src/data/heal_locations.constants.json.txt include/constants/heal_locations.h
+tools/mapjson/mapjson layouts emerald data/layouts/layouts.json data/layouts include/constants
+tools/mapjson/mapjson event_constants emerald <MAP_JSONS> include/constants/map_event_ids.h
+tools/mapjson/mapjson groups emerald data/maps/map_groups.json data/maps include/constants
+tools/scaninc/scaninc -M build/emerald/data/event_scripts.d -I include -I "" data/event_scripts.s
+tools/scaninc/scaninc -M build/emerald/data/contest_ai_scripts.d -I include -I "" data/contest_ai_scripts.s
+tools/scaninc/scaninc -M build/emerald/data/battle_scripts_2.d -I include -I "" data/battle_scripts_2.s
+tools/scaninc/scaninc -M build/emerald/data/battle_scripts_1.d -I include -I "" data/battle_scripts_1.s
+tools/scaninc/scaninc -M build/emerald/data/battle_anim_scripts.d -I include -I "" data/battle_anim_scripts.s
+tools/scaninc/scaninc -M build/emerald/src/rom_header.d -I include -I "" src/rom_header.s
+tools/scaninc/scaninc -M build/emerald/src/m4a_1.d -I include -I "" src/m4a_1.s
+tools/scaninc/scaninc -M build/emerald/src/libgcnmultiboot.d -I include -I "" src/libgcnmultiboot.s
+tools/scaninc/scaninc -M build/emerald/src/decompress_asm.d -I include -I "" src/decompress_asm.s
+tools/scaninc/scaninc -M build/emerald/src/crt0.d -I include -I "" src/crt0.s
+tools/scaninc/scaninc -M build/emerald/src/data/graphics/spaceworld_pokemon_gfx.d -I include -I tools/agbcc/include src/data/graphics/spaceworld_pokemon_gfx.c
+tools/scaninc/scaninc -M build/emerald/src/data/graphics/spaceworld_icons.d -I include -I tools/agbcc/include src/data/graphics/spaceworld_icons.c
+tools/scaninc/scaninc -M build/emerald/src/wonder_news.d -I include -I tools/agbcc/include src/wonder_news.c
+tools/scaninc/scaninc -M build/emerald/src/wireless_communication_status_screen.d -I include -I tools/agbcc/include src/wireless_communication_status_screen.c
+tools/scaninc/scaninc -M build/emerald/src/window.d -I include -I tools/agbcc/include src/window.c
+python3 tools/wild_encounters/wild_encounters_to_header.py
+tools/scaninc/scaninc -M build/emerald/src/wild_encounter.d -I include -I tools/agbcc/include src/wild_encounter.c
+tools/scaninc/scaninc -M build/emerald/src/wallclock.d -I include -I tools/agbcc/include src/wallclock.c
+tools/scaninc/scaninc -M build/emerald/src/walda_phrase.d -I include -I tools/agbcc/include src/walda_phrase.c
+python3  tools/misc/make_scr_cmd_constants.py
+tools/scaninc/scaninc -M build/emerald/src/vs_seeker.d -I include -I tools/agbcc/include src/vs_seeker.c
+tools/scaninc/scaninc -M build/emerald/src/util.d -I include -I tools/agbcc/include src/util.c
+tools/scaninc/scaninc -M build/emerald/src/use_pokeblock.d -I include -I tools/agbcc/include src/use_pokeblock.c
+tools/scaninc/scaninc -M build/emerald/src/union_room_player_avatar.d -I include -I tools/agbcc/include src/union_room_player_avatar.c
+tools/scaninc/scaninc -M build/emerald/src/union_room_chat.d -I include -I tools/agbcc/include src/union_room_chat.c
+tools/scaninc/scaninc -M build/emerald/src/union_room_battle.d -I include -I tools/agbcc/include src/union_room_battle.c
+tools/scaninc/scaninc -M build/emerald/src/union_room.d -I include -I tools/agbcc/include src/union_room.c
+tools/scaninc/scaninc -M build/emerald/src/type_icons.d -I include -I tools/agbcc/include src/type_icons.c
+tools/scaninc/scaninc -M build/emerald/src/tv.d -I include -I tools/agbcc/include src/tv.c
+tools/scaninc/scaninc -M build/emerald/src/trig.d -I include -I tools/agbcc/include src/trig.c
+tools/scaninc/scaninc -M build/emerald/src/trainer_slide.d -I include -I tools/agbcc/include src/trainer_slide.c
+tools/scaninc/scaninc -M build/emerald/src/trainer_see.d -I include -I tools/agbcc/include src/trainer_see.c
+tools/scaninc/scaninc -M build/emerald/src/trainer_pools.d -I include -I tools/agbcc/include src/trainer_pools.c
+tools/scaninc/scaninc -M build/emerald/src/trainer_pokemon_sprites.d -I include -I tools/agbcc/include src/trainer_pokemon_sprites.c
+tools/scaninc/scaninc -M build/emerald/src/trainer_hill.d -I include -I tools/agbcc/include src/trainer_hill.c
+tools/scaninc/scaninc -M build/emerald/src/trainer_card.d -I include -I tools/agbcc/include src/trainer_card.c
+tools/scaninc/scaninc -M build/emerald/src/trader.d -I include -I tools/agbcc/include src/trader.c
+tools/scaninc/scaninc -M build/emerald/src/trade.d -I include -I tools/agbcc/include src/trade.c
+tools/scaninc/scaninc -M build/emerald/src/title_screen.d -I include -I tools/agbcc/include src/title_screen.c
+tools/scaninc/scaninc -M build/emerald/src/time_events.d -I include -I tools/agbcc/include src/time_events.c
+tools/scaninc/scaninc -M build/emerald/src/tilesets.d -I include -I tools/agbcc/include src/tilesets.c
+tools/scaninc/scaninc -M build/emerald/src/tileset_anims.d -I include -I tools/agbcc/include src/tileset_anims.c
+tools/scaninc/scaninc -M build/emerald/src/text_window.d -I include -I tools/agbcc/include src/text_window.c
+tools/scaninc/scaninc -M build/emerald/src/text_input_strings.d -I include -I tools/agbcc/include src/text_input_strings.c
+tools/scaninc/scaninc -M build/emerald/src/text.d -I include -I tools/agbcc/include src/text.c
+tools/scaninc/scaninc -M build/emerald/src/test_runner_stub.d -I include -I tools/agbcc/include src/test_runner_stub.c
+tools/scaninc/scaninc -M build/emerald/src/task.d -I include -I tools/agbcc/include src/task.c
+tools/scaninc/scaninc -M build/emerald/src/strings.d -I include -I tools/agbcc/include src/strings.c
+tools/scaninc/scaninc -M build/emerald/src/string_util.d -I include -I tools/agbcc/include src/string_util.c
+tools/scaninc/scaninc -M build/emerald/src/starter_choose.d -I include -I tools/agbcc/include src/starter_choose.c
+tools/scaninc/scaninc -M build/emerald/src/start_menu.d -I include -I tools/agbcc/include src/start_menu.c
+tools/scaninc/scaninc -M build/emerald/src/sprite.d -I include -I tools/agbcc/include src/sprite.c
+tools/scaninc/scaninc -M build/emerald/src/sprays.d -I include -I tools/agbcc/include src/sprays.c
+tools/scaninc/scaninc -M build/emerald/src/sound.d -I include -I tools/agbcc/include src/sound.c
+tools/scaninc/scaninc -M build/emerald/src/slot_machine.d -I include -I tools/agbcc/include src/slot_machine.c
+tools/scaninc/scaninc -M build/emerald/src/siirtc.d -I include -I tools/agbcc/include src/siirtc.c
+tools/scaninc/scaninc -M build/emerald/src/shop.d -I include -I tools/agbcc/include src/shop.c
+tools/scaninc/scaninc -M build/emerald/src/secret_base.d -I include -I tools/agbcc/include src/secret_base.c
+tools/scaninc/scaninc -M build/emerald/src/script_pokemon_util.d -I include -I tools/agbcc/include src/script_pokemon_util.c
+tools/scaninc/scaninc -M build/emerald/src/script_movement.d -I include -I tools/agbcc/include src/script_movement.c
+tools/scaninc/scaninc -M build/emerald/src/script_menu.d -I include -I tools/agbcc/include src/script_menu.c
+tools/scaninc/scaninc -M build/emerald/src/script.d -I include -I tools/agbcc/include src/script.c
+tools/scaninc/scaninc -M build/emerald/src/scrcmd.d -I include -I tools/agbcc/include src/scrcmd.c
+tools/scaninc/scaninc -M build/emerald/src/scanline_effect.d -I include -I tools/agbcc/include src/scanline_effect.c
+tools/scaninc/scaninc -M build/emerald/src/save_location.d -I include -I tools/agbcc/include src/save_location.c
+tools/scaninc/scaninc -M build/emerald/src/save_failed_screen.d -I include -I tools/agbcc/include src/save_failed_screen.c
+tools/scaninc/scaninc -M build/emerald/src/save.d -I include -I tools/agbcc/include src/save.c
+tools/scaninc/scaninc -M build/emerald/src/safari_zone.d -I include -I tools/agbcc/include src/safari_zone.c
+tools/scaninc/scaninc -M build/emerald/src/rtc.d -I include -I tools/agbcc/include src/rtc.c
+tools/scaninc/scaninc -M build/emerald/src/roulette.d -I include -I tools/agbcc/include src/roulette.c
+tools/scaninc/scaninc -M build/emerald/src/rotating_tile_puzzle.d -I include -I tools/agbcc/include src/rotating_tile_puzzle.c
+tools/scaninc/scaninc -M build/emerald/src/rotating_gate.d -I include -I tools/agbcc/include src/rotating_gate.c
+tools/scaninc/scaninc -M build/emerald/src/rom_header_rhh.d -I include -I tools/agbcc/include src/rom_header_rhh.c
+tools/scaninc/scaninc -M build/emerald/src/rom_header_gf.d -I include -I tools/agbcc/include src/rom_header_gf.c
+tools/scaninc/scaninc -M build/emerald/src/roamer.d -I include -I tools/agbcc/include src/roamer.c
+tools/scaninc/scaninc -M build/emerald/src/reshow_battle_screen.d -I include -I tools/agbcc/include src/reshow_battle_screen.c
+tools/scaninc/scaninc -M build/emerald/src/reset_rtc_screen.d -I include -I tools/agbcc/include src/reset_rtc_screen.c
+tools/scaninc/scaninc -M build/emerald/src/reload_save.d -I include -I tools/agbcc/include src/reload_save.c
+tools/jsonproc/jsonproc src/data/region_map/region_map_sections.json src/data/region_map/region_map_sections.json.txt src/data/region_map/region_map_entries.h
+tools/scaninc/scaninc -M build/emerald/src/region_map.d -I include -I tools/agbcc/include src/region_map.c
+tools/scaninc/scaninc -M build/emerald/src/recorded_battle.d -I include -I tools/agbcc/include src/recorded_battle.c
+tools/scaninc/scaninc -M build/emerald/src/record_mixing.d -I include -I tools/agbcc/include src/record_mixing.c
+tools/scaninc/scaninc -M build/emerald/src/rayquaza_scene.d -I include -I tools/agbcc/include src/rayquaza_scene.c
+tools/scaninc/scaninc -M build/emerald/src/random.d -I include -I tools/agbcc/include src/random.c
+tools/scaninc/scaninc -M build/emerald/src/post_battle_event_funcs.d -I include -I tools/agbcc/include src/post_battle_event_funcs.c
+tools/scaninc/scaninc -M build/emerald/src/pokenav_ribbons_summary.d -I include -I tools/agbcc/include src/pokenav_ribbons_summary.c
+tools/scaninc/scaninc -M build/emerald/src/pokenav_ribbons_list.d -I include -I tools/agbcc/include src/pokenav_ribbons_list.c
+tools/scaninc/scaninc -M build/emerald/src/pokenav_region_map.d -I include -I tools/agbcc/include src/pokenav_region_map.c
+tools/scaninc/scaninc -M build/emerald/src/pokenav_menu_handler_gfx.d -I include -I tools/agbcc/include src/pokenav_menu_handler_gfx.c
+tools/scaninc/scaninc -M build/emerald/src/pokenav_menu_handler.d -I include -I tools/agbcc/include src/pokenav_menu_handler.c
+tools/scaninc/scaninc -M build/emerald/src/pokenav_match_call_list.d -I include -I tools/agbcc/include src/pokenav_match_call_list.c
+tools/scaninc/scaninc -M build/emerald/src/pokenav_match_call_gfx.d -I include -I tools/agbcc/include src/pokenav_match_call_gfx.c
+tools/scaninc/scaninc -M build/emerald/src/pokenav_match_call_data.d -I include -I tools/agbcc/include src/pokenav_match_call_data.c
+tools/scaninc/scaninc -M build/emerald/src/pokenav_main_menu.d -I include -I tools/agbcc/include src/pokenav_main_menu.c
+tools/scaninc/scaninc -M build/emerald/src/pokenav_list.d -I include -I tools/agbcc/include src/pokenav_list.c
+tools/scaninc/scaninc -M build/emerald/src/pokenav_conditions_search_results.d -I include -I tools/agbcc/include src/pokenav_conditions_search_results.c
+tools/scaninc/scaninc -M build/emerald/src/pokenav_conditions_gfx.d -I include -I tools/agbcc/include src/pokenav_conditions_gfx.c
+tools/scaninc/scaninc -M build/emerald/src/pokenav_conditions.d -I include -I tools/agbcc/include src/pokenav_conditions.c
+tools/scaninc/scaninc -M build/emerald/src/pokenav.d -I include -I tools/agbcc/include src/pokenav.c
+tools/scaninc/scaninc -M build/emerald/src/pokemon_summary_screen.d -I include -I tools/agbcc/include src/pokemon_summary_screen.c
+tools/scaninc/scaninc -M build/emerald/src/pokemon_storage_system.d -I include -I tools/agbcc/include src/pokemon_storage_system.c
+tools/scaninc/scaninc -M build/emerald/src/pokemon_sprite_visualizer.d -I include -I tools/agbcc/include src/pokemon_sprite_visualizer.c
+tools/scaninc/scaninc -M build/emerald/src/pokemon_size_record.d -I include -I tools/agbcc/include src/pokemon_size_record.c
+tools/scaninc/scaninc -M build/emerald/src/pokemon_jump.d -I include -I tools/agbcc/include src/pokemon_jump.c
+tools/scaninc/scaninc -M build/emerald/src/pokemon_icon.d -I include -I tools/agbcc/include src/pokemon_icon.c
+tools/scaninc/scaninc -M build/emerald/src/pokemon_animation.d -I include -I tools/agbcc/include src/pokemon_animation.c
+python3 tools/learnset_helpers/make_learnables.py tools/learnset_helpers/porymoves_files tools/learnset_helpers/build/all_learnables.json
+tools/mapjson/mapjson layouts emerald data/layouts/layouts.json data/layouts include/constants
+tools/mapjson/mapjson layouts emerald data/layouts/layouts.json data/layouts include/constants
+tools/mapjson/mapjson map emerald data/maps/LilycoveCity_DepartmentStoreElevator/map.json data/layouts/layouts.json data/maps/LilycoveCity_DepartmentStoreElevator
+tools/mapjson/mapjson map emerald data/maps/Route110_SeasideCyclingRoadNorthEntrance/map.json data/layouts/layouts.json data/maps/Route110_SeasideCyclingRoadNorthEntrance
+tools/mapjson/mapjson map emerald data/maps/BattleFrontier_BattlePyramidFloor/map.json data/layouts/layouts.json data/maps/BattleFrontier_BattlePyramidFloor
+tools/mapjson/mapjson map emerald data/maps/LavaridgeTown_PokemonCenter_2F/map.json data/layouts/layouts.json data/maps/LavaridgeTown_PokemonCenter_2F
+tools/mapjson/mapjson map emerald data/maps/RusturfTunnel/map.json data/layouts/layouts.json data/maps/RusturfTunnel
+tools/mapjson/mapjson map emerald data/maps/NavelRock_Top/map.json data/layouts/layouts.json data/maps/NavelRock_Top
+tools/mapjson/mapjson map emerald data/maps/BattlePyramidSquare07/map.json data/layouts/layouts.json data/maps/BattlePyramidSquare07
+tools/mapjson/mapjson map emerald data/maps/ContestHallSmart/map.json data/layouts/layouts.json data/maps/ContestHallSmart
+tools/mapjson/mapjson map emerald data/maps/MossdeepCity_House3/map.json data/layouts/layouts.json data/maps/MossdeepCity_House3
+tools/mapjson/mapjson map emerald data/maps/SootopolisCity_House4/map.json data/layouts/layouts.json data/maps/SootopolisCity_House4
+tools/mapjson/mapjson map emerald data/maps/LilycoveCity_ContestHall/map.json data/layouts/layouts.json data/maps/LilycoveCity_ContestHall
+tools/mapjson/mapjson map emerald data/maps/CaveOfOrigin_Entrance/map.json data/layouts/layouts.json data/maps/CaveOfOrigin_Entrance
+tools/mapjson/mapjson map emerald data/maps/SlateportCity_NameRatersHouse/map.json data/layouts/layouts.json data/maps/SlateportCity_NameRatersHouse
+tools/mapjson/mapjson map emerald data/maps/AbandonedShip_Underwater2/map.json data/layouts/layouts.json data/maps/AbandonedShip_Underwater2
+tools/mapjson/mapjson map emerald data/maps/SkyPillar_1F/map.json data/layouts/layouts.json data/maps/SkyPillar_1F
+tools/mapjson/mapjson map emerald data/maps/SealedChamber_OuterRoom/map.json data/layouts/layouts.json data/maps/SealedChamber_OuterRoom
+tools/mapjson/mapjson map emerald data/maps/NavelRock_Down02/map.json data/layouts/layouts.json data/maps/NavelRock_Down02
+tools/mapjson/mapjson map emerald data/maps/DewfordTown_PokemonCenter_2F/map.json data/layouts/layouts.json data/maps/DewfordTown_PokemonCenter_2F
+tools/mapjson/mapjson map emerald data/maps/Underwater_Route124/map.json data/layouts/layouts.json data/maps/Underwater_Route124
+tools/mapjson/mapjson map emerald data/maps/MauvilleCity/map.json data/layouts/layouts.json data/maps/MauvilleCity
+tools/mapjson/mapjson map emerald data/maps/TradeCenter/map.json data/layouts/layouts.json data/maps/TradeCenter
+tools/mapjson/mapjson map emerald data/maps/Route114/map.json data/layouts/layouts.json data/maps/Route114
+tools/mapjson/mapjson map emerald data/maps/UnusedContestHall2/map.json data/layouts/layouts.json data/maps/UnusedContestHall2
+tools/mapjson/mapjson map emerald data/maps/BattleFrontier_BattleDomeLobby/map.json data/layouts/layouts.json data/maps/BattleFrontier_BattleDomeLobby
+tools/mapjson/mapjson map emerald data/maps/AbandonedShip_HiddenFloorRooms/map.json data/layouts/layouts.json data/maps/AbandonedShip_HiddenFloorRooms
+tools/mapjson/mapjson map emerald data/maps/BattleFrontier_BattleTowerCorridor/map.json data/layouts/layouts.json data/maps/BattleFrontier_BattleTowerCorridor
+tools/mapjson/mapjson map emerald data/maps/Route115/map.json data/layouts/layouts.json data/maps/Route115
+tools/mapjson/mapjson map emerald data/maps/FortreeCity_House3/map.json data/layouts/layouts.json data/maps/FortreeCity_House3
+tools/mapjson/mapjson map emerald data/maps/ShoalCave_LowTideInnerRoom/map.json data/layouts/layouts.json data/maps/ShoalCave_LowTideInnerRoom
+tools/mapjson/mapjson map emerald data/maps/SSTidalRooms/map.json data/layouts/layouts.json data/maps/SSTidalRooms
+tools/mapjson/mapjson map emerald data/maps/BattleFrontier_BattlePyramidTop/map.json data/layouts/layouts.json data/maps/BattleFrontier_BattlePyramidTop
+tools/mapjson/mapjson map emerald data/maps/FallarborTown/map.json data/layouts/layouts.json data/maps/FallarborTown
+tools/mapjson/mapjson map emerald data/maps/Route104_Prototype/map.json data/layouts/layouts.json data/maps/Route104_Prototype
+tools/mapjson/mapjson map emerald data/maps/OldaleTown_House2/map.json data/layouts/layouts.json data/maps/OldaleTown_House2
+tools/mapjson/mapjson map emerald data/maps/FallarborTown_BattleTentBattleRoom/map.json data/layouts/layouts.json data/maps/FallarborTown_BattleTentBattleRoom
+tools/mapjson/mapjson map emerald data/maps/BattleFrontier_BattlePikeCorridor/map.json data/layouts/layouts.json data/maps/BattleFrontier_BattlePikeCorridor
+tools/mapjson/mapjson map emerald data/maps/BattleFrontier_Mart/map.json data/layouts/layouts.json data/maps/BattleFrontier_Mart
+tools/mapjson/mapjson map emerald data/maps/SeafloorCavern_Room6/map.json data/layouts/layouts.json data/maps/SeafloorCavern_Room6
+tools/mapjson/mapjson map emerald data/maps/FallarborTown_CozmosHouse/map.json data/layouts/layouts.json data/maps/FallarborTown_CozmosHouse
+tools/mapjson/mapjson map emerald data/maps/BattleFrontier_BattlePalaceLobby/map.json data/layouts/layouts.json data/maps/BattleFrontier_BattlePalaceLobby
+tools/mapjson/mapjson map emerald data/maps/MossdeepCity_House4/map.json data/layouts/layouts.json data/maps/MossdeepCity_House4
+tools/mapjson/mapjson map emerald data/maps/AquaHideout_UnusedRubyMap3/map.json data/layouts/layouts.json data/maps/AquaHideout_UnusedRubyMap3
+tools/mapjson/mapjson map emerald data/maps/SootopolisCity_MysteryEventsHouse_B1F/map.json data/layouts/layouts.json data/maps/SootopolisCity_MysteryEventsHouse_B1F
+tools/mapjson/mapjson map emerald data/maps/EverGrandeCity_ChampionsRoom/map.json data/layouts/layouts.json data/maps/EverGrandeCity_ChampionsRoom
+tools/mapjson/mapjson map emerald data/maps/SecretBase_RedCave1/map.json data/layouts/layouts.json data/maps/SecretBase_RedCave1
+tools/mapjson/mapjson groups emerald data/maps/map_groups.json data/maps include/constants
+tools/mapjson/mapjson map emerald data/maps/SecretBase_RedCave2/map.json data/layouts/layouts.json data/maps/SecretBase_RedCave2
+tools/mapjson/mapjson map emerald data/maps/MossdeepCity_House1/map.json data/layouts/layouts.json data/maps/MossdeepCity_House1
+tools/mapjson/mapjson map emerald data/maps/BattleFrontier_BattleTowerMultiBattleRoom/map.json data/layouts/layouts.json data/maps/BattleFrontier_BattleTowerMultiBattleRoom
+tools/mapjson/mapjson map emerald data/maps/SecretBase_YellowCave4/map.json data/layouts/layouts.json data/maps/SecretBase_YellowCave4
+tools/mapjson/mapjson map emerald data/maps/SkyPillar_Outside/map.json data/layouts/layouts.json data/maps/SkyPillar_Outside
+tools/mapjson/mapjson map emerald data/maps/BattleFrontier_BattleArenaLobby/map.json data/layouts/layouts.json data/maps/BattleFrontier_BattleArenaLobby
+tools/mapjson/mapjson map emerald data/maps/SootopolisCity_MysteryEventsHouse_1F/map.json data/layouts/layouts.json data/maps/SootopolisCity_MysteryEventsHouse_1F
+tools/mapjson/mapjson map emerald data/maps/BattleFrontier_OutsideWest/map.json data/layouts/layouts.json data/maps/BattleFrontier_OutsideWest
+tools/mapjson/mapjson map emerald data/maps/SafariZone_Southwest/map.json data/layouts/layouts.json data/maps/SafariZone_Southwest
+tools/mapjson/mapjson map emerald data/maps/Underwater_SootopolisCity/map.json data/layouts/layouts.json data/maps/Underwater_SootopolisCity
+tools/mapjson/mapjson map emerald data/maps/LilycoveCity_PokemonTrainerFanClub/map.json data/layouts/layouts.json data/maps/LilycoveCity_PokemonTrainerFanClub
+tools/mapjson/mapjson map emerald data/maps/MtPyre_Summit/map.json data/layouts/layouts.json data/maps/MtPyre_Summit
+tools/mapjson/mapjson map emerald data/maps/AbandonedShip_Rooms_B1F/map.json data/layouts/layouts.json data/maps/AbandonedShip_Rooms_B1F
+tools/mapjson/mapjson map emerald data/maps/BattleFrontier_BattlePalaceCorridor/map.json data/layouts/layouts.json data/maps/BattleFrontier_BattlePalaceCorridor
+tools/mapjson/mapjson map emerald data/maps/LilycoveCity_DepartmentStoreRooftop/map.json data/layouts/layouts.json data/maps/LilycoveCity_DepartmentStoreRooftop
+tools/mapjson/mapjson map emerald data/maps/MeteorFalls_B1F_2R/map.json data/layouts/layouts.json data/maps/MeteorFalls_B1F_2R
+tools/mapjson/mapjson map emerald data/maps/CaveOfOrigin_1F/map.json data/layouts/layouts.json data/maps/CaveOfOrigin_1F
+tools/mapjson/mapjson map emerald data/maps/SecretBase_YellowCave1/map.json data/layouts/layouts.json data/maps/SecretBase_YellowCave1
+tools/mapjson/mapjson map emerald data/maps/SeafloorCavern_Room5/map.json data/layouts/layouts.json data/maps/SeafloorCavern_Room5
+tools/mapjson/mapjson map emerald data/maps/OldaleTown_PokemonCenter_2F/map.json data/layouts/layouts.json data/maps/OldaleTown_PokemonCenter_2F
+tools/mapjson/mapjson map emerald data/maps/CaveOfOrigin_UnusedRubySapphireMap2/map.json data/layouts/layouts.json data/maps/CaveOfOrigin_UnusedRubySapphireMap2
+tools/mapjson/mapjson map emerald data/maps/LittlerootTown_MaysHouse_2F/map.json data/layouts/layouts.json data/maps/LittlerootTown_MaysHouse_2F
+tools/mapjson/mapjson map emerald data/maps/BattleFrontier_BattlePyramidLobby/map.json data/layouts/layouts.json data/maps/BattleFrontier_BattlePyramidLobby
+tools/mapjson/mapjson map emerald data/maps/Route112/map.json data/layouts/layouts.json data/maps/Route112
+tools/mapjson/mapjson map emerald data/maps/SeafloorCavern_Room3/map.json data/layouts/layouts.json data/maps/SeafloorCavern_Room3
+tools/mapjson/mapjson map emerald data/maps/MagmaHideout_1F/map.json data/layouts/layouts.json data/maps/MagmaHideout_1F
+tools/mapjson/mapjson map emerald data/maps/SootopolisCity_House3/map.json data/layouts/layouts.json data/maps/SootopolisCity_House3
+tools/mapjson/mapjson map emerald data/maps/CaveOfOrigin_UnusedRubySapphireMap1/map.json data/layouts/layouts.json data/maps/CaveOfOrigin_UnusedRubySapphireMap1
+tools/mapjson/mapjson map emerald data/maps/LilycoveCity_DepartmentStore_3F/map.json data/layouts/layouts.json data/maps/LilycoveCity_DepartmentStore_3F
+tools/mapjson/mapjson map emerald data/maps/BattlePyramidSquare06/map.json data/layouts/layouts.json data/maps/BattlePyramidSquare06
+tools/mapjson/mapjson map emerald data/maps/ScorchedSlab/map.json data/layouts/layouts.json data/maps/ScorchedSlab
+tools/mapjson/mapjson map emerald data/maps/MagmaHideout_3F_2R/map.json data/layouts/layouts.json data/maps/MagmaHideout_3F_2R
+tools/mapjson/mapjson map emerald data/maps/RustboroCity_House1/map.json data/layouts/layouts.json data/maps/RustboroCity_House1
+
+---- graphics/pokemon/bulbasaur/back.4bpp.smol ----
+tools/scaninc/scaninc -M build/emerald/data/sound_data.d -I include -I "" data/sound_data.s
+tools/jsonproc/jsonproc src/data/region_map/region_map_sections.json src/data/region_map/region_map_sections.constants.json.txt include/constants/region_map_sections.h
+tools/scaninc/scaninc -M build/emerald/data/mystery_gift.d -I include -I "" data/mystery_gift.s
+tools/scaninc/scaninc -M build/emerald/data/mystery_event_script_cmd_table.d -I include -I "" data/mystery_event_script_cmd_table.s
+tools/scaninc/scaninc -M build/emerald/data/multiboot_pokemon_colosseum.d -I include -I "" data/multiboot_pokemon_colosseum.s
+tools/scaninc/scaninc -M build/emerald/data/multiboot_ereader.d -I include -I "" data/multiboot_ereader.s
+tools/scaninc/scaninc -M build/emerald/data/multiboot_berry_glitch_fix.d -I include -I "" data/multiboot_berry_glitch_fix.s
+tools/scaninc/scaninc -M build/emerald/data/field_effect_scripts.d -I include -I "" data/field_effect_scripts.s
+tools/jsonproc/jsonproc src/data/heal_locations.json src/data/heal_locations.constants.json.txt include/constants/heal_locations.h
+tools/mapjson/mapjson layouts emerald data/layouts/layouts.json data/layouts include/constants
+tools/mapjson/mapjson event_constants emerald <MAP_JSONS> include/constants/map_event_ids.h
+tools/mapjson/mapjson groups emerald data/maps/map_groups.json data/maps include/constants
+tools/scaninc/scaninc -M build/emerald/data/event_scripts.d -I include -I "" data/event_scripts.s
+tools/scaninc/scaninc -M build/emerald/data/contest_ai_scripts.d -I include -I "" data/contest_ai_scripts.s
+tools/scaninc/scaninc -M build/emerald/data/battle_scripts_2.d -I include -I "" data/battle_scripts_2.s
+tools/scaninc/scaninc -M build/emerald/data/battle_scripts_1.d -I include -I "" data/battle_scripts_1.s
+tools/scaninc/scaninc -M build/emerald/data/battle_anim_scripts.d -I include -I "" data/battle_anim_scripts.s
+tools/scaninc/scaninc -M build/emerald/src/rom_header.d -I include -I "" src/rom_header.s
+tools/scaninc/scaninc -M build/emerald/src/m4a_1.d -I include -I "" src/m4a_1.s
+tools/scaninc/scaninc -M build/emerald/src/libgcnmultiboot.d -I include -I "" src/libgcnmultiboot.s
+tools/scaninc/scaninc -M build/emerald/src/decompress_asm.d -I include -I "" src/decompress_asm.s
+tools/scaninc/scaninc -M build/emerald/src/crt0.d -I include -I "" src/crt0.s
+tools/scaninc/scaninc -M build/emerald/src/data/graphics/spaceworld_pokemon_gfx.d -I include -I tools/agbcc/include src/data/graphics/spaceworld_pokemon_gfx.c
+tools/scaninc/scaninc -M build/emerald/src/data/graphics/spaceworld_icons.d -I include -I tools/agbcc/include src/data/graphics/spaceworld_icons.c
+tools/scaninc/scaninc -M build/emerald/src/wonder_news.d -I include -I tools/agbcc/include src/wonder_news.c
+tools/scaninc/scaninc -M build/emerald/src/wireless_communication_status_screen.d -I include -I tools/agbcc/include src/wireless_communication_status_screen.c
+tools/scaninc/scaninc -M build/emerald/src/window.d -I include -I tools/agbcc/include src/window.c
+python3 tools/wild_encounters/wild_encounters_to_header.py
+tools/scaninc/scaninc -M build/emerald/src/wild_encounter.d -I include -I tools/agbcc/include src/wild_encounter.c
+tools/scaninc/scaninc -M build/emerald/src/wallclock.d -I include -I tools/agbcc/include src/wallclock.c
+tools/scaninc/scaninc -M build/emerald/src/walda_phrase.d -I include -I tools/agbcc/include src/walda_phrase.c
+python3  tools/misc/make_scr_cmd_constants.py
+tools/scaninc/scaninc -M build/emerald/src/vs_seeker.d -I include -I tools/agbcc/include src/vs_seeker.c
+tools/scaninc/scaninc -M build/emerald/src/util.d -I include -I tools/agbcc/include src/util.c
+tools/scaninc/scaninc -M build/emerald/src/use_pokeblock.d -I include -I tools/agbcc/include src/use_pokeblock.c
+tools/scaninc/scaninc -M build/emerald/src/union_room_player_avatar.d -I include -I tools/agbcc/include src/union_room_player_avatar.c
+tools/scaninc/scaninc -M build/emerald/src/union_room_chat.d -I include -I tools/agbcc/include src/union_room_chat.c
+tools/scaninc/scaninc -M build/emerald/src/union_room_battle.d -I include -I tools/agbcc/include src/union_room_battle.c
+tools/scaninc/scaninc -M build/emerald/src/union_room.d -I include -I tools/agbcc/include src/union_room.c
+tools/scaninc/scaninc -M build/emerald/src/type_icons.d -I include -I tools/agbcc/include src/type_icons.c
+tools/scaninc/scaninc -M build/emerald/src/tv.d -I include -I tools/agbcc/include src/tv.c
+tools/scaninc/scaninc -M build/emerald/src/trig.d -I include -I tools/agbcc/include src/trig.c
+tools/scaninc/scaninc -M build/emerald/src/trainer_slide.d -I include -I tools/agbcc/include src/trainer_slide.c
+tools/scaninc/scaninc -M build/emerald/src/trainer_see.d -I include -I tools/agbcc/include src/trainer_see.c
+tools/scaninc/scaninc -M build/emerald/src/trainer_pools.d -I include -I tools/agbcc/include src/trainer_pools.c
+tools/scaninc/scaninc -M build/emerald/src/trainer_pokemon_sprites.d -I include -I tools/agbcc/include src/trainer_pokemon_sprites.c
+tools/scaninc/scaninc -M build/emerald/src/trainer_hill.d -I include -I tools/agbcc/include src/trainer_hill.c
+tools/scaninc/scaninc -M build/emerald/src/trainer_card.d -I include -I tools/agbcc/include src/trainer_card.c
+tools/scaninc/scaninc -M build/emerald/src/trader.d -I include -I tools/agbcc/include src/trader.c
+tools/scaninc/scaninc -M build/emerald/src/trade.d -I include -I tools/agbcc/include src/trade.c
+tools/scaninc/scaninc -M build/emerald/src/title_screen.d -I include -I tools/agbcc/include src/title_screen.c
+tools/scaninc/scaninc -M build/emerald/src/time_events.d -I include -I tools/agbcc/include src/time_events.c
+tools/scaninc/scaninc -M build/emerald/src/tilesets.d -I include -I tools/agbcc/include src/tilesets.c
+tools/scaninc/scaninc -M build/emerald/src/tileset_anims.d -I include -I tools/agbcc/include src/tileset_anims.c
+tools/scaninc/scaninc -M build/emerald/src/text_window.d -I include -I tools/agbcc/include src/text_window.c
+tools/scaninc/scaninc -M build/emerald/src/text_input_strings.d -I include -I tools/agbcc/include src/text_input_strings.c
+tools/scaninc/scaninc -M build/emerald/src/text.d -I include -I tools/agbcc/include src/text.c
+tools/scaninc/scaninc -M build/emerald/src/test_runner_stub.d -I include -I tools/agbcc/include src/test_runner_stub.c
+tools/scaninc/scaninc -M build/emerald/src/task.d -I include -I tools/agbcc/include src/task.c
+tools/scaninc/scaninc -M build/emerald/src/strings.d -I include -I tools/agbcc/include src/strings.c
+tools/scaninc/scaninc -M build/emerald/src/string_util.d -I include -I tools/agbcc/include src/string_util.c
+tools/scaninc/scaninc -M build/emerald/src/starter_choose.d -I include -I tools/agbcc/include src/starter_choose.c
+tools/scaninc/scaninc -M build/emerald/src/start_menu.d -I include -I tools/agbcc/include src/start_menu.c
+tools/scaninc/scaninc -M build/emerald/src/sprite.d -I include -I tools/agbcc/include src/sprite.c
+tools/scaninc/scaninc -M build/emerald/src/sprays.d -I include -I tools/agbcc/include src/sprays.c
+tools/scaninc/scaninc -M build/emerald/src/sound.d -I include -I tools/agbcc/include src/sound.c
+tools/scaninc/scaninc -M build/emerald/src/slot_machine.d -I include -I tools/agbcc/include src/slot_machine.c
+tools/scaninc/scaninc -M build/emerald/src/siirtc.d -I include -I tools/agbcc/include src/siirtc.c
+tools/scaninc/scaninc -M build/emerald/src/shop.d -I include -I tools/agbcc/include src/shop.c
+tools/scaninc/scaninc -M build/emerald/src/secret_base.d -I include -I tools/agbcc/include src/secret_base.c
+tools/scaninc/scaninc -M build/emerald/src/script_pokemon_util.d -I include -I tools/agbcc/include src/script_pokemon_util.c
+tools/scaninc/scaninc -M build/emerald/src/script_movement.d -I include -I tools/agbcc/include src/script_movement.c
+tools/scaninc/scaninc -M build/emerald/src/script_menu.d -I include -I tools/agbcc/include src/script_menu.c
+tools/scaninc/scaninc -M build/emerald/src/script.d -I include -I tools/agbcc/include src/script.c
+tools/scaninc/scaninc -M build/emerald/src/scrcmd.d -I include -I tools/agbcc/include src/scrcmd.c
+tools/scaninc/scaninc -M build/emerald/src/scanline_effect.d -I include -I tools/agbcc/include src/scanline_effect.c
+tools/scaninc/scaninc -M build/emerald/src/save_location.d -I include -I tools/agbcc/include src/save_location.c
+tools/scaninc/scaninc -M build/emerald/src/save_failed_screen.d -I include -I tools/agbcc/include src/save_failed_screen.c
+tools/scaninc/scaninc -M build/emerald/src/save.d -I include -I tools/agbcc/include src/save.c
+tools/scaninc/scaninc -M build/emerald/src/safari_zone.d -I include -I tools/agbcc/include src/safari_zone.c
+tools/scaninc/scaninc -M build/emerald/src/rtc.d -I include -I tools/agbcc/include src/rtc.c
+tools/scaninc/scaninc -M build/emerald/src/roulette.d -I include -I tools/agbcc/include src/roulette.c
+tools/scaninc/scaninc -M build/emerald/src/rotating_tile_puzzle.d -I include -I tools/agbcc/include src/rotating_tile_puzzle.c
+tools/scaninc/scaninc -M build/emerald/src/rotating_gate.d -I include -I tools/agbcc/include src/rotating_gate.c
+tools/scaninc/scaninc -M build/emerald/src/rom_header_rhh.d -I include -I tools/agbcc/include src/rom_header_rhh.c
+tools/scaninc/scaninc -M build/emerald/src/rom_header_gf.d -I include -I tools/agbcc/include src/rom_header_gf.c
+tools/scaninc/scaninc -M build/emerald/src/roamer.d -I include -I tools/agbcc/include src/roamer.c
+tools/scaninc/scaninc -M build/emerald/src/reshow_battle_screen.d -I include -I tools/agbcc/include src/reshow_battle_screen.c
+tools/scaninc/scaninc -M build/emerald/src/reset_rtc_screen.d -I include -I tools/agbcc/include src/reset_rtc_screen.c
+tools/scaninc/scaninc -M build/emerald/src/reload_save.d -I include -I tools/agbcc/include src/reload_save.c
+tools/jsonproc/jsonproc src/data/region_map/region_map_sections.json src/data/region_map/region_map_sections.json.txt src/data/region_map/region_map_entries.h
+tools/scaninc/scaninc -M build/emerald/src/region_map.d -I include -I tools/agbcc/include src/region_map.c
+tools/scaninc/scaninc -M build/emerald/src/recorded_battle.d -I include -I tools/agbcc/include src/recorded_battle.c
+tools/scaninc/scaninc -M build/emerald/src/record_mixing.d -I include -I tools/agbcc/include src/record_mixing.c
+tools/scaninc/scaninc -M build/emerald/src/rayquaza_scene.d -I include -I tools/agbcc/include src/rayquaza_scene.c
+tools/scaninc/scaninc -M build/emerald/src/random.d -I include -I tools/agbcc/include src/random.c
+tools/scaninc/scaninc -M build/emerald/src/post_battle_event_funcs.d -I include -I tools/agbcc/include src/post_battle_event_funcs.c
+tools/scaninc/scaninc -M build/emerald/src/pokenav_ribbons_summary.d -I include -I tools/agbcc/include src/pokenav_ribbons_summary.c
+tools/scaninc/scaninc -M build/emerald/src/pokenav_ribbons_list.d -I include -I tools/agbcc/include src/pokenav_ribbons_list.c
+tools/scaninc/scaninc -M build/emerald/src/pokenav_region_map.d -I include -I tools/agbcc/include src/pokenav_region_map.c
+tools/scaninc/scaninc -M build/emerald/src/pokenav_menu_handler_gfx.d -I include -I tools/agbcc/include src/pokenav_menu_handler_gfx.c
+tools/scaninc/scaninc -M build/emerald/src/pokenav_menu_handler.d -I include -I tools/agbcc/include src/pokenav_menu_handler.c
+tools/scaninc/scaninc -M build/emerald/src/pokenav_match_call_list.d -I include -I tools/agbcc/include src/pokenav_match_call_list.c
+tools/scaninc/scaninc -M build/emerald/src/pokenav_match_call_gfx.d -I include -I tools/agbcc/include src/pokenav_match_call_gfx.c
+tools/scaninc/scaninc -M build/emerald/src/pokenav_match_call_data.d -I include -I tools/agbcc/include src/pokenav_match_call_data.c
+tools/scaninc/scaninc -M build/emerald/src/pokenav_main_menu.d -I include -I tools/agbcc/include src/pokenav_main_menu.c
+tools/scaninc/scaninc -M build/emerald/src/pokenav_list.d -I include -I tools/agbcc/include src/pokenav_list.c
+tools/scaninc/scaninc -M build/emerald/src/pokenav_conditions_search_results.d -I include -I tools/agbcc/include src/pokenav_conditions_search_results.c
+tools/scaninc/scaninc -M build/emerald/src/pokenav_conditions_gfx.d -I include -I tools/agbcc/include src/pokenav_conditions_gfx.c
+tools/scaninc/scaninc -M build/emerald/src/pokenav_conditions.d -I include -I tools/agbcc/include src/pokenav_conditions.c
+tools/scaninc/scaninc -M build/emerald/src/pokenav.d -I include -I tools/agbcc/include src/pokenav.c
+tools/scaninc/scaninc -M build/emerald/src/pokemon_summary_screen.d -I include -I tools/agbcc/include src/pokemon_summary_screen.c
+tools/scaninc/scaninc -M build/emerald/src/pokemon_storage_system.d -I include -I tools/agbcc/include src/pokemon_storage_system.c
+tools/scaninc/scaninc -M build/emerald/src/pokemon_sprite_visualizer.d -I include -I tools/agbcc/include src/pokemon_sprite_visualizer.c
+tools/scaninc/scaninc -M build/emerald/src/pokemon_size_record.d -I include -I tools/agbcc/include src/pokemon_size_record.c
+tools/scaninc/scaninc -M build/emerald/src/pokemon_jump.d -I include -I tools/agbcc/include src/pokemon_jump.c
+tools/scaninc/scaninc -M build/emerald/src/pokemon_icon.d -I include -I tools/agbcc/include src/pokemon_icon.c
+tools/scaninc/scaninc -M build/emerald/src/pokemon_animation.d -I include -I tools/agbcc/include src/pokemon_animation.c
+python3 tools/learnset_helpers/make_learnables.py tools/learnset_helpers/porymoves_files tools/learnset_helpers/build/all_learnables.json
+tools/mapjson/mapjson layouts emerald data/layouts/layouts.json data/layouts include/constants
+tools/mapjson/mapjson layouts emerald data/layouts/layouts.json data/layouts include/constants
+tools/mapjson/mapjson map emerald data/maps/LilycoveCity_DepartmentStoreElevator/map.json data/layouts/layouts.json data/maps/LilycoveCity_DepartmentStoreElevator
+tools/mapjson/mapjson map emerald data/maps/Route110_SeasideCyclingRoadNorthEntrance/map.json data/layouts/layouts.json data/maps/Route110_SeasideCyclingRoadNorthEntrance
+tools/mapjson/mapjson map emerald data/maps/BattleFrontier_BattlePyramidFloor/map.json data/layouts/layouts.json data/maps/BattleFrontier_BattlePyramidFloor
+tools/mapjson/mapjson map emerald data/maps/LavaridgeTown_PokemonCenter_2F/map.json data/layouts/layouts.json data/maps/LavaridgeTown_PokemonCenter_2F
+tools/mapjson/mapjson map emerald data/maps/RusturfTunnel/map.json data/layouts/layouts.json data/maps/RusturfTunnel
+tools/mapjson/mapjson map emerald data/maps/NavelRock_Top/map.json data/layouts/layouts.json data/maps/NavelRock_Top
+tools/mapjson/mapjson map emerald data/maps/BattlePyramidSquare07/map.json data/layouts/layouts.json data/maps/BattlePyramidSquare07
+tools/mapjson/mapjson map emerald data/maps/ContestHallSmart/map.json data/layouts/layouts.json data/maps/ContestHallSmart
+tools/mapjson/mapjson map emerald data/maps/MossdeepCity_House3/map.json data/layouts/layouts.json data/maps/MossdeepCity_House3
+tools/mapjson/mapjson map emerald data/maps/SootopolisCity_House4/map.json data/layouts/layouts.json data/maps/SootopolisCity_House4
+tools/mapjson/mapjson map emerald data/maps/LilycoveCity_ContestHall/map.json data/layouts/layouts.json data/maps/LilycoveCity_ContestHall
+tools/mapjson/mapjson map emerald data/maps/CaveOfOrigin_Entrance/map.json data/layouts/layouts.json data/maps/CaveOfOrigin_Entrance
+tools/mapjson/mapjson map emerald data/maps/SlateportCity_NameRatersHouse/map.json data/layouts/layouts.json data/maps/SlateportCity_NameRatersHouse
+tools/mapjson/mapjson map emerald data/maps/AbandonedShip_Underwater2/map.json data/layouts/layouts.json data/maps/AbandonedShip_Underwater2
+tools/mapjson/mapjson map emerald data/maps/SkyPillar_1F/map.json data/layouts/layouts.json data/maps/SkyPillar_1F
+tools/mapjson/mapjson map emerald data/maps/SealedChamber_OuterRoom/map.json data/layouts/layouts.json data/maps/SealedChamber_OuterRoom
+tools/mapjson/mapjson map emerald data/maps/NavelRock_Down02/map.json data/layouts/layouts.json data/maps/NavelRock_Down02
+tools/mapjson/mapjson map emerald data/maps/DewfordTown_PokemonCenter_2F/map.json data/layouts/layouts.json data/maps/DewfordTown_PokemonCenter_2F
+tools/mapjson/mapjson map emerald data/maps/Underwater_Route124/map.json data/layouts/layouts.json data/maps/Underwater_Route124
+tools/mapjson/mapjson map emerald data/maps/MauvilleCity/map.json data/layouts/layouts.json data/maps/MauvilleCity
+tools/mapjson/mapjson map emerald data/maps/TradeCenter/map.json data/layouts/layouts.json data/maps/TradeCenter
+tools/mapjson/mapjson map emerald data/maps/Route114/map.json data/layouts/layouts.json data/maps/Route114
+tools/mapjson/mapjson map emerald data/maps/UnusedContestHall2/map.json data/layouts/layouts.json data/maps/UnusedContestHall2
+tools/mapjson/mapjson map emerald data/maps/BattleFrontier_BattleDomeLobby/map.json data/layouts/layouts.json data/maps/BattleFrontier_BattleDomeLobby
+tools/mapjson/mapjson map emerald data/maps/AbandonedShip_HiddenFloorRooms/map.json data/layouts/layouts.json data/maps/AbandonedShip_HiddenFloorRooms
+tools/mapjson/mapjson map emerald data/maps/BattleFrontier_BattleTowerCorridor/map.json data/layouts/layouts.json data/maps/BattleFrontier_BattleTowerCorridor
+tools/mapjson/mapjson map emerald data/maps/Route115/map.json data/layouts/layouts.json data/maps/Route115
+tools/mapjson/mapjson map emerald data/maps/FortreeCity_House3/map.json data/layouts/layouts.json data/maps/FortreeCity_House3
+tools/mapjson/mapjson map emerald data/maps/ShoalCave_LowTideInnerRoom/map.json data/layouts/layouts.json data/maps/ShoalCave_LowTideInnerRoom
+tools/mapjson/mapjson map emerald data/maps/SSTidalRooms/map.json data/layouts/layouts.json data/maps/SSTidalRooms
+tools/mapjson/mapjson map emerald data/maps/BattleFrontier_BattlePyramidTop/map.json data/layouts/layouts.json data/maps/BattleFrontier_BattlePyramidTop
+tools/mapjson/mapjson map emerald data/maps/FallarborTown/map.json data/layouts/layouts.json data/maps/FallarborTown
+tools/mapjson/mapjson map emerald data/maps/Route104_Prototype/map.json data/layouts/layouts.json data/maps/Route104_Prototype
+tools/mapjson/mapjson map emerald data/maps/OldaleTown_House2/map.json data/layouts/layouts.json data/maps/OldaleTown_House2
+tools/mapjson/mapjson map emerald data/maps/FallarborTown_BattleTentBattleRoom/map.json data/layouts/layouts.json data/maps/FallarborTown_BattleTentBattleRoom
+tools/mapjson/mapjson map emerald data/maps/BattleFrontier_BattlePikeCorridor/map.json data/layouts/layouts.json data/maps/BattleFrontier_BattlePikeCorridor
+tools/mapjson/mapjson map emerald data/maps/BattleFrontier_Mart/map.json data/layouts/layouts.json data/maps/BattleFrontier_Mart
+tools/mapjson/mapjson map emerald data/maps/SeafloorCavern_Room6/map.json data/layouts/layouts.json data/maps/SeafloorCavern_Room6
+tools/mapjson/mapjson map emerald data/maps/FallarborTown_CozmosHouse/map.json data/layouts/layouts.json data/maps/FallarborTown_CozmosHouse
+tools/mapjson/mapjson map emerald data/maps/BattleFrontier_BattlePalaceLobby/map.json data/layouts/layouts.json data/maps/BattleFrontier_BattlePalaceLobby
+tools/mapjson/mapjson map emerald data/maps/MossdeepCity_House4/map.json data/layouts/layouts.json data/maps/MossdeepCity_House4
+tools/mapjson/mapjson map emerald data/maps/AquaHideout_UnusedRubyMap3/map.json data/layouts/layouts.json data/maps/AquaHideout_UnusedRubyMap3
+tools/mapjson/mapjson map emerald data/maps/SootopolisCity_MysteryEventsHouse_B1F/map.json data/layouts/layouts.json data/maps/SootopolisCity_MysteryEventsHouse_B1F
+tools/mapjson/mapjson map emerald data/maps/EverGrandeCity_ChampionsRoom/map.json data/layouts/layouts.json data/maps/EverGrandeCity_ChampionsRoom
+tools/mapjson/mapjson map emerald data/maps/SecretBase_RedCave1/map.json data/layouts/layouts.json data/maps/SecretBase_RedCave1
+tools/mapjson/mapjson groups emerald data/maps/map_groups.json data/maps include/constants
+tools/mapjson/mapjson map emerald data/maps/SecretBase_RedCave2/map.json data/layouts/layouts.json data/maps/SecretBase_RedCave2
+tools/mapjson/mapjson map emerald data/maps/MossdeepCity_House1/map.json data/layouts/layouts.json data/maps/MossdeepCity_House1
+tools/mapjson/mapjson map emerald data/maps/BattleFrontier_BattleTowerMultiBattleRoom/map.json data/layouts/layouts.json data/maps/BattleFrontier_BattleTowerMultiBattleRoom
+tools/mapjson/mapjson map emerald data/maps/SecretBase_YellowCave4/map.json data/layouts/layouts.json data/maps/SecretBase_YellowCave4
+tools/mapjson/mapjson map emerald data/maps/SkyPillar_Outside/map.json data/layouts/layouts.json data/maps/SkyPillar_Outside
+tools/mapjson/mapjson map emerald data/maps/BattleFrontier_BattleArenaLobby/map.json data/layouts/layouts.json data/maps/BattleFrontier_BattleArenaLobby
+tools/mapjson/mapjson map emerald data/maps/SootopolisCity_MysteryEventsHouse_1F/map.json data/layouts/layouts.json data/maps/SootopolisCity_MysteryEventsHouse_1F
+tools/mapjson/mapjson map emerald data/maps/BattleFrontier_OutsideWest/map.json data/layouts/layouts.json data/maps/BattleFrontier_OutsideWest
+tools/mapjson/mapjson map emerald data/maps/SafariZone_Southwest/map.json data/layouts/layouts.json data/maps/SafariZone_Southwest
+tools/mapjson/mapjson map emerald data/maps/Underwater_SootopolisCity/map.json data/layouts/layouts.json data/maps/Underwater_SootopolisCity
+tools/mapjson/mapjson map emerald data/maps/LilycoveCity_PokemonTrainerFanClub/map.json data/layouts/layouts.json data/maps/LilycoveCity_PokemonTrainerFanClub
+tools/mapjson/mapjson map emerald data/maps/MtPyre_Summit/map.json data/layouts/layouts.json data/maps/MtPyre_Summit
+tools/mapjson/mapjson map emerald data/maps/AbandonedShip_Rooms_B1F/map.json data/layouts/layouts.json data/maps/AbandonedShip_Rooms_B1F
+tools/mapjson/mapjson map emerald data/maps/BattleFrontier_BattlePalaceCorridor/map.json data/layouts/layouts.json data/maps/BattleFrontier_BattlePalaceCorridor
+tools/mapjson/mapjson map emerald data/maps/LilycoveCity_DepartmentStoreRooftop/map.json data/layouts/layouts.json data/maps/LilycoveCity_DepartmentStoreRooftop
+tools/mapjson/mapjson map emerald data/maps/MeteorFalls_B1F_2R/map.json data/layouts/layouts.json data/maps/MeteorFalls_B1F_2R
+tools/mapjson/mapjson map emerald data/maps/CaveOfOrigin_1F/map.json data/layouts/layouts.json data/maps/CaveOfOrigin_1F
+tools/mapjson/mapjson map emerald data/maps/SecretBase_YellowCave1/map.json data/layouts/layouts.json data/maps/SecretBase_YellowCave1
+tools/mapjson/mapjson map emerald data/maps/SeafloorCavern_Room5/map.json data/layouts/layouts.json data/maps/SeafloorCavern_Room5
+tools/mapjson/mapjson map emerald data/maps/OldaleTown_PokemonCenter_2F/map.json data/layouts/layouts.json data/maps/OldaleTown_PokemonCenter_2F
+tools/mapjson/mapjson map emerald data/maps/CaveOfOrigin_UnusedRubySapphireMap2/map.json data/layouts/layouts.json data/maps/CaveOfOrigin_UnusedRubySapphireMap2
+tools/mapjson/mapjson map emerald data/maps/LittlerootTown_MaysHouse_2F/map.json data/layouts/layouts.json data/maps/LittlerootTown_MaysHouse_2F
+tools/mapjson/mapjson map emerald data/maps/BattleFrontier_BattlePyramidLobby/map.json data/layouts/layouts.json data/maps/BattleFrontier_BattlePyramidLobby
+tools/mapjson/mapjson map emerald data/maps/Route112/map.json data/layouts/layouts.json data/maps/Route112
+tools/mapjson/mapjson map emerald data/maps/SeafloorCavern_Room3/map.json data/layouts/layouts.json data/maps/SeafloorCavern_Room3
+tools/mapjson/mapjson map emerald data/maps/MagmaHideout_1F/map.json data/layouts/layouts.json data/maps/MagmaHideout_1F
+tools/mapjson/mapjson map emerald data/maps/SootopolisCity_House3/map.json data/layouts/layouts.json data/maps/SootopolisCity_House3
+tools/mapjson/mapjson map emerald data/maps/CaveOfOrigin_UnusedRubySapphireMap1/map.json data/layouts/layouts.json data/maps/CaveOfOrigin_UnusedRubySapphireMap1
+tools/mapjson/mapjson map emerald data/maps/LilycoveCity_DepartmentStore_3F/map.json data/layouts/layouts.json data/maps/LilycoveCity_DepartmentStore_3F
+tools/mapjson/mapjson map emerald data/maps/BattlePyramidSquare06/map.json data/layouts/layouts.json data/maps/BattlePyramidSquare06
+tools/mapjson/mapjson map emerald data/maps/ScorchedSlab/map.json data/layouts/layouts.json data/maps/ScorchedSlab
+tools/mapjson/mapjson map emerald data/maps/MagmaHideout_3F_2R/map.json data/layouts/layouts.json data/maps/MagmaHideout_3F_2R
+tools/mapjson/mapjson map emerald data/maps/RustboroCity_House1/map.json data/layouts/layouts.json data/maps/RustboroCity_House1
+

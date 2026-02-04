@@ -1,0 +1,17 @@
+== Sizes ==
+-rw-r--r-- 1 jwilld10 jwilld10  508 Jan 31 04:12 graphics/bw3g/pokemon/genesect/anim_front.4bpp.smol
+-rw-r--r-- 1 jwilld10 jwilld10  956 Jan 31 04:12 graphics/bw3g/pokemon/skarmory/anim_front.4bpp.smol
+-rw-r--r-- 1 jwilld10 jwilld10  848 Jan 29 18:53 graphics/pokemon/bulbasaur/anim_front.4bpp.smol
+-rw-r--r-- 1 jwilld10 jwilld10 1972 Jan 29 18:53 graphics/pokemon/charizard/anim_front.4bpp.smol
+
+== sha1 (quick identity check) ==
+371b23d338af9aafca3c17ea3a3efcea772bafdd  graphics/bw3g/pokemon/genesect/anim_front.4bpp.smol
+46e1fc780eab615c4eb9c6299f06e5b10dd0acf6  graphics/bw3g/pokemon/skarmory/anim_front.4bpp.smol
+ff11729ccab056ec2afee214454bcb784fc29ed1  graphics/pokemon/charizard/anim_front.4bpp.smol
+3dba892340d1bc69f8c435ad4bdf1645e1724ad8  graphics/pokemon/bulbasaur/anim_front.4bpp.smol
+
+== direct comparisons ==
+Genesect smol != Charizard smol
+Genesect smol != Bulbasaur smol
+
+Skarmory smol != Charizard smol

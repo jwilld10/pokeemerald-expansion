@@ -1,0 +1,55 @@
+Backup created: src/bw3g_pokemon_pics.c.bak_20260204_111235
+Patched src/bw3g_pokemon_pics.c
+Replacements:
+  front.animated.2bpp.lz -> anim_front.4bpp.smol : 252
+  front.2bpp.lz          -> anim_front.4bpp.smol : 0
+  back.2bpp.lz           -> back.4bpp.smol       : 252
+
+Post-patch quick counts:
+  2bpp.lz refs: 0
+  .smol refs:   504
+
+Now verifying that referenced smol files exist for a sample...
+[OK]      graphics/bw3g/pokemon/snivy/anim_front.4bpp.smol
+[OK]      graphics/bw3g/pokemon/snivy/back.4bpp.smol
+[OK]      graphics/bw3g/pokemon/servine/anim_front.4bpp.smol
+[OK]      graphics/bw3g/pokemon/servine/back.4bpp.smol
+[OK]      graphics/bw3g/pokemon/serperior/anim_front.4bpp.smol
+[OK]      graphics/bw3g/pokemon/serperior/back.4bpp.smol
+[OK]      graphics/bw3g/pokemon/tepig/anim_front.4bpp.smol
+[OK]      graphics/bw3g/pokemon/tepig/back.4bpp.smol
+[OK]      graphics/bw3g/pokemon/pignite/anim_front.4bpp.smol
+[OK]      graphics/bw3g/pokemon/pignite/back.4bpp.smol
+[OK]      graphics/bw3g/pokemon/emboar/anim_front.4bpp.smol
+[OK]      graphics/bw3g/pokemon/emboar/back.4bpp.smol
+[OK]      graphics/bw3g/pokemon/oshawott/anim_front.4bpp.smol
+[OK]      graphics/bw3g/pokemon/oshawott/back.4bpp.smol
+[OK]      graphics/bw3g/pokemon/dewott/anim_front.4bpp.smol
+[OK]      graphics/bw3g/pokemon/dewott/back.4bpp.smol
+[OK]      graphics/bw3g/pokemon/samurott/anim_front.4bpp.smol
+[OK]      graphics/bw3g/pokemon/samurott/back.4bpp.smol
+[OK]      graphics/bw3g/pokemon/patrat/anim_front.4bpp.smol
+[OK]      graphics/bw3g/pokemon/patrat/back.4bpp.smol
+[OK]      graphics/bw3g/pokemon/watchog/anim_front.4bpp.smol
+[OK]      graphics/bw3g/pokemon/watchog/back.4bpp.smol
+[OK]      graphics/bw3g/pokemon/purrloin/anim_front.4bpp.smol
+[OK]      graphics/bw3g/pokemon/purrloin/back.4bpp.smol
+[OK]      graphics/bw3g/pokemon/liepard/anim_front.4bpp.smol
+[OK]      graphics/bw3g/pokemon/liepard/back.4bpp.smol
+[OK]      graphics/bw3g/pokemon/pidove/anim_front.4bpp.smol
+[OK]      graphics/bw3g/pokemon/pidove/back.4bpp.smol
+[OK]      graphics/bw3g/pokemon/tranquill/anim_front.4bpp.smol
+[OK]      graphics/bw3g/pokemon/tranquill/back.4bpp.smol
+[OK]      graphics/bw3g/pokemon/unfezant/anim_front.4bpp.smol
+[OK]      graphics/bw3g/pokemon/unfezant/back.4bpp.smol
+[OK]      graphics/bw3g/pokemon/igglybuff/anim_front.4bpp.smol
+[OK]      graphics/bw3g/pokemon/igglybuff/back.4bpp.smol
+[OK]      graphics/bw3g/pokemon/jigglypuff/anim_front.4bpp.smol
+[OK]      graphics/bw3g/pokemon/jigglypuff/back.4bpp.smol
+[OK]      graphics/bw3g/pokemon/wigglytuff/anim_front.4bpp.smol
+[OK]      graphics/bw3g/pokemon/wigglytuff/back.4bpp.smol
+[OK]      graphics/bw3g/pokemon/azurill/anim_front.4bpp.smol
+[OK]      graphics/bw3g/pokemon/azurill/back.4bpp.smol
+sample missing count: 0
+
+DONE. Next: rebuild (make -j) and test BW3G summary screen.

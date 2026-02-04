@@ -1,0 +1,1 @@
+../../../data/graphics/bw3g_mon_icons_table_generated.h

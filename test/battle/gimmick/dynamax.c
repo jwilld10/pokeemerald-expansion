@@ -705,11 +705,11 @@ DOUBLE_BATTLE_TEST("Dynamax: Max Strike lowers both opponents' speed")
         OPPONENT(SPECIES_WOBBUFFET) { Speed(100); }
         OPPONENT(SPECIES_WOBBUFFET) { Speed(99); }
     } WHEN {
-        TURN { MOVE(playerLeft, MOVE_SCRATCH, target: opponentLeft, gimmick: GIMMICK_DYNAMAX); \
-               MOVE(opponentLeft, MOVE_SCRATCH, target: playerLeft); \
+        TURN { MOVE(playerLeft, MOVE_SCRATCH, target: opponentLeft, gimmick: GIMMICK_DYNAMAX);
+               MOVE(opponentLeft, MOVE_SCRATCH, target: playerLeft);
                MOVE(opponentRight, MOVE_SCRATCH, target: playerLeft); }
-        TURN { MOVE(playerLeft, MOVE_SCRATCH, target: opponentLeft); \
-               MOVE(opponentLeft, MOVE_SCRATCH, target: playerLeft); \
+        TURN { MOVE(playerLeft, MOVE_SCRATCH, target: opponentLeft);
+               MOVE(opponentLeft, MOVE_SCRATCH, target: playerLeft);
                MOVE(opponentRight, MOVE_SCRATCH, target: playerLeft); }
     } SCENE {
         // turn 1
@@ -744,9 +744,9 @@ DOUBLE_BATTLE_TEST("Dynamax: Max Knuckle raises both allies' attack")
         OPPONENT(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WYNAUT);
     } WHEN {
-        TURN { MOVE(playerLeft, MOVE_CLOSE_COMBAT, target: opponentLeft, gimmick: GIMMICK_DYNAMAX); \
+        TURN { MOVE(playerLeft, MOVE_CLOSE_COMBAT, target: opponentLeft, gimmick: GIMMICK_DYNAMAX);
                MOVE(playerRight, MOVE_SCRATCH, target: opponentRight); }
-        TURN { MOVE(playerLeft, MOVE_CLOSE_COMBAT, target: opponentLeft); \
+        TURN { MOVE(playerLeft, MOVE_CLOSE_COMBAT, target: opponentLeft);
                MOVE(playerRight, MOVE_SCRATCH, target: opponentRight); }
     } SCENE {
         // turn 1
@@ -1021,7 +1021,7 @@ DOUBLE_BATTLE_TEST("Dynamax: G-Max Stun Shock paralyzes or poisons both opponent
         OPPONENT(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WYNAUT);
     } WHEN {
-        TURN { MOVE(playerLeft, MOVE_THUNDERBOLT, target: opponentLeft, gimmick: GIMMICK_DYNAMAX, \
+        TURN { MOVE(playerLeft, MOVE_THUNDERBOLT, target: opponentLeft, gimmick: GIMMICK_DYNAMAX,
                WITH_RNG(RNG_G_MAX_STUN_SHOCK, rng)); }
     } SCENE {
         MESSAGE("Toxtricity used G-Max Stun Shock!");
@@ -1058,7 +1058,7 @@ DOUBLE_BATTLE_TEST("Dynamax: G-Max Stun Shock chooses statuses before considerin
         OPPONENT(SPECIES_GARBODOR);
         OPPONENT(SPECIES_TRUBBISH);
     } WHEN {
-        TURN { MOVE(playerLeft, MOVE_NUZZLE, target: opponentLeft, gimmick: GIMMICK_DYNAMAX, \
+        TURN { MOVE(playerLeft, MOVE_NUZZLE, target: opponentLeft, gimmick: GIMMICK_DYNAMAX,
                WITH_RNG(RNG_G_MAX_STUN_SHOCK, STATUS1_POISON)); }
     } SCENE {
         MESSAGE("Toxtricity used G-Max Stun Shock!");
@@ -1231,15 +1231,15 @@ DOUBLE_BATTLE_TEST("Dynamax: G-Max Meltdown torments both opponents for 3 turns"
         OPPONENT(SPECIES_WOBBUFFET) { Moves(MOVE_SPLASH, MOVE_CELEBRATE); }
         OPPONENT(SPECIES_WYNAUT) { Moves(MOVE_SPLASH, MOVE_CELEBRATE); }
     } WHEN {
-        TURN { MOVE(playerLeft, MOVE_IRON_HEAD, target: opponentLeft, gimmick: GIMMICK_DYNAMAX); \
+        TURN { MOVE(playerLeft, MOVE_IRON_HEAD, target: opponentLeft, gimmick: GIMMICK_DYNAMAX);
                MOVE(opponentLeft, MOVE_SPLASH); MOVE(opponentRight, MOVE_SPLASH); }
-        TURN { MOVE(playerLeft, MOVE_CELEBRATE, target: opponentLeft); \
-               MOVE(opponentLeft, MOVE_SPLASH, allowed: FALSE); \
-               MOVE(opponentLeft, MOVE_CELEBRATE); \
-               MOVE(opponentRight, MOVE_SPLASH, allowed: FALSE); \
+        TURN { MOVE(playerLeft, MOVE_CELEBRATE, target: opponentLeft);
+               MOVE(opponentLeft, MOVE_SPLASH, allowed: FALSE);
+               MOVE(opponentLeft, MOVE_CELEBRATE);
+               MOVE(opponentRight, MOVE_SPLASH, allowed: FALSE);
                MOVE(opponentRight, MOVE_CELEBRATE); }
-        TURN { MOVE(playerLeft, MOVE_CELEBRATE, target: opponentLeft); \
-               MOVE(opponentLeft, MOVE_SPLASH); \
+        TURN { MOVE(playerLeft, MOVE_CELEBRATE, target: opponentLeft);
+               MOVE(opponentLeft, MOVE_SPLASH);
                MOVE(opponentRight, MOVE_SPLASH); }
     } SCENE {
         // turn 1
@@ -1314,9 +1314,9 @@ DOUBLE_BATTLE_TEST("Dynamax: G-Max Replenish recycles allies' berries 50\% of th
         OPPONENT(SPECIES_WOBBUFFET) { Item(ITEM_APICOT_BERRY); }
         OPPONENT(SPECIES_WOBBUFFET) { Item(ITEM_APICOT_BERRY); }
     } WHEN {
-        TURN { MOVE(playerLeft, MOVE_STUFF_CHEEKS); \
-               MOVE(playerRight, MOVE_STUFF_CHEEKS); \
-               MOVE(opponentLeft, MOVE_STUFF_CHEEKS); \
+        TURN { MOVE(playerLeft, MOVE_STUFF_CHEEKS);
+               MOVE(playerRight, MOVE_STUFF_CHEEKS);
+               MOVE(opponentLeft, MOVE_STUFF_CHEEKS);
                MOVE(opponentRight, MOVE_STUFF_CHEEKS); }
         TURN { MOVE(playerLeft, MOVE_SCRATCH, target: opponentLeft, gimmick: GIMMICK_DYNAMAX); }
     } SCENE {
@@ -1443,7 +1443,7 @@ DOUBLE_BATTLE_TEST("Dynamax: G-Max Chi Strike boosts allies' crit chance by 1 st
     } WHEN {
         TURN { MOVE(playerLeft, MOVE_FORCE_PALM, target: opponentLeft, gimmick: GIMMICK_DYNAMAX); }
         TURN { MOVE(playerLeft, MOVE_FORCE_PALM, target: opponentLeft); }
-        TURN { MOVE(playerLeft, MOVE_FORCE_PALM, target: opponentLeft); \
+        TURN { MOVE(playerLeft, MOVE_FORCE_PALM, target: opponentLeft);
                MOVE(playerRight, MOVE_FOCUS_ENERGY); }
         TURN { MOVE(playerRight, MOVE_SCRATCH, target: opponentLeft); }
     } SCENE {
@@ -1499,10 +1499,10 @@ DOUBLE_BATTLE_TEST("Dynamax: G-Max One Blow bypasses Max Guard for full damage",
         OPPONENT(SPECIES_WYNAUT);
     } WHEN {
         if (protect)
-            TURN { MOVE(playerLeft, MOVE_WICKED_BLOW, target: opponentLeft, gimmick: GIMMICK_DYNAMAX); \
+            TURN { MOVE(playerLeft, MOVE_WICKED_BLOW, target: opponentLeft, gimmick: GIMMICK_DYNAMAX);
                    MOVE(opponentLeft, MOVE_PROTECT, gimmick: GIMMICK_DYNAMAX); }
         else
-            TURN { MOVE(playerLeft, MOVE_WICKED_BLOW, target: opponentLeft, gimmick: GIMMICK_DYNAMAX); \
+            TURN { MOVE(playerLeft, MOVE_WICKED_BLOW, target: opponentLeft, gimmick: GIMMICK_DYNAMAX);
                    MOVE(opponentLeft, MOVE_PSYCHIC, target: playerLeft, gimmick: GIMMICK_DYNAMAX); }
     } SCENE {
         if (protect)

@@ -2163,7 +2163,7 @@ static bool8 PayoutTask_Free(struct Task *task)
 // that if `offset` is negative, it wraps around to the bottom of the tape.
 //           .-----------------.
 //           | [ ] | [ ] | [ ] | <- offset = 0
-//           /-----|-----|-----\
+//           /-----|-----|-----
 // screen -> | [ ] | [ ] | [ ] | <- offset = 1
 //           | [ ] | [ ] | [ ] | <- offset = 2
 //           | [ ] | [ ] | [ ] | <- offset = 3

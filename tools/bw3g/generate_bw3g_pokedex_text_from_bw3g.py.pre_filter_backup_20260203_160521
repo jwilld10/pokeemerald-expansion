@@ -1,0 +1,218 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import re
+from pathlib import Path
+
+BW3G_ROOT = Path.home() / "decomps/gb/BW3G"
+DEX_MASTER = BW3G_ROOT / "data/pokemon/dex_entries.asm"
+DEX_DIR    = BW3G_ROOT / "data/pokemon/dex_entries"
+
+OUT = Path("data/pokemon/bw3g_generated/bw3g_pokedex_text.h")
+
+INCLUDE_RE = re.compile(r'^\s*(?:\w+::\s*)?INCLUDE\s+"([^"]+)"', re.I)
+DB_STR_RE  = re.compile(r'^\s*db\s+"([^"]*)"', re.I)
+
+def canon(token: str) -> str:
+    s = token.lower()
+    s = s.replace("ho_oh", "hooh")
+    s = s.replace("mr_mime", "mrmime")
+    s = s.replace("mime_jr", "mimejr")
+    s = s.replace("porygon_z", "porygonz")
+    s = s.replace("nidoran_f", "nidoranf")
+    s = s.replace("nidoran_m", "nidoranm")
+    return s
+
+def c_escape(s: str) -> str:
+    return s.replace("\\", "\\\\").replace('"', '\\"')
+
+def wrap_c_string(s: str, width: int = 72) -> str:
+    # produce _("...") as adjacent string literals for long lines
+    s = " ".join(s.split())
+    if not s:
+        return '_("")'
+    words = s.split(" ")
+    lines = []
+    cur = ""
+    for w in words:
+        if not cur:
+            cur = w
+        elif len(cur) + 1 + len(w) <= width:
+            cur += " " + w
+        else:
+            lines.append(cur)
+            cur = w
+    if cur:
+        lines.append(cur)
+    if len(lines) == 1:
+        return f'_("{c_escape(lines[0])}")'
+    joined = "\n".join([f'    "{c_escape(line)}"' for line in lines])
+    return f'_({joined}\n)'
+
+def parse_bw3g_entry_file(p: Path) -> tuple[str, str]:
+    """
+    Returns (category, dex_text) from a BW3G dex entry .asm file.
+
+    Observed pattern from your grep hits:
+      db "AUTOMATON@" ; species name   <-- category
+      ... then several db "....@" strings for the entry text
+
+    We treat:
+      - FIRST db "...." as category (strip trailing @)
+      - ALL subsequent db "...." strings concatenated as dex text (strip @ and join with spaces)
+    """
+    lines = p.read_text(encoding="utf-8", errors="ignore").splitlines()
+
+    strings = []
+    for ln in lines:
+        m = DB_STR_RE.match(ln)
+        if not m:
+            continue
+        s = m.group(1)
+
+        # Strip the terminator @ if present
+        if s.endswith("@"):
+            s = s[:-1]
+        strings.append(s)
+
+    if not strings:
+        raise SystemExit(f"ERROR: No db \"...\" strings found in {p}")
+
+    category = strings[0].strip()
+    # remaining strings are typically the dex entry text chunks
+    text_chunks = [x.strip() for x in strings[1:] if x.strip()]
+
+    # Some projects split text across many db lines; join into one paragraph.
+    dex_text = " ".join(text_chunks).strip()
+
+    if not dex_text:
+        # If BW3G only stores category/height/weight here and text elsewhere,
+        # hard-fail so you don't silently ship empty dex text.
+        raise SystemExit(f"ERROR: Parsed empty dex text from {p} (category='{category}'). Need to adjust parser.")
+    return category, dex_text
+
+def read_master_includes() -> list[Path]:
+    if not DEX_MASTER.exists():
+        raise SystemExit(f"ERROR: Missing master file: {DEX_MASTER}")
+    incs: list[Path] = []
+    for ln in DEX_MASTER.read_text(encoding="utf-8", errors="ignore").splitlines():
+        m = INCLUDE_RE.match(ln)
+        if not m:
+            continue
+        rel = m.group(1)
+
+        # Only keep real per-species entry includes
+        # e.g. data/pokemon/dex_entries/snivy.asm
+        rel_norm = rel.replace("\\", "/")
+        if not rel_norm.startswith("data/pokemon/dex_entries/"):
+            continue
+        if not rel_norm.endswith(".asm"):
+            continue
+
+        fp = BW3G_ROOT / rel_norm
+        if not fp.exists():
+            # Missing dex entry file (GENESIS_MON is commonly a placeholder)
+            print(f"[WARN] Missing BW3G dex include: {fp} — skipping")
+            continue
+
+        incs.append(fp)
+
+    if not incs:
+        raise SystemExit(f"ERROR: No dex_entries/*.asm INCLUDE lines parsed from {DEX_MASTER}")
+    return incs
+
+def main() -> None:
+    if not BW3G_ROOT.exists():
+        raise SystemExit(f"ERROR: BW3G_ROOT not found: {BW3G_ROOT}")
+    if not DEX_DIR.exists():
+        raise SystemExit(f"ERROR: dex_entries dir not found: {DEX_DIR}")
+
+    inc_files = read_master_includes()
+
+    # Build maps from filename stem -> (category, text)
+    entries = {}
+    for fp in inc_files:
+        if not fp.exists():
+            raise SystemExit(f"ERROR: INCLUDE target missing: {fp}")
+        stem = canon(fp.stem)
+        category, text = parse_bw3g_entry_file(fp)
+        entries[stem] = (category, text)
+
+    # Load your BW3G species tokens to produce a stable table indexed by species order
+    SPECIES_HDR = Path("include/constants/species_bw3g.h")
+    rx = re.compile(r'^\s*#define\s+(SPECIES_([A-Z0-9_]+)_BW3G)\b')
+    species = []
+    for ln in SPECIES_HDR.read_text(encoding="utf-8", errors="replace").splitlines():
+        m = rx.match(ln)
+        if m:
+            species.append((m.group(1), canon(m.group(2)), m.group(2)))
+    if not species:
+        raise SystemExit(f"ERROR: No species parsed from {SPECIES_HDR}")
+
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+
+    out = []
+    out.append("// Auto-generated from BW3G data/pokemon/dex_entries.asm + dex_entries/*.asm\n")
+    out.append("// Real BW3G dex categories + text (no stubs)\n")
+    out.append("#ifndef GUARD_BW3G_POKEDEX_TEXT_H\n#define GUARD_BW3G_POKEDEX_TEXT_H\n\n")
+    out.append('#include "global.h"\n')
+    out.append('#include "constants/species_bw3g.h"\n\n')
+
+    # Emit arrays
+    out.append("// Category strings (indexed by species - SPECIES_SNIVY_BW3G)\n")
+    out.append("static const u8 *const gBw3gPokedexCategory[] =\n{\n")
+    cat_syms = []
+    txt_syms = []
+
+    for full, stem, tok_upper in species:
+        key = stem
+        if key not in entries:
+            raise SystemExit(f"ERROR: No BW3G dex entry found for species token '{tok_upper}' (expected file like {key}.asm)")
+        category, text = entries[key]
+
+        cat_sym = f"sBw3gDexCategory_{tok_upper}"
+        txt_sym = f"sBw3gDexText_{tok_upper}"
+        cat_syms.append(cat_sym)
+        txt_syms.append(txt_sym)
+
+        out.append(f"    /* {full} */ {cat_sym},\n")
+
+        # declare the underlying arrays
+    out.append("};\n\n")
+
+    out.append("// Underlying category arrays\n")
+    for (full, stem, tok_upper), cat_sym in zip(species, cat_syms):
+        if tok_upper == 'GENESIS_MON':
+            print(f"[WARN] Skipping placeholder species '{tok_upper}'")
+            continue
+        category, _ = entries[stem]
+        out.append(f"static const u8 {cat_sym}[] = {wrap_c_string(category)};\n")
+    out.append("\n")
+
+    out.append("// Dex text arrays\n")
+    for (full, stem, tok_upper), txt_sym in zip(species, txt_syms):
+        if tok_upper == 'GENESIS_MON':
+            print(f"[WARN] Skipping placeholder species '{tok_upper}'")
+            continue
+        _, text = entries[stem]
+        out.append(f"static const u8 {txt_sym}[] = {wrap_c_string(text)};\n")
+    out.append("\n")
+
+    out.append("// Pointer table indexed by (species - SPECIES_SNIVY_BW3G)\n")
+    out.append("static const u8 *const gBw3gPokedexTextPointers[] =\n{\n")
+    for (full, stem, tok_upper), txt_sym in zip(species, txt_syms):
+        if tok_upper == 'GENESIS_MON':
+            print(f"[WARN] Skipping placeholder species '{tok_upper}'")
+            continue
+        out.append(f"    /* {full} */ {txt_sym},\n")
+    out.append("};\n\n")
+
+    out.append("#endif // GUARD_BW3G_POKEDEX_TEXT_H\n")
+
+    OUT.write_text("".join(out), encoding="utf-8")
+    print(f"[OK] Wrote real BW3G dex text header: {OUT}")
+    print(f"[OK] Entries: {len(species)}")
+    print(f"[OK] Parsed from BW3G includes: {len(inc_files)} (unique stems: {len(entries)})")
+
+if __name__ == "__main__":
+    main()

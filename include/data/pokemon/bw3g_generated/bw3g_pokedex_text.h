@@ -1,0 +1,1 @@
+../../../../data/pokemon/bw3g_generated/bw3g_pokedex_text.h

@@ -1,0 +1,2045 @@
+BW3G ROOT: /home/jwilld10/decomps/gb/BW3G
+MAX_RESULTS: 400
+
+== Candidates: base stats ==
+/home/jwilld10/decomps/gb/BW3G/wram.asm:561:wPlayerSpAtk:: dw
+/home/jwilld10/decomps/gb/BW3G/wram.asm:562:wPlayerSpDef:: dw
+/home/jwilld10/decomps/gb/BW3G/wram.asm:569:wEnemySpAtk:: dw
+/home/jwilld10/decomps/gb/BW3G/wram.asm:570:wEnemySpDef:: dw
+/home/jwilld10/decomps/gb/BW3G/wram.asm:709:wBackupEnemyMonBaseStats:: ds 5 ; c720
+/home/jwilld10/decomps/gb/BW3G/wram.asm:2118:wEnemyMonBaseStats:: ds 5 ; d226
+/home/jwilld10/decomps/gb/BW3G/wram.asm:2152:; corresponds to the data/pokemon/base_stats/*.asm contents
+/home/jwilld10/decomps/gb/BW3G/wram.asm:2155:wBaseStats:: ; d237
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_constants.asm:4:; - BaseData (see data/pokemon/base_stats.asm)
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_data_constants.asm:1:; base data struct members (see data/pokemon/base_stats/*.asm)
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_data_constants.asm:3:BASE_STATS       EQUS "(wBaseStats - wCurBaseData)"
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_data_constants.asm:12:BASE_CATCH_RATE  EQUS "(wBaseCatchRate - wCurBaseData)"
+/home/jwilld10/decomps/gb/BW3G/main.asm:262:INCLUDE "data/pokemon/base_stats.asm"
+/home/jwilld10/decomps/gb/BW3G/bw3genesis.map:7491:           $7d57 = SandstormSpDefBoost
+/home/jwilld10/decomps/gb/BW3G/bw3genesis.map:7492:           $7d68 = SandstormSpDefBoost.ok
+/home/jwilld10/decomps/gb/BW3G/bw3genesis.map:7493:           $7d71 = SandstormSpDefBoost.start_boost
+/home/jwilld10/decomps/gb/BW3G/bw3genesis.map:7549:           $435f = AI_Items.XSpDef
+/home/jwilld10/decomps/gb/BW3G/bw3genesis.map:7579:           $457b = EnemyUsedXSpDef
+/home/jwilld10/decomps/gb/BW3G/bw3genesis.map:7668:           $4b39 = AI_Smart_SpDefenseUp2
+/home/jwilld10/decomps/gb/BW3G/bw3genesis.map:7669:           $4b6e = AI_Smart_SpDefenseUp2.asm_38b10
+/home/jwilld10/decomps/gb/BW3G/bw3genesis.map:33410:           $59bf = XSpDefDesc
+/home/jwilld10/decomps/gb/BW3G/bw3genesis.map:37732:           $c6bc = wPlayerSpAtk
+/home/jwilld10/decomps/gb/BW3G/bw3genesis.map:37733:           $c6be = wPlayerSpDef
+/home/jwilld10/decomps/gb/BW3G/bw3genesis.map:37740:           $c6c7 = wEnemySpAtk
+/home/jwilld10/decomps/gb/BW3G/bw3genesis.map:37741:           $c6c9 = wEnemySpDef
+/home/jwilld10/decomps/gb/BW3G/bw3genesis.map:37943:           $c720 = wBackupEnemyMonBaseStats
+/home/jwilld10/decomps/gb/BW3G/bw3genesis.map:39261:           $d227 = wEnemyMonBaseStats
+/home/jwilld10/decomps/gb/BW3G/bw3genesis.map:39277:           $d238 = wBaseStats
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:728:; table of routines that increase or decrease the catch rate based on
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:749:; multiply catch rate by 1 + (turns passed * 3) / 10, capped at 4
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:771:; multiply catch rate by 5 on first turn
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:788:; multiply catch rate by 3.5 if mon is already in Pokedex
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:809:; multiply catch rate by 3.5 if in a surfing or fishing encounter
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:832:; multiply catch rate by 3 if mon is water or bug type
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:872:; b is the catch rate
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:887:; multiply catch rate by 2
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:896:; multiply catch rate by 1.5
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:928:; subtract 20 from catch rate if weight < 102.4 kg
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:929:; else add 0 to catch rate if weight < 204.8 kg
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:930:; else add 20 to catch rate if weight < 307.2 kg
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:931:; else add 30 to catch rate if weight < 409.6 kg
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:932:; else add 40 to catch rate (never happens)
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:1028:; multiply catch rate by 5 if this is a fishing rod battle
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:1046:; Intent:  multiply catch rate by 4 if mon evolves with moon stone
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:1073:; so Moon Balls always have a catch rate of 1×.
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:1092:; Intent:  multiply catch rate by 8 if mons are of same species, different sex
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:1093:; Reality: multiply catch rate by 8 if mons are of same species, same sex
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:1157:; Intent:  multiply catch rate by 4 if enemy mon is in one of the three
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:1159:; Reality: multiply catch rate by 4 if enemy mon is one of the first three in
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:1191:; multiply catch rate by 8 if player mon level / 4 > enemy mon level
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:1192:; multiply catch rate by 4 if player mon level / 2 > enemy mon level
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:1193:; multiply catch rate by 2 if player mon level > enemy mon level
+/home/jwilld10/decomps/gb/BW3G/data/items/descriptions.asm:122:	dw XSpDefDesc
+/home/jwilld10/decomps/gb/BW3G/data/items/descriptions.asm:730:XSpDefDesc:
+/home/jwilld10/decomps/gb/BW3G/data/items/catch_rate_items.asm:2:; catch rate as an item. However, if the catch rate appears in this table, the
+/home/jwilld10/decomps/gb/BW3G/data/trainers/parties.asm:6:;    * with TRAINERTYPE_STAT_EXP: dw hp, atk, def, spd, spc
+/home/jwilld10/decomps/gb/BW3G/data/trainers/dvs.asm:3:	;  atk,def,spd,spc
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/move_mon.asm:1412:; 'c' counts from 1-6 and points with 'wBaseStats' to the base value
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/move_mon.asm:1437:; 5: SpAtk
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/move_mon.asm:1438:; 6: SpDef
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/move_mon.asm:1445:	ld hl, wBaseStats
+/home/jwilld10/decomps/gb/BW3G/engine/gfx/load_pics.asm:5:;	atk  def  spd  spc
+/home/jwilld10/decomps/gb/BW3G/engine/battle/move_effects/calm_mind.asm:25:; SpDefense
+/home/jwilld10/decomps/gb/BW3G/engine/battle/move_effects/calm_mind.asm:33:; Raise SpAttack, SpDefense, and Speed.
+/home/jwilld10/decomps/gb/BW3G/engine/battle/move_effects/quiver_dance.asm:30:; SpDefense
+/home/jwilld10/decomps/gb/BW3G/engine/battle/move_effects/quiver_dance.asm:38:; Raise SpAttack, SpDefense, and Speed.
+/home/jwilld10/decomps/gb/BW3G/engine/battle/core.asm:2410:	ld hl, wEnemyMonBaseStats
+/home/jwilld10/decomps/gb/BW3G/engine/battle/core.asm:2411:	ld b, wEnemyMonEnd - wEnemyMonBaseStats
+/home/jwilld10/decomps/gb/BW3G/engine/battle/core.asm:2419:	ld hl, wEnemyMonBaseStats
+/home/jwilld10/decomps/gb/BW3G/engine/battle/core.asm:2420:	ld de, wBackupEnemyMonBaseStats
+/home/jwilld10/decomps/gb/BW3G/engine/battle/core.asm:2421:	ld bc, wEnemyMonEnd - wEnemyMonBaseStats
+/home/jwilld10/decomps/gb/BW3G/engine/battle/core.asm:2433:	ld hl, wBackupEnemyMonBaseStats
+/home/jwilld10/decomps/gb/BW3G/engine/battle/core.asm:2434:	ld de, wEnemyMonBaseStats
+/home/jwilld10/decomps/gb/BW3G/engine/battle/core.asm:2435:	ld bc, wEnemyMonEnd - wEnemyMonBaseStats
+/home/jwilld10/decomps/gb/BW3G/engine/battle/core.asm:3594:	ld bc, BASE_CATCH_RATE - BASE_TYPES
+/home/jwilld10/decomps/gb/BW3G/engine/battle/core.asm:4246:	ld hl, wBaseStats
+/home/jwilld10/decomps/gb/BW3G/engine/battle/core.asm:4247:	ld de, wEnemyMonBaseStats
+/home/jwilld10/decomps/gb/BW3G/engine/battle/core.asm:6714:; Only the first five base stats are copied..
+/home/jwilld10/decomps/gb/BW3G/engine/battle/core.asm:6715:	ld hl, wBaseStats
+/home/jwilld10/decomps/gb/BW3G/engine/battle/core.asm:6716:	ld de, wEnemyMonBaseStats
+/home/jwilld10/decomps/gb/BW3G/engine/battle/core.asm:6717:	ld b, wBaseSpecialDefense - wBaseStats
+/home/jwilld10/decomps/gb/BW3G/engine/battle/core.asm:7279:	ld hl, wEnemyMonBaseStats - 1
+/home/jwilld10/decomps/gb/BW3G/engine/battle/core.asm:7662:	ld hl, wEnemyMonBaseStats
+/home/jwilld10/decomps/gb/BW3G/engine/battle/core.asm:7663:	ld c, wEnemyMonEnd - wEnemyMonBaseStats
+/home/jwilld10/decomps/gb/BW3G/engine/battle/ai/scoring.asm:345:	dbw EFFECT_SP_DEF_UP_2,      AI_Smart_SpDefenseUp2
+/home/jwilld10/decomps/gb/BW3G/engine/battle/ai/scoring.asm:1121:AI_Smart_SpDefenseUp2:
+/home/jwilld10/decomps/gb/BW3G/engine/battle/ai/items.asm:284:	dbw X_SP_DEF,     .XSpDef
+/home/jwilld10/decomps/gb/BW3G/engine/battle/ai/items.asm:493:.XSpDef:
+/home/jwilld10/decomps/gb/BW3G/engine/battle/ai/items.asm:496:	call EnemyUsedXSpDef
+/home/jwilld10/decomps/gb/BW3G/engine/battle/ai/items.asm:816:EnemyUsedXSpDef:
+/home/jwilld10/decomps/gb/BW3G/engine/battle/effect_commands.asm:2627:	call SandstormSpDefBoost
+/home/jwilld10/decomps/gb/BW3G/engine/battle/effect_commands.asm:2648:	ld hl, wEnemySpDef
+/home/jwilld10/decomps/gb/BW3G/engine/battle/effect_commands.asm:2652:	ld hl, wPlayerSpAtk
+/home/jwilld10/decomps/gb/BW3G/engine/battle/effect_commands.asm:2880:	call SandstormSpDefBoost
+/home/jwilld10/decomps/gb/BW3G/engine/battle/effect_commands.asm:2900:	ld hl, wPlayerSpDef
+/home/jwilld10/decomps/gb/BW3G/engine/battle/effect_commands.asm:2904:	ld hl, wEnemySpAtk
+/home/jwilld10/decomps/gb/BW3G/engine/battle/effect_commands.asm:7033:SandstormSpDefBoost:
+/home/jwilld10/decomps/gb/BW3G/engine/link/link.asm:738:	ld bc, BASE_CATCH_RATE - BASE_TYPES
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/golett.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/golett.asm:7:	db 190 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/zorua.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/zorua.asm:7:	db 75 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/gothita.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/gothita.asm:7:	db 200 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/onix.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/onix.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/zweilous.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/zweilous.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/purrloin.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/purrloin.asm:7:	db 255 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/sneasel.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/sneasel.asm:7:	db 60 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/solosis.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/solosis.asm:7:	db 200 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/rufflet.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/rufflet.asm:7:	db 190 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/tynamo.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/tynamo.asm:7:	db 190 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/vanillite.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/vanillite.asm:7:	db 255 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/lairon.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/lairon.asm:7:	db 90 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/mantyke.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/mantyke.asm:7:	db 25 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/tropius.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/tropius.asm:7:	db 200 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/leavanny.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/leavanny.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/yamask.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/yamask.asm:7:	db 190 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/klang.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/klang.asm:7:	db 60 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/swanna.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/swanna.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/gothorita.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/gothorita.asm:7:	db 100 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/oshawott.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/oshawott.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/yanma.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/yanma.asm:7:	db 75 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/cryogonal.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/cryogonal.asm:7:	db 25 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/drifloon.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/drifloon.asm:7:	db 125 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/lillipup.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/lillipup.asm:7:	db 255 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/zubat.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/zubat.asm:7:	db 255 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/igglybuff.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/igglybuff.asm:7:	db 170 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/ferrothorn.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/ferrothorn.asm:7:	db 90 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/stoutland.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/stoutland.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/corphish.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/corphish.asm:7:	db 205 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/heatmor.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/heatmor.asm:7:	db 90 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/musharna.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/musharna.asm:7:	db 75 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/skorupi.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/skorupi.asm:7:	db 120 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/crawdaunt.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/crawdaunt.asm:7:	db 155 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/foongus.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/foongus.asm:7:	db 190 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/gligar.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/gligar.asm:7:	db 60 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/liepard.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/liepard.asm:7:	db 90 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/aggron.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/aggron.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/altaria.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/altaria.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/mantine.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/mantine.asm:7:	db 25 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/swablu.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/swablu.asm:7:	db 255 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/gastly.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/gastly.asm:7:	db 190 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/haunter.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/haunter.asm:7:	db 90 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/carracosta.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/carracosta.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/sewaddle.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/sewaddle.asm:7:	db 255 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/jigglypuff.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/jigglypuff.asm:7:	db 170 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/drapion.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/drapion.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/heracross.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/heracross.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/conkeldurr.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/conkeldurr.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/frillish.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/frillish.asm:7:	db 190 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/reuniclus.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/reuniclus.asm:7:	db 50 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/eelektross.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/eelektross.asm:7:	db 30 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/roselia.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/roselia.asm:7:	db 150 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/mareep.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/mareep.asm:7:	db 235 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/palpitoad.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/palpitoad.asm:7:	db 120 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/zoroark.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/zoroark.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/roserade.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/roserade.asm:7:	db 75 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/remoraid.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/remoraid.asm:7:	db 190 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/venipede.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/venipede.asm:7:	db 255 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/audino.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/audino.asm:7:	db 255 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/mamoswine.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/mamoswine.asm:7:	db 50 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/litwick.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/litwick.asm:7:	db 190 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/corsola.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/corsola.asm:7:	db 60 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/gliscor.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/gliscor.asm:7:	db 30 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/haxorus.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/haxorus.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/vaporeon.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/vaporeon.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/weezing.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/weezing.asm:7:	db 60 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/snubbull.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/snubbull.asm:7:	db 190 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/galvantula.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/galvantula.asm:7:	db 75 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/amoonguss.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/amoonguss.asm:7:	db 75 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/flygon.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/flygon.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/magneton.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/magneton.asm:7:	db 60 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/electivire.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/electivire.asm:7:	db 30 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/duosion.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/duosion.asm:7:	db 100 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/genesect.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/genesect.asm:7:	db 3 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/beldum.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/beldum.asm:7:	db 3 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/timburr.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/timburr.asm:7:	db 180 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/cofagrigus.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/cofagrigus.asm:7:	db 90 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/krokorok.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/krokorok.asm:7:	db 90 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/braviary.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/braviary.asm:7:	db 60 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/munna.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/munna.asm:7:	db 190 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/sawsbuck.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/sawsbuck.asm:7:	db 75 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/tools/gfx.py:30:base_stats = None
+/home/jwilld10/decomps/gb/BW3G/tools/gfx.py:31:def get_base_stats():
+/home/jwilld10/decomps/gb/BW3G/tools/gfx.py:32:    global base_stats
+/home/jwilld10/decomps/gb/BW3G/tools/gfx.py:33:    if not base_stats:
+/home/jwilld10/decomps/gb/BW3G/tools/gfx.py:34:        base_stats = recursive_read('data/base_stats.asm')
+/home/jwilld10/decomps/gb/BW3G/tools/gfx.py:35:    return base_stats
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/swoobat.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/swoobat.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/samurott.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/samurott.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/seismitoad.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/seismitoad.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/snorunt.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/snorunt.asm:7:	db 190 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/escavalier.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/escavalier.asm:7:	db 75 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/mawile.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/mawile.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/gurdurr.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/gurdurr.asm:7:	db 90 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/ferroseed.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/ferroseed.asm:7:	db 255 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/flaaffy.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/flaaffy.asm:7:	db 120 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/kirlia.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/kirlia.asm:7:	db 120 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/seadra.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/seadra.asm:7:	db 75 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/clefairy.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/clefairy.asm:7:	db 150 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/cottonee.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/cottonee.asm:7:	db 190 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/jolteon.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/jolteon.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/dratini.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/dratini.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/crobat.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/crobat.asm:7:	db 90 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/sawk.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/sawk.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/pignite.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/pignite.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/electabuzz.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/electabuzz.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/tools/bw3g/import_bw3g_all.py:18:#   - Import base stats
+/home/jwilld10/decomps/gb/BW3G/tools/bw3g/import_bw3g_all.py:43:    "data/pokemon/base_stats.asm",
+/home/jwilld10/decomps/gb/BW3G/tools/bw3g/import_bw3g_all.py:215:# base_stats.asm in BW3G is Gen2-style "base_stats <SPECIES>" blocks.
+/home/jwilld10/decomps/gb/BW3G/tools/bw3g/import_bw3g_all.py:217:BASE_STATS_SPEC_RE  = re.compile(r'^\s*base_stats\s+([A-Z0-9_]+)\b', re.I)
+/home/jwilld10/decomps/gb/BW3G/tools/bw3g/import_bw3g_all.py:219:def parse_bw3g_base_stats(base_stats_asm: Path) -> Dict[str, Dict[str,int]]:
+/home/jwilld10/decomps/gb/BW3G/tools/bw3g/import_bw3g_all.py:221:    Returns: {SPECIES_TOKEN: {hp, atk, def, spd, sat, sdf, type1, type2, catchRate, expYield}}
+/home/jwilld10/decomps/gb/BW3G/tools/bw3g/import_bw3g_all.py:224:    text = read_text(base_stats_asm).splitlines()
+/home/jwilld10/decomps/gb/BW3G/tools/bw3g/import_bw3g_all.py:227:    # We'll parse the first several db lines after base_stats token:
+/home/jwilld10/decomps/gb/BW3G/tools/bw3g/import_bw3g_all.py:228:    # hp, atk, def, spd, sat, sdf, type1, type2, catch, exp
+/home/jwilld10/decomps/gb/BW3G/tools/bw3g/import_bw3g_all.py:238:        if line.strip().startswith("end_base_stats") or line.strip().startswith("endb"):
+/home/jwilld10/decomps/gb/BW3G/tools/bw3g/import_bw3g_all.py:396:    base_stats = parse_bw3g_base_stats(bw / "data/pokemon/base_stats.asm") if (bw/"data/pokemon/base_stats.asm").exists() else {}
+/home/jwilld10/decomps/gb/BW3G/tools/bw3g/import_bw3g_all.py:486:        # SpeciesInfo stub (fill what we can from BW3G base_stats; rest defaults)
+/home/jwilld10/decomps/gb/BW3G/tools/bw3g/import_bw3g_all.py:487:        bs = base_stats.get(sp_token, {})
+/home/jwilld10/decomps/gb/BW3G/tools/bw3g/import_bw3g_all.py:495:        info_lines.append(f"    .baseSpDefense = {bs.get('sdf', 1)},")
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/tranquill.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/tranquill.asm:7:	db 120 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/emolga.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/emolga.asm:7:	db 200 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/leafeon.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/leafeon.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/baltoy.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/baltoy.asm:7:	db 255 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/mandibuzz.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/mandibuzz.asm:7:	db 60 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/staryu.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/staryu.asm:7:	db 225 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/excadrill.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/excadrill.asm:7:	db 60 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/joltik.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/joltik.asm:7:	db 190 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/swadloon.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/swadloon.asm:7:	db 120 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/deerling.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/deerling.asm:7:	db 190 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/granbull.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/granbull.asm:7:	db 75 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/deino.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/deino.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/glaceon.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/glaceon.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/gothitelle.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/gothitelle.asm:7:	db 50 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/garbodor.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/garbodor.asm:7:	db 60 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/basculin.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/basculin.asm:7:	db 25 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/golbat.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/golbat.asm:7:	db 90 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/bouffalant.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/bouffalant.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/probopass.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/probopass.asm:7:	db 60 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/pidove.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/pidove.asm:7:	db 255 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/petilil.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/petilil.asm:7:	db 190 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/jellicent.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/jellicent.asm:7:	db 60 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/dewott.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/dewott.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/swinub.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/swinub.asm:7:	db 225 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/steelix.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/steelix.asm:7:	db 25 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/genesis.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/genesis.asm:7:	db 3 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/krookodile.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/krookodile.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/trapinch.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/trapinch.asm:7:	db 255 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/drifblim.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/drifblim.asm:7:	db 60 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/metang.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/metang.asm:7:	db 3 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/metagross.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/metagross.asm:7:	db 3 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/breloom.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/breloom.asm:7:	db 90 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/vulpix.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/vulpix.asm:7:	db 190 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/medicham.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/medicham.asm:7:	db 90 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/clefable.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/clefable.asm:7:	db 25 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/lampent.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/lampent.asm:7:	db 90 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/snivy.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/snivy.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/servine.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/servine.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/whirlipede.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/whirlipede.asm:7:	db 120 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/gallade.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/gallade.asm:7:	db 45 ; catch rate
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/gengar.asm:4:	;   hp  atk  def  spd  sat  sdf
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/gengar.asm:7:	db 45 ; catch rate
+
+== Candidates: evos/learnsets (evos_attacks etc) ==
+/home/jwilld10/decomps/gb/BW3G/macros/scripts/audio.asm:3:	dbw ((\1 - 1) << 6) + (\2 - 1), \3
+/home/jwilld10/decomps/gb/BW3G/main.asm:122:INCLUDE "engine/pokemon/level_up_happiness.asm"
+/home/jwilld10/decomps/gb/BW3G/macros/scripts/maps.asm:15:	dbw \1, \2
+/home/jwilld10/decomps/gb/BW3G/macros/scripts/maps.asm:123:	dbw \1, \2
+/home/jwilld10/decomps/gb/BW3G/macros/data.asm:12:dbw: MACRO
+/home/jwilld10/decomps/gb/BW3G/macros/data.asm:22:dbww: MACRO
+/home/jwilld10/decomps/gb/BW3G/macros/data.asm:27:dbwww: MACRO
+/home/jwilld10/decomps/gb/BW3G/macros/data.asm:70:dba: MACRO ; dbw bank, address
+/home/jwilld10/decomps/gb/BW3G/macros/data.asm:72:	dbw BANK(\1), \1
+/home/jwilld10/decomps/gb/BW3G/home/text.asm:923:	dbw TX_SOUND_DEX_FANFARE_50_79,  SFX_DEX_FANFARE_50_79
+/home/jwilld10/decomps/gb/BW3G/home/text.asm:924:	dbw TX_SOUND_FANFARE,            SFX_FANFARE
+/home/jwilld10/decomps/gb/BW3G/home/text.asm:925:	dbw TX_SOUND_DEX_FANFARE_20_49,  SFX_DEX_FANFARE_20_49
+/home/jwilld10/decomps/gb/BW3G/home/text.asm:926:	dbw TX_SOUND_ITEM,               SFX_ITEM
+/home/jwilld10/decomps/gb/BW3G/home/text.asm:927:	dbw TX_SOUND_CAUGHT_MON,         SFX_CAUGHT_MON
+/home/jwilld10/decomps/gb/BW3G/home/text.asm:928:	dbw TX_SOUND_DEX_FANFARE_80_109, SFX_DEX_FANFARE_80_109
+/home/jwilld10/decomps/gb/BW3G/home/text.asm:929:	dbw TX_SOUND_SLOT_MACHINE_START, SFX_SLOT_MACHINE_START
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_constants.asm:5:; - EvosAttacksPointers (see data/pokemon/evos_attacks_pointers.asm)
+/home/jwilld10/decomps/gb/BW3G/constants/scgb_constants.asm:17:	const SCGB_MOVE_LIST
+/home/jwilld10/decomps/gb/BW3G/home/battle_vars.asm:87:.MoveAnim:       db PLAYER_MOVE_ANIMATION, ENEMY_MOVE_ANIMATION
+/home/jwilld10/decomps/gb/BW3G/home/battle_vars.asm:88:.MoveEffect:     db PLAYER_MOVE_EFFECT,    ENEMY_MOVE_EFFECT
+/home/jwilld10/decomps/gb/BW3G/home/battle_vars.asm:89:.MovePower:      db PLAYER_MOVE_POWER,     ENEMY_MOVE_POWER
+/home/jwilld10/decomps/gb/BW3G/home/battle_vars.asm:90:.MoveType:       db PLAYER_MOVE_TYPE,      ENEMY_MOVE_TYPE
+/home/jwilld10/decomps/gb/BW3G/constants/trainer_data_constants.asm:6:	const TRNATTR_AI_MOVE_WEIGHTS ; 3
+/home/jwilld10/decomps/gb/BW3G/constants/trainer_data_constants.asm:12:; TRNATTR_AI_MOVE_WEIGHTS bit flags (wEnemyTrainerAIFlags)
+/home/jwilld10/decomps/gb/BW3G/constants/sfx_constants.asm:54:	const SFX_MOVE_PUZZLE_PIECE           ; 32
+/home/jwilld10/decomps/gb/BW3G/constants/sfx_constants.asm:155:	const SFX_MOVE_DELETED                ; 97
+/home/jwilld10/decomps/gb/BW3G/home/names.asm:4:	dba MoveNames           ; MOVE_NAME
+/home/jwilld10/decomps/gb/BW3G/home/names.asm:7:	dbw 0, wPartyMonOT      ; PARTY_OT_NAME
+/home/jwilld10/decomps/gb/BW3G/home/names.asm:8:	dbw 0, wOTPartyMonOT    ; ENEMY_OT_NAME
+/home/jwilld10/decomps/gb/BW3G/home/names.asm:10:	dbw 4, MoveDescriptions ; MOVE_DESC_NAME_BROKEN (wrong bank)
+/home/jwilld10/decomps/gb/BW3G/home/names.asm:263:	ld a, MOVE_NAME
+/home/jwilld10/decomps/gb/BW3G/audio/music/gamecorner.asm:2:	dbw $C0, Music_SinnohGameCorner_Ch1
+/home/jwilld10/decomps/gb/BW3G/audio/music/gamecorner.asm:3:	dbw $01, Music_SinnohGameCorner_Ch2
+/home/jwilld10/decomps/gb/BW3G/audio/music/gamecorner.asm:4:	dbw $02, Music_SinnohGameCorner_Ch3
+/home/jwilld10/decomps/gb/BW3G/audio/music/gamecorner.asm:5:	dbw $03, Music_SinnohGameCorner_Ch4
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_data_constants.asm:130:; evolution types (used in data/pokemon/evos_attacks.asm)
+/home/jwilld10/decomps/gb/BW3G/constants/battle_constants.asm:45:	const MOVE_ANIM   ; 0
+/home/jwilld10/decomps/gb/BW3G/constants/battle_constants.asm:46:	const MOVE_EFFECT ; 1
+/home/jwilld10/decomps/gb/BW3G/constants/battle_constants.asm:47:	const MOVE_POWER  ; 2
+/home/jwilld10/decomps/gb/BW3G/constants/battle_constants.asm:48:	const MOVE_TYPE   ; 3
+/home/jwilld10/decomps/gb/BW3G/constants/battle_constants.asm:49:	const MOVE_ACC    ; 4
+/home/jwilld10/decomps/gb/BW3G/constants/battle_constants.asm:50:	const MOVE_PP     ; 5
+/home/jwilld10/decomps/gb/BW3G/constants/battle_constants.asm:51:	const MOVE_CHANCE ; 6
+/home/jwilld10/decomps/gb/BW3G/constants/battle_constants.asm:52:MOVE_LENGTH EQU const_value
+/home/jwilld10/decomps/gb/BW3G/constants/battle_constants.asm:115:	const BATTLE_VARS_MOVE_ANIM
+/home/jwilld10/decomps/gb/BW3G/constants/battle_constants.asm:116:	const BATTLE_VARS_MOVE_EFFECT
+/home/jwilld10/decomps/gb/BW3G/constants/battle_constants.asm:117:	const BATTLE_VARS_MOVE_POWER
+/home/jwilld10/decomps/gb/BW3G/constants/battle_constants.asm:118:	const BATTLE_VARS_MOVE_TYPE
+/home/jwilld10/decomps/gb/BW3G/constants/battle_constants.asm:121:	const BATTLE_VARS_LAST_COUNTER_MOVE_OPP
+/home/jwilld10/decomps/gb/BW3G/constants/battle_constants.asm:123:	const BATTLE_VARS_LAST_MOVE_OPP
+/home/jwilld10/decomps/gb/BW3G/constants/battle_constants.asm:139:	const PLAYER_MOVE_ANIMATION
+/home/jwilld10/decomps/gb/BW3G/constants/battle_constants.asm:140:	const ENEMY_MOVE_ANIMATION
+/home/jwilld10/decomps/gb/BW3G/constants/battle_constants.asm:141:	const PLAYER_MOVE_EFFECT
+/home/jwilld10/decomps/gb/BW3G/constants/battle_constants.asm:142:	const ENEMY_MOVE_EFFECT
+/home/jwilld10/decomps/gb/BW3G/constants/battle_constants.asm:143:	const PLAYER_MOVE_POWER
+/home/jwilld10/decomps/gb/BW3G/constants/battle_constants.asm:144:	const ENEMY_MOVE_POWER
+/home/jwilld10/decomps/gb/BW3G/constants/battle_constants.asm:145:	const PLAYER_MOVE_TYPE
+/home/jwilld10/decomps/gb/BW3G/constants/battle_constants.asm:146:	const ENEMY_MOVE_TYPE
+/home/jwilld10/decomps/gb/BW3G/audio/music/virbank - Copy.asm:2:	dbw $C0, Music_JubilifeCity_Ch1
+/home/jwilld10/decomps/gb/BW3G/audio/music/virbank - Copy.asm:3:	dbw $01, Music_JubilifeCity_Ch2
+/home/jwilld10/decomps/gb/BW3G/audio/music/virbank - Copy.asm:4:	dbw $02, Music_JubilifeCity_Ch3
+/home/jwilld10/decomps/gb/BW3G/audio/music/virbank - Copy.asm:5:	dbw $03, Music_JubilifeCity_Ch4
+/home/jwilld10/decomps/gb/BW3G/constants/engine_flags.asm:108:	const ENGINE_DAILY_MOVE_TUTOR ; !
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:1984:	const EVENT_GOLDENROD_CITY_MOVE_TUTOR
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:1985:	const EVENT_GOLDENROD_GAME_CORNER_MOVE_TUTOR
+/home/jwilld10/decomps/gb/BW3G/constants/wram_constants.asm:92:REMOVE_PARTY      EQU 0
+/home/jwilld10/decomps/gb/BW3G/constants/wram_constants.asm:93:REMOVE_BOX        EQU 1
+/home/jwilld10/decomps/gb/BW3G/constants/wram_constants.asm:259:	const DAILYFLAGS2_MOVE_TUTOR_F                        ; 6
+/home/jwilld10/decomps/gb/BW3G/constants/text_constants.asm:6:MOVE_NAME_LENGTH     EQU 13
+/home/jwilld10/decomps/gb/BW3G/constants/text_constants.asm:14:	const MOVE_NAME             ; 2
+/home/jwilld10/decomps/gb/BW3G/constants/text_constants.asm:20:	const MOVE_DESC_NAME_BROKEN ; 8
+/home/jwilld10/decomps/gb/BW3G/audio/music/lacunosa.asm:2:	dbw $c0, Music_LacunosaTown_Ch1
+/home/jwilld10/decomps/gb/BW3G/audio/music/lacunosa.asm:3:	dbw $01, Music_LacunosaTown_Ch2
+/home/jwilld10/decomps/gb/BW3G/audio/music/lacunosa.asm:4:	dbw $02, Music_LacunosaTown_Ch3
+/home/jwilld10/decomps/gb/BW3G/audio/music/lacunosa.asm:5:	dbw $03, Music_LacunosaTown_Ch4
+/home/jwilld10/decomps/gb/BW3G/constants/map_object_constants.asm:53:	const MOVE_ANYWHERE_F ; 5
+/home/jwilld10/decomps/gb/BW3G/constants/map_object_constants.asm:62:MOVE_ANYWHERE EQU 1 << MOVE_ANYWHERE_F
+/home/jwilld10/decomps/gb/BW3G/audio/music/lentimas.asm:2:	dbw $c0, Music_LentimasTown_Ch1
+/home/jwilld10/decomps/gb/BW3G/audio/music/lentimas.asm:3:	dbw $01, Music_LentimasTown_Ch2
+/home/jwilld10/decomps/gb/BW3G/audio/music/lentimas.asm:4:	dbw $02, Music_LentimasTown_Ch3
+/home/jwilld10/decomps/gb/BW3G/audio/music/lentimas.asm:5:	dbw $03, Music_LentimasTown_Ch4
+/home/jwilld10/decomps/gb/BW3G/constants/map_constants.asm:213:	map_const ASPERTIA_MOVE_DELETER_HOUSE, 4, 4 
+/home/jwilld10/decomps/gb/BW3G/constants/map_constants.asm:307:	map_const MISTRALTON_MOVE_REMINDER_HOUSE, 4, 4
+/home/jwilld10/decomps/gb/BW3G/audio/music/r2.asm:2:	dbw $c0, Music_UnovaRoute2_Ch1
+/home/jwilld10/decomps/gb/BW3G/audio/music/r2.asm:3:	dbw $01, Music_UnovaRoute2_Ch2
+/home/jwilld10/decomps/gb/BW3G/audio/music/r2.asm:4:	dbw $02, Music_UnovaRoute2_Ch3
+/home/jwilld10/decomps/gb/BW3G/audio/music/r2.asm:5:	dbw $03, Music_UnovaRoute2_Ch4
+/home/jwilld10/decomps/gb/BW3G/audio/music/floccesy.asm:2:	dbw $80, Music_OldaleTown_Ch1
+/home/jwilld10/decomps/gb/BW3G/audio/music/floccesy.asm:3:	dbw $01, Music_OldaleTown_Ch2
+/home/jwilld10/decomps/gb/BW3G/audio/music/floccesy.asm:4:	dbw $02, Music_OldaleTown_Ch3
+/home/jwilld10/decomps/gb/BW3G/audio/music/bicycle.asm:2:	dbw $C0, KalosBicycle_Ch1
+/home/jwilld10/decomps/gb/BW3G/audio/music/bicycle.asm:3:	dbw $01, KalosBicycle_Ch2
+/home/jwilld10/decomps/gb/BW3G/audio/music/bicycle.asm:4:	dbw $02, KalosBicycle_Ch3
+/home/jwilld10/decomps/gb/BW3G/audio/music/bicycle.asm:5:	dbw $03, KalosBicycle_Ch4
+/home/jwilld10/decomps/gb/BW3G/audio/music/irisbattle.asm:2:	dbw $c0, Music_ChampionBattle_B2W2_Ch1
+/home/jwilld10/decomps/gb/BW3G/audio/music/irisbattle.asm:3:	dbw $01, Music_ChampionBattle_B2W2_Ch2
+/home/jwilld10/decomps/gb/BW3G/audio/music/irisbattle.asm:4:	dbw $02, Music_ChampionBattle_B2W2_Ch3
+/home/jwilld10/decomps/gb/BW3G/audio/music/irisbattle.asm:5:	dbw $03, Music_ChampionBattle_B2W2_Ch4
+/home/jwilld10/decomps/gb/BW3G/data/sprites/map_objects.asm:176:	db WONT_DELETE | FIXED_FACING | SLIDING | MOVE_ANYWHERE ; flags1
+/home/jwilld10/decomps/gb/BW3G/data/sprites/map_objects.asm:184:	db WONT_DELETE | FIXED_FACING | SLIDING | MOVE_ANYWHERE ; flags1
+/home/jwilld10/decomps/gb/BW3G/data/sprites/map_objects.asm:200:	db WONT_DELETE | FIXED_FACING | SLIDING | MOVE_ANYWHERE ; flags1
+/home/jwilld10/decomps/gb/BW3G/data/sprites/map_objects.asm:208:	db WONT_DELETE | FIXED_FACING | SLIDING | MOVE_ANYWHERE ; flags1
+/home/jwilld10/decomps/gb/BW3G/data/sprites/map_objects.asm:264:	db WONT_DELETE | FIXED_FACING | SLIDING | MOVE_ANYWHERE ; flags1
+/home/jwilld10/decomps/gb/BW3G/data/sprites/map_objects.asm:272:	db WONT_DELETE | FIXED_FACING | SLIDING | MOVE_ANYWHERE ; flags1
+/home/jwilld10/decomps/gb/BW3G/data/sprites/map_objects.asm:328:	db WONT_DELETE | FIXED_FACING | SLIDING | MOVE_ANYWHERE ; flags1
+/home/jwilld10/decomps/gb/BW3G/data/sprites/map_objects.asm:336:	db WONT_DELETE | FIXED_FACING | SLIDING | MOVE_ANYWHERE ; flags1
+/home/jwilld10/decomps/gb/BW3G/data/sprites/map_objects.asm:344:	db WONT_DELETE | FIXED_FACING | SLIDING | MOVE_ANYWHERE ; flags1
+/home/jwilld10/decomps/gb/BW3G/data/sprites/map_objects.asm:352:	db WONT_DELETE | FIXED_FACING | SLIDING | MOVE_ANYWHERE ; flags1
+/home/jwilld10/decomps/gb/BW3G/audio/music/anville.asm:2:	dbw $80, Music_AnvilleTown_Ch1
+/home/jwilld10/decomps/gb/BW3G/audio/music/anville.asm:3:	dbw $01, Music_AnvilleTown_Ch2
+/home/jwilld10/decomps/gb/BW3G/audio/music/anville.asm:4:	dbw $02, Music_AnvilleTown_Ch3
+/home/jwilld10/decomps/gb/BW3G/data/engine_flags.asm:117:	engine_flag wDailyFlags2, DAILYFLAGS2_MOVE_TUTOR_F
+/home/jwilld10/decomps/gb/BW3G/data/sgb_ctrl_packets.asm:95:	dbw $0c, $caa5          ; tsb $caa5
+/home/jwilld10/decomps/gb/BW3G/data/sgb_ctrl_packets.asm:105:	dbw $cd, $0c48          ; cmp $0c48
+/home/jwilld10/decomps/gb/BW3G/data/sgb_ctrl_packets.asm:120:	dbw $cd, $0c4f          ; cmp $c4f
+/home/jwilld10/decomps/gb/BW3G/data/sgb_ctrl_packets.asm:125:	dbw $4c, $0820          ; jmp $0820
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/pic_pointers.asm:512:	dbw -1, -1 ; unused
+/home/jwilld10/decomps/gb/BW3G/data/items/rooftop_sale.asm:3:	dbw POKE_BALL,     150
+/home/jwilld10/decomps/gb/BW3G/data/items/rooftop_sale.asm:4:	dbw GREAT_BALL,    500
+/home/jwilld10/decomps/gb/BW3G/data/items/rooftop_sale.asm:5:	dbw SUPER_POTION,  500
+/home/jwilld10/decomps/gb/BW3G/data/items/rooftop_sale.asm:6:	dbw FULL_HEAL,     500
+/home/jwilld10/decomps/gb/BW3G/data/items/rooftop_sale.asm:7:	dbw REVIVE,       1200
+/home/jwilld10/decomps/gb/BW3G/data/items/rooftop_sale.asm:12:	dbw HYPER_POTION, 1000
+/home/jwilld10/decomps/gb/BW3G/data/items/rooftop_sale.asm:13:	dbw FULL_RESTORE, 2000
+/home/jwilld10/decomps/gb/BW3G/data/items/rooftop_sale.asm:14:	dbw FULL_HEAL,     500
+/home/jwilld10/decomps/gb/BW3G/data/items/rooftop_sale.asm:15:	dbw ULTRA_BALL,   1000
+/home/jwilld10/decomps/gb/BW3G/data/items/rooftop_sale.asm:16:	dbw PROTEIN,      7800
+/home/jwilld10/decomps/gb/BW3G/data/items/heal_hp.asm:2:	dbw FRESH_WATER,   50
+/home/jwilld10/decomps/gb/BW3G/data/items/heal_hp.asm:3:	dbw SODA_POP,      60
+/home/jwilld10/decomps/gb/BW3G/data/items/heal_hp.asm:4:	dbw LEMONADE,      80
+/home/jwilld10/decomps/gb/BW3G/data/items/heal_hp.asm:5:	dbw HYPER_POTION, 200
+/home/jwilld10/decomps/gb/BW3G/data/items/heal_hp.asm:6:	dbw SUPER_POTION,  50
+/home/jwilld10/decomps/gb/BW3G/data/items/heal_hp.asm:7:	dbw POTION,        20
+/home/jwilld10/decomps/gb/BW3G/data/items/heal_hp.asm:8:	dbw MAX_POTION,   MAX_STAT_VALUE
+/home/jwilld10/decomps/gb/BW3G/data/items/heal_hp.asm:9:	dbw FULL_RESTORE, MAX_STAT_VALUE
+/home/jwilld10/decomps/gb/BW3G/data/items/heal_hp.asm:10:	dbw MOOMOO_MILK,  100
+/home/jwilld10/decomps/gb/BW3G/data/items/heal_hp.asm:11:	dbw BERRY,         10
+/home/jwilld10/decomps/gb/BW3G/data/items/heal_hp.asm:12:	dbw GOLD_BERRY,    30
+/home/jwilld10/decomps/gb/BW3G/data/items/heal_hp.asm:13:	dbw ENERGYPOWDER,  50
+/home/jwilld10/decomps/gb/BW3G/data/items/heal_hp.asm:14:	dbw ENERGY_ROOT,  200
+/home/jwilld10/decomps/gb/BW3G/data/items/heal_hp.asm:15:	dbw BERRY_JUICE,   20
+/home/jwilld10/decomps/gb/BW3G/data/items/heal_hp.asm:16:	dbw -1, 0 ; end
+/home/jwilld10/decomps/gb/BW3G/engine/overworld/decorations.asm:413:	dbw 0, wd002 ; text pointer
+/home/jwilld10/decomps/gb/BW3G/engine/overworld/decorations.asm:415:	dbw 0, 0
+/home/jwilld10/decomps/gb/BW3G/engine/overworld/decorations.asm:416:	dbw 0, 0
+/home/jwilld10/decomps/gb/BW3G/engine/overworld/decorations.asm:1000:	dbw DECO_TOWN_MAP, DecorationDesc_TownMapPoster
+/home/jwilld10/decomps/gb/BW3G/engine/overworld/decorations.asm:1001:	dbw DECO_PIKACHU_POSTER, DecorationDesc_PikachuPoster
+/home/jwilld10/decomps/gb/BW3G/engine/overworld/decorations.asm:1002:	dbw DECO_CLEFAIRY_POSTER, DecorationDesc_ClefairyPoster
+/home/jwilld10/decomps/gb/BW3G/engine/overworld/decorations.asm:1003:	dbw DECO_JIGGLYPUFF_POSTER, DecorationDesc_JigglypuffPoster
+/home/jwilld10/decomps/gb/BW3G/data/items/bargain_shop.asm:3:	dbw NUGGET,     4500
+/home/jwilld10/decomps/gb/BW3G/data/items/bargain_shop.asm:4:	dbw PEARL,       650
+/home/jwilld10/decomps/gb/BW3G/data/items/bargain_shop.asm:5:	dbw BIG_PEARL,  3500
+/home/jwilld10/decomps/gb/BW3G/data/items/bargain_shop.asm:6:	dbw STARDUST,    900
+/home/jwilld10/decomps/gb/BW3G/data/items/bargain_shop.asm:7:	dbw STAR_PIECE, 4600
+/home/jwilld10/decomps/gb/BW3G/engine/overworld/events.asm:576:	dbw OBJECTTYPE_SCRIPT, .script
+/home/jwilld10/decomps/gb/BW3G/engine/overworld/events.asm:577:	dbw OBJECTTYPE_ITEMBALL, .itemball
+/home/jwilld10/decomps/gb/BW3G/engine/overworld/events.asm:578:	dbw OBJECTTYPE_TRAINER, .trainer
+/home/jwilld10/decomps/gb/BW3G/engine/overworld/events.asm:580:	dbw OBJECTTYPE_3, .three
+/home/jwilld10/decomps/gb/BW3G/engine/overworld/events.asm:581:	dbw OBJECTTYPE_4, .four
+/home/jwilld10/decomps/gb/BW3G/engine/overworld/events.asm:582:	dbw OBJECTTYPE_5, .five
+/home/jwilld10/decomps/gb/BW3G/engine/overworld/events.asm:583:	dbw OBJECTTYPE_6, .six
+/home/jwilld10/decomps/gb/BW3G/engine/overworld/npc_movement.asm:44:	bit MOVE_ANYWHERE_F, [hl]
+/home/jwilld10/decomps/gb/BW3G/data/moves/animations.asm:1817:	anim_sound 0, 1, SFX_MOVE_PUZZLE_PIECE
+/home/jwilld10/decomps/gb/BW3G/data/moves/animations.asm:4493:	anim_sound 0, 1, SFX_MOVE_PUZZLE_PIECE
+/home/jwilld10/decomps/gb/BW3G/data/maps/attributes.asm:236:	map_attributes AspertiaMoveDeleterHouse, ASPERTIA_MOVE_DELETER_HOUSE, $00, 0
+/home/jwilld10/decomps/gb/BW3G/data/maps/attributes.asm:317:	map_attributes MistraltonMoveReminderHouse, MISTRALTON_MOVE_REMINDER_HOUSE, $00, 0
+/home/jwilld10/decomps/gb/BW3G/engine/items/pack.asm:1274:	dbw 0, wDudeNumItems
+/home/jwilld10/decomps/gb/BW3G/engine/items/pack.asm:1294:	dbw 0, wDudeNumKeyItems
+/home/jwilld10/decomps/gb/BW3G/engine/items/pack.asm:1323:	dbw 0, wDudeNumBalls
+/home/jwilld10/decomps/gb/BW3G/engine/items/pack.asm:1343:	dbw 0, wDudeNumBerries
+/home/jwilld10/decomps/gb/BW3G/engine/items/pack.asm:1363:	dbw 0, wDudeNumMedicine
+/home/jwilld10/decomps/gb/BW3G/engine/items/pack.asm:1685:	dbw 0, wNumItems
+/home/jwilld10/decomps/gb/BW3G/engine/items/pack.asm:1700:	dbw 0, wNumItems
+/home/jwilld10/decomps/gb/BW3G/engine/items/pack.asm:1715:	dbw 0, wNumKeyItems
+/home/jwilld10/decomps/gb/BW3G/engine/items/pack.asm:1730:	dbw 0, wNumKeyItems
+/home/jwilld10/decomps/gb/BW3G/engine/items/pack.asm:1745:	dbw 0, wNumBalls
+/home/jwilld10/decomps/gb/BW3G/engine/items/pack.asm:1760:	dbw 0, wNumBalls
+/home/jwilld10/decomps/gb/BW3G/engine/items/pack.asm:1775:	dbw 0, wNumBerries
+/home/jwilld10/decomps/gb/BW3G/engine/items/pack.asm:1790:	dbw 0, wNumBerries
+/home/jwilld10/decomps/gb/BW3G/engine/items/pack.asm:1805:	dbw 0, wNumMedicine
+/home/jwilld10/decomps/gb/BW3G/engine/items/pack.asm:1820:	dbw 0, wNumMedicine
+/home/jwilld10/decomps/gb/BW3G/engine/items/mart.asm:675:	dbw 0, wCurMart
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:730:	dbw ULTRA_BALL,  UltraBallMultiplier
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:731:	dbw GREAT_BALL,  GreatBallMultiplier
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:732:	dbw SAFARI_BALL, SafariBallMultiplier ; Safari Ball, leftover from RBY
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:733:	dbw HEAVY_BALL,  HeavyBallMultiplier
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:734:	dbw LEVEL_BALL,  LevelBallMultiplier
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:735:	dbw LURE_BALL,   LureBallMultiplier
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:736:	dbw FAST_BALL,   FastBallMultiplier
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:737:	dbw MOON_BALL,   MoonBallMultiplier
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:738:	dbw LOVE_BALL,   LoveBallMultiplier
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:739:	dbw PARK_BALL,   ParkBallMultiplier
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:740:	dbw DUSK_BALL,   DuskBallMultiplier
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:741:	dbw NET_BALL,    NetBallMultiplier
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:742:	dbw DIVE_BALL,   DiveBallMultiplier
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:743:	dbw QUICK_BALL,  QuickBallMultiplier
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:744:	dbw TIMER_BALL,  TimerBallMultiplier
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:745:	dbw REPEAT_BALL, RepeatBallMultiplier
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:1053:	ld hl, EvosAttacksPointers
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:1056:	ld a, BANK(EvosAttacksPointers)
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:3086:	ld hl, Moves + MOVE_PP
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:3087:	ld bc, MOVE_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/games/unown_puzzle.asm:290:	ld de, SFX_MOVE_PUZZLE_PIECE
+/home/jwilld10/decomps/gb/BW3G/engine/games/slot_machine.asm:1882:	dbw "300@", .LinedUpSevens
+/home/jwilld10/decomps/gb/BW3G/engine/games/slot_machine.asm:1883:	dbw "50@@", .LinedUpPokeballs
+/home/jwilld10/decomps/gb/BW3G/engine/games/slot_machine.asm:1884:	dbw "6@@@", .LinedUpMonOrCherry
+/home/jwilld10/decomps/gb/BW3G/engine/games/slot_machine.asm:1885:	dbw "8@@@", .LinedUpMonOrCherry
+/home/jwilld10/decomps/gb/BW3G/engine/games/slot_machine.asm:1886:	dbw "10@@", .LinedUpMonOrCherry
+/home/jwilld10/decomps/gb/BW3G/engine/games/slot_machine.asm:1887:	dbw "15@@", .LinedUpMonOrCherry
+/home/jwilld10/decomps/gb/BW3G/engine/events/pokecenter_pc.asm:631:	dbw 0, wPCItems
+/home/jwilld10/decomps/gb/BW3G/engine/events/dratini.asm:54:	ld hl, Moves + MOVE_PP
+/home/jwilld10/decomps/gb/BW3G/engine/events/dratini.asm:55:	ld bc, MOVE_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/npc_trade.asm:184:	ld [wPokemonWithdrawDepositParameter], a ; REMOVE_PARTY
+/home/jwilld10/decomps/gb/BW3G/engine/events/move_deleter.asm:40:	ld de, SFX_MOVE_DELETED
+/home/jwilld10/decomps/gb/BW3G/engine/events/daycare.asm:13:	const DAYCARETEXT_REMOVE_MAIL
+/home/jwilld10/decomps/gb/BW3G/engine/events/daycare.asm:165:	ld a, DAYCARETEXT_REMOVE_MAIL
+/home/jwilld10/decomps/gb/BW3G/engine/menus/save.asm:1067:; dbww bank, address, address
+/home/jwilld10/decomps/gb/BW3G/engine/menus/save.asm:1068:	dbww BANK(sBox1),  sBox1,  sBox1End
+/home/jwilld10/decomps/gb/BW3G/engine/menus/save.asm:1069:	dbww BANK(sBox2),  sBox2,  sBox2End
+/home/jwilld10/decomps/gb/BW3G/engine/menus/save.asm:1070:	dbww BANK(sBox3),  sBox3,  sBox3End
+/home/jwilld10/decomps/gb/BW3G/engine/menus/save.asm:1071:	dbww BANK(sBox4),  sBox4,  sBox4End
+/home/jwilld10/decomps/gb/BW3G/engine/menus/save.asm:1072:	dbww BANK(sBox5),  sBox5,  sBox5End
+/home/jwilld10/decomps/gb/BW3G/engine/menus/save.asm:1073:	dbww BANK(sBox6),  sBox6,  sBox6End
+/home/jwilld10/decomps/gb/BW3G/engine/menus/save.asm:1074:	dbww BANK(sBox7),  sBox7,  sBox7End
+/home/jwilld10/decomps/gb/BW3G/engine/menus/save.asm:1075:	dbww BANK(sBox8),  sBox8,  sBox8End
+/home/jwilld10/decomps/gb/BW3G/engine/menus/save.asm:1076:	dbww BANK(sBox9),  sBox9,  sBox9End
+/home/jwilld10/decomps/gb/BW3G/engine/menus/save.asm:1077:	dbww BANK(sBox10), sBox10, sBox10End
+/home/jwilld10/decomps/gb/BW3G/engine/menus/save.asm:1078:	dbww BANK(sBox11), sBox11, sBox11End
+/home/jwilld10/decomps/gb/BW3G/engine/menus/save.asm:1079:	dbww BANK(sBox12), sBox12, sBox12End
+/home/jwilld10/decomps/gb/BW3G/engine/menus/save.asm:1080:	dbww BANK(sBox13), sBox13, sBox13End
+/home/jwilld10/decomps/gb/BW3G/engine/menus/save.asm:1081:	dbww BANK(sBox14), sBox14, sBox14End
+/home/jwilld10/decomps/gb/BW3G/engine/events/std_scripts.asm:549:	setevent EVENT_GOLDENROD_CITY_MOVE_TUTOR
+/home/jwilld10/decomps/gb/BW3G/engine/events/field_moves.asm:1:FIELDMOVE_GRASS EQU $A0
+/home/jwilld10/decomps/gb/BW3G/engine/events/field_moves.asm:2:FIELDMOVE_TREE EQU $A4
+/home/jwilld10/decomps/gb/BW3G/engine/events/field_moves.asm:3:FIELDMOVE_FLY EQU $A4
+/home/jwilld10/decomps/gb/BW3G/engine/events/field_moves.asm:27:	ld hl, vTiles0 tile FIELDMOVE_GRASS
+/home/jwilld10/decomps/gb/BW3G/engine/events/field_moves.asm:31:	ld hl, vTiles0 tile FIELDMOVE_TREE
+/home/jwilld10/decomps/gb/BW3G/engine/events/field_moves.asm:39:	ld [hl], FIELDMOVE_TREE
+/home/jwilld10/decomps/gb/BW3G/engine/events/field_moves.asm:141:	ld hl, vTiles0 tile FIELDMOVE_GRASS
+/home/jwilld10/decomps/gb/BW3G/engine/events/field_moves.asm:145:	ld hl, vTiles0 tile FIELDMOVE_TREE
+/home/jwilld10/decomps/gb/BW3G/engine/events/field_moves.asm:180:	ld [hl], FIELDMOVE_TREE
+/home/jwilld10/decomps/gb/BW3G/engine/events/field_moves.asm:233:	ld [hl], FIELDMOVE_GRASS
+/home/jwilld10/decomps/gb/BW3G/engine/events/field_moves.asm:320:	ld [hl], FIELDMOVE_FLY
+/home/jwilld10/decomps/gb/BW3G/engine/events/field_moves.asm:354:	ld [hl], FIELDMOVE_FLY
+/home/jwilld10/decomps/gb/BW3G/engine/events/field_moves.asm:401:	ld hl, vTiles0 tile FIELDMOVE_GRASS
+/home/jwilld10/decomps/gb/BW3G/engine/events/field_moves.asm:411:	ld e, FIELDMOVE_FLY
+/home/jwilld10/decomps/gb/BW3G/engine/events/field_moves.asm:453:	ld [hl], FIELDMOVE_GRASS
+/home/jwilld10/decomps/gb/BW3G/engine/events/move_reminder.asm:100:	ld hl, EvosAttacksPointers
+/home/jwilld10/decomps/gb/BW3G/engine/events/move_reminder.asm:104:	ld a, BANK(EvosAttacksPointers)
+/home/jwilld10/decomps/gb/BW3G/engine/events/move_reminder.asm:253:	ld bc, MOVE_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/move_reminder.asm:254:	ld hl, Moves + MOVE_TYPE
+/home/jwilld10/decomps/gb/BW3G/engine/events/move_reminder.asm:282:	ld bc, MOVE_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/move_reminder.asm:283:	ld hl, Moves + MOVE_TYPE
+/home/jwilld10/decomps/gb/BW3G/engine/events/move_reminder.asm:307:	ld bc, MOVE_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/move_reminder.asm:308:	ld hl, Moves + MOVE_POWER
+/home/jwilld10/decomps/gb/BW3G/engine/events/move_reminder.asm:334:	ld bc, MOVE_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/move_reminder.asm:335:	ld hl, Moves + MOVE_PP
+/home/jwilld10/decomps/gb/BW3G/engine/events/elevator.asm:188:	dbw 0, wCurElevator
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/evolve.asm:48:	ld hl, EvosAttacksPointers
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/evolve.asm:555:	ld hl, EvosAttacksPointers
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/evolve.asm:614:; Fill in moves at de for wCurPartySpecies at wCurPartyLevel
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/evolve.asm:619:	ld hl, EvosAttacksPointers
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/evolve.asm:707:	ld hl, Moves + MOVE_PP
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/evolve.asm:708:	ld bc, MOVE_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/evolve.asm:748:	ld hl, EvosAttacksPointers
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/evolve.asm:793:GetEvosAttacksPointer:
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/evolve.asm:798:	ld hl, EvosAttacksPointers
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/evolve.asm:816:	call GetEvosAttacksPointer
+/home/jwilld10/decomps/gb/BW3G/engine/events/kurt.asm:92:	dbw 0, wBuffer1
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/golett.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/zorua.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/engine/events/poke_seer.asm:367:	dbw 9,   SeerAdvice1
+/home/jwilld10/decomps/gb/BW3G/engine/events/poke_seer.asm:368:	dbw 29,  SeerAdvice2
+/home/jwilld10/decomps/gb/BW3G/engine/events/poke_seer.asm:369:	dbw 59,  SeerAdvice3
+/home/jwilld10/decomps/gb/BW3G/engine/events/poke_seer.asm:370:	dbw 89,  SeerAdvice4
+/home/jwilld10/decomps/gb/BW3G/engine/events/poke_seer.asm:371:	dbw 100, SeerAdvice5
+/home/jwilld10/decomps/gb/BW3G/engine/events/poke_seer.asm:372:	dbw 255, SeerAdvice1
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/types.asm:47:	ld bc, MOVE_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/types.asm:53:	ld a, [wStringBuffer1 + MOVE_TYPE]
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/types.asm:90:	ld bc, MOVE_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/gothita.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/onix.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/breeding.asm:464:	ld hl, EvosAttacksPointers
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/breeding.asm:467:	ld a, BANK(EvosAttacksPointers)
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/zweilous.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/engine/events/shuckle.asm:121:	xor a ; REMOVE_PARTY
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/purrloin.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/move_mon.asm:386:	ld bc, MOVE_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/move_mon.asm:394:	ld a, [wStringBuffer1 + MOVE_PP]
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/move_mon.asm:922:	xor a ; REMOVE_PARTY
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/move_mon.asm:929:	xor a ; REMOVE_PARTY
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/sneasel.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/solosis.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/rufflet.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/categories.asm:6:	ld bc, MOVE_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/categories.asm:7:	ld hl, Moves + MOVE_TYPE
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/categories.asm:28:	ld bc, MOVE_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/tynamo.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/vanillite.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/lairon.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/engine/battle/move_effects/mirror_move.asm:9:	ld a, BATTLE_VARS_LAST_COUNTER_MOVE_OPP
+/home/jwilld10/decomps/gb/BW3G/engine/battle/move_effects/mirror_move.asm:30:	ld a, BATTLE_VARS_MOVE_ANIM
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/bills_pc.asm:204:	xor a ; REMOVE_PARTY
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/bills_pc.asm:458:	ld a, REMOVE_BOX
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/bills_pc.asm:1780:	xor a ; REMOVE_PARTY
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/bills_pc.asm:1835:	ld a, REMOVE_BOX
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/bills_pc.asm:2061:	ld a, REMOVE_BOX
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/bills_pc.asm:2092:	xor a ; REMOVE_PARTY
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/mantyke.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/engine/battle/move_effects/disable.asm:21:	ld a, BATTLE_VARS_LAST_COUNTER_MOVE_OPP
+/home/jwilld10/decomps/gb/BW3G/engine/battle/move_effects/disable.asm:63:	ld a, BATTLE_VARS_LAST_COUNTER_MOVE_OPP
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/tropius.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/party_menu.asm:371:	ld hl, EvosAttacksPointers
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/party_menu.asm:390:	ld a, BANK(EvosAttacksPointers)
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/leavanny.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/engine/battle/move_effects/counter.asm:6:	ld a, BATTLE_VARS_LAST_COUNTER_MOVE_OPP
+/home/jwilld10/decomps/gb/BW3G/engine/battle/move_effects/counter.asm:25:	ld a, BATTLE_VARS_LAST_COUNTER_MOVE_OPP
+/home/jwilld10/decomps/gb/BW3G/engine/battle/move_effects/counter.asm:31:	ld a, [wStringBuffer1 + MOVE_POWER]
+/home/jwilld10/decomps/gb/BW3G/engine/battle/move_effects/counter.asm:35:	ld a, [wStringBuffer1 + MOVE_TYPE]
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/yamask.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mail.asm:174:	xor a ; REMOVE_PARTY
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mail.asm:548:	dbw 0, wMailboxCount ; text pointer
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/klang.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/swanna.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/engine/battle/move_effects/sucker_punch.asm:12:	ld a, BATTLE_VARS_MOVE_TYPE
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mon_menu.asm:140:	dbw MONMENUITEM_CUT,        MonMenu_Cut
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mon_menu.asm:141:	dbw MONMENUITEM_FLY,        MonMenu_Fly
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mon_menu.asm:142:	dbw MONMENUITEM_SURF,       MonMenu_Surf
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mon_menu.asm:143:	dbw MONMENUITEM_STRENGTH,   MonMenu_Strength
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mon_menu.asm:144:	;dbw MONMENUITEM_FLASH,      MonMenu_Flash
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mon_menu.asm:145:	;dbw MONMENUITEM_WHIRLPOOL,  MonMenu_Whirlpool
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mon_menu.asm:146:	dbw MONMENUITEM_DIG,        MonMenu_Dig
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mon_menu.asm:147:	;dbw MONMENUITEM_TELEPORT,   MonMenu_Teleport
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mon_menu.asm:148:	;dbw MONMENUITEM_SOFTBOILED, MonMenu_Softboiled_MilkDrink
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mon_menu.asm:149:	;dbw MONMENUITEM_MILKDRINK,  MonMenu_Softboiled_MilkDrink
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mon_menu.asm:150:	;dbw MONMENUITEM_HEADBUTT,   MonMenu_Headbutt
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mon_menu.asm:151:	dbw MONMENUITEM_WATERFALL,  MonMenu_Waterfall
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mon_menu.asm:152:	;dbw MONMENUITEM_ROCKSMASH,  MonMenu_RockSmash
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mon_menu.asm:153:	dbw MONMENUITEM_SWEETSCENT, MonMenu_SweetScent
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mon_menu.asm:154:	dbw MONMENUITEM_STATS,      OpenPartyStats
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mon_menu.asm:155:	dbw MONMENUITEM_SWITCH,     SwitchPartyMons
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mon_menu.asm:156:	dbw MONMENUITEM_ITEM,       GiveTakePartyMonItem
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mon_menu.asm:157:	dbw MONMENUITEM_CANCEL,     CancelPokemonAction
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mon_menu.asm:158:	dbw MONMENUITEM_MOVE,       ManagePokemonMoves
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mon_menu.asm:159:	dbw MONMENUITEM_MAIL,       MonMailAction
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mon_menu.asm:1149:	ld b, SCGB_MOVE_LIST
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mon_menu.asm:1230:	ld hl, Moves + MOVE_ACC
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mon_menu.asm:1231:	ld bc, MOVE_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mon_menu.asm:1263:	ld hl, Moves + MOVE_POWER
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mon_menu.asm:1264:	ld bc, MOVE_LENGTH
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/gothorita.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/oshawott.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/engine/battle/move_effects/mimic.asm:17:	ld a, BATTLE_VARS_LAST_COUNTER_MOVE_OPP
+/home/jwilld10/decomps/gb/BW3G/engine/battle/move_effects/mimic.asm:37:	ld a, BATTLE_VARS_LAST_COUNTER_MOVE_OPP
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/yanma.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/engine/battle/move_effects/bide.asm:25:	ld a, BATTLE_VARS_MOVE_POWER
+/home/jwilld10/decomps/gb/BW3G/engine/battle/move_effects/bide.asm:59:	ld a, BATTLE_VARS_MOVE_ANIM
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mail_2.asm:114:	; dbw FLOWER_MAIL,  LoadFlowerMailGFX
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mail_2.asm:115:	; dbw SURF_MAIL,    LoadSurfMailGFX
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mail_2.asm:116:	; dbw LITEBLUEMAIL, LoadLiteBlueMailGFX
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mail_2.asm:117:	; dbw PORTRAITMAIL, LoadPortraitMailGFX
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mail_2.asm:118:	; dbw LOVELY_MAIL,  LoadLovelyMailGFX
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mail_2.asm:119:	; dbw EON_MAIL,     LoadEonMailGFX
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mail_2.asm:120:	; dbw MORPH_MAIL,   LoadMorphMailGFX
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mail_2.asm:121:	; dbw BLUESKY_MAIL, LoadBlueSkyMailGFX
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mail_2.asm:122:	; dbw MUSIC_MAIL,   LoadMusicMailGFX
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mail_2.asm:123:	; dbw MIRAGE_MAIL,  LoadMirageMailGFX
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/cryogonal.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/learn.asm:68:	ld hl, Moves + MOVE_PP
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/learn.asm:69:	ld bc, MOVE_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/learn.asm:141:	ld c, MOVE_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/battle/move_effects/thunder.asm:4:	ld a, BATTLE_VARS_MOVE_TYPE
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/drifloon.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/engine/battle/move_effects/encore.asm:12:	ld a, BATTLE_VARS_LAST_MOVE_OPP
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/lillipup.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/zubat.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/engine/battle/move_effects/spite.asm:14:	ld a, BATTLE_VARS_LAST_COUNTER_MOVE_OPP
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mon_stats.asm:433:; List moves at hl, spaced every [wBuffer1] tiles.
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mon_stats.asm:445:	ld a, MOVE_NAME
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/igglybuff.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/ferrothorn.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/engine/battle/move_effects/mirror_coat.asm:7:	ld a, BATTLE_VARS_LAST_COUNTER_MOVE_OPP
+/home/jwilld10/decomps/gb/BW3G/engine/battle/move_effects/mirror_coat.asm:26:	ld a, BATTLE_VARS_LAST_COUNTER_MOVE_OPP
+/home/jwilld10/decomps/gb/BW3G/engine/battle/move_effects/mirror_coat.asm:32:	ld a, [wStringBuffer1 + MOVE_POWER]
+/home/jwilld10/decomps/gb/BW3G/engine/battle/move_effects/mirror_coat.asm:36:	ld a, [wStringBuffer1 + MOVE_TYPE]
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/stoutland.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/engine/battle/move_effects/conversion.asm:26:	ld hl, Moves + MOVE_TYPE
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/corphish.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/heatmor.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/musharna.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/engine/battle/move_effects/conversion2.asm:13:	ld a, BATTLE_VARS_LAST_COUNTER_MOVE_OPP
+/home/jwilld10/decomps/gb/BW3G/engine/battle/move_effects/conversion2.asm:19:	ld hl, Moves + MOVE_TYPE
+/home/jwilld10/decomps/gb/BW3G/engine/battle/move_effects/conversion2.asm:41:	ld a, BATTLE_VARS_MOVE_TYPE
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/skorupi.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/crawdaunt.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/foongus.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/engine/battle/move_effects/future_sight.asm:33:	ld a, BATTLE_VARS_MOVE_ANIM
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/gligar.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/liepard.asm:19:	; tm/hm learnset
+/home/jwilld10/decomps/gb/BW3G/engine/battle/move_effects/sleep_talk.asm:40:	ld a, BATTLE_VARS_MOVE_ANIM
+
+== Candidates: pokedex entries (text/height/weight/category) ==
+/home/jwilld10/decomps/gb/BW3G/macros/scripts/text.asm:102:	enum TX_SOUND_CAUGHT_MON ; $10
+/home/jwilld10/decomps/gb/BW3G/macros/scripts/text.asm:104:	db TX_SOUND_CAUGHT_MON
+/home/jwilld10/decomps/gb/BW3G/main.asm:432:INCLUDE "engine/pokedex/new_pokedex_entry.asm"
+/home/jwilld10/decomps/gb/BW3G/macros/scripts/maps.asm:13:;\1: type: a MAPCALLBACK_* constant
+/home/jwilld10/decomps/gb/BW3G/macros/scripts/maps.asm:156:_blk = \3_WIDTH * (\3_HEIGHT + -3) + _src
+/home/jwilld10/decomps/gb/BW3G/macros/scripts/maps.asm:158:_win = (\3_WIDTH + 6) * \3_HEIGHT + 1
+/home/jwilld10/decomps/gb/BW3G/macros/scripts/maps.asm:159:_y = \3_HEIGHT * 2 - 1
+/home/jwilld10/decomps/gb/BW3G/macros/scripts/maps.asm:168:_map = (CURRENT_MAP_WIDTH + 6) * (CURRENT_MAP_HEIGHT + 3) + _tgt
+/home/jwilld10/decomps/gb/BW3G/macros/scripts/maps.asm:183:_len = CURRENT_MAP_HEIGHT + 3 - (\4)
+/home/jwilld10/decomps/gb/BW3G/macros/scripts/maps.asm:184:if _len > \3_HEIGHT
+/home/jwilld10/decomps/gb/BW3G/macros/scripts/maps.asm:185:_len = \3_HEIGHT
+/home/jwilld10/decomps/gb/BW3G/macros/scripts/maps.asm:194:_len = CURRENT_MAP_HEIGHT + 3 - (\4)
+/home/jwilld10/decomps/gb/BW3G/macros/scripts/maps.asm:195:if _len > \3_HEIGHT
+/home/jwilld10/decomps/gb/BW3G/macros/scripts/maps.asm:196:_len = \3_HEIGHT
+/home/jwilld10/decomps/gb/BW3G/home/text.asm:39:	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
+/home/jwilld10/decomps/gb/BW3G/home/text.asm:101:; Fill text box width c height b at hl with pal 7
+/home/jwilld10/decomps/gb/BW3G/home/text.asm:485:; Ends a Pokédex entry in Gen 1.
+/home/jwilld10/decomps/gb/BW3G/home/text.asm:658:	dw TextCommand_SOUND            ; TX_SOUND_CAUGHT_MON
+/home/jwilld10/decomps/gb/BW3G/home/text.asm:765:; [$04][addr][height][width]
+/home/jwilld10/decomps/gb/BW3G/home/text.asm:852:	set PRINTNUM_RIGHTALIGN_F, a
+/home/jwilld10/decomps/gb/BW3G/home/text.asm:927:	dbw TX_SOUND_CAUGHT_MON,         SFX_CAUGHT_MON
+/home/jwilld10/decomps/gb/BW3G/home/joypad.asm:116:;     4 RIGHT
+/home/jwilld10/decomps/gb/BW3G/home/joypad.asm:117:;     5 LEFT
+/home/jwilld10/decomps/gb/BW3G/home/print_level.asm:27:	ld b, PRINTNUM_RIGHTALIGN | 1
+/home/jwilld10/decomps/gb/BW3G/home/scrolling_menu.asm:55:	and D_RIGHT + D_LEFT + D_UP + D_DOWN
+/home/jwilld10/decomps/gb/BW3G/home/movement.asm:56:	ld h, LEFT
+/home/jwilld10/decomps/gb/BW3G/home/movement.asm:60:	ld h, RIGHT
+/home/jwilld10/decomps/gb/BW3G/home/movement.asm:120:	slow_step LEFT
+/home/jwilld10/decomps/gb/BW3G/home/movement.asm:121:	slow_step RIGHT
+/home/jwilld10/decomps/gb/BW3G/home/movement.asm:124:	step LEFT
+/home/jwilld10/decomps/gb/BW3G/home/movement.asm:125:	step RIGHT
+/home/jwilld10/decomps/gb/BW3G/home/movement.asm:128:	big_step LEFT
+/home/jwilld10/decomps/gb/BW3G/home/movement.asm:129:	big_step RIGHT
+/home/jwilld10/decomps/gb/BW3G/home/map.asm:106:	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
+/home/jwilld10/decomps/gb/BW3G/home/map.asm:143:	ld b, SURROUNDING_HEIGHT / METATILE_WIDTH ; 5
+/home/jwilld10/decomps/gb/BW3G/home/map.asm:728:	ld a, MAPCALLBACK_TILES
+/home/jwilld10/decomps/gb/BW3G/home/map.asm:1193:	hlcoord 0, SCREEN_HEIGHT - 2
+/home/jwilld10/decomps/gb/BW3G/home/map.asm:1196:	hlcoord 0, SCREEN_HEIGHT - 2, wAttrMap
+/home/jwilld10/decomps/gb/BW3G/home/map.asm:1244:	add SCREEN_HEIGHT
+/home/jwilld10/decomps/gb/BW3G/home/map.asm:1266:	ld c, SCREEN_HEIGHT
+/home/jwilld10/decomps/gb/BW3G/home/map.asm:1318:	ld c, SCREEN_HEIGHT
+/home/jwilld10/decomps/gb/BW3G/home/map.asm:1338:	ld a, SCREEN_HEIGHT
+/home/jwilld10/decomps/gb/BW3G/home/map.asm:1388:	cp TILESET_DRIFTVEIL
+/home/jwilld10/decomps/gb/BW3G/home/map.asm:1427:	cp TILESET_JOHTO
+/home/jwilld10/decomps/gb/BW3G/home/map.asm:1429:	cp TILESET_JOHTO_MODERN
+/home/jwilld10/decomps/gb/BW3G/home/map.asm:1459:	ld c, SCREEN_META_HEIGHT
+/home/jwilld10/decomps/gb/BW3G/home/map.asm:1495:	cp LEFT
+/home/jwilld10/decomps/gb/BW3G/home/map.asm:1497:	cp RIGHT
+/home/jwilld10/decomps/gb/BW3G/home/map.asm:1513:	ld c, SCREEN_META_HEIGHT - 1
+/home/jwilld10/decomps/gb/BW3G/home/map.asm:1525:	ld c, SCREEN_META_HEIGHT
+/home/jwilld10/decomps/gb/BW3G/home/map.asm:1538:	ld c, SCREEN_META_HEIGHT
+/home/jwilld10/decomps/gb/BW3G/home/map.asm:1601:	db LEFT_MASK
+/home/jwilld10/decomps/gb/BW3G/home/map.asm:1602:	db RIGHT_MASK
+/home/jwilld10/decomps/gb/BW3G/home/map.asm:1603:	db DOWN_MASK | RIGHT_MASK
+/home/jwilld10/decomps/gb/BW3G/home/map.asm:1604:	db UP_MASK | RIGHT_MASK
+/home/jwilld10/decomps/gb/BW3G/home/map.asm:1605:	db DOWN_MASK | LEFT_MASK
+/home/jwilld10/decomps/gb/BW3G/home/map.asm:1606:	db UP_MASK | LEFT_MASK
+/home/jwilld10/decomps/gb/BW3G/home/map.asm:1696:	or FACE_RIGHT
+/home/jwilld10/decomps/gb/BW3G/home/map.asm:1714:	or FACE_LEFT
+/home/jwilld10/decomps/gb/BW3G/home/menu.asm:36:	menu_coords 0, 12, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1
+/home/jwilld10/decomps/gb/BW3G/home/menu.asm:52:	menu_coords 0, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1
+/home/jwilld10/decomps/gb/BW3G/home/menu.asm:324:	set D_LEFT_F, [hl]
+/home/jwilld10/decomps/gb/BW3G/home/menu.asm:325:	set D_RIGHT_F, [hl]
+/home/jwilld10/decomps/gb/BW3G/home/menu.asm:348:	bit D_RIGHT_F, a
+/home/jwilld10/decomps/gb/BW3G/home/menu.asm:350:	bit D_LEFT_F, a
+/home/jwilld10/decomps/gb/BW3G/home/menu.asm:357:	ld a, D_RIGHT
+/home/jwilld10/decomps/gb/BW3G/home/menu.asm:362:	ld a, D_LEFT
+/home/jwilld10/decomps/gb/BW3G/home/trainers.asm:188:	ld e, OW_LEFT
+/home/jwilld10/decomps/gb/BW3G/home/trainers.asm:193:	ld e, OW_RIGHT
+/home/jwilld10/decomps/gb/BW3G/home/map_objects.asm:194:	cp COLL_WATERFALL_LEFT
+/home/jwilld10/decomps/gb/BW3G/home/map_objects.asm:198:	cp COLL_WATERFALL_RIGHT
+/home/jwilld10/decomps/gb/BW3G/home/tilemap.asm:112:	ld a, SCREEN_HEIGHT
+/home/jwilld10/decomps/gb/BW3G/home/video.asm:183:THIRD_HEIGHT EQU SCREEN_HEIGHT / 3
+/home/jwilld10/decomps/gb/BW3G/home/video.asm:186:	ld de, 2 * THIRD_HEIGHT * SCREEN_WIDTH
+/home/jwilld10/decomps/gb/BW3G/home/video.asm:195:	ld de, 2 * THIRD_HEIGHT * BG_MAP_WIDTH
+/home/jwilld10/decomps/gb/BW3G/home/video.asm:203:	ld de, THIRD_HEIGHT * SCREEN_WIDTH
+/home/jwilld10/decomps/gb/BW3G/home/video.asm:212:	ld de, THIRD_HEIGHT * BG_MAP_WIDTH
+/home/jwilld10/decomps/gb/BW3G/home/video.asm:235:	ld a, SCREEN_HEIGHT / 3
+/home/jwilld10/decomps/gb/BW3G/macros/legacy.asm:104:turn_head_left        EQUS "turn_head LEFT"
+/home/jwilld10/decomps/gb/BW3G/macros/legacy.asm:105:turn_head_right       EQUS "turn_head RIGHT"
+/home/jwilld10/decomps/gb/BW3G/macros/legacy.asm:108:turn_step_left        EQUS "turn_step LEFT"
+/home/jwilld10/decomps/gb/BW3G/macros/legacy.asm:109:turn_step_right       EQUS "turn_step RIGHT"
+/home/jwilld10/decomps/gb/BW3G/macros/legacy.asm:112:slow_step_left        EQUS "slow_step LEFT"
+/home/jwilld10/decomps/gb/BW3G/macros/legacy.asm:113:slow_step_right       EQUS "slow_step RIGHT"
+/home/jwilld10/decomps/gb/BW3G/macros/legacy.asm:116:step_left             EQUS "step LEFT"
+/home/jwilld10/decomps/gb/BW3G/macros/legacy.asm:117:step_right            EQUS "step RIGHT"
+/home/jwilld10/decomps/gb/BW3G/macros/legacy.asm:120:big_step_left         EQUS "big_step LEFT"
+/home/jwilld10/decomps/gb/BW3G/macros/legacy.asm:121:big_step_right        EQUS "big_step RIGHT"
+/home/jwilld10/decomps/gb/BW3G/macros/legacy.asm:124:slow_slide_step_left  EQUS "slow_slide_step LEFT"
+/home/jwilld10/decomps/gb/BW3G/macros/legacy.asm:125:slow_slide_step_right EQUS "slow_slide_step RIGHT"
+/home/jwilld10/decomps/gb/BW3G/macros/legacy.asm:128:slide_step_left       EQUS "slide_step LEFT"
+/home/jwilld10/decomps/gb/BW3G/macros/legacy.asm:129:slide_step_right      EQUS "slide_step RIGHT"
+/home/jwilld10/decomps/gb/BW3G/macros/legacy.asm:132:fast_slide_step_left  EQUS "fast_slide_step LEFT"
+/home/jwilld10/decomps/gb/BW3G/macros/legacy.asm:133:fast_slide_step_right EQUS "fast_slide_step RIGHT"
+/home/jwilld10/decomps/gb/BW3G/macros/legacy.asm:136:turn_away_left        EQUS "turn_away LEFT"
+/home/jwilld10/decomps/gb/BW3G/macros/legacy.asm:137:turn_away_right       EQUS "turn_away RIGHT"
+/home/jwilld10/decomps/gb/BW3G/macros/legacy.asm:140:turn_in_left          EQUS "turn_in LEFT"
+/home/jwilld10/decomps/gb/BW3G/macros/legacy.asm:141:turn_in_right         EQUS "turn_in RIGHT"
+/home/jwilld10/decomps/gb/BW3G/macros/legacy.asm:144:turn_waterfall_left   EQUS "turn_waterfall LEFT"
+/home/jwilld10/decomps/gb/BW3G/macros/legacy.asm:145:turn_waterfall_right  EQUS "turn_waterfall RIGHT"
+/home/jwilld10/decomps/gb/BW3G/macros/legacy.asm:148:slow_jump_step_left   EQUS "slow_jump_step LEFT"
+/home/jwilld10/decomps/gb/BW3G/macros/legacy.asm:149:slow_jump_step_right  EQUS "slow_jump_step RIGHT"
+/home/jwilld10/decomps/gb/BW3G/macros/legacy.asm:152:jump_step_left        EQUS "jump_step LEFT"
+/home/jwilld10/decomps/gb/BW3G/macros/legacy.asm:153:jump_step_right       EQUS "jump_step RIGHT"
+/home/jwilld10/decomps/gb/BW3G/macros/legacy.asm:156:fast_jump_step_left   EQUS "fast_jump_step LEFT"
+/home/jwilld10/decomps/gb/BW3G/macros/legacy.asm:157:fast_jump_step_right  EQUS "fast_jump_step RIGHT"
+/home/jwilld10/decomps/gb/BW3G/constants/item_data_constants.asm:57:MAILBOX_CAPACITY   EQU 10
+/home/jwilld10/decomps/gb/BW3G/constants/item_data_constants.asm:65:	const HELD_LEFTOVERS
+/home/jwilld10/decomps/gb/BW3G/constants/item_data_constants.asm:114:	const HELD_FIGHTING_BOOST
+/home/jwilld10/decomps/gb/BW3G/constants/item_data_constants.asm:140:	const HELD_BRIGHTPOWDER
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/icirrus_collision.asm:113:	tilecoll UP_WALL, UP_WALL, FLOOR, STAIRS_RIGHT_DOWN ; 70
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/icirrus_collision.asm:118:	tilecoll WALL, STAIRS_LEFT_UP, WALL, WALL ; 75
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/icirrus_collision.asm:138:	tilecoll FLOOR, FLOOR, FLOOR, WARP_CARPET_RIGHT ; 89
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/icirrus_collision.asm:142:	tilecoll FLOOR, WARP_CARPET_RIGHT, FLOOR, FLOOR ; 8d
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/icirrus_collision.asm:168:	tilecoll LEFT_WALL, RIGHT_WALL, LEFT_WALL, RIGHT_WALL ; a7
+/home/jwilld10/decomps/gb/BW3G/constants/music_constants.asm:40:	const MUSIC_WILD_BATTLE_NIGHT            ; 24
+/home/jwilld10/decomps/gb/BW3G/constants/music_constants.asm:77:	const MUSIC_DRIFTVEIL_CITY               ; 49
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/driftveil_collision.asm:12:	tilecoll FLOOR, WARP_CARPET_RIGHT, FLOOR, WARP_CARPET_RIGHT ; 0b
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/driftveil_collision.asm:81:	tilecoll FLOOR, WALL, STAIRS_RIGHT_UP, WALL ; 50
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/driftveil_collision.asm:82:	tilecoll STAIRS_LEFT_DOWN, FLOOR, STAIRS_LEFT_DOWN, FLOOR ; 51
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/driftveil_collision.asm:83:	tilecoll STAIRS_RIGHT_DOWN, WALL, STAIRS_RIGHT_DOWN, WALL ; 52
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/driftveil_collision.asm:84:	tilecoll FLOOR, FLOOR, STAIRS_LEFT_UP, FLOOR ; 53
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/driftveil_collision.asm:85:	tilecoll STAIRS_RIGHT_UP, WALL, STAIRS_RIGHT_UP, WALL ; 54
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/driftveil_collision.asm:86:	tilecoll STAIRS_LEFT_DOWN, FLOOR, WALL, WALL ; 55
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/driftveil_collision.asm:87:	tilecoll STAIRS_RIGHT_DOWN, WALL, WALL, WALL ; 56
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/driftveil_collision.asm:88:	tilecoll STAIRS_LEFT_UP, FLOOR, STAIRS_LEFT_UP, FLOOR ; 57
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/driftveil_collision.asm:114:	tilecoll WARP_CARPET_LEFT, FLOOR, WARP_CARPET_LEFT, FLOOR ; 71
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_constants.asm:11:; - PokedexDataPointerTable (see data/pokemon/dex_entry_pointers.asm)
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_constants.asm:57:	const GOLBAT     ; 24
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_constants.asm:87:	const DRILBUR    ; 42
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_constants.asm:172:	const SCRAFTY    ; 97
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_constants.asm:275:JOHTO_POKEMON EQU const_value
+/home/jwilld10/decomps/gb/BW3G/constants/sprite_anim_constants.asm:43:	const SPRITE_ANIM_INDEX_EVOLUTION_BALL_OF_LIGHT  ; 13
+/home/jwilld10/decomps/gb/BW3G/constants/sprite_anim_constants.asm:136:	const SPRITE_ANIM_FRAMESET_EVOLUTION_BALL_OF_LIGHT  ; 19
+/home/jwilld10/decomps/gb/BW3G/constants/sprite_anim_constants.asm:175:	const SPRITE_ANIM_FRAMESET_CELEBI_LEFT              ; 40
+/home/jwilld10/decomps/gb/BW3G/constants/sprite_anim_constants.asm:176:	const SPRITE_ANIM_FRAMESET_CELEBI_RIGHT             ; 41
+/home/jwilld10/decomps/gb/BW3G/constants/sprite_anim_constants.asm:239:	const SPRITE_ANIM_OAMSET_EVOLUTION_BALL_OF_LIGHT_1  ; 3a
+/home/jwilld10/decomps/gb/BW3G/constants/sprite_anim_constants.asm:240:	const SPRITE_ANIM_OAMSET_EVOLUTION_BALL_OF_LIGHT_2  ; 3b
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/johto_modern_collision.asm:12:	tilecoll WARP_CARPET_LEFT, FLOOR, WARP_CARPET_LEFT, FLOOR ; 0b
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/johto_modern_collision.asm:15:	tilecoll FLOOR, WARP_CARPET_RIGHT, FLOOR, WARP_CARPET_RIGHT ; 0e
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/johto_modern_collision.asm:77:	tilecoll WALL, HOP_LEFT, WALL, HOP_LEFT ; 4c
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/johto_modern_collision.asm:78:	tilecoll HOP_RIGHT, WALL, HOP_RIGHT, WALL ; 4d
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/johto_modern_collision.asm:79:	tilecoll WALL, HOP_LEFT, WALL, HOP_LEFT ; 4e
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/johto_modern_collision.asm:80:	tilecoll HOP_RIGHT, WALL, HOP_RIGHT, WALL ; 4f
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/johto_modern_collision.asm:81:	tilecoll WALL, HOP_DOWN_LEFT, WALL, WALL ; 50
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/johto_modern_collision.asm:82:	tilecoll HOP_DOWN_RIGHT, WALL, WALL, WALL ; 51
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/johto_modern_collision.asm:83:	tilecoll WALL, HOP_DOWN_LEFT, WALL, WALL ; 52
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/johto_modern_collision.asm:84:	tilecoll HOP_DOWN_RIGHT, WALL, WALL, WALL ; 53
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/johto_modern_collision.asm:154:	tilecoll WARP_CARPET_LEFT, FLOOR, WARP_CARPET_LEFT, FLOOR ; 99
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/johto_modern_collision.asm:167:	tilecoll WALL, STAIRS_LEFT_DOWN, WALL, FLOOR ; a6
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/johto_modern_collision.asm:180:	tilecoll STAIRS_RIGHT_DOWN, WALL, FLOOR, WALL ; b3
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/johto_modern_collision.asm:193:	tilecoll FLOOR, WARP_CARPET_RIGHT, FLOOR, WARP_CARPET_RIGHT ; c0
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/johto_modern_collision.asm:200:	tilecoll FLOOR, FLOOR, FLOOR, STAIRS_RIGHT_UP ; c7
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/johto_modern_collision.asm:201:	tilecoll FLOOR, STAIRS_RIGHT_DOWN, FLOOR, FLOOR ; c8
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/johto_modern_collision.asm:202:	tilecoll WALL, WALL, WALL, STAIRS_LEFT_UP ; c9
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/johto_modern_collision.asm:203:	tilecoll FLOOR, FLOOR, STAIRS_LEFT_UP, FLOOR ; ca
+/home/jwilld10/decomps/gb/BW3G/constants/npc_trade_constants.asm:22:	const NPC_TRADE_DRIFTVEIL ; 7
+/home/jwilld10/decomps/gb/BW3G/constants/npc_trade_constants.asm:40:	const TRADE_DIALOG_AFTER
+/home/jwilld10/decomps/gb/BW3G/constants/scgb_constants.asm:32:	const SCGB_MYSTERY_GIFT
+/home/jwilld10/decomps/gb/BW3G/constants/scgb_constants.asm:44:	const PREDEFPAL_PEWTER
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/nacrene_collision.asm:12:	tilecoll WARP_CARPET_LEFT, FLOOR, WARP_CARPET_LEFT, FLOOR ; 0b
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/nacrene_collision.asm:56:	tilecoll WALL, WARP_CARPET_LEFT, WALL, WARP_CARPET_LEFT ; 37
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/nacrene_collision.asm:59:	tilecoll FLOOR, WARP_CARPET_RIGHT, FLOOR, WARP_CARPET_RIGHT ; 3a
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/nacrene_collision.asm:85:	tilecoll WALL, HOP_DOWN_LEFT, WALL, WALL ; 54
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/nacrene_collision.asm:86:	tilecoll WALL, STAIRS_LEFT_DOWN, WALL, STAIRS_LEFT_DOWN ; 55
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/nacrene_collision.asm:90:	tilecoll WALL, WALL, STAIRS_LEFT_DOWN, STAIRS_RIGHT_UP ; 59
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/nacrene_collision.asm:94:	tilecoll WALL, WALL, STAIRS_LEFT_DOWN, STAIRS_RIGHT_UP ; 5d
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/nacrene_collision.asm:95:	tilecoll WALL, STAIRS_LEFT_DOWN, WALL, STAIRS_LEFT_DOWN ; 5e
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/nacrene_collision.asm:97:	tilecoll STAIRS_RIGHT_UP, WALL, STAIRS_RIGHT_UP, WALL ; 60
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/nacrene_collision.asm:98:	tilecoll STAIRS_LEFT_DOWN, STAIRS_RIGHT_UP, WALL, WALL ; 61
+/home/jwilld10/decomps/gb/BW3G/constants/map_setup_constants.asm:71:	const MAPCALLBACK_TILES
+/home/jwilld10/decomps/gb/BW3G/constants/map_setup_constants.asm:72:	const MAPCALLBACK_OBJECTS
+/home/jwilld10/decomps/gb/BW3G/constants/map_setup_constants.asm:73:	const MAPCALLBACK_STONETABLE
+/home/jwilld10/decomps/gb/BW3G/constants/map_setup_constants.asm:74:	const MAPCALLBACK_SPRITES
+/home/jwilld10/decomps/gb/BW3G/constants/map_setup_constants.asm:75:	const MAPCALLBACK_NEWMAP
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/cave_ruins_collision.asm:33:	tilecoll UP_WALL, WALL, HOP_RIGHT, WALL ; 20
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/cave_ruins_collision.asm:37:	tilecoll HOP_RIGHT, WALL, HOP_RIGHT, WALL ; 24
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/cave_ruins_collision.asm:41:	tilecoll FLOOR, WALL, STAIRS_RIGHT_UP, WALL ; 28
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/cave_ruins_collision.asm:42:	tilecoll STAIRS_LEFT_DOWN, FLOOR, FLOOR, FLOOR ; 29
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/cave_ruins_collision.asm:49:	tilecoll STAIRS_RIGHT_DOWN, WALL, FLOOR, WALL ; 30
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/cave_ruins_collision.asm:50:	tilecoll FLOOR, FLOOR, STAIRS_LEFT_UP, FLOOR ; 31
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/cave_ruins_collision.asm:145:	tilecoll STAIRS_RIGHT_DOWN, WALL, STAIRS_RIGHT_DOWN, WALL ; 90
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/cave_ruins_collision.asm:146:	tilecoll WALL, WALL, STAIRS_LEFT_UP, STAIRS_RIGHT_DOWN ; 91
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/cave_ruins_collision.asm:150:	tilecoll STAIRS_LEFT_UP, STAIRS_RIGHT_DOWN, WALL, WALL ; 95
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/cave_ruins_collision.asm:151:	tilecoll WALL, STAIRS_LEFT_UP, WALL, STAIRS_LEFT_UP ; 96
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/cave_ruins_collision.asm:152:	tilecoll STAIRS_RIGHT_DOWN, WALL, STAIRS_RIGHT_DOWN, WALL ; 97
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/cave_ruins_collision.asm:153:	tilecoll FLOOR, WALL, WARP_CARPET_RIGHT, WALL ; 98
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/cave_ruins_collision.asm:184:	tilecoll LEFT_WALL, RIGHT_WALL, LEFT_WALL, RIGHT_WALL ; b7
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/cave_ruins_collision.asm:186:	tilecoll FLOOR, WALL, STAIRS_RIGHT_UP, WALL ; b9
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/cave_ruins_collision.asm:187:	tilecoll STAIRS_LEFT_DOWN, FLOOR, FLOOR, FLOOR ; ba
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/cave_ruins_collision.asm:188:	tilecoll LEFT_WALL, FLOOR, LEFT_WALL, FLOOR ; bb
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/cave_ruins_collision.asm:190:	tilecoll UP_LEFT_WALL, UP_RIGHT_WALL, LEFT_WALL, RIGHT_WALL ; bd
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/cave_ruins_collision.asm:191:	tilecoll UP_LEFT_WALL, UP_WALL, LEFT_WALL, FLOOR ; be
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/cave_ruins_collision.asm:192:	tilecoll UP_WALL, UP_RIGHT_WALL, FLOOR, RIGHT_WALL ; bf
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/cave_ruins_collision.asm:194:	tilecoll UP_LEFT_WALL, UP_WALL, LEFT_WALL, FLOOR ; c1
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/cave_ruins_collision.asm:195:	tilecoll LEFT_WALL, FLOOR, LEFT_WALL, FLOOR ; c2
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/cave_ruins_collision.asm:196:	tilecoll FLOOR, RIGHT_WALL, FLOOR, RIGHT_WALL ; c3
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/cave_ruins_collision.asm:198:	tilecoll UP_LEFT_WALL, UP_RIGHT_WALL, LEFT_WALL, RIGHT_WALL ; c5
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/cave_ruins_collision.asm:233:	tilecoll FLOOR, RIGHT_WALL, FLOOR, RIGHT_WALL ; e8
+/home/jwilld10/decomps/gb/BW3G/constants/scene_constants.asm:208:	const SCENE_NIMBASA_PARK_OUTSIDE_AFTER ;2
+/home/jwilld10/decomps/gb/BW3G/constants/scene_constants.asm:225:	const SCENE_P2_LAB_ENTRANCE_AFTER ;1
+/home/jwilld10/decomps/gb/BW3G/constants/scene_constants.asm:228:; wPWTBackRoomSceneID
+/home/jwilld10/decomps/gb/BW3G/constants/scene_constants.asm:230:	const SCENE_PWT_BACK_ROOM_ARRIVE ;0
+/home/jwilld10/decomps/gb/BW3G/constants/scene_constants.asm:231:	const SCENE_PWT_BACK_ROOM_WIN_1 ;1
+/home/jwilld10/decomps/gb/BW3G/constants/scene_constants.asm:232:	const SCENE_PWT_BACK_ROOM_WIN_2 ;2
+/home/jwilld10/decomps/gb/BW3G/constants/scene_constants.asm:233:	const SCENE_PWT_BACK_ROOM_WIN_3 ;3
+/home/jwilld10/decomps/gb/BW3G/constants/scene_constants.asm:234:	const SCENE_PWT_BACK_ROOM_NOTHING ;4
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/mansion_collision.asm:30:	tilecoll FLOOR, WARP_CARPET_RIGHT, FLOOR, FLOOR ; 1d
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/mansion_collision.asm:31:	tilecoll FLOOR, FLOOR, FLOOR, WARP_CARPET_RIGHT ; 1e
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/mansion_collision.asm:34:	tilecoll WARP_CARPET_LEFT, FLOOR, FLOOR, FLOOR ; 21
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/mansion_collision.asm:35:	tilecoll FLOOR, FLOOR, WARP_CARPET_LEFT, FLOOR ; 22
+/home/jwilld10/decomps/gb/BW3G/constants/battle_tower_constants.asm:58:	const BATTLETOWER_SAVED_AND_LEFT
+/home/jwilld10/decomps/gb/BW3G/constants/trainer_data_constants.asm:6:	const TRNATTR_AI_MOVE_WEIGHTS ; 3
+/home/jwilld10/decomps/gb/BW3G/constants/trainer_data_constants.asm:12:; TRNATTR_AI_MOVE_WEIGHTS bit flags (wEnemyTrainerAIFlags)
+/home/jwilld10/decomps/gb/BW3G/constants/trainer_data_constants.asm:40:SWITCH_OFTEN_F     EQU 0
+/home/jwilld10/decomps/gb/BW3G/constants/trainer_data_constants.asm:47:SWITCH_OFTEN       EQU 1 << SWITCH_OFTEN_F
+/home/jwilld10/decomps/gb/BW3G/constants/phone_constants.asm:23:	; const PHONE_SCHOOLBOY_CHAD
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/gate_collision.asm:36:	tilecoll WARP_CARPET_LEFT, FLOOR, WARP_CARPET_LEFT, FLOOR ; 23
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/gate_collision.asm:37:	tilecoll FLOOR, WARP_CARPET_RIGHT, FLOOR, WARP_CARPET_RIGHT ; 24
+/home/jwilld10/decomps/gb/BW3G/constants/credits_constants.asm:101:	const COPYRIGHT
+/home/jwilld10/decomps/gb/BW3G/constants/sfx_constants.asm:6:	const SFX_CAUGHT_MON                  ; 02
+/home/jwilld10/decomps/gb/BW3G/constants/sfx_constants.asm:126:	const SFX_NIGHTMARE                   ; 7a
+/home/jwilld10/decomps/gb/BW3G/constants/sfx_constants.asm:133:	const SFX_FORESIGHT                   ; 81
+/home/jwilld10/decomps/gb/BW3G/constants/sfx_constants.asm:179:	const SFX_MOONLIGHT                   ; af
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_data_constants.asm:23:BASE_GROWTH_RATE EQUS "(wBaseGrowthRate - wCurBaseData)"
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_data_constants.asm:40:	const GROWTH_MEDIUM_FAST
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_data_constants.asm:41:	const GROWTH_SLIGHTLY_FAST
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_data_constants.asm:42:	const GROWTH_SLIGHTLY_SLOW
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_data_constants.asm:43:	const GROWTH_MEDIUM_SLOW
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_data_constants.asm:44:	const GROWTH_FAST
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_data_constants.asm:45:	const GROWTH_SLOW
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_data_constants.asm:65:; pokedex entries (see data/pokemon/dex_entries.asm)
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_data_constants.asm:84:MON_CAUGHTDATA         EQUS "(wPartyMon1CaughtData - wPartyMon1)"
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_data_constants.asm:85:MON_CAUGHTLEVEL        EQUS "(wPartyMon1CaughtLevel - wPartyMon1)"
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_data_constants.asm:86:MON_CAUGHTTIME         EQUS "(wPartyMon1CaughtTime - wPartyMon1)"
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_data_constants.asm:87:MON_CAUGHTGENDER       EQUS "(wPartyMon1CaughtGender - wPartyMon1)"
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_data_constants.asm:88:MON_CAUGHTLOCATION     EQUS "(wPartyMon1CaughtLocation - wPartyMon1)"
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_data_constants.asm:106:CAUGHT_TIME_MASK  EQU %11000000
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_data_constants.asm:107:CAUGHT_LEVEL_MASK EQU %00111111
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_data_constants.asm:109:CAUGHT_GENDER_MASK   EQU %10000000
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_data_constants.asm:110:CAUGHT_LOCATION_MASK EQU %01111111
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_data_constants.asm:112:CAUGHT_BY_UNKNOWN EQU 0
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_data_constants.asm:113:CAUGHT_BY_GIRL    EQU 1
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_data_constants.asm:114:CAUGHT_BY_BOY     EQU 2
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_data_constants.asm:116:CAUGHT_EGG_LEVEL EQU 1
+/home/jwilld10/decomps/gb/BW3G/constants/battle_constants.asm:173:	enum SUBSTATUS_NIGHTMARE
+/home/jwilld10/decomps/gb/BW3G/constants/battle_constants.asm:214:	enum SCREENS_LIGHT_SCREEN
+/home/jwilld10/decomps/gb/BW3G/constants/battle_constants.asm:262:BATTLERESULT_CAUGHT_CELEBI EQU 6
+/home/jwilld10/decomps/gb/BW3G/constants/battle_constants.asm:264:BATTLERESULT_BITMASK EQU (1 << BATTLERESULT_CAUGHT_CELEBI) | (1 << BATTLERESULT_BOX_FULL)
+/home/jwilld10/decomps/gb/BW3G/constants/engine_flags.asm:22:	const ENGINE_CAUGHT_POKERUS
+/home/jwilld10/decomps/gb/BW3G/constants/engine_flags.asm:52:	const ENGINE_SOULBADGE
+/home/jwilld10/decomps/gb/BW3G/constants/engine_flags.asm:81:	const ENGINE_FLYPOINT_DRIFTVEIL
+/home/jwilld10/decomps/gb/BW3G/constants/engine_flags.asm:107:	const ENGINE_INDIGO_PLATEAU_RIVAL_FIGHT ; !
+/home/jwilld10/decomps/gb/BW3G/constants/engine_flags.asm:142:	const ENGINE_HILBERT_HILDA
+/home/jwilld10/decomps/gb/BW3G/constants/engine_flags.asm:173:	const ENGINE_ALAN_WEDNESDAY_AFTERNOON
+/home/jwilld10/decomps/gb/BW3G/constants/engine_flags.asm:174:	const ENGINE_DANA_THURSDAY_NIGHT
+/home/jwilld10/decomps/gb/BW3G/constants/engine_flags.asm:176:	const ENGINE_TULLY_SUNDAY_NIGHT
+/home/jwilld10/decomps/gb/BW3G/constants/engine_flags.asm:178:	const ENGINE_TIFFANY_TUESDAY_AFTERNOON
+/home/jwilld10/decomps/gb/BW3G/constants/engine_flags.asm:179:	const ENGINE_VANCE_WEDNESDAY_NIGHT
+/home/jwilld10/decomps/gb/BW3G/constants/engine_flags.asm:181:	const ENGINE_PARRY_FRIDAY_AFTERNOON
+/home/jwilld10/decomps/gb/BW3G/constants/engine_flags.asm:182:	const ENGINE_ERIN_SATURDAY_NIGHT
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/underground_collision.asm:40:	tilecoll FLOOR, WARP_CARPET_RIGHT, FLOOR, WARP_CARPET_RIGHT ; 27
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/underground_collision.asm:41:	tilecoll WARP_CARPET_LEFT, FLOOR, WARP_CARPET_LEFT, FLOOR ; 28
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/underground_collision.asm:75:	tilecoll LEFT_WALL, RIGHT_WALL, LEFT_WALL, RIGHT_WALL ; 4a
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/underground_collision.asm:101:	tilecoll FLOOR, FLOOR, FLOOR, STAIRS_RIGHT_UP ; 64
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/underground_collision.asm:102:	tilecoll WALL, STAIRS_LEFT_DOWN, WALL, FLOOR ; 65
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/underground_collision.asm:103:	tilecoll STAIRS_RIGHT_DOWN, WALL, FLOOR, WALL ; 66
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/underground_collision.asm:104:	tilecoll FLOOR, FLOOR, STAIRS_LEFT_UP, FLOOR ; 67
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/underground_collision.asm:105:	tilecoll UP_WALL, WALL, STAIRS_RIGHT_DOWN, WALL ; 68
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/underground_collision.asm:107:	tilecoll WALL, WALL, STAIRS_LEFT_UP, FLOOR ; 6a
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/underground_collision.asm:108:	tilecoll WALL, WALL, STAIRS_LEFT_UP, FLOOR ; 6b
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/underground_collision.asm:110:	tilecoll STAIRS_LEFT_UP, FLOOR, FLOOR, FLOOR ; 6d
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/underground_collision.asm:117:	tilecoll FLOOR, FLOOR, STAIRS_LEFT_UP, FLOOR ; 74
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/underground_collision.asm:130:	tilecoll FLOOR, FLOOR, FLOOR, STAIRS_RIGHT_UP ; 81
+/home/jwilld10/decomps/gb/BW3G/constants/battle_anim_constants.asm:84:	const ANIM_OBJ_LIGHTNING_BOLT
+/home/jwilld10/decomps/gb/BW3G/constants/battle_anim_constants.asm:140:	const ANIM_OBJ_SWIFT
+/home/jwilld10/decomps/gb/BW3G/constants/battle_anim_constants.asm:148:	const ANIM_OBJ_GROWTH
+/home/jwilld10/decomps/gb/BW3G/constants/battle_anim_constants.asm:182:	const ANIM_OBJ_NIGHTMARE
+/home/jwilld10/decomps/gb/BW3G/constants/battle_anim_constants.asm:183:	const ANIM_OBJ_IN_NIGHTMARE
+/home/jwilld10/decomps/gb/BW3G/constants/battle_anim_constants.asm:192:	const ANIM_OBJ_MOONLIGHT
+/home/jwilld10/decomps/gb/BW3G/constants/battle_anim_constants.asm:201:	const ANIM_OBJ_FORESIGHT
+/home/jwilld10/decomps/gb/BW3G/constants/battle_anim_constants.asm:738:	const ANIM_BG_NIGHT_SHADE
+/home/jwilld10/decomps/gb/BW3G/constants/battle_anim_constants.asm:783:	const ANIM_GFX_LIGHTNING
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/pkmn_league_collision.asm:113:	tilecoll WALL, HOP_LEFT, WALL, HOP_LEFT ; 70
+/home/jwilld10/decomps/gb/BW3G/constants/input_constants.asm:7:	const D_RIGHT_F  ; 4
+/home/jwilld10/decomps/gb/BW3G/constants/input_constants.asm:8:	const D_LEFT_F   ; 5
+/home/jwilld10/decomps/gb/BW3G/constants/input_constants.asm:17:D_RIGHT    EQU 1 << D_RIGHT_F
+/home/jwilld10/decomps/gb/BW3G/constants/input_constants.asm:18:D_LEFT     EQU 1 << D_LEFT_F
+/home/jwilld10/decomps/gb/BW3G/constants/input_constants.asm:23:D_PAD      EQU D_RIGHT | D_LEFT | D_UP | D_DOWN
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:32:COLL_WATERFALL_RIGHT   EQU $30 ; unused
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:33:COLL_WATERFALL_LEFT    EQU $31 ; unused
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:36:COLL_CURRENT_RIGHT     EQU $38 ; unused
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:37:COLL_CURRENT_LEFT      EQU $39 ; unused
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:41:COLL_WALK_RIGHT        EQU $41 ; unused
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:42:COLL_WALK_LEFT         EQU $42 ; unused
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:53:COLL_WALK_RIGHT_ALT    EQU $50 ; unused
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:54:COLL_WALK_LEFT_ALT     EQU $51 ; unused
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:73:COLL_WARP_CARPET_LEFT  EQU $76
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:81:COLL_WARP_CARPET_RIGHT EQU $7e
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:94:COLL_HOP_RIGHT         EQU $a0
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:95:COLL_HOP_LEFT          EQU $a1
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:98:COLL_HOP_DOWN_RIGHT    EQU $a4
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:99:COLL_HOP_DOWN_LEFT     EQU $a5
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:100:COLL_HOP_UP_RIGHT      EQU $a6 ; unused
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:101:COLL_HOP_UP_LEFT       EQU $a7 ; unused
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:102:COLL_RIGHT_WALL        EQU $b0
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:103:COLL_LEFT_WALL         EQU $b1
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:106:COLL_DOWN_RIGHT_WALL   EQU $b4 ; unused
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:107:COLL_DOWN_LEFT_WALL    EQU $b5 ; unused
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:108:COLL_UP_RIGHT_WALL     EQU $b6 ; unused
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:109:COLL_UP_LEFT_WALL      EQU $b7 ; unused
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:110:COLL_RIGHT_BUOY        EQU $c0 ; unused
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:111:COLL_LEFT_BUOY         EQU $c1 ; unused
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:114:COLL_DOWN_RIGHT_BUOY   EQU $c4 ; unused
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:115:COLL_DOWN_LEFT_BUOY    EQU $c5 ; unused
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:116:COLL_UP_RIGHT_BUOY     EQU $c6 ; unused
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:117:COLL_UP_LEFT_BUOY      EQU $c7 ; unused
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:118:COLL_STAIRS_RIGHT_DOWN EQU $d0
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:119:COLL_STAIRS_LEFT_DOWN  EQU $d1
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:120:COLL_STAIRS_RIGHT_UP   EQU $d2
+/home/jwilld10/decomps/gb/BW3G/constants/collision_constants.asm:121:COLL_STAIRS_LEFT_UP    EQU $d3
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/bridge_collision.asm:3:	tilecoll WARP_CARPET_LEFT, FLOOR, WARP_CARPET_LEFT, FLOOR ; 02
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/bridge_collision.asm:4:	tilecoll STAIRS_LEFT_UP, WARP_CARPET_RIGHT, STAIRS_LEFT_UP, WARP_CARPET_RIGHT ; 03
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/bridge_collision.asm:5:	tilecoll WARP_CARPET_LEFT, STAIRS_RIGHT_UP, WARP_CARPET_LEFT, STAIRS_RIGHT_UP ; 04
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/bridge_collision.asm:9:	tilecoll WARP_CARPET_LEFT, FLOOR, WARP_CARPET_LEFT, FLOOR ; 08
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/bridge_collision.asm:13:	tilecoll FLOOR, WARP_CARPET_RIGHT, FLOOR, WARP_CARPET_RIGHT ; 0c
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/bridge_collision.asm:57:	tilecoll STAIRS_LEFT_DOWN, FLOOR, WALL, WALL ; 38
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/bridge_collision.asm:64:	tilecoll FLOOR, STAIRS_RIGHT_DOWN, WALL, WALL ; 3f
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/bridge_collision.asm:85:	tilecoll STAIRS_RIGHT_UP, WALL, STAIRS_RIGHT_UP, WALL ; 54
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/bridge_collision.asm:89:	tilecoll WALL, WALL, WALL, STAIRS_LEFT_DOWN ; 58
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/bridge_collision.asm:90:	tilecoll WALL, WALL, STAIRS_RIGHT_UP, WALL ; 59
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/bridge_collision.asm:91:	tilecoll FLOOR, STAIRS_RIGHT_UP, FLOOR, STAIRS_RIGHT_UP ; 5a
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/bridge_collision.asm:92:	tilecoll STAIRS_LEFT_UP, FLOOR, STAIRS_LEFT_UP, FLOOR ; 5b
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/bridge_collision.asm:93:	tilecoll WALL, STAIRS_LEFT_DOWN, WALL, STAIRS_LEFT_DOWN ; 5c
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/bridge_collision.asm:94:	tilecoll STAIRS_RIGHT_UP, WALL, STAIRS_RIGHT_UP, WALL ; 5d
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/bridge_collision.asm:95:	tilecoll FLOOR, STAIRS_RIGHT_UP, WALL, WALL ; 5e
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/bridge_collision.asm:96:	tilecoll STAIRS_LEFT_UP, FLOOR, WALL, WALL ; 5f
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/bridge_collision.asm:99:	tilecoll STAIRS_LEFT_DOWN, STAIRS_RIGHT_DOWN, STAIRS_LEFT_DOWN, STAIRS_RIGHT_DOWN ; 62
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/bridge_collision.asm:100:	tilecoll STAIRS_LEFT_DOWN, STAIRS_RIGHT_DOWN, STAIRS_LEFT_DOWN, STAIRS_RIGHT_DOWN ; 63
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/bridge_collision.asm:102:	tilecoll WALL, STAIRS_LEFT_UP, WALL, STAIRS_LEFT_UP ; 65
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/bridge_collision.asm:105:	tilecoll WALL, WALL, WALL, STAIRS_LEFT_UP ; 68
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/bridge_collision.asm:106:	tilecoll WALL, WALL, STAIRS_RIGHT_DOWN, WALL ; 69
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/bridge_collision.asm:109:	tilecoll WALL, STAIRS_LEFT_UP, WALL, STAIRS_LEFT_UP ; 6c
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/bridge_collision.asm:110:	tilecoll STAIRS_RIGHT_DOWN, WALL, STAIRS_RIGHT_DOWN, WALL ; 6d
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/lab_collision.asm:67:	tilecoll WALL, HOP_LEFT, FLOOR, FLOOR ; 42
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/lab_collision.asm:85:	tilecoll WALL, HOP_LEFT, WALL, WALL ; 54
+/home/jwilld10/decomps/gb/BW3G/data/tilesets/lab_collision.asm:91:	tilecoll HOP_RIGHT, WALL, WALL, WALL ; 5a
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:50:	const EVENT_FOUGHT_SUDOWOODO
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:72:	const EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST ; 040
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:91:	const EVENT_GOT_TM50_NIGHTMARE
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:120:	const EVENT_GOT_SOFT_SAND_FROM_KATE
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:142:	const EVENT_OLIVINE_LIGHTHOUSE_5F_HIDDEN_HYPER_POTION
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:228:	const EVENT_TALKED_TO_WARDENS_GRANDDAUGHTER
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:261:	const EVENT_FOUND_LEFTOVERS_IN_CELADON_CAFE
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:379:	const EVENT_DESERT_SOFT_SAND
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:617:	const EVENT_GAVE_KURT_WHT_APRICORN
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:715:	const EVENT_DECO_BULBASAUR_DOLL
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:793:	const EVENT_LEFT_MONS_WITH_CONTEST_OFFICER
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:808:	const EVENT_FOUGHT_HO_OH
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:809:	const EVENT_FOUGHT_LUGIA
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:837:	const EVENT_FOUGHT_EUSINE
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:839:	const EVENT_FOUGHT_SUICUNE
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:855:	const EVENT_PWT_LEFTOVERS
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:862:	const EVENT_PWT_OUTSIDE_CHEREN_BIANCA
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:863:	const EVENT_FINISHED_PWT
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:864:	const EVENT_FINISHED_PWT_QUALIFIER
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:865:	const EVENT_PWT_QUALIFIER_ROOM_ACE_TRAINER_M
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:866:	const EVENT_PWT_QUALIFIER_ROOM_ACE_TRAINER_F
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:867:	const EVENT_PWT_BATTLE_ROOM_BIANCA
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:868:	const EVENT_PWT_BATTLE_ROOM_INFER
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:869:	const EVENT_PWT_BATTLE_ROOM_VIO
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:870:	const EVENT_PWT_BACK_ROOM_BIANCA
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:871:	const EVENT_PWT_BACK_ROOM_CHEREN
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:872:	const EVENT_PWT_BACK_ROOM_JUNIPER
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:873:	const EVENT_PWT_BACK_ROOM_IRIS
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:874:	const EVENT_PWT_BACK_ROOM_MARLON
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:875:	const EVENT_PWT_BACK_ROOM_INFER
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:876:	const EVENT_PWT_BACK_ROOM_VIO
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:877:	const EVENT_PWT_BEAT_INFER
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:878:	const EVENT_PWT_BEAT_BIANCA
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:879:	const EVENT_DRIFTVEIL_BLOCKER
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:880:	const EVENT_DRIFTVEIL_RAZOR_FANG
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:881:	const EVENT_DRIFTVEIL_THUNDERSTONE
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:882:	const EVENT_PWT_BACK_ROOM_ROOD
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:883:	const EVENT_DRIFTVEIL_SHELTER_FRIENDS
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:892:	const EVENT_DRIFTVEIL_DAWN_STONE
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:1532:	const EVENT_BEAT_YOUNGSTER_ALBERT
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:1596:	const EVENT_DRIFTVEIL_REPEAT_BALL
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:1639:	const EVENT_DRAGONSPIRAL_LIGHT_CLAY
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:1657:	const EVENT_DRIFTVEIL_HEART_SCALE
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:1704:	const EVENT_VICTORY_ROAD_INT_BRIGHTPOWDER
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:1791:	const EVENT_DRIFTVEIL_SHELTER_HUGH
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:1795:	const EVENT_HILBERT_HILDA_READY_FOR_BATTLE
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:1797:	const EVENT_BEAT_HILBERT_HILDA
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:1800:	const EVENT_NUVEMA_TOWN_HILBERT
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:1829:	const EVENT_TALKED_TO_MOM_AFTER_POKEMON
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:1830:	const EVENT_PWT_OUTSIDE_CARBOS
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:1832:	const EVENT_OLIVINE_LIGHTHOUSE_JASMINE
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:1895:	const EVENT_MYSTERY_GIFT_DELIVERY_GUY
+/home/jwilld10/decomps/gb/BW3G/constants/event_flags.asm:1924:	const EVENT_FAST_SHIP_B1F_SAILOR_LEFT
+
+== Candidates: species/names (name tables) ==
+/home/jwilld10/decomps/gb/BW3G/macros/wram.asm:110:\1MonOT::           ds NAME_LENGTH * MONS_PER_BOX
+/home/jwilld10/decomps/gb/BW3G/macros/wram.asm:111:\1MonNicknames::    ds MON_NAME_LENGTH * MONS_PER_BOX
+/home/jwilld10/decomps/gb/BW3G/macros/wram.asm:174:\1Name:: ds NAME_LENGTH + -1
+/home/jwilld10/decomps/gb/BW3G/macros/wram.asm:177:\1Mon1Name:: ds MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/macros/wram.asm:180:\1Mon2Name:: ds MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/macros/wram.asm:183:\1Mon3Name:: ds MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/macros/wram.asm:192:\1Author::     ds PLAYER_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/macros/wram.asm:220:\1Nickname:: ds MON_NAME_LENGTH + -1
+/home/jwilld10/decomps/gb/BW3G/macros/wram.asm:236:\1Name::   ds NAME_LENGTH + -1
+/home/jwilld10/decomps/gb/BW3G/macros/wram.asm:245:\1SpeciesName:: ds MON_NAME_LENGTH ; wc6d1 | wc703
+/home/jwilld10/decomps/gb/BW3G/macros/wram.asm:246:\1Nickname::    ds MON_NAME_LENGTH ; wc6dc | wc70e
+/home/jwilld10/decomps/gb/BW3G/macros/wram.asm:247:\1SenderName::  ds NAME_LENGTH ; wc6e7 | wc719
+/home/jwilld10/decomps/gb/BW3G/macros/wram.asm:248:\1OTName::      ds NAME_LENGTH ; wc6f2 | wc724
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_constants.asm:3:; - PokemonNames (see data/pokemon/names.asm)
+/home/jwilld10/decomps/gb/BW3G/constants/npc_trade_constants.asm:5:NPCTRADE_NICK    EQU  3 ; ds MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/constants/npc_trade_constants.asm:9:NPCTRADE_OT_NAME EQU 19 ; ds NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/constants/battle_tower_constants.asm:8:BATTLE_TOWER_STRUCT_LENGTH EQUS "(NAME_LENGTH + BATTLETOWER_PARTY_LENGTH * NICKNAMED_MON_STRUCT_LENGTH + BATTLETOWER_TRAINERDATALENGTH)"
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_data_constants.asm:101:NICKNAMED_MON_STRUCT_LENGTH EQUS "(PARTYMON_STRUCT_LENGTH + MON_NAME_LENGTH)"
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_data_constants.asm:126:HOF_MON_LENGTH EQU 1 + 2 + 2 + 1 + (MON_NAME_LENGTH + -1) ; species, id, dvs, level, nick
+/home/jwilld10/decomps/gb/BW3G/wram.asm:379:wOddEggName:: ds MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/wram.asm:380:wOddEggOTName:: ds NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/wram.asm:409:wEnemyMonNick::  ds MON_NAME_LENGTH ; c616
+/home/jwilld10/decomps/gb/BW3G/wram.asm:410:wBattleMonNick:: ds MON_NAME_LENGTH ; c621
+/home/jwilld10/decomps/gb/BW3G/wram.asm:422:wOTClassName:: ds TRAINER_CLASS_NAME_LENGTH ; c656
+/home/jwilld10/decomps/gb/BW3G/wram.asm:749:wLinkPlayer1Name:: ds NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/wram.asm:750:wLinkPlayer2Name:: ds NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/wram.asm:961:wLinkPlayerName:: ds NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/wram.asm:975:wTimeCapsulePartyMonOTNames:: ds PARTY_LENGTH * NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/wram.asm:976:wTimeCapsulePartyMonNicks:: ds PARTY_LENGTH * MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/wram.asm:988:wLinkPlayerPartyMonOTNames:: ds PARTY_LENGTH * NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/wram.asm:989:wLinkPlayerPartyMonNicks:: ds PARTY_LENGTH * MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/wram.asm:1034:wMysteryGiftPartnerName:: ds NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/wram.asm:1049:wMysteryGiftPlayerName:: ds NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/wram.asm:1591:wSeerNickname:: ds MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/wram.asm:1593:wSeerTimeOfDay:: ds NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/wram.asm:1594:wSeerOTName:: ds NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/wram.asm:1603:wBufferMonNick:: ds MON_NAME_LENGTH ; d002
+/home/jwilld10/decomps/gb/BW3G/wram.asm:1604:wBufferMonOT:: ds NAME_LENGTH ; d00d
+/home/jwilld10/decomps/gb/BW3G/wram.asm:1618:wBugContestWinnerName:: ds NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/wram.asm:1688:wMobileParticipant1Nickname:: ds NAME_LENGTH_JAPANESE
+/home/jwilld10/decomps/gb/BW3G/wram.asm:1689:wMobileParticipant2Nickname:: ds NAME_LENGTH_JAPANESE
+/home/jwilld10/decomps/gb/BW3G/wram.asm:1690:wMobileParticipant3Nickname:: ds NAME_LENGTH_JAPANESE
+/home/jwilld10/decomps/gb/BW3G/wram.asm:1842:wTMHMMoveNameBackup:: ds MOVE_NAME_LENGTH ; d066
+/home/jwilld10/decomps/gb/BW3G/wram.asm:2234:wOTPlayerName:: ds NAME_LENGTH ; d26b
+/home/jwilld10/decomps/gb/BW3G/wram.asm:2254:wOTPartyMonOT:: ds NAME_LENGTH * PARTY_LENGTH ; d3a8
+/home/jwilld10/decomps/gb/BW3G/wram.asm:2255:wOTPartyMonNicknames:: ds MON_NAME_LENGTH * PARTY_LENGTH ; d3ea
+/home/jwilld10/decomps/gb/BW3G/wram.asm:2366:wPlayerName:: ds NAME_LENGTH ; d47d
+/home/jwilld10/decomps/gb/BW3G/wram.asm:2367:wMomsName::   ds NAME_LENGTH ; d488
+/home/jwilld10/decomps/gb/BW3G/wram.asm:2368:wRivalName::  ds NAME_LENGTH ; d493
+/home/jwilld10/decomps/gb/BW3G/wram.asm:2369:wRedsName::   ds NAME_LENGTH ; d49e
+/home/jwilld10/decomps/gb/BW3G/wram.asm:2370:wGreensName:: ds NAME_LENGTH ; d4a9
+/home/jwilld10/decomps/gb/BW3G/wram.asm:2684:wBoxNames:: ds BOX_NAME_LENGTH * NUM_BOXES ; db75
+/home/jwilld10/decomps/gb/BW3G/wram.asm:2840:wPartyMonOT:: ds NAME_LENGTH * PARTY_LENGTH ; ddff
+/home/jwilld10/decomps/gb/BW3G/wram.asm:2842:wPartyMonNicknames:: ds MON_NAME_LENGTH * PARTY_LENGTH ; de41
+/home/jwilld10/decomps/gb/BW3G/wram.asm:2865:wBreedMon1Nick::  ds MON_NAME_LENGTH ; def6
+/home/jwilld10/decomps/gb/BW3G/wram.asm:2866:wBreedMon1OT::    ds NAME_LENGTH ; df01
+/home/jwilld10/decomps/gb/BW3G/wram.asm:2882:wBreedMon2Nick::  ds MON_NAME_LENGTH ; df2f
+/home/jwilld10/decomps/gb/BW3G/wram.asm:2883:wBreedMon2OT::    ds NAME_LENGTH ; df3a
+/home/jwilld10/decomps/gb/BW3G/wram.asm:2886:wEggNick:: ds MON_NAME_LENGTH ; df65
+/home/jwilld10/decomps/gb/BW3G/wram.asm:2887:wEggOT::   ds NAME_LENGTH ; df70
+/home/jwilld10/decomps/gb/BW3G/wram.asm:2908:wMagikarpRecordHoldersName:: ds NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/constants/text_constants.asm:2:NAME_LENGTH          EQU 11
+/home/jwilld10/decomps/gb/BW3G/constants/text_constants.asm:3:PLAYER_NAME_LENGTH   EQU 8
+/home/jwilld10/decomps/gb/BW3G/constants/text_constants.asm:4:BOX_NAME_LENGTH      EQU 9
+/home/jwilld10/decomps/gb/BW3G/constants/text_constants.asm:5:MON_NAME_LENGTH      EQU 11
+/home/jwilld10/decomps/gb/BW3G/constants/text_constants.asm:6:MOVE_NAME_LENGTH     EQU 13
+/home/jwilld10/decomps/gb/BW3G/constants/text_constants.asm:7:ITEM_NAME_LENGTH     EQU 13
+/home/jwilld10/decomps/gb/BW3G/constants/text_constants.asm:8:TRAINER_CLASS_NAME_LENGTH EQU 13
+/home/jwilld10/decomps/gb/BW3G/constants/text_constants.asm:9:NAME_LENGTH_JAPANESE EQU 6
+/home/jwilld10/decomps/gb/BW3G/constants/text_constants.asm:20:	const MOVE_DESC_NAME_BROKEN ; 8
+/home/jwilld10/decomps/gb/BW3G/constants/menu_constants.asm:99:	const NAME_MON
+/home/jwilld10/decomps/gb/BW3G/constants/menu_constants.asm:100:	const NAME_PLAYER
+/home/jwilld10/decomps/gb/BW3G/constants/menu_constants.asm:101:	const NAME_RIVAL
+/home/jwilld10/decomps/gb/BW3G/constants/menu_constants.asm:102:	const NAME_MOM
+/home/jwilld10/decomps/gb/BW3G/constants/menu_constants.asm:103:	const NAME_BOX
+/home/jwilld10/decomps/gb/BW3G/constants/menu_constants.asm:104:	const NAME_FRIEND
+/home/jwilld10/decomps/gb/BW3G/constants/menu_constants.asm:105:	const NAME_6 ; duplicate of NAME_MON
+/home/jwilld10/decomps/gb/BW3G/constants/menu_constants.asm:106:	const NAME_7 ; duplicate of NAME_MON
+/home/jwilld10/decomps/gb/BW3G/constants/menu_constants.asm:107:NUM_NAME_TYPES EQU const_value
+/home/jwilld10/decomps/gb/BW3G/constants/map_constants.asm:162:	map_const NIMBASA_NAME_RATER, 4, 4 
+/home/jwilld10/decomps/gb/BW3G/engine/overworld/decorations.asm:79:	ld bc, ITEM_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/overworld/decorations.asm:87:	ld bc, ITEM_NAME_LENGTH - 1
+/home/jwilld10/decomps/gb/BW3G/engine/overworld/scripting.asm:2016:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/overworld/wildmons.asm:876:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/overworld/wildmons.asm:986:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokedex/pokedex_3.asm:116:	db   "ESULTS"
+/home/jwilld10/decomps/gb/BW3G/engine/pokedex/pokedex.asm:1130:	db "SEEN", -1
+/home/jwilld10/decomps/gb/BW3G/engine/pokedex/pokedex.asm:1132:	db "OWN", -1
+/home/jwilld10/decomps/gb/BW3G/engine/pokedex/pokedex.asm:1174:	db "HT  ?", $5e, "??", $5f, -1 ; HT  ?'??"
+/home/jwilld10/decomps/gb/BW3G/engine/pokedex/pokedex.asm:1243:	db   "TYPE1"
+/home/jwilld10/decomps/gb/BW3G/engine/pokedex/pokedex.asm:1248:	db   "BEGIN SEARCH!!"
+/home/jwilld10/decomps/gb/BW3G/engine/pokedex/pokedex.asm:1283:	db   "SEARCH RESULTS"
+/home/jwilld10/decomps/gb/BW3G/engine/items/pack.asm:660:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:593:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:601:	ld b, NAME_MON
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:654:	ld b, NAME_MON
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:662:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:677:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/items/item_effects.asm:1366:	ld bc, ITEM_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/games/card_flip.asm:485:	db "1", $4e, "1", $57, "1", $69, "1", $60
+/home/jwilld10/decomps/gb/BW3G/engine/games/card_flip.asm:486:	db "2", $4e, "2", $57, "2", $69, "2", $60
+/home/jwilld10/decomps/gb/BW3G/engine/games/card_flip.asm:487:	db "3", $4e, "3", $57, "3", $69, "3", $60
+/home/jwilld10/decomps/gb/BW3G/engine/games/card_flip.asm:488:	db "4", $4e, "4", $57, "4", $69, "4", $60
+/home/jwilld10/decomps/gb/BW3G/engine/games/card_flip.asm:489:	db "5", $4e, "5", $57, "5", $69, "5", $60
+/home/jwilld10/decomps/gb/BW3G/engine/games/card_flip.asm:490:	db "6", $4e, "6", $57, "6", $69, "6", $60
+/home/jwilld10/decomps/gb/BW3G/engine/menus/naming_screen.asm:64:	maskbits NUM_NAME_TYPES
+/home/jwilld10/decomps/gb/BW3G/engine/menus/naming_screen.asm:76:; entries correspond to NAME_* constants
+/home/jwilld10/decomps/gb/BW3G/engine/menus/naming_screen.asm:249:	ld a, MON_NAME_LENGTH - 1
+/home/jwilld10/decomps/gb/BW3G/engine/menus/naming_screen.asm:254:	ld a, PLAYER_NAME_LENGTH - 1
+/home/jwilld10/decomps/gb/BW3G/engine/menus/naming_screen.asm:259:	ld a, BOX_NAME_LENGTH - 1
+/home/jwilld10/decomps/gb/BW3G/engine/menus/intro_menu.asm:296:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/menus/intro_menu.asm:762:	ld b, NAME_PLAYER
+/home/jwilld10/decomps/gb/BW3G/engine/menus/intro_menu.asm:806:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/evolve.asm:499:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/evolve.asm:508:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/types.asm:38:	ld bc, NAME_LENGTH_JAPANESE - 1
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/types.asm:90:	ld bc, MOVE_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/breeding.asm:307:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/breeding.asm:317:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/breeding.asm:333:	ld b, NAME_MON
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/breeding.asm:342:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/breeding.asm:906:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/move_mon.asm:50:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/move_mon.asm:66:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/move_mon.asm:439:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/move_mon.asm:451:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/move_mon.asm:603:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/move_mon.asm:637:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/move_mon.asm:979:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/move_mon.asm:988:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/move_mon.asm:1083:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/move_mon.asm:1087:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/move_mon.asm:1280:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/move_mon.asm:1323:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/move_mon.asm:1328:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/move_mon.asm:1687:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/move_mon.asm:1699:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/move_mon.asm:1799:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/move_mon.asm:1822:	ld b, NAME_MON
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/caught_data.asm:45:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/caught_data.asm:104:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/caught_data.asm:123:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/categories.asm:28:	ld bc, MOVE_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/bills_pc.asm:997:	ld bc, BOX_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/bills_pc.asm:1298:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/bills_pc.asm:1302:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/bills_pc.asm:1324:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/bills_pc.asm:1328:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/bills_pc.asm:1350:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/bills_pc.asm:1354:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/bills_pc.asm:2115:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/bills_pc.asm:2119:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/bills_pc.asm:2124:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/bills_pc.asm:2128:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/bills_pc.asm:2299:	ld bc, BOX_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/bills_pc.asm:2332:	db "0" + MONS_PER_BOX / 10 ; "2"
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/bills_pc.asm:2333:	db "0" + MONS_PER_BOX % 10 ; "0"
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/bills_pc.asm:2457:	ld b, NAME_BOX
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/bills_pc.asm:2469:	ld c, BOX_NAME_LENGTH - 1
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/party_menu.asm:536:	ld e, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mail.asm:217:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mail.asm:219:	ld bc, NAME_LENGTH - 1
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mail.asm:353:	ld bc, NAME_LENGTH - 1
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/bills_pc_top.asm:320:	ld bc, MONS_PER_BOX * (BOXMON_STRUCT_LENGTH + NAME_LENGTH)
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mon_menu.asm:226:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mon_menu.asm:460:	ld bc, NAME_LENGTH - 1
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/correct_nick_errors.asm:9:	ld b, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mail_2.asm:688:	ld bc, NAME_LENGTH - 1
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mail_2.asm:692:	ld [wMonOrItemNameBuffer + NAME_LENGTH - 1], a
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/switchpartymons.asm:143:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/learn.asm:8:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/learn.asm:141:	ld c, MOVE_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/correct_party_errors.asm:131:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/correct_party_errors.asm:154:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/correct_party_errors.asm:206:	ld b, NAME_LENGTH_JAPANESE
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/mon_stats.asm:117:	db   "ATTACK"
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/search.asm:219:rept NAME_LENGTH_JAPANESE + -2 ; should be PLAYER_NAME_LENGTH + -2
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/search.asm:265:	ld hl, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/move_mon_wo_mail.asm:10:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/move_mon_wo_mail.asm:17:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/move_mon_wo_mail.asm:47:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/move_mon_wo_mail.asm:54:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/stats_screen.asm:1086:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/movie/trade_animation.asm:827:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/movie/trade_animation.asm:962:	db   "EGG"
+/home/jwilld10/decomps/gb/BW3G/engine/movie/trade_animation.asm:1004:	db " ", "♂", "♀"
+/home/jwilld10/decomps/gb/BW3G/engine/movie/trade_animation.asm:1330:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/movie/trade_animation.asm:1334:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/movie/trade_animation.asm:1422:	ld c, NAME_LENGTH + 2 ; JP: NAME_LENGTH_JAPANESE + 2
+/home/jwilld10/decomps/gb/BW3G/engine/movie/trade_animation.asm:1433:	ld c, NAME_LENGTH + 2 ; JP: NAME_LENGTH_JAPANESE + 2
+/home/jwilld10/decomps/gb/BW3G/engine/movie/title.asm:77:	ld bc, NAME_LENGTH ; length of version text
+/home/jwilld10/decomps/gb/BW3G/engine/pokegear/radio.asm:275:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokegear/pokegear.asm:1385:	db   "CALL"
+/home/jwilld10/decomps/gb/BW3G/engine/pokegear/pokegear.asm:1398:	db   "CALL"
+/home/jwilld10/decomps/gb/BW3G/engine/pokegear/pokegear.asm:2044:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/pokegear/pokegear.asm:2069:	;ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/halloffame.asm:202:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/halloffame.asm:204:	ld bc, MON_NAME_LENGTH - 1
+/home/jwilld10/decomps/gb/BW3G/engine/events/halloffame.asm:446:	ld bc, MON_NAME_LENGTH - 1
+/home/jwilld10/decomps/gb/BW3G/engine/events/haircut.asm:78:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/prof_oaks_pc.asm:70:	ld bc, ITEM_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/name_rater.asm:35:	ld b, NAME_MON
+/home/jwilld10/decomps/gb/BW3G/engine/events/name_rater.asm:48:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/name_rater.asm:54:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/name_rater.asm:84:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/name_rater.asm:88:	ld c, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/name_rater.asm:116:	ld c, MON_NAME_LENGTH - 1
+/home/jwilld10/decomps/gb/BW3G/engine/events/name_rater.asm:137:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/name_rater.asm:177:	cp MON_NAME_LENGTH - 1
+/home/jwilld10/decomps/gb/BW3G/engine/events/battle_tower/load_trainer.asm:59:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/battle_tower/load_trainer.asm:61:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/battle_tower/load_trainer.asm:178:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/battle_tower/battle_tower.asm:105:	ld bc, NAME_LENGTH_JAPANESE - 1
+/home/jwilld10/decomps/gb/BW3G/engine/events/battle_tower/battle_tower.asm:157:	ld bc, NAME_LENGTH_JAPANESE
+/home/jwilld10/decomps/gb/BW3G/engine/events/battle_tower/battle_tower.asm:272:; with their species names.
+/home/jwilld10/decomps/gb/BW3G/engine/events/battle_tower/battle_tower.asm:274:	ld c, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/battle_tower/battle_tower.asm:284:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/battle_tower/battle_tower.asm:289:	ld c, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/battle_tower/battle_tower.asm:298:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/battle_tower/battle_tower.asm:303:	ld c, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/battle_tower/battle_tower.asm:312:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/battle_tower/battle_tower.asm:325:	ld c, NAME_LENGTH - 1
+/home/jwilld10/decomps/gb/BW3G/engine/events/battle_tower/battle_tower.asm:336:	ld bc, NAME_LENGTH - 1
+/home/jwilld10/decomps/gb/BW3G/engine/events/battle_tower/battle_tower.asm:368:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/battle_tower/battle_tower.asm:806:	ld de, NAME_LENGTH_JAPANESE
+/home/jwilld10/decomps/gb/BW3G/engine/events/battle_tower/battle_tower.asm:1276:	ld de, NAME_LENGTH_JAPANESE
+/home/jwilld10/decomps/gb/BW3G/engine/events/battle_tower/battle_tower.asm:1286:	ld a, NAME_LENGTH_JAPANESE
+/home/jwilld10/decomps/gb/BW3G/engine/events/specials.asm:87:	ld b, NAME_RIVAL
+/home/jwilld10/decomps/gb/BW3G/engine/events/npc_trade.asm:135:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/npc_trade.asm:204:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/npc_trade.asm:219:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/npc_trade.asm:311:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/daycare.asm:247:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/daycare.asm:495:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/daycare.asm:501:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/daycare.asm:581:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/daycare.asm:584:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/daycare.asm:641:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/daycare.asm:730:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/daycare.asm:737:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/map_name_sign.asm:1:MAP_NAME_SIGN_START EQU $e0
+/home/jwilld10/decomps/gb/BW3G/engine/events/map_name_sign.asm:129:	ld hl, vTiles0 tile MAP_NAME_SIGN_START
+/home/jwilld10/decomps/gb/BW3G/engine/events/map_name_sign.asm:200:	ld a, MAP_NAME_SIGN_START + 1
+/home/jwilld10/decomps/gb/BW3G/engine/events/map_name_sign.asm:203:	ld a, MAP_NAME_SIGN_START + 2
+/home/jwilld10/decomps/gb/BW3G/engine/events/map_name_sign.asm:206:	ld a, MAP_NAME_SIGN_START + 4
+/home/jwilld10/decomps/gb/BW3G/engine/events/map_name_sign.asm:209:	ld a, MAP_NAME_SIGN_START + 5
+/home/jwilld10/decomps/gb/BW3G/engine/events/map_name_sign.asm:214:	ld a, MAP_NAME_SIGN_START + 11
+/home/jwilld10/decomps/gb/BW3G/engine/events/map_name_sign.asm:217:	ld a, MAP_NAME_SIGN_START + 6
+/home/jwilld10/decomps/gb/BW3G/engine/events/map_name_sign.asm:222:	ld a, MAP_NAME_SIGN_START + 12
+/home/jwilld10/decomps/gb/BW3G/engine/events/map_name_sign.asm:225:	ld a, MAP_NAME_SIGN_START + 7
+/home/jwilld10/decomps/gb/BW3G/engine/events/map_name_sign.asm:228:	ld a, MAP_NAME_SIGN_START + 8
+/home/jwilld10/decomps/gb/BW3G/engine/events/map_name_sign.asm:231:	ld a, MAP_NAME_SIGN_START + 10
+/home/jwilld10/decomps/gb/BW3G/engine/events/map_name_sign.asm:237:	ld a, MAP_NAME_SIGN_START + 13
+/home/jwilld10/decomps/gb/BW3G/engine/events/catch_tutorial.asm:23:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/catch_tutorial.asm:28:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/catch_tutorial.asm:51:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/poke_seer.asm:141:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/poke_seer.asm:144:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/poke_seer.asm:210:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/poke_seer.asm:253:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/poke_seer.asm:256:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/odd_egg.asm:48:	ld bc, NICKNAMED_MON_STRUCT_LENGTH + NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/odd_egg.asm:78:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/bug_contest/judging.asm:95:	ld bc, TRAINER_CLASS_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/events/bug_contest/judging.asm:119:	ld bc, NAME_LENGTH - 1
+/home/jwilld10/decomps/gb/BW3G/engine/events/bug_contest/judging.asm:125:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/battle/move_effects/beat_up.asm:128:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/battle/core.asm:4153:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/battle/core.asm:4232:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/battle/core.asm:6745:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/battle/core.asm:7846:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/battle/core.asm:8953:	ld bc, NAME_LENGTH - 1
+/home/jwilld10/decomps/gb/BW3G/engine/battle/read_trainer_party.asm:350:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/battle/read_trainer_party.asm:360:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/battle/ai/items.asm:849:	ld bc, ITEM_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/battle/read_trainer_attributes.asm:24:	ld bc, TRAINER_CLASS_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/link/mystery_gift.asm:83:	ld bc, ITEM_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/link/mystery_gift.asm:218:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/link/mystery_gift.asm:1527:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/link/init_list.asm:23:	ld de, PokemonNames
+/home/jwilld10/decomps/gb/BW3G/engine/link/link_trade.asm:264:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/link/link_trade.asm:316:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/link/mystery_gift_2.asm:19:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/link/link.asm:99:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/link/link.asm:142:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/link/link.asm:398:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/link/link.asm:434:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/link/link.asm:643:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/link/link.asm:686:	ld bc, PARTY_LENGTH * NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/link/link.asm:809:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/link/link.asm:821:	ld bc, PARTY_LENGTH * NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/link/link.asm:824:	ld bc, PARTY_LENGTH * MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/link/link.asm:966:	ld bc, PARTY_LENGTH * NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/link/link.asm:969:	ld bc, PARTY_LENGTH * MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/link/link.asm:1237:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/link/link.asm:1298:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/link/link.asm:1318:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/link/link.asm:1510:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/link/link.asm:1626:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/link/link.asm:1747:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/link/link.asm:1761:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/link/link.asm:1787:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/link/link.asm:1800:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/link/link.asm:1948:	db   "TRADE"
+/home/jwilld10/decomps/gb/BW3G/engine/link/time_capsule.asm:116:	call .PlaceSpeciesNames
+/home/jwilld10/decomps/gb/BW3G/engine/link/time_capsule.asm:119:.PlaceSpeciesNames:
+/home/jwilld10/decomps/gb/BW3G/engine/printer/print_party.asm:289:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/printer/print_party.asm:339:	db   "ATTACK"
+/home/jwilld10/decomps/gb/BW3G/engine/printer/printer.asm:645:	ld bc, BOX_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/printer/printer.asm:752:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/printer/printer.asm:755:	ld bc, SCREEN_WIDTH - MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/printer/printer.asm:773:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/engine/printer/printer.asm:784:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/sram.asm:66:sMysteryGiftPartnerName:: ds NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/home/mon_data.asm:79:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/home/names.asm:3:	dba PokemonNames        ; MON_NAME (not used; jumps to GetPokemonName)
+/home/jwilld10/decomps/gb/BW3G/home/names.asm:10:	dbw 4, MoveDescriptions ; MOVE_DESC_NAME_BROKEN (wrong bank)
+/home/jwilld10/decomps/gb/BW3G/home/names.asm:28:	ld hl, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/home/names.asm:54:	ld bc, ITEM_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/home/names.asm:118:	ld a, BANK(PokemonNames)
+/home/jwilld10/decomps/gb/BW3G/home/names.asm:132:	ld de, PokemonNames
+/home/jwilld10/decomps/gb/BW3G/home/names.asm:138:	ld bc, MON_NAME_LENGTH - 1
+/home/jwilld10/decomps/gb/BW3G/home/names.asm:140:	ld hl, wStringBuffer1 + MON_NAME_LENGTH - 1
+/home/jwilld10/decomps/gb/BW3G/home/names.asm:249:	db "TM"
+/home/jwilld10/decomps/gb/BW3G/home/names.asm:254:	db "HM"
+/home/jwilld10/decomps/gb/BW3G/data/credits_strings.asm:191:.Planning:            db " SPECIAL PRODUCTION"
+/home/jwilld10/decomps/gb/BW3G/data/credits_strings.asm:258:.MadePossibleBy:      db " THIS GAME WAS MADE"
+/home/jwilld10/decomps/gb/BW3G/data/credits_strings.asm:285:.PolishedStaff:       db "  POLISHED CRYSTAL"
+/home/jwilld10/decomps/gb/BW3G/data/battle_tower/classes.asm:9:	db "ZABOROWSKI", LASS
+/home/jwilld10/decomps/gb/BW3G/data/text/mail_input_chars.asm:4:	db "A B C D E F G H I J"
+/home/jwilld10/decomps/gb/BW3G/data/text/mail_input_chars.asm:5:	db "K L M N O P Q R S T"
+/home/jwilld10/decomps/gb/BW3G/data/text/mail_input_chars.asm:7:	db "1 2 3 4 5 6 7 8 9 0"
+/home/jwilld10/decomps/gb/BW3G/data/text/mail_input_chars.asm:17:	db "UPPER  DEL   END   "
+/home/jwilld10/decomps/gb/BW3G/data/text/name_input_chars.asm:8:	db "UPPER  DEL   END "
+/home/jwilld10/decomps/gb/BW3G/data/text/name_input_chars.asm:15:	db "1 2 3 4 5 6 7 8 9"
+/home/jwilld10/decomps/gb/BW3G/data/text/name_input_chars.asm:16:	db "UPPER  DEL   END "
+/home/jwilld10/decomps/gb/BW3G/data/text/name_input_chars.asm:19:	db "A B C D E F G H I"
+/home/jwilld10/decomps/gb/BW3G/data/text/name_input_chars.asm:20:	db "J K L M N O P Q R"
+/home/jwilld10/decomps/gb/BW3G/data/text/name_input_chars.asm:21:	db "S T U V W X Y Z  "
+/home/jwilld10/decomps/gb/BW3G/data/text/name_input_chars.asm:26:	db "A B C D E F G H I"
+/home/jwilld10/decomps/gb/BW3G/data/text/name_input_chars.asm:27:	db "J K L M N O P Q R"
+/home/jwilld10/decomps/gb/BW3G/data/text/name_input_chars.asm:28:	db "S T U V W X Y Z  "
+/home/jwilld10/decomps/gb/BW3G/bw3genesis.map:10165:           $7541 = PokemonNames
+/home/jwilld10/decomps/gb/BW3G/bw3genesis.map:24790:           $73dc = PlaceTradePartnerNamesAndParty.PlaceSpeciesNames
+/home/jwilld10/decomps/gb/BW3G/bw3genesis.map:25827:           $6e5b = Function102e4f.PlaceSpeciesNames
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/dex_entries/genesis.asm:4:	db "???"
+/home/jwilld10/decomps/gb/BW3G/data/maps/attributes.asm:203:	map_attributes NimbasaNameRater, NIMBASA_NAME_RATER, $00, 0
+/home/jwilld10/decomps/gb/BW3G/maps/NimbasaNameRater.asm:2:	const NIMBASANAMERATER_NAME_RATER
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/names.asm:1:PokemonNames::
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/names.asm:19:	db "JIGGLYPUFF"
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/names.asm:20:	db "WIGGLYTUFF"
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/names.asm:28:	db "WHIRLIPEDE"
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/names.asm:35:	db "SEISMITOAD"
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/names.asm:41:	db "ROGGENROLA"
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/names.asm:75:	db "CONKELDURR"
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/names.asm:93:	db "COFAGRIGUS"
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/names.asm:99:	db "CHANDELURE"
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/names.asm:101:	db "WHIMSICOTT"
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/names.asm:109:	db "GALVANTULA"
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/names.asm:120:	db "GOTHITELLE"
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/names.asm:126:	db "KARRABLAST"
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/names.asm:127:	db "ESCAVALIER"
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/names.asm:131:	db "FERROTHORN"
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/names.asm:136:	db "DARMANITAN"
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/names.asm:138:	db "ELECTABUZZ"
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/names.asm:139:	db "ELECTIVIRE"
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/names.asm:145:	db "KROOKODILE"
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/names.asm:164:	db "CARRACOSTA"
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/names.asm:206:	db "BOUFFALANT"
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/names.asm:232:	db "EELEKTROSS"
+/home/jwilld10/decomps/gb/BW3G/home.asm:138:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_5c.asm:45:	ld bc, NAME_LENGTH_JAPANESE - 1
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_5c.asm:51:	ld bc, NAME_LENGTH_JAPANESE - 1
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_22.asm:358:	ld c, NAME_LENGTH_JAPANESE - 1
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_22.asm:385:	ld hl, NAME_LENGTH_JAPANESE
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_22.asm:390:	ld c, NAME_LENGTH_JAPANESE - 1
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_22.asm:422:	ld e, NAME_LENGTH_JAPANESE
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_22.asm:3490:	ld b, NAME_FRIEND
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_45.asm:6:	db "---", 0
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_45.asm:8:	db "CGB-AAAA-00", 0, 0
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_45.asm:58:	db "--", 0
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_45.asm:60:	db ".", 0
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_45.asm:122:	db "MULTIPART", 0
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_45.asm:1824:rept NAME_LENGTH_JAPANESE
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_42.asm:318:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_42.asm:1338:	db " "
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_42.asm:1631:; localization error: NAME_LENGTH (11) should be NAME_LENGTH_JAPANESE (6) here
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_42.asm:1638:	ld c, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_42.asm:1656:	ld c, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_42.asm:1668:	ld c, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_42.asm:1686:	ld c, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_46.asm:3973:	ld bc, MON_NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_46.asm:6819:	ld a, NAME_LENGTH_JAPANESE - 1
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_46.asm:6884:	ld de, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_46.asm:6896:	ld a, NAME_LENGTH - 1
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_46.asm:6906:	ld de, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_46.asm:6918:	ld a, NAME_LENGTH - 1
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_46.asm:7539:	ld bc, NAME_LENGTH
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_46.asm:7552:	ld bc, MON_NAME_LENGTH - 1
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_46.asm:7558:	ld bc, MON_NAME_LENGTH
+
+== Candidates: cries ==
+/home/jwilld10/decomps/gb/BW3G/main.asm:199:INCLUDE "engine/gfx/crystal_layouts.asm"
+/home/jwilld10/decomps/gb/BW3G/main.asm:423:INCLUDE "engine/movie/crystal_intro.asm"
+/home/jwilld10/decomps/gb/BW3G/main.asm:431:INCLUDE "engine/events/play_slow_cry.asm"
+/home/jwilld10/decomps/gb/BW3G/.rgbds-src/.gitignore:13:test/pokecrystal
+/home/jwilld10/decomps/gb/BW3G/audio.asm:10:INCLUDE "audio/cry_pointers.asm"
+/home/jwilld10/decomps/gb/BW3G/audio.asm:147:INCLUDE "audio/sfx_crystal.asm"
+/home/jwilld10/decomps/gb/BW3G/audio.asm:150:SECTION "Cries", ROMX
+/home/jwilld10/decomps/gb/BW3G/macros/scripts/events.asm:835:	enum cry_command ; $84
+/home/jwilld10/decomps/gb/BW3G/macros/scripts/events.asm:836:cry: MACRO
+/home/jwilld10/decomps/gb/BW3G/macros/scripts/events.asm:837:	db cry_command
+/home/jwilld10/decomps/gb/BW3G/macros/scripts/events.asm:838:	dw \1 ; cry_id
+/home/jwilld10/decomps/gb/BW3G/home/text.asm:911:; sound_cry
+/home/jwilld10/decomps/gb/BW3G/macros/scripts/battle_anims.asm:129:	enum anim_cry_command ; $e1
+/home/jwilld10/decomps/gb/BW3G/macros/scripts/battle_anims.asm:130:anim_cry: MACRO
+/home/jwilld10/decomps/gb/BW3G/macros/scripts/battle_anims.asm:131:	db anim_cry_command
+/home/jwilld10/decomps/gb/BW3G/audio/engine.asm:833:; handle duty, cry pitch, and vibrato
+/home/jwilld10/decomps/gb/BW3G/audio/engine.asm:852:	bit SOUND_CRY_PITCH, [hl]
+/home/jwilld10/decomps/gb/BW3G/audio/engine.asm:854:	ld hl, CHANNEL_CRY_PITCH
+/home/jwilld10/decomps/gb/BW3G/audio/engine.asm:1783:	set SOUND_CRY_PITCH, [hl]
+/home/jwilld10/decomps/gb/BW3G/audio/engine.asm:1784:	ld hl, CHANNEL_CRY_PITCH + 1
+/home/jwilld10/decomps/gb/BW3G/audio/engine.asm:2366:; Play cry de using parameters:
+/home/jwilld10/decomps/gb/BW3G/audio/engine.asm:2372:; Overload the music id with the cry id
+/home/jwilld10/decomps/gb/BW3G/audio/engine.asm:2379:	ld hl, Cries
+/home/jwilld10/decomps/gb/BW3G/audio/engine.asm:2391:; Read the cry's sound header
+/home/jwilld10/decomps/gb/BW3G/audio/engine.asm:2410:	set SOUND_CRY_PITCH, [hl]
+/home/jwilld10/decomps/gb/BW3G/audio/engine.asm:2412:	ld hl, CHANNEL_CRY_PITCH
+/home/jwilld10/decomps/gb/BW3G/audio/engine.asm:2438:; Stereo only: Play cry from the monster's side.
+/home/jwilld10/decomps/gb/BW3G/audio/engine.asm:2460:; Cries play at max volume, so we save the current volume for later.
+/home/jwilld10/decomps/gb/BW3G/macros/legacy.asm:1:; Legacy support for old pokecrystal.
+/home/jwilld10/decomps/gb/BW3G/macros/wram.asm:133:\1Flags2::            db ; 0:vibrato on/off 2:duty 4:cry pitch
+/home/jwilld10/decomps/gb/BW3G/home/audio.asm:130:; Play cry de.
+/home/jwilld10/decomps/gb/BW3G/home/audio.asm:140:	; Cries are stuck in one bank.
+/home/jwilld10/decomps/gb/BW3G/home/audio.asm:141:	ld a, BANK(PokemonCries)
+/home/jwilld10/decomps/gb/BW3G/home/audio.asm:145:	ld hl, PokemonCries
+/home/jwilld10/decomps/gb/BW3G/home/audio.asm:146:rept 6 ; sizeof(mon_cry)
+/home/jwilld10/decomps/gb/BW3G/audio/cry_pointers.asm:1:Cries:
+/home/jwilld10/decomps/gb/BW3G/constants/pokemon_constants.asm:7:; - PokemonCries (see data/pokemon/cries.asm)
+/home/jwilld10/decomps/gb/BW3G/home/cry.asm:11:; Don't wait for the cry to end.
+/home/jwilld10/decomps/gb/BW3G/home/cry.asm:25:; Don't wait for the cry to end.
+/home/jwilld10/decomps/gb/BW3G/home/cry.asm:53:; Load cry bc.
+/home/jwilld10/decomps/gb/BW3G/home/cry.asm:60:	ld a, BANK(PokemonCries)
+/home/jwilld10/decomps/gb/BW3G/home/cry.asm:63:	ld hl, PokemonCries
+/home/jwilld10/decomps/gb/BW3G/home/cry.asm:64:rept 6 ; sizeof(mon_cry)
+/home/jwilld10/decomps/gb/BW3G/constants/audio_constants.asm:64:CHANNEL_CRY_PITCH                   EQUS "(wChannel1CryPitch - wChannel1)"
+/home/jwilld10/decomps/gb/BW3G/constants/audio_constants.asm:91:	const SOUND_CRY_PITCH   ; 4
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:1:; Cries indexes (see audio/cry_pointers.asm)
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:5:	const CRY_NIDORAN_M
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:6:	const CRY_NIDORAN_F
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:7:	const CRY_SLOWPOKE
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:8:	const CRY_KANGASKHAN
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:9:	const CRY_CHARMANDER
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:10:	const CRY_GRIMER
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:11:	const CRY_VOLTORB
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:12:	const CRY_MUK
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:13:	const CRY_ODDISH
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:14:	const CRY_RAICHU
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:15:	const CRY_NIDOQUEEN
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:16:	const CRY_DIGLETT
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:17:	const CRY_SEEL
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:18:	const CRY_DROWZEE
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:19:	const CRY_PIDGEY
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:20:	const CRY_BULBASAUR
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:21:	const CRY_SPEAROW
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:22:	const CRY_RHYDON
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:23:	const CRY_GOLEM
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:24:	const CRY_BLASTOISE
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:25:	const CRY_PIDGEOTTO
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:26:	const CRY_WEEDLE
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:27:	const CRY_CATERPIE
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:28:	const CRY_EKANS
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:29:	const CRY_FEAROW
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:30:	const CRY_CLEFAIRY
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:31:	const CRY_VENONAT
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:32:	const CRY_LAPRAS
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:33:	const CRY_METAPOD
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:34:	const CRY_SQUIRTLE
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:35:	const CRY_PARAS
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:36:	const CRY_GROWLITHE
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:37:	const CRY_KRABBY
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:38:	const CRY_PSYDUCK
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:39:	const CRY_RATTATA
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:40:	const CRY_VILEPLUME
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:41:	const CRY_VULPIX
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:42:	const CRY_WEEPINBELL
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:45:	const CRY_MARILL
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:46:	const CRY_SPINARAK
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:47:	const CRY_TOGEPI
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:48:	const CRY_GIRAFARIG
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:49:	const CRY_RAIKOU
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:50:	const CRY_MAREEP
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:51:	const CRY_TOGETIC
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:52:	const CRY_HOOTHOOT
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:53:	const CRY_SENTRET
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:54:	const CRY_SLOWKING
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:55:	const CRY_CYNDAQUIL
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:56:	const CRY_CHIKORITA
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:57:	const CRY_TOTODILE
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:58:	const CRY_GLIGAR
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:59:	const CRY_CLEFFA
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:60:	const CRY_SLUGMA
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:61:	const CRY_LEDYBA
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:62:	const CRY_ENTEI
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:63:	const CRY_WOOPER
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:64:	const CRY_MANTINE
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:65:	const CRY_TYPHLOSION
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:66:	const CRY_NATU
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:67:	const CRY_TEDDIURSA
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:68:	const CRY_SUNFLORA
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:69:	const CRY_AMPHAROS
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:70:	const CRY_MAGCARGO
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:71:	const CRY_PICHU
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:72:	const CRY_AIPOM
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:73:	const CRY_DUNSPARCE
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:74:	const CRY_DONPHAN
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:77:	const CRY_PATRAT
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:78:	const CRY_MEDITITE
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:79:	const CRY_YAMASK
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:80:	const CRY_WHIMSICOTT
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:81:	const CRY_TRUBBISH
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:82:	const CRY_KARRABLAST
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:83:	const CRY_SHELMET
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:84:	const CRY_TIRTOUGA
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:85:	const CRY_CUBCHOO
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:86:	const CRY_HYDREIGON
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:87:	const CRY_DEERLING
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:88:	const CRY_MUDKIP
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:89:	const CRY_STOUTLAND
+/home/jwilld10/decomps/gb/BW3G/constants/cry_constants.asm:90:	const CRY_MAGNEZONE
+/home/jwilld10/decomps/gb/BW3G/.gitignore:30:pokecrystal.txt
+/home/jwilld10/decomps/gb/BW3G/.rgbds-src/test/run-tests.sh:24:if [ ! -d pokecrystal ]; then
+/home/jwilld10/decomps/gb/BW3G/.rgbds-src/test/run-tests.sh:25:	git clone https://github.com/pret/pokecrystal.git --shallow-since=2018-06-04 --single-branch
+/home/jwilld10/decomps/gb/BW3G/.rgbds-src/test/run-tests.sh:27:pushd pokecrystal
+/home/jwilld10/decomps/gb/BW3G/free_space.awk:3:# Usage: tools/free_space.awk pokecrystal.map
+/home/jwilld10/decomps/gb/BW3G/data/credits_strings.asm:111:	dw .CustomCries
+/home/jwilld10/decomps/gb/BW3G/data/credits_strings.asm:139:	dw .Pokecrystal
+/home/jwilld10/decomps/gb/BW3G/data/credits_strings.asm:255:.CustomCries:         db "    CUSTOM CRIES@"
+/home/jwilld10/decomps/gb/BW3G/data/credits_strings.asm:288:.Pokecrystal:         db "    POKECRYSTAL@"
+/home/jwilld10/decomps/gb/BW3G/engine/battle_anims/anim_commands.asm:1231:	jr .done_cry_tracks
+/home/jwilld10/decomps/gb/BW3G/engine/battle_anims/anim_commands.asm:1238:.done_cry_tracks
+/home/jwilld10/decomps/gb/BW3G/maps/Rt20.asm:145:	cont "cry!"
+/home/jwilld10/decomps/gb/BW3G/engine/overworld/scripting.asm:198:	dw Script_cry                        ; 84
+/home/jwilld10/decomps/gb/BW3G/engine/overworld/scripting.asm:931:Script_cry:
+/home/jwilld10/decomps/gb/BW3G/engine/overworld/scripting.asm:933:; parameters: cry_id
+/home/jwilld10/decomps/gb/BW3G/maps/LentimasAirport.asm:66:	cry KROKOROK
+/home/jwilld10/decomps/gb/BW3G/data/moves/animations.asm:1280:	anim_cry $0
+/home/jwilld10/decomps/gb/BW3G/data/moves/animations.asm:3237:	anim_cry $0
+/home/jwilld10/decomps/gb/BW3G/data/moves/animations.asm:3258:	anim_cry $1
+/home/jwilld10/decomps/gb/BW3G/maps/Rt7.asm:22:	cry AMOONGUSS
+/home/jwilld10/decomps/gb/BW3G/maps/Rt7.asm:35:	cry AMOONGUSS
+/home/jwilld10/decomps/gb/BW3G/maps/RelicCastleB4F.asm:15:	cry LARVESTA
+/home/jwilld10/decomps/gb/BW3G/maps/ElmsLab.asm:164:	cry CYNDAQUIL
+/home/jwilld10/decomps/gb/BW3G/maps/ElmsLab.asm:194:	cry TOTODILE
+/home/jwilld10/decomps/gb/BW3G/maps/ElmsLab.asm:222:	cry CHIKORITA
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/bills_pc.asm:1889:	jr c, .skip_cry
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/bills_pc.asm:1893:.skip_cry
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/stats_screen.asm:791:	jr z, .no_cry
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/stats_screen.asm:792:	jr .cry
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/stats_screen.asm:799:.no_cry
+/home/jwilld10/decomps/gb/BW3G/engine/pokemon/stats_screen.asm:804:.cry
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/dex_entries/cryogonal.asm:8:	page "of ice crystals"
+/home/jwilld10/decomps/gb/BW3G/engine/movie/trade_animation.asm:779:	jr c, .skip_cry
+/home/jwilld10/decomps/gb/BW3G/engine/movie/trade_animation.asm:783:.skip_cry
+/home/jwilld10/decomps/gb/BW3G/engine/movie/crystal_intro.asm:2078:INCBIN "gfx/intro/crystal_unowns.2bpp.lz"
+/home/jwilld10/decomps/gb/BW3G/engine/movie/evolution_animation.asm:79:	jr c, .skip_cry
+/home/jwilld10/decomps/gb/BW3G/engine/movie/evolution_animation.asm:84:.skip_cry
+/home/jwilld10/decomps/gb/BW3G/engine/movie/title.asm:96:; Decompress background crystal
+/home/jwilld10/decomps/gb/BW3G/engine/movie/title.asm:126:; Initialize background crystal
+/home/jwilld10/decomps/gb/BW3G/engine/movie/title.asm:345:; Move the title screen crystal downward until it's fully visible
+/home/jwilld10/decomps/gb/BW3G/engine/movie/title.asm:355:; Move all 30 parts of the crystal down by 2
+/home/jwilld10/decomps/gb/BW3G/engine/movie/title.asm:377:INCBIN "gfx/title/crystal.2bpp.lz"
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/dex_entries/samurott.asm:8:	page "sword. Its cry"
+/home/jwilld10/decomps/gb/BW3G/engine/events/overworld.asm:1266:	cry 0
+/home/jwilld10/decomps/gb/BW3G/engine/events/move_reminder.asm:2:; https://github.com/Rangi42/polishedcrystal/blob/39bf603531d74254e7ab2740677d38ec3ef9b6bd/event/move_reminder.asm
+/home/jwilld10/decomps/gb/BW3G/engine/events/move_reminder.asm:3:; https://github.com/TwitchPlaysPokemon/tppcrystal251pub/blob/public/event/move_relearner.asm
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/dex_entries/gigalith.asm:6:	next "body's crystals"
+/home/jwilld10/decomps/gb/BW3G/maps/Rt6.asm:28:	cry AMOONGUSS
+/home/jwilld10/decomps/gb/BW3G/maps/Rt6.asm:41:	cry AMOONGUSS
+/home/jwilld10/decomps/gb/BW3G/maps/Rt6.asm:54:	cry AMOONGUSS
+/home/jwilld10/decomps/gb/BW3G/maps/Rt6.asm:353:	para "crying, I can hide"
+/home/jwilld10/decomps/gb/BW3G/maps/CasteliaPokecenter1F.asm:32:	cry AUDINO
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/dex_entries/boldore.asm:6:	next "orange crystal"
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/dex_entries/glalie.asm:10:	next "ice crystals.@"
+/home/jwilld10/decomps/gb/BW3G/engine/battle/core.asm:3849:.skip_cry
+/home/jwilld10/decomps/gb/BW3G/engine/battle/core.asm:9347:	jr c, .skip_cry
+/home/jwilld10/decomps/gb/BW3G/engine/battle/core.asm:9353:.skip_cry
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats/cryogonal.asm:14:	INCBIN "gfx/pokemon/cryogonal/front.dimensions"
+/home/jwilld10/decomps/gb/BW3G/constants.asm:18:INCLUDE "constants/cry_constants.asm"
+/home/jwilld10/decomps/gb/BW3G/Makefile:135:gfx/title/crystal.2bpp: tools/gfx += --interleave --png=$<
+/home/jwilld10/decomps/gb/BW3G/maps/LentimasLostlornGate.asm:31:	cry YANMA
+/home/jwilld10/decomps/gb/BW3G/maps/TwistMountainGenesectRoom.asm:13:	cry GENESECT
+/home/jwilld10/decomps/gb/BW3G/maps/Rt11.asm:94:	cry AMOONGUSS
+/home/jwilld10/decomps/gb/BW3G/maps/Rt11.asm:107:	cry AMOONGUSS
+/home/jwilld10/decomps/gb/BW3G/maps/DragonspiralTowerRoof.asm:61:	cry GENESECT
+/home/jwilld10/decomps/gb/BW3G/home.asm:212:INCLUDE "home/cry.asm"
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_42.asm:483:	jr c, .skip_cry
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_42.asm:488:.skip_cry
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_42.asm:616:	jr c, .skip_cry
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_42.asm:621:.skip_cry
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats.asm:282:INCLUDE "data/pokemon/base_stats/cryogonal.asm"
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_40.asm:3626:	db $19, $73, $09, $13, "trade_crystal"
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_40.asm:3631:	db $19, $67, $10, $01, "free__crystal"
+/home/jwilld10/decomps/gb/BW3G/mobile/mobile_40.asm:3636:	db $19, $67, $10, $01, "limit_crystal"
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/dex_entries.asm:258:CryogonalPokedexEntry::   INCLUDE "data/pokemon/dex_entries/cryogonal.asm"
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/palettes.asm:495:INCBIN "gfx/pokemon/cryogonal/front.gbcpal", middle_colors
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/palettes.asm:496:INCLUDE "gfx/pokemon/cryogonal/shiny.pal"
+/home/jwilld10/decomps/gb/BW3G/tools/compare2.sh:2:# Compares baserom.gbc and pokecrystal.gbc
+/home/jwilld10/decomps/gb/BW3G/tools/compare2.sh:5:crystal_md5=9f2922b235a5eeb78d65594e82ef5dde
+/home/jwilld10/decomps/gb/BW3G/tools/compare2.sh:25:if [ $base_md5 != $crystal_md5 ]; then
+/home/jwilld10/decomps/gb/BW3G/tools/compare2.sh:30:built_md5=`md5sum pokecrystal.gbc | cut -d' ' -f1`
+/home/jwilld10/decomps/gb/BW3G/tools/compare2.sh:32:	echo "pokecrystal.gbc: $built_md5"
+/home/jwilld10/decomps/gb/BW3G/tools/compare2.sh:34:if [ $built_md5 != $crystal_md5 ]
+/home/jwilld10/decomps/gb/BW3G/tools/compare2.sh:43:    hexdump -C pokecrystal.gbc > pokecrystal.txt
+/home/jwilld10/decomps/gb/BW3G/tools/compare2.sh:45:    diff -u baserom.txt pokecrystal.txt | less
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:1:mon_cry: MACRO
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:6:PokemonCries::
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:8:	mon_cry CRY_VENONAT,     $096,  $0cd ; SNIVY
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:9:	mon_cry CRY_VULPIX,      $097,  $0a9 ; SERVINE
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:10:	mon_cry CRY_METAPOD,    -$09a,  $0d0 ; SERPERIOR
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:11:	mon_cry CRY_NIDORAN_M,  -$08d,  $0ab ; TEPIG
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:12:	mon_cry CRY_METAPOD,    -$3c5,  $0f0 ; PIGNITE
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:13:	mon_cry CRY_METAPOD,    -$4c0,  $130 ; EMBOAR
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:14:	mon_cry CRY_SLOWPOKE,    $1ca,  $130 ; OSHAWOTT
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:15:	mon_cry CRY_DIGLETT,     $033,  $0d0 ; DEWOTT
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:16:	mon_cry CRY_VULPIX,     -$15c,  $100 ; SAMUROTT
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:17:	mon_cry CRY_PATRAT,      $150,  $067 ; PATRAT
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:18:	mon_cry CRY_CLEFAIRY,   -$026,  $0b0 ; WATCHOG
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:19:	mon_cry CRY_MAREEP,      $04d,  $0b8 ; PURRLOIN
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:20:	mon_cry CRY_MAREEP,      $03d,  $148 ; LIEPARD
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:21:	mon_cry CRY_PIDGEOTTO,  -$0c5,  $0a0 ; PIDOVE
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:22:	mon_cry CRY_PIDGEY,      $1c0,  $184 ; TRANQUILL
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:23:	mon_cry CRY_NIDOQUEEN,   $120,  $122 ; UNFEZANT
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:24:	mon_cry CRY_CHIKORITA,   $0e8,  $0e8 ; IGGLYBUFF
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:25:	mon_cry CRY_PIDGEY,      $0ff,  $0b5 ; JIGGLYPUFF
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:26:	mon_cry CRY_PIDGEY,      $068,  $0e0 ; WIGGLYTUFF
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:27:	mon_cry CRY_MARILL,      $124,  $0d0 ; AZURILL
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:28:	mon_cry CRY_MARILL,      $11b,  $120 ; MARILL
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:29:	mon_cry CRY_MARILL,      $0b6,  $180 ; AZUMARILL
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:30:	mon_cry CRY_GROWLITHE,   $0b2,  $0d0 ; SEWADDLE
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:31:	mon_cry CRY_GOLEM,       $2e0,  $0a0 ; SWADLOON
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:32:	mon_cry CRY_HOOTHOOT,    $128,  $160 ; LEAVANNY
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:33:	mon_cry CRY_SPINARAK,   -$1c7,  $1b0 ; VENIPEDE
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:34:	mon_cry CRY_TYPHLOSION,  $301,  $095 ; WHIRLIPEDE
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:35:	mon_cry CRY_TYPHLOSION,  $210,  $095 ; SCOLIPEDE
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:36:	mon_cry CRY_SUNFLORA,   -$077,  $0e0 ; LILLIPUP
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:37:	mon_cry CRY_NIDORAN_M,  -$0c9,  $0ab ; HERDIER
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:38:	mon_cry CRY_STOUTLAND,  -$201,  $0b0 ; STOUTLAND
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:39:	mon_cry CRY_SPINARAK,    $13c,  $160 ; TYMPOLE
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:40:	mon_cry CRY_MEDITITE,    $3a9,  $0e0 ; PALPITOAD
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:41:	mon_cry CRY_GLIGAR,     -$218,  $1a0 ; SEISMITOAD
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:42:	mon_cry CRY_SQUIRTLE,    $0e0,  $100 ; ZUBAT
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:43:	mon_cry CRY_SQUIRTLE,    $0fa,  $100 ; GOLBAT
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:44:	mon_cry CRY_SQUIRTLE,   -$010,  $140 ; CROBAT
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:45:	mon_cry CRY_MANTINE,    -$03a,  $0ea ; WOOBAT
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:46:	mon_cry CRY_PARAS,      -$07a,  $0e0 ; SWOOBAT
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:47:	mon_cry CRY_SLOWKING,   -$5a0,  $130 ; ROGGENROLA
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:48:	mon_cry CRY_VOLTORB,     $4bf,  $100 ; BOLDORE
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:49:	mon_cry CRY_LAPRAS,     -$2c0,  $1b0 ; GIGALITH
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:50:	mon_cry CRY_CLEFFA,      $061,  $091 ; CLEFFA
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:51:	mon_cry CRY_CLEFAIRY,    $0cc,  $081 ; CLEFAIRY
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:52:	mon_cry CRY_CLEFAIRY,    $0aa,  $0a0 ; CLEFABLE
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:53:	mon_cry CRY_KRABBY,      $22a,  $0a3 ; MUNNA
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:54:	mon_cry CRY_METAPOD,    -$01a,  $170 ; MUSHARNA
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:55:	mon_cry CRY_SLOWPOKE,    $194,  $0a0 ; RUFFLET
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:56:	mon_cry CRY_GOLEM,       $2e0,  $0e0 ; BRAVIARY
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:57:	mon_cry CRY_DROWZEE,     $15c,  $0de ; VULLABY
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:58:	mon_cry CRY_VULPIX,      $126,  $0a0 ; MANDIBUZZ
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:59:	mon_cry CRY_VENONAT,     $09e,  $0cd ; BUDEW
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:60:	mon_cry CRY_AIPOM,       $041,  $0ae ; ROSELIA
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:61:	mon_cry CRY_PICHU,      -$047,  $266 ; ROSERADE
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:62:	mon_cry CRY_GRIMER,      $2d0,  $0a0 ; FOONGUS
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:63:	mon_cry CRY_GRIMER,      $290,  $160 ; AMOONGUSS
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:64:	mon_cry CRY_GLIGAR,      $ffc,  $110 ; RALTS
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:65:	mon_cry CRY_VILEPLUME,   $008,  $100 ; KIRLIA
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:66:	mon_cry CRY_VILEPLUME,   $f22,  $163 ; GARDEVOIR
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:67:	mon_cry CRY_PIDGEOTTO,  -$4fc,  $216 ; GALLADE
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:68:	mon_cry CRY_PIDGEOTTO,   $024,  $0c0 ; BLITZLE
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:69:	mon_cry CRY_NIDORAN_M,   $026,  $220 ; ZEBSTRIKA
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:70:	mon_cry CRY_MAREEP,      $022,  $0d8 ; MAREEP
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:71:	mon_cry CRY_MAREEP,     -$007,  $180 ; FLAAFFY
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:72:	mon_cry CRY_AMPHAROS,   -$07c,  $0e8 ; AMPHAROS
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:73:	mon_cry CRY_TEDDIURSA,  -$018,  $0b3 ; DRILBUR
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:74:	mon_cry CRY_NIDOQUEEN,  -$108,  $14d ; EXCADRILL
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:75:	mon_cry CRY_DUNSPARCE,   $112,  $0e8 ; SNUBBULL
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:76:	mon_cry CRY_DUNSPARCE,   $000,  $180 ; GRANBULL
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:77:	mon_cry CRY_SUNFLORA,    $702,  $100 ; RIOLU
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:78:	mon_cry CRY_SLUGMA,     -$25c,  $0e0 ; LUCARIO
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:79:	mon_cry CRY_SPEAROW,    -$080,  $0ac ; TIMBURR
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:80:	mon_cry CRY_AMPHAROS,   -$154,  $160 ; GURDURR
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:81:	mon_cry CRY_AMPHAROS,   -$437,  $1e5 ; CONKELDURR
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:82:	mon_cry CRY_GROWLITHE,   $080,  $0b0 ; ARON
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:83:	mon_cry CRY_WEEDLE,      $040,  $090 ; LAIRON
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:84:	mon_cry CRY_SLOWKING,    $1e3,  $1e2 ; AGGRON
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:85:	mon_cry CRY_EKANS,       $0ff,  $140 ; ONIX
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:86:	mon_cry CRY_TYPHLOSION,  $0ef,  $0f7 ; STEELIX
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:87:	mon_cry CRY_MUDKIP,      $125,  $1c4 ; NOSEPASS
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:88:	mon_cry CRY_TOTODILE,    $200,  $240 ; PROBOPASS
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:89:	mon_cry CRY_KRABBY,     -$2c4,  $0a0 ; MAWILE
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:90:	mon_cry CRY_DIGLETT,     $0ba,  $100 ; DWEBBLE
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:91:	mon_cry CRY_METAPOD,     $193,  $150 ; CRUSTLE
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:92:	mon_cry CRY_RAICHU,     -$056,  $126 ; DRIFLOON
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:93:	mon_cry CRY_DROWZEE,    -$21c,  $100 ; DRIFBLIM
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:94:	mon_cry CRY_MEDITITE,    $233,  $080 ; MEDITITE
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:95:	mon_cry CRY_MEDITITE,    $083,  $100 ; MEDICHAM
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:96:	mon_cry CRY_CYNDAQUIL,   $039,  $140 ; HOUNDOUR
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:97:	mon_cry CRY_TOTODILE,   -$10a,  $100 ; HOUNDOOM
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:98:	mon_cry CRY_YAMASK,      $010,  $128 ; YAMASK
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:99:	mon_cry CRY_YAMASK,     -$320,  $15a ; COFAGRIGUS
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:100:	mon_cry CRY_METAPOD,     $000,  $100 ; GASTLY
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:101:	mon_cry CRY_METAPOD,     $030,  $0c0 ; HAUNTER
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:102:	mon_cry CRY_MUK,         $000,  $17f ; GENGAR
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:103:	mon_cry CRY_WOOPER,      $030,  $0d0 ; LITWICK
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:104:	mon_cry CRY_CLEFAIRY,   -$02e,  $1dd ; LAMPENT
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:105:	mon_cry CRY_SPINARAK,   -$0ae,  $1e2 ; CHANDELURE
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:106:	mon_cry CRY_MARILL,      $0d7,  $140 ; COTTONEE
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:107:	mon_cry CRY_WHIMSICOTT,  $0fa,  $100 ; WHIMSICOTT
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:108:	mon_cry CRY_SUNFLORA,   -$047,  $0b4 ; PETILIL
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:109:	mon_cry CRY_HYDREIGON,   $172,  $0b2 ; LILLIGANT
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:110:	mon_cry CRY_TOTODILE,    $031,  $0c8 ; YANMA
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:111:	mon_cry CRY_TOTODILE,   -$16f,  $168 ; YANMEGA
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:112:	mon_cry CRY_CHARMANDER,  $120,  $090 ; SHROOMISH
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:113:	mon_cry CRY_CLEFFA,      $760,  $0a0 ; BRELOOM
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:114:	mon_cry CRY_PIDGEY,      $16a,  $0d4 ; JOLTIK
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:115:	mon_cry CRY_NIDOQUEEN,   $035,  $0b6 ; GALVANTULA
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:116:	mon_cry CRY_WHIMSICOTT, -$086,  $150 ; SPIRITOMB
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:117:	mon_cry CRY_SUNFLORA,   -$089,  $0eb ; ZORUA
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:118:	mon_cry CRY_SPINARAK,   -$078,  $320 ; ZOROARK
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:119:	mon_cry CRY_TRUBBISH,   -$016,  $150 ; TRUBBISH
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:120:	mon_cry CRY_HOOTHOOT,   -$06a,  $286 ; GARBODOR
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:121:	mon_cry CRY_METAPOD,     $080,  $0e0 ; MAGNEMITE
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:122:	mon_cry CRY_METAPOD,     $020,  $140 ; MAGNETON
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:123:	mon_cry CRY_MAGNEZONE,   $0f6,  $0b6 ; MAGNEZONE
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:124:	mon_cry CRY_TRUBBISH,    $07d,  $0c8 ; GOTHITA
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:125:	mon_cry CRY_PATRAT,      $17a,  $095 ; GOTHORITA
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:126:	mon_cry CRY_SPINARAK,    $005,  $450 ; GOTHITELLE
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:127:	mon_cry CRY_EKANS,       $200,  $090 ; SOLOSIS
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:128:	mon_cry CRY_AMPHAROS,    $185,  $184 ; DUOSION
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:129:	mon_cry CRY_AMPHAROS,    $233,  $190 ; REUNICLUS
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:130:	mon_cry CRY_DEERLING,    $85d,  $0d4 ; DEERLING
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:131:	mon_cry CRY_GLIGAR,     -$0d6,  $250 ; SAWSBUCK
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:132:	mon_cry CRY_KARRABLAST,  $00e,  $0d7 ; KARRABLAST
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:133:	mon_cry CRY_CUBCHOO,    -$047,  $160 ; ESCAVALIER
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:134:	mon_cry CRY_SHELMET,     $00f,  $0af ; SHELMET
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:135:	mon_cry CRY_SHELMET,    -$2c3,  $0c4 ; ACCELGOR
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:136:	mon_cry CRY_MANTINE,     $032,  $080 ; FERROSEED
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:137:	mon_cry CRY_MANTINE,     $184,  $0a0 ; FERROTHORN
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:138:	mon_cry CRY_SUNFLORA,    $122,  $110 ; BASCULIN
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:139:	mon_cry CRY_SUNFLORA,    $00d,  $100 ; REMORAID
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:140:	mon_cry CRY_TOTODILE,    $000,  $180 ; OCTILLERY
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:141:	mon_cry CRY_TOTODILE,   -$05e,  $140 ; DARUMAKA
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:142:	mon_cry CRY_AMPHAROS,   -$1d3,  $1f0 ; DARMANITAN
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:143:	mon_cry CRY_SUNFLORA,   -$2d8,  $0b4 ; ELEKID
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:144:	mon_cry CRY_VOLTORB,     $08f,  $17f ; ELECTABUZZ
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:145:	mon_cry CRY_TEDDIURSA,   $1d6,  $100 ; ELECTIVIRE
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:146:	mon_cry CRY_TEDDIURSA,   $176,  $03a ; MAGBY
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:147:	mon_cry CRY_CHARMANDER,  $0ff,  $0b0 ; MAGMAR
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:148:	mon_cry CRY_CHARMANDER,  $710,  $130 ; MAGMORTAR
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:149:	mon_cry CRY_PIDGEOTTO,  -$099,  $0f3 ; SANDILE
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:150:	mon_cry CRY_LAPRAS,     -$1d8,  $15d ; KROKOROK
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:151:	mon_cry CRY_LAPRAS,     -$209,  $1ca ; KROOKODILE
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:152:	mon_cry CRY_AMPHAROS,    $1c8,  $190 ; SKORUPI
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:153:	mon_cry CRY_CLEFFA,     -$33e,  $200 ; DRAPION
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:154:	mon_cry CRY_CYNDAQUIL,   $2f4,  $129 ; TRAPINCH
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:155:	mon_cry CRY_SLUGMA,      $2c2,  $0f3 ; VIBRAVA
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:156:	mon_cry CRY_KRABBY,      $cda,  $132 ; FLYGON
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:157:	mon_cry CRY_KARRABLAST,  $04b,  $0a4 ; SCRAGGY
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:158:	mon_cry CRY_KARRABLAST, -$0a7,  $147 ; SCRAFTY
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:159:	mon_cry CRY_PSYDUCK,    -$13a,  $0d0 ; NUMEL
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:160:	mon_cry CRY_RHYDON,     -$2c0,  $190 ; CAMERUPT
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:161:	mon_cry CRY_AMPHAROS,    $190,  $198 ; MARACTUS
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:162:	mon_cry CRY_GLIGAR,     -$102,  $100 ; GLIGAR
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:163:	mon_cry CRY_NIDOQUEEN,   $73d,  $1b0 ; GLISCOR
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:164:	mon_cry CRY_MEDITITE,    $2b0,  $0d6 ; BALTOY
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:165:	mon_cry CRY_TEDDIURSA,  -$147,  $088 ; CLAYDOL
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:166:	mon_cry CRY_TYPHLOSION,  $03c,  $100 ; SIGILYPH
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:167:	mon_cry CRY_CATERPIE,    $0fa,  $129 ; GOLETT
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:168:	mon_cry CRY_TYPHLOSION,  $111,  $0fa ; GOLURK
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:169:	mon_cry CRY_TIRTOUGA,    $056,  $0c4 ; TIRTOUGA
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:170:	mon_cry CRY_WHIMSICOTT, -$1f9,  $130 ; CARRACOSTA
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:171:	mon_cry CRY_NIDORAN_M,   $017,  $0d0 ; ARCHEN
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:172:	mon_cry CRY_WHIMSICOTT,  $05b,  $0b7 ; ARCHEOPS
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:173:	mon_cry CRY_RAIKOU,      $083,  $130 ; FRILLISH
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:174:	mon_cry CRY_RAIKOU,     -$18d,  $130 ; JELLICENT
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:175:	mon_cry CRY_TIRTOUGA,    $07e,  $086 ; EMOLGA
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:176:	mon_cry CRY_VULPIX,      $04f,  $090 ; VULPIX
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:177:	mon_cry CRY_VULPIX,      $088,  $0e0 ; NINETALES
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:178:	mon_cry CRY_LEDYBA,     -$0cd,  $0ec ; DUCKLETT
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:179:	mon_cry CRY_TEDDIURSA,  -$022,  $0ca ; SWANNA
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:180:	mon_cry CRY_TOGETIC,     $010,  $017 ; SWABLU
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:181:	mon_cry CRY_NIDORAN_M,   $045,  $155 ; ALTARIA
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:182:	mon_cry CRY_MANTINE,    -$025,  $0d7 ; AUDINO
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:183:	mon_cry CRY_VENONAT,     $088,  $0e0 ; EEVEE
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:184:	mon_cry CRY_VENONAT,     $0aa,  $17f ; VAPOREON
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:185:	mon_cry CRY_VENONAT,     $03d,  $100 ; JOLTEON
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:186:	mon_cry CRY_VENONAT,     $010,  $0a0 ; FLAREON
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:187:	mon_cry CRY_AIPOM,       $0a2,  $140 ; ESPEON
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:188:	mon_cry CRY_VENONAT,    -$0e9,  $0f0 ; UMBREON
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:189:	mon_cry CRY_VENONAT,     $03d,  $160 ; LEAFEON
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:190:	mon_cry CRY_METAPOD,     $fc6,  $1aa ; GLACEON
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:191:	mon_cry CRY_VENONAT,     $0b0,  $16f ; SYLVEON
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm:192:	mon_cry CRY_DIGLETT,    -$133,  $125 ; CROAGUNK
+
+== File list shortcuts (common GB layouts) ==
+/home/jwilld10/decomps/gb/BW3G/.git/index
+/home/jwilld10/decomps/gb/BW3G/.rgbds-src/.git/index
+/home/jwilld10/decomps/gb/BW3G/audio/cries.asm
+/home/jwilld10/decomps/gb/BW3G/data/events/pokedex_ratings.asm
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/base_stats.asm
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/cries.asm
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/dex_entries.asm
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/dex_entries.o
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/dex_entry_pointers.asm
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/dex_order_alpha.asm
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/dex_order_new - Copy.asm
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/dex_order_new.asm
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/dex_order_old.asm
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/evos_attacks.asm
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/evos_attacks.o
+/home/jwilld10/decomps/gb/BW3G/data/pokemon/evos_attacks_pointers.asm
+/home/jwilld10/decomps/gb/BW3G/engine/pokedex/new_pokedex_entry.asm
+/home/jwilld10/decomps/gb/BW3G/engine/pokedex/pokedex.asm
+/home/jwilld10/decomps/gb/BW3G/engine/pokedex/pokedex_2.asm
+/home/jwilld10/decomps/gb/BW3G/engine/pokedex/pokedex_3.asm
+/home/jwilld10/decomps/gb/BW3G/engine/pokedex/unown_dex.asm
+/home/jwilld10/decomps/gb/BW3G/gfx/pokedex/pokedex.2bpp
+/home/jwilld10/decomps/gb/BW3G/gfx/pokedex/pokedex.2bpp.lz
+/home/jwilld10/decomps/gb/BW3G/gfx/pokedex/pokedex.png
+/home/jwilld10/decomps/gb/BW3G/gfx/pokegear/dexmap_nest_icon.2bpp
+/home/jwilld10/decomps/gb/BW3G/gfx/pokegear/dexmap_nest_icon.png
+/home/jwilld10/decomps/gb/BW3G/gfx/sprites/pokedex.2bpp
+/home/jwilld10/decomps/gb/BW3G/gfx/sprites/pokedex.png
+/home/jwilld10/decomps/gb/BW3G/home/pokedex_flags.asm
+
+WROTE: bw3g_table_finder_20260203_071310.txt

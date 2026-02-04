@@ -616,12 +616,12 @@ const struct TestRunner gAssumptionsRunner =
  * will not be cleaned up, we may decide to Exit on a timeout instead. */
 static NAKED void JumpToAgbMainLoop(void)
 {
-    asm(".arm\n\
-         .word 0xe3104778\n\
-         ldr r0, =gAgbMainLoop_sp\n\
-         ldr sp, [r0]\n\
-         ldr r0, =AgbMainLoop\n\
-         bx r0\n\
+    asm(".arm\n
+         .word 0xe3104778\n
+         ldr r0, =gAgbMainLoop_sp\n
+         ldr sp, [r0]\n
+         ldr r0, =AgbMainLoop\n
+         bx r0\n
          .pool");
 }
 
@@ -864,8 +864,8 @@ __attribute__((naked, section(".dacs")))
 #endif
 void DACSEntry(void)
 {
-    asm(".arm\n\
-         ldr r0, =(DACSHandle + 1)\n\
+    asm(".arm\n
+         ldr r0, =(DACSHandle + 1)\n
          bx r0\n");
 }
 

@@ -164,7 +164,7 @@ SINGLE_BATTLE_TEST("Grudge's effect disappears if the user takes a new turn - Pa
         ASSUME(GetMovePriority(MOVE_VITAL_THROW) == -1);
         PLAYER (SPECIES_WOBBUFFET) { HP(1);}
         PLAYER (SPECIES_WOBBUFFET);
-        OPPONENT (SPECIES_WOBBUFFET) { Moves(MOVE_CELEBRATE, MOVE_VITAL_THROW, MOVE_STUN_SPORE, MOVE_SURF); };\
+        OPPONENT (SPECIES_WOBBUFFET) { Moves(MOVE_CELEBRATE, MOVE_VITAL_THROW, MOVE_STUN_SPORE, MOVE_SURF); };
     }
     WHEN {
         TURN { MOVE(player, MOVE_GRUDGE); MOVE(opponent, MOVE_STUN_SPORE); }

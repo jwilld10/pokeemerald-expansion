@@ -61,117 +61,117 @@ static const char *BattlerIdentifier(s32 battlerId);
 
 NAKED static void InvokeSingleTestFunctionWithStack(void *results, u32 i, struct BattlePokemon *player, struct BattlePokemon *opponent, SingleBattleTestFunction function, void *stack)
 {
-    asm("push {r4-r6,lr}\n\
-         ldr r4, [sp, #16] @ function\n\
-         ldr r5, [sp, #20] @ stack\n\
-         mov r6, sp\n\
-         mov sp, r5\n\
-         push {r6}\n\
-         ldr r6, =SingleRestoreSP + 1\n\
-         mov lr, r6\n\
-         bx r4\n\
-    SingleRestoreSP:\n\
-         pop {r0}\n\
-         mov sp, r0\n\
-         pop {r4-r6}\n\
-         pop {r0}\n\
-         bx r0\n\
+    asm("push {r4-r6,lr}\n
+         ldr r4, [sp, #16] @ function\n
+         ldr r5, [sp, #20] @ stack\n
+         mov r6, sp\n
+         mov sp, r5\n
+         push {r6}\n
+         ldr r6, =SingleRestoreSP + 1\n
+         mov lr, r6\n
+         bx r4\n
+    SingleRestoreSP:\n
+         pop {r0}\n
+         mov sp, r0\n
+         pop {r4-r6}\n
+         pop {r0}\n
+         bx r0\n
         .pool");
 }
 
 NAKED static void InvokeDoubleTestFunctionWithStack(void *results, u32 i, struct BattlePokemon *playerLeft, struct BattlePokemon *opponentLeft, struct BattlePokemon *playerRight, struct BattlePokemon *opponentRight, DoubleBattleTestFunction function, void *stack)
 {
-    asm("push {r4-r7,lr}\n\
-         ldr r4, [sp, #28] @ function\n\
-         ldr r5, [sp, #32] @ stack\n\
-         mov r6, sp\n\
-         mov sp, r5\n\
-         push {r6}\n\
-         add r6, #20\n\
-         ldmia r6, {r6, r7} @ playerRight, opponentRight\n\
-         push {r6, r7}\n\
-         ldr r6, =DoubleRestoreSP + 1\n\
-         mov lr, r6\n\
-         bx r4\n\
-    DoubleRestoreSP:\n\
-         add sp, #8\n\
-         pop {r0}\n\
-         mov sp, r0\n\
-         pop {r4-r7}\n\
-         pop {r0}\n\
-         bx r0\n\
+    asm("push {r4-r7,lr}\n
+         ldr r4, [sp, #28] @ function\n
+         ldr r5, [sp, #32] @ stack\n
+         mov r6, sp\n
+         mov sp, r5\n
+         push {r6}\n
+         add r6, #20\n
+         ldmia r6, {r6, r7} @ playerRight, opponentRight\n
+         push {r6, r7}\n
+         ldr r6, =DoubleRestoreSP + 1\n
+         mov lr, r6\n
+         bx r4\n
+    DoubleRestoreSP:\n
+         add sp, #8\n
+         pop {r0}\n
+         mov sp, r0\n
+         pop {r4-r7}\n
+         pop {r0}\n
+         bx r0\n
         .pool");
 }
 
 NAKED static void InvokeMultiTestFunctionWithStack(void *results, u32 i, struct BattlePokemon *playerLeft, struct BattlePokemon *opponentLeft, struct BattlePokemon *playerRight, struct BattlePokemon *opponentRight, MultiBattleTestFunction function, void *stack)
 {
-    asm("push {r4-r7,lr}\n\
-         ldr r4, [sp, #28] @ function\n\
-         ldr r5, [sp, #32] @ stack\n\
-         mov r6, sp\n\
-         mov sp, r5\n\
-         push {r6}\n\
-         add r6, #20\n\
-         ldmia r6, {r6, r7} @ playerRight, opponentRight\n\
-         push {r6, r7}\n\
-         ldr r6, =MultiRestoreSP + 1\n\
-         mov lr, r6\n\
-         bx r4\n\
-    MultiRestoreSP:\n\
-         add sp, #8\n\
-         pop {r0}\n\
-         mov sp, r0\n\
-         pop {r4-r7}\n\
-         pop {r0}\n\
-         bx r0\n\
+    asm("push {r4-r7,lr}\n
+         ldr r4, [sp, #28] @ function\n
+         ldr r5, [sp, #32] @ stack\n
+         mov r6, sp\n
+         mov sp, r5\n
+         push {r6}\n
+         add r6, #20\n
+         ldmia r6, {r6, r7} @ playerRight, opponentRight\n
+         push {r6, r7}\n
+         ldr r6, =MultiRestoreSP + 1\n
+         mov lr, r6\n
+         bx r4\n
+    MultiRestoreSP:\n
+         add sp, #8\n
+         pop {r0}\n
+         mov sp, r0\n
+         pop {r4-r7}\n
+         pop {r0}\n
+         bx r0\n
         .pool");
 }
 
 NAKED static void InvokeTwoVsOneTestFunctionWithStack(void *results, u32 i, struct BattlePokemon *playerLeft, struct BattlePokemon *opponentLeft, struct BattlePokemon *playerRight, struct BattlePokemon *opponentRight, TwoVsOneBattleTestFunction function, void *stack)
 {
-    asm("push {r4-r7,lr}\n\
-         ldr r4, [sp, #28] @ function\n\
-         ldr r5, [sp, #32] @ stack\n\
-         mov r6, sp\n\
-         mov sp, r5\n\
-         push {r6}\n\
-         add r6, #20\n\
-         ldmia r6, {r6, r7} @ playerRight, opponentRight\n\
-         push {r6, r7}\n\
-         ldr r6, =TwoVsOneRestoreSP + 1\n\
-         mov lr, r6\n\
-         bx r4\n\
-    TwoVsOneRestoreSP:\n\
-         add sp, #8\n\
-         pop {r0}\n\
-         mov sp, r0\n\
-         pop {r4-r7}\n\
-         pop {r0}\n\
-         bx r0\n\
+    asm("push {r4-r7,lr}\n
+         ldr r4, [sp, #28] @ function\n
+         ldr r5, [sp, #32] @ stack\n
+         mov r6, sp\n
+         mov sp, r5\n
+         push {r6}\n
+         add r6, #20\n
+         ldmia r6, {r6, r7} @ playerRight, opponentRight\n
+         push {r6, r7}\n
+         ldr r6, =TwoVsOneRestoreSP + 1\n
+         mov lr, r6\n
+         bx r4\n
+    TwoVsOneRestoreSP:\n
+         add sp, #8\n
+         pop {r0}\n
+         mov sp, r0\n
+         pop {r4-r7}\n
+         pop {r0}\n
+         bx r0\n
         .pool");
 }
 
 NAKED static void InvokeOneVsTwoTestFunctionWithStack(void *results, u32 i, struct BattlePokemon *playerLeft, struct BattlePokemon *opponentLeft, struct BattlePokemon *playerRight, struct BattlePokemon *opponentRight, OneVsTwoBattleTestFunction function, void *stack)
 {
-    asm("push {r4-r7,lr}\n\
-         ldr r4, [sp, #28] @ function\n\
-         ldr r5, [sp, #32] @ stack\n\
-         mov r6, sp\n\
-         mov sp, r5\n\
-         push {r6}\n\
-         add r6, #20\n\
-         ldmia r6, {r6, r7} @ playerRight, opponentRight\n\
-         push {r6, r7}\n\
-         ldr r6, =OneVsTwoRestoreSP + 1\n\
-         mov lr, r6\n\
-         bx r4\n\
-    OneVsTwoRestoreSP:\n\
-         add sp, #8\n\
-         pop {r0}\n\
-         mov sp, r0\n\
-         pop {r4-r7}\n\
-         pop {r0}\n\
-         bx r0\n\
+    asm("push {r4-r7,lr}\n
+         ldr r4, [sp, #28] @ function\n
+         ldr r5, [sp, #32] @ stack\n
+         mov r6, sp\n
+         mov sp, r5\n
+         push {r6}\n
+         add r6, #20\n
+         ldmia r6, {r6, r7} @ playerRight, opponentRight\n
+         push {r6, r7}\n
+         ldr r6, =OneVsTwoRestoreSP + 1\n
+         mov lr, r6\n
+         bx r4\n
+    OneVsTwoRestoreSP:\n
+         add sp, #8\n
+         pop {r0}\n
+         mov sp, r0\n
+         pop {r4-r7}\n
+         pop {r0}\n
+         bx r0\n
         .pool");
 }
 
@@ -2615,7 +2615,7 @@ void Move(u32 sourceLine, struct BattlePokemon *battler, struct MoveContext ctx)
 
     // Check party menu moves.
     INVALID_IF(requirePartyIndex && !ctx.explicitPartyIndex, "%S requires explicit party index", GetMoveName(moveId));
-    INVALID_IF(requirePartyIndex && ctx.partyIndex >= ((battlerId & BIT_SIDE) == B_SIDE_PLAYER ? DATA.playerPartySize : DATA.opponentPartySize), \
+    INVALID_IF(requirePartyIndex && ctx.partyIndex >= ((battlerId & BIT_SIDE) == B_SIDE_PLAYER ? DATA.playerPartySize : DATA.opponentPartySize),
                 "MOVE to invalid party index");
 
     if (ctx.explicitHit)
@@ -2909,7 +2909,7 @@ void UseItem(u32 sourceLine, struct BattlePokemon *battler, struct ItemContext c
     INVALID_IF(ctx.itemId >= ITEMS_COUNT, "Illegal item: %d", ctx.itemId);
     // Check party menu items.
     INVALID_IF(requirePartyIndex && !ctx.explicitPartyIndex, "%S requires explicit party index", GetItemName(ctx.itemId));
-    INVALID_IF(requirePartyIndex && ctx.partyIndex >= ((battlerId & BIT_SIDE) == B_SIDE_PLAYER ? DATA.playerPartySize : DATA.opponentPartySize), \
+    INVALID_IF(requirePartyIndex && ctx.partyIndex >= ((battlerId & BIT_SIDE) == B_SIDE_PLAYER ? DATA.playerPartySize : DATA.opponentPartySize),
                 "USE_ITEM to invalid party index");
     // Check move slot items.
     if (GetItemType(ctx.itemId) == ITEM_USE_PARTY_MENU_MOVES)

@@ -1,0 +1,1 @@
+../../src/data/pokemon/level_up_learnsets_bw3g.h

@@ -100,7 +100,14 @@
 #define NO_FLIP 1
 #include "data/pokemon/level_up_learnsets_bw3g.h"
 
+#ifndef sEmptyLevelUpLearnset
+#define sEmptyLevelUpLearnset sNoneLevelUpLearnset
+#endif
 
+
+#include "data/pokemon/bw3g_generated/bw3g_mon_icons.h"
+#include "data/pokemon/bw3g_generated/bw3g_pokemon_pics.h"
+#include "data/pokemon/bw3g_generated/bw3g_pokedex_text.h"
 const struct SpeciesInfo gSpeciesInfo[] =
 {
     [SPECIES_NONE] =

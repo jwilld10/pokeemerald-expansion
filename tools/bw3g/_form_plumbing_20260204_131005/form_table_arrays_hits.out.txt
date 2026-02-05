@@ -1,0 +1,16 @@
+src/pokemon.c:3598:const u16 *GetSpeciesFormTable(u16 species)
+src/pokemon.c:6857:    if (GetSpeciesFormTable(speciesId) != NULL)
+src/pokemon.c:6858:        return GetSpeciesFormTable(speciesId)[formId];
+src/pokemon.c:6867:    if (GetSpeciesFormTable(formSpeciesId) != NULL)
+src/pokemon.c:6869:        for (targetFormId = 0; GetSpeciesFormTable(formSpeciesId)[targetFormId] != FORM_SPECIES_END; targetFormId++)
+src/pokemon.c:6871:            if (formSpeciesId == GetSpeciesFormTable(formSpeciesId)[targetFormId])
+src/pokemon.c:7438:    const u16 *formTable = GetSpeciesFormTable(species);
+src/pokemon.c:7451:    const u16 *formTable = GetSpeciesFormTable(species);
+include/pokemon.h:802:const u16 *GetSpeciesFormTable(u16 species);
+src/pokedex_plus_hgss.c:4131:        if (GetSpeciesFormTable(species) != NULL)
+src/pokedex_plus_hgss.c:6205:                if (GetSpeciesFormTable(targetSpecies) != NULL)
+src/pokemon_sprite_visualizer.c:474:        if (GetSpeciesFormTable(species) != NULL)
+src/pokemon_sprite_visualizer.c:1450:        if (GetSpeciesFormTable(species) != NULL)
+src/pokemon_sprite_visualizer.c:1454:            const u16 *formTable = GetSpeciesFormTable(species);
+src/pokemon_sprite_visualizer.c:1816:                if ((GetSpeciesFormTable(species) == NULL) || (data->submenuYpos[1] >= 4))
+src/pokemon_sprite_visualizer.c:1826:                if (GetSpeciesFormTable(species) != NULL)

@@ -1,0 +1,212 @@
+src/pokemon.c:143:#if P_NEW_EVOS_IN_REGIONAL_DEX && P_GALARIAN_FORMS
+src/pokemon.c:289:    HOENN_TO_NATIONAL(CASTFORM),
+src/pokemon.c:343:#if P_NEW_EVOS_IN_REGIONAL_DEX && P_GALARIAN_FORMS
+src/pokemon.c:1241:    if ((u8)(unownLetter - 1) < NUM_UNOWN_FORMS)
+src/pokemon.c:1910:    for (u32 i = 0; formChanges != NULL && formChanges[i].method != FORM_CHANGE_TERMINATOR; i++)
+src/pokemon.c:1912:        if (formChanges[i].method == FORM_CHANGE_END_BATTLE
+src/pokemon.c:2772:        case MON_DATA_DAYS_SINCE_FORM_CHANGE:
+src/pokemon.c:3200:        case MON_DATA_DAYS_SINCE_FORM_CHANGE:
+src/pokemon.c:4408:    for (i = 0; formChanges != NULL && formChanges[i].method != FORM_CHANGE_TERMINATOR; i++)
+src/pokemon.c:4410:        if (formChanges[i].method == FORM_CHANGE_BATTLE_GIGANTAMAX)
+src/pokemon.c:4982:    return GET_BASE_SPECIES_ID(species);
+src/pokemon.c:5638:                    if (move == MOVE_TERA_BLAST && GET_BASE_SPECIES_ID(species) == SPECIES_TERAPAGOS)
+src/pokemon.c:5640:                    if (GET_BASE_SPECIES_ID(species) == SPECIES_PYUKUMUKU && (move == MOVE_HIDDEN_POWER || move == MOVE_RETURN || move == MOVE_FRUSTRATION))
+src/pokemon.c:6869:        for (targetFormId = 0; GetSpeciesFormTable(formSpeciesId)[targetFormId] != FORM_SPECIES_END; targetFormId++)
+src/pokemon.c:6899:        for (i = 0; formChanges[i].method != FORM_CHANGE_TERMINATOR; i++)
+src/pokemon.c:6905:                case FORM_CHANGE_ITEM_HOLD:
+src/pokemon.c:6912:                        for (u32 j = 0; formChanges[j].method != FORM_CHANGE_TERMINATOR; j++)
+src/pokemon.c:6926:                case FORM_CHANGE_ITEM_USE:
+src/pokemon.c:6949:                case FORM_CHANGE_ITEM_USE_MULTICHOICE:
+src/pokemon.c:6956:                case FORM_CHANGE_MOVE:
+src/pokemon.c:6960:                case FORM_CHANGE_BEGIN_BATTLE:
+src/pokemon.c:6961:                case FORM_CHANGE_END_BATTLE:
+src/pokemon.c:6965:                case FORM_CHANGE_END_BATTLE_ENVIRONMENT:
+src/pokemon.c:6969:                case FORM_CHANGE_WITHDRAW:
+src/pokemon.c:6970:                case FORM_CHANGE_DEPOSIT:
+src/pokemon.c:6971:                case FORM_CHANGE_FAINT:
+src/pokemon.c:6972:                case FORM_CHANGE_DAYS_PASSED:
+src/pokemon.c:6975:                case FORM_CHANGE_STATUS:
+src/pokemon.c:6979:                case FORM_CHANGE_TIME_OF_DAY:
+src/pokemon.c:7008:    for (i = 0; formChanges != NULL && formChanges[i].method != FORM_CHANGE_TERMINATOR; i++)
+src/pokemon.c:7010:        if (formChanges[i].method == FORM_CHANGE_DAYS_PASSED && species != formChanges[i].targetSpecies)
+src/pokemon.c:7012:            SetMonData(mon, MON_DATA_DAYS_SINCE_FORM_CHANGE, &formChanges[i].param1);
+src/pokemon.c:7023:    for (i = 0; formChanges != NULL && formChanges[i].method != FORM_CHANGE_TERMINATOR; i++)
+src/pokemon.c:7174:        // This is added to prevent FORM_CHANGE_END_BATTLE_ENVIRONMENT from omitting move changes
+src/pokemon.c:7176:        && method == FORM_CHANGE_END_BATTLE)
+src/pokemon.c:7213:        || (method != FORM_CHANGE_BEGIN_BATTLE && method != FORM_CHANGE_END_BATTLE))
+src/pokemon.c:7216:    for (i = 0; formChanges[i].method != FORM_CHANGE_TERMINATOR; i++)
+src/pokemon.c:7376:        daysSinceFormChange = GetMonData(mon, MON_DATA_DAYS_SINCE_FORM_CHANGE, 0);
+src/pokemon.c:7385:        SetMonData(mon, MON_DATA_DAYS_SINCE_FORM_CHANGE, &daysSinceFormChange);
+src/pokemon.c:7389:            u32 targetSpecies = GetFormChangeTargetSpecies(mon, FORM_CHANGE_DAYS_PASSED, 0);
+src/pokemon.c:7439:    for (formId = 0; formTable != NULL && formTable[formId] != FORM_SPECIES_END; formId++)
+src/pokemon.c:7455:        for (formId = 0; formTable[formId] != FORM_SPECIES_END; formId++)
+include/contest.h:23:    CONTEST_STRING_REGAINED_FORM,
+include/event_object_movement.h:6:#if OW_BATTLE_ONLY_FORMS && !OW_POKEMON_OBJECT_EVENTS
+include/event_object_movement.h:7:#error "OW_POKEMON_OBJECT_EVENTS needs to be TRUE in order for OW_BATTLE_ONLY_FORMS to work."
+include/event_object_movement.h:61:    TRANSFORM_TYPE_NONE,
+include/event_object_movement.h:62:    TRANSFORM_TYPE_PERMANENT,
+include/event_object_movement.h:63:    TRANSFORM_TYPE_RANDOM_WILD,
+include/event_object_movement.h:64:    TRANSFORM_TYPE_WEATHER,
+include/constants/battle_frontier_mons.h:209:#define FRONTIER_MON_CASTFORM_1     204
+include/constants/battle_frontier_mons.h:315:#define FRONTIER_MON_CASTFORM_2     309
+include/constants/form_change_types.h:1:#ifndef GUARD_CONSTANTS_FORM_CHANGE_TYPES_H
+include/constants/form_change_types.h:2:#define GUARD_CONSTANTS_FORM_CHANGE_TYPES_H
+include/constants/form_change_types.h:4:// FORM_CHANGE_BATTLE_HP_PERCENT param2 arguments
+include/constants/form_change_types.h:10:// FORM_CHANGE_MOVE param2 Arguments
+include/constants/form_change_types.h:16:// FORM_CHANGE_ITEM_USE param2 Arguments
+include/constants/form_change_types.h:27:    FORM_CHANGE_TERMINATOR,
+include/constants/form_change_types.h:31:    FORM_CHANGE_ITEM_HOLD,
+include/constants/form_change_types.h:39:    FORM_CHANGE_ITEM_USE,
+include/constants/form_change_types.h:45:    FORM_CHANGE_MOVE,
+include/constants/form_change_types.h:48:    FORM_CHANGE_WITHDRAW,
+include/constants/form_change_types.h:53:    FORM_CHANGE_FAINT,
+include/constants/form_change_types.h:58:    FORM_CHANGE_BEGIN_BATTLE,
+include/constants/form_change_types.h:63:    FORM_CHANGE_END_BATTLE,
+include/constants/form_change_types.h:64:    // Form change that activates at the end of a battle based on the environment if it participated in the battle and hasn't fainted. Takes priority over FORM_CHANGE_END_BATTLE.
+include/constants/form_change_types.h:66:    FORM_CHANGE_END_BATTLE_ENVIRONMENT,
+include/constants/form_change_types.h:69:    FORM_CHANGE_BATTLE_SWITCH,
+include/constants/form_change_types.h:76:    FORM_CHANGE_BATTLE_HP_PERCENT,
+include/constants/form_change_types.h:80:    FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM,
+include/constants/form_change_types.h:84:    FORM_CHANGE_BATTLE_MEGA_EVOLUTION_MOVE,
+include/constants/form_change_types.h:89:    FORM_CHANGE_BATTLE_PRIMAL_REVERSION,
+include/constants/form_change_types.h:93:    FORM_CHANGE_BATTLE_WEATHER,
+include/constants/form_change_types.h:96:    FORM_CHANGE_BATTLE_TURN_END,
+include/constants/form_change_types.h:100:    FORM_CHANGE_BATTLE_ULTRA_BURST,
+include/constants/form_change_types.h:103:    FORM_CHANGE_BATTLE_GIGANTAMAX,
+include/constants/form_change_types.h:108:    FORM_CHANGE_TIME_OF_DAY,
+include/constants/form_change_types.h:111:    FORM_CHANGE_ITEM_USE_MULTICHOICE,
+include/constants/form_change_types.h:114:    FORM_CHANGE_STATUS,
+include/constants/form_change_types.h:116:    FORM_CHANGE_HIT_BY_MOVE,
+include/constants/form_change_types.h:119:    FORM_CHANGE_BATTLE_TERASTALLIZATION,
+include/constants/form_change_types.h:123:    FORM_CHANGE_DAYS_PASSED,
+include/constants/form_change_types.h:127:    FORM_CHANGE_BATTLE_BEFORE_MOVE,
+include/constants/form_change_types.h:130:    FORM_CHANGE_BATTLE_AFTER_MOVE,
+include/constants/form_change_types.h:134:    FORM_CHANGE_BATTLE_BEFORE_MOVE_CATEGORY,
+include/constants/form_change_types.h:137:    FORM_CHANGE_OVERWORLD_WEATHER,
+include/constants/form_change_types.h:139:    FORM_CHANGE_DEPOSIT,
+include/constants/form_change_types.h:142:#endif // GUARD_CONSTANTS_FORM_CHANGE_TYPES_H
+include/pokemon.h:20:#define GET_BASE_SPECIES_ID(speciesId) (GetFormSpeciesId(speciesId, 0))
+include/pokemon.h:21:#define FORM_SPECIES_END (0xffff)
+include/pokemon.h:39:    MON_DATA_DAYS_SINCE_FORM_CHANGE,
+include/pokemon.h:660:#if P_FUSION_FORMS
+include/pokemon.h:669:#endif //P_FUSION_FORMS
+include/pokemon.h:671:#define NUM_UNOWN_FORMS 28
+include/pokemon.h:678:) % NUM_UNOWN_FORMS)
+include/constants/battle.h:179:    F(VOLATILE_TRANSFORMED,                 transformed,                   (u32, 1)) \
+include/constants/easy_chat.h:820:#define EC_WORD_INFORMATION   ((EC_GROUP_LIFESTYLE << EC_MASK_BITS) | 18)
+include/constants/battle_string_ids.h:123:    STRINGID_PKMNTRANSFORMEDINTO,
+include/constants/battle_string_ids.h:304:    STRINGID_PKMNTRANSFORMED,
+include/constants/battle_string_ids.h:354:    STRINGID_PKMNEAGERFORMORE,
+include/constants/battle_string_ids.h:466:    STRINGID_IMPOSTERTRANSFORM,
+include/constants/battle_string_ids.h:660:    STRINGID_ZEROTOHEROTRANSFORMATION,
+include/constants/battle_string_ids.h:714:    STRINGID_POWERCONSTRUCTTRANSFORM,
+include/constants/battle_string_ids.h:881:    B_MSG_TRANSFORMED,
+include/constants/battle_string_ids.h:882:    B_MSG_TRANSFORM_FAILED,
+include/data/pokemon/level_up_learnsets_bw3g.h:940:    LEVEL_UP_MOVE(1, MOVE_TRANSFORM),
+include/data/pokemon/bw3g_generated/bw3g_pokedex_text.h.bak2_20260203_183231:275:static const u8 sBw3gDexCategory_SAMUROTT[] = _("FORMIDABLE");
+include/data/pokemon/bw3g_generated/bw3g_pokedex_text.h.bak2_20260203_183231:475:static const u8 sBw3gDexCategory_DITTO[] = _("TRANSFORM");
+include/constants/battle_end_turn.h:52:    ENDTURN_FORM_CHANGE_ABILITIES,
+include/config/overworld.h:67:#define OW_FOLLOWERS_WEATHER_FORMS     FALSE      // If TRUE, Castform and Cherrim gain FORM_CHANGE_OVERWORLD_WEATHER, which will make them transform in the overworld based on the weather.
+include/config/overworld.h:69:#define OW_BATTLE_ONLY_FORMS           TRUE       // If TRUE, loads overworld sprites for battle-only forms like Mega Evos. Requires OW_POKEMON_OBJECT_EVENTS.
+include/constants/battle_anim.h:565:#define B_ANIM_FORM_CHANGE              24
+include/constants/battle_anim.h:676:    SPECIES_GFX_CHANGE_TRANSFORM,
+include/constants/battle_anim.h:677:    SPECIES_GFX_CHANGE_FORM_CHANGE,
+include/config/battle.h:116:#define B_TRANSFORM_SHINY           GEN_LATEST // In Gen4+, Transform will copy the shiny state of the opponent instead of maintaining its own shiny state.
+include/config/battle.h:117:#define B_TRANSFORM_FORM_CHANGES    GEN_LATEST // In Gen5+, Transformed Pokemon cannot change forms.
+include/config/battle.h:149:#define B_WEATHER_FORMS             GEN_LATEST // In Gen5+, Castform and Cherrim revert to their base form upon losing their respective ability. Cherrim needs Flower Gift to swap forms.
+include/config/battle.h:372:#define B_POOL_RULE_EXCLUDE_FORMS           FALSE    // Exclude different forms from the Species Clause
+include/config/test.h:11:#undef P_ULTRA_BURST_FORMS
+include/config/test.h:12:#define P_ULTRA_BURST_FORMS              TRUE
+include/config/test.h:13:#undef P_GIGANTAMAX_FORMS
+include/config/test.h:14:#define P_GIGANTAMAX_FORMS               TRUE
+include/config/test.h:15:#undef P_TERA_FORMS
+include/config/test.h:16:#define P_TERA_FORMS                     TRUE
+include/config/test.h:17:#undef P_FUSION_FORMS
+include/config/test.h:18:#define P_FUSION_FORMS                   TRUE
+include/config/test.h:19:#undef P_ALOLAN_FORMS
+include/config/test.h:20:#define P_ALOLAN_FORMS                   TRUE
+include/config/test.h:21:#undef P_GALARIAN_FORMS
+include/config/test.h:22:#define P_GALARIAN_FORMS                 TRUE
+include/config/test.h:23:#undef P_HISUIAN_FORMS
+include/config/test.h:24:#define P_HISUIAN_FORMS                  TRUE
+include/config/test.h:25:#undef P_PALDEAN_FORMS
+include/config/test.h:26:#define P_PALDEAN_FORMS                  TRUE
+include/config/test.h:27:#undef P_PIKACHU_EXTRA_FORMS
+include/config/test.h:28:#define P_PIKACHU_EXTRA_FORMS            TRUE
+include/config/test.h:29:#undef P_COSPLAY_PIKACHU_FORMS
+include/config/test.h:30:#define P_COSPLAY_PIKACHU_FORMS          TRUE
+include/config/test.h:31:#undef P_CAP_PIKACHU_FORMS
+include/config/test.h:32:#define P_CAP_PIKACHU_FORMS              TRUE
+include/config/test.h:400:#undef P_FAMILY_CASTFORM
+include/config/test.h:401:#define P_FAMILY_CASTFORM                TRUE
+include/constants/species.h:362:#define SPECIES_CASTFORM                                SPECIES_CASTFORM_NORMAL
+include/constants/species.h:363:#define SPECIES_CASTFORM_NORMAL                         351
+include/constants/species.h:1123:#define SPECIES_CASTFORM_SUNNY                          1051
+include/constants/species.h:1124:#define SPECIES_CASTFORM_RAINY                          1052
+include/constants/species.h:1125:#define SPECIES_CASTFORM_SNOWY                          1053
+include/config/species_enabled.h:25:#define P_ULTRA_BURST_FORMS              TRUE // Ultra Necrozma only.
+include/config/species_enabled.h:26:#define P_GIGANTAMAX_FORMS               TRUE
+include/config/species_enabled.h:27:#define P_TERA_FORMS                     TRUE
+include/config/species_enabled.h:32:#define P_FUSION_FORMS                   TRUE
+include/config/species_enabled.h:35:#define P_REGIONAL_FORMS                 TRUE
+include/config/species_enabled.h:36:#define P_ALOLAN_FORMS                   P_REGIONAL_FORMS
+include/config/species_enabled.h:37:#define P_GALARIAN_FORMS                 P_REGIONAL_FORMS
+include/config/species_enabled.h:38:#define P_HISUIAN_FORMS                  P_REGIONAL_FORMS
+include/config/species_enabled.h:39:#define P_PALDEAN_FORMS                  P_REGIONAL_FORMS
+include/config/species_enabled.h:42:#define P_PIKACHU_EXTRA_FORMS            TRUE
+include/config/species_enabled.h:43:#define P_COSPLAY_PIKACHU_FORMS          P_PIKACHU_EXTRA_FORMS
+include/config/species_enabled.h:44:#define P_CAP_PIKACHU_FORMS              P_PIKACHU_EXTRA_FORMS
+include/config/species_enabled.h:53://#define P_GEN_7_CROSS_EVOS             // Alolan evolutions handled by P_ALOLAN_FORMS.
+include/config/species_enabled.h:54:#define P_GEN_8_CROSS_EVOS               P_CROSS_GENERATION_EVOS // Regional evolutions handled by P_GALARIAN_FORMS and P_HISUIAN_FORMS.
+include/config/species_enabled.h:55:#define P_GEN_9_CROSS_EVOS               P_CROSS_GENERATION_EVOS // Clodsire handled by P_PALDEAN_FORMS.
+include/config/species_enabled.h:236:#define P_FAMILY_CASTFORM                P_GEN_3_POKEMON
+include/config/pokemon.h:35:#define P_SCATTERBUG_LINE_FORM_BREED   SPECIES_SCATTERBUG_FANCY  // Choose the Scatterbug form all Vivillon/Spewpa/Scatterbug will breed into, basically aligning with the "location" of the player's game.
+include/config/pokemon.h:45:#define P_ARCEUS_UNIQUE_FORM_ICONS      GEN_LATEST  // Since Gen 9, Arceus changes its icon to reflect its current form.
+include/config/item.h:12:#define I_GRISEOUS_ORB_FORM_CHANGE      GEN_LATEST  // In Gen9+, the Griseous Orb no longer changes Giratina's form when held.
+include/constants/pokedex.h:362:    NATIONAL_DEX_CASTFORM,
+include/constants/pokedex.h:1083:#if P_NEW_EVOS_IN_REGIONAL_DEX && P_GALARIAN_FORMS
+include/constants/pokedex.h:1229:    HOENN_DEX_CASTFORM,
+include/constants/pokedex.h:1283:#if P_NEW_EVOS_IN_REGIONAL_DEX && P_GALARIAN_FORMS
+include/constants/moves.h:169:#define MOVE_TRANSFORM 144
+include/constants/flags.h:173:#define FLAG_RECEIVED_CASTFORM               0x97
+include/constants/generational_changes.h:107:    F(TRANSFORM_SHINY,           transformShiny,          (u32, GEN_COUNT - 1)) /* TODO: use in tests */ \
+include/constants/generational_changes.h:108:    F(TRANSFORM_FORM_CHANGES,    transformFormChanges,    (u32, GEN_COUNT - 1)) /* TODO: use in tests */ \
+include/constants/generational_changes.h:137:    F(WEATHER_FORMS,             weatherForms,            (u32, GEN_COUNT - 1)) /* TODO: use in tests */ \
+include/constants/cries.h:132:#if P_GALARIAN_FORMS
+include/constants/cries.h:134:#endif //P_GALARIAN_FORMS
+include/constants/cries.h:199:#if P_GALARIAN_FORMS
+include/constants/cries.h:201:#endif //P_GALARIAN_FORMS
+include/constants/cries.h:212:#if P_GALARIAN_FORMS
+include/constants/cries.h:214:#endif //P_GALARIAN_FORMS
+include/constants/cries.h:337:#if P_GALARIAN_FORMS
+include/constants/cries.h:339:#endif //P_GALARIAN_FORMS
+include/constants/cries.h:556:#if P_PALDEAN_FORMS
+include/constants/cries.h:558:#endif //P_PALDEAN_FORMS
+include/constants/cries.h:605:#if P_HISUIAN_FORMS
+include/constants/cries.h:607:#endif //P_HISUIAN_FORMS
+include/constants/cries.h:623:#if P_HISUIAN_FORMS
+include/constants/cries.h:625:#endif //P_HISUIAN_FORMS
+include/constants/cries.h:647:#if P_GALARIAN_FORMS
+include/constants/cries.h:649:#endif //P_GALARIAN_FORMS
+include/constants/cries.h:747:#if P_GALARIAN_FORMS
+include/constants/cries.h:749:#endif //P_GALARIAN_FORMS
+include/constants/cries.h:964:#if P_FAMILY_CASTFORM
+include/constants/cries.h:965:    CRY_CASTFORM,
+include/constants/cries.h:966:#endif //P_FAMILY_CASTFORM
+include/constants/cries.h:1376:#if P_HISUIAN_FORMS
+include/constants/cries.h:1378:#endif //P_HISUIAN_FORMS
+include/constants/cries.h:1406:#if P_GALARIAN_FORMS
+include/constants/cries.h:1408:#endif //P_GALARIAN_FORMS
+include/constants/cries.h:1590:#if P_FUSION_FORMS
+include/constants/cries.h:1593:#endif //P_FUSION_FORMS
+include/constants/cries.h:1938:#if P_FUSION_FORMS
+include/constants/cries.h:1941:#if P_ULTRA_BURST_FORMS
+include/constants/cries.h:1943:#endif //P_ULTRA_BURST_FORMS
+include/constants/cries.h:1944:#endif //P_FUSION_FORMS
+include/constants/cries.h:2160:#if P_FUSION_FORMS
+include/constants/cries.h:2163:#endif //P_FUSION_FORMS
+include/constants/battle_pyramid.h:27:#define OBJ_POSITIONS_UNIFORM               0
+include/constants/abilities.h:333:    ABILITY_TERAFORM_ZERO = 309,
+include/constants/battle_script_commands.h:161:    B_SCR_OP_TRANSFORMDATAEXECUTION,
+include/constants/battle_script_commands.h:431:    MOVEEND_FORM_CHANGE,
+include/constants/battle_move_effects.h:54:    EFFECT_TRANSFORM,

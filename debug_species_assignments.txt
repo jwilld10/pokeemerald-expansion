@@ -1,0 +1,10 @@
+2198:    sDebugMonData->species          = 1;
+2248:    Debug_Display_SpeciesInfo(sDebugMonData->species, 0, windowId);
+2253:    gTasks[taskId].tInput = sDebugMonData->species;
+2283:    Debug_Display_SpeciesInfo(sDebugMonData->species, 0, windowId);
+2323:        sDebugMonData->species = gTasks[taskId].tInput;
+2368:            ScriptGiveMon(sDebugMonData->species, gTasks[taskId].tInput, ITEM_NONE);
+2467:        enum Ability abilityId = GetAbilityBySpecies(sDebugMonData->species, 0);
+2512:        while (GetAbilityBySpecies(sDebugMonData->species, gTasks[taskId].tInput - i) == ABILITY_NONE && gTasks[taskId].tInput - i < NUM_ABILITY_SLOTS)
+2516:        enum Ability abilityId = GetAbilityBySpecies(sDebugMonData->species, gTasks[taskId].tInput - i);
+2840:    u16 species     = sDebugMonData->species;

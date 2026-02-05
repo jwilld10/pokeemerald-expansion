@@ -1,0 +1,11 @@
+--- src/pokemon.c ---
+
+u16 GetFormSpeciesId(u16 speciesId, u8 formId)
+{
+    if (GetSpeciesFormTable(speciesId) != NULL)
+        return GetSpeciesFormTable(speciesId)[formId];
+    else
+        return speciesId;
+}
+
+

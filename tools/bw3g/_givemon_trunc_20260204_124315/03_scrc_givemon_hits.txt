@@ -1,0 +1,5 @@
+=== Likely script give-mon command(s) ===
+src/mystery_event_script.c:313:bool8 MEScrCmd_givepokemon(struct ScriptContext *ctx)
+src/pokemon.c:6910:                        // Eg. Giving a Zap Plate to an Electric Arceus without an item (most likely to happen when using givemon)
+src/debug.c:2829:static void DebugAction_Give_Pokemon_ComplexCreateMon(u8 taskId) //https://github.com/ghoulslash/pokeemerald/tree/custom-givemon
+

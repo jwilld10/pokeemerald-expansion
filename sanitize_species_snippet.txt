@@ -1,0 +1,181 @@
+    // use the species at the start of the battle.
+    if (targetSpecies == SPECIES_NONE
+        && gBattleStruct != NULL
+        && gBattleStruct->partyState[side][monId].changedSpecies != SPECIES_NONE
+        // This is added to prevent FORM_CHANGE_END_BATTLE_ENVIRONMENT from omitting move changes
+        // at the end of the battle, as it was being counting as a successful form change.
+        && method == FORM_CHANGE_END_BATTLE)
+    {
+        targetSpecies = gBattleStruct->partyState[side][monId].changedSpecies;
+    }
+
+    if (targetSpecies != currentSpecies && targetSpecies != SPECIES_NONE)
+    {
+        TryToSetBattleFormChangeMoves(&party[monId], method);
+        SetMonData(&party[monId], MON_DATA_SPECIES, &targetSpecies);
+        CalculateMonStats(&party[monId]);
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
+u16 SanitizeSpeciesId(u16 species)
+{
+    if (species > NUM_SPECIES || !IsSpeciesEnabled(species))
+        return SPECIES_NONE;
+    else
+        return species;
+}
+
+bool32 IsSpeciesEnabled(u16 species)
+{
+    // This function should not use the GetSpeciesBaseHP function, as the included sanitation will result in an infinite loop
+    return gSpeciesInfo[species].baseHP > 0 || species == SPECIES_EGG;
+}
+
+void TryToSetBattleFormChangeMoves(struct Pokemon *mon, enum FormChanges method)
+{
+    int i, j;
+    u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
+    const struct FormChange *formChanges = GetSpeciesFormChanges(species);
+
+    if (formChanges == NULL
+        || (method != FORM_CHANGE_BEGIN_BATTLE && method != FORM_CHANGE_END_BATTLE))
+        return;
+
+    for (i = 0; formChanges[i].method != FORM_CHANGE_TERMINATOR; i++)
+    {
+        if (formChanges[i].method == method
+            && formChanges[i].param2
+            && formChanges[i].param3
+            && formChanges[i].targetSpecies != species)
+        {
+            u16 originalMove = formChanges[i].param2;
+            u16 newMove = formChanges[i].param3;
+
+            for (j = 0; j < MAX_MON_MOVES; j++)
+            {
+                u16 currMove = GetMonData(mon, MON_DATA_MOVE1 + j, NULL);
+                if (currMove == originalMove)
+                    SetMonMoveSlot_KeepPP(mon, newMove, j);
+            }
+            break;
+        }
+    }
+}
+
+u32 GetMonFriendshipScore(struct Pokemon *pokemon)
+{
+    u32 friendshipScore = GetMonData(pokemon, MON_DATA_FRIENDSHIP, NULL);
+
+    if (friendshipScore == MAX_FRIENDSHIP)
+        return FRIENDSHIP_MAX;
+    if (friendshipScore >= 200)
+        return FRIENDSHIP_200_TO_254;
+    if (friendshipScore >= 150)
+        return FRIENDSHIP_150_TO_199;
+    if (friendshipScore >= 100)
+        return FRIENDSHIP_100_TO_149;
+    if (friendshipScore >= 50)
+        return FRIENDSHIP_50_TO_99;
+    if (friendshipScore >= 1)
+        return FRIENDSHIP_1_TO_49;
+
+    return FRIENDSHIP_NONE;
+}
+
+u32 GetMonAffectionHearts(struct Pokemon *pokemon)
+{
+    u32 friendship = GetMonData(pokemon, MON_DATA_FRIENDSHIP, NULL);
+
+    if (friendship == MAX_FRIENDSHIP)
+        return AFFECTION_FIVE_HEARTS;
+    if (friendship >= 220)
+        return AFFECTION_FOUR_HEARTS;
+    if (friendship >= 180)
+        return AFFECTION_THREE_HEARTS;
+    if (friendship >= 130)
+        return AFFECTION_TWO_HEARTS;
+    if (friendship >= 80)
+        return AFFECTION_ONE_HEART;
+
+    return AFFECTION_NO_HEARTS;
+}
+
+void UpdateMonPersonality(struct BoxPokemon *boxMon, u32 personality)
+{
+    struct PokemonSubstruct0 *old0, *new0;
+    struct PokemonSubstruct1 *old1, *new1;
+    struct PokemonSubstruct2 *old2, *new2;
+    struct PokemonSubstruct3 *old3, *new3;
+    struct BoxPokemon old;
+
+    bool32 isShiny = GetBoxMonData(boxMon, MON_DATA_IS_SHINY, NULL);
+    u32 hiddenNature = GetBoxMonData(boxMon, MON_DATA_HIDDEN_NATURE, NULL);
+    enum Type teraType = GetBoxMonData(boxMon, MON_DATA_TERA_TYPE, NULL);
+
+    old = *boxMon;
+    old0 = &(GetSubstruct(&old, old.personality, SUBSTRUCT_TYPE_0)->type0);
+    old1 = &(GetSubstruct(&old, old.personality, SUBSTRUCT_TYPE_1)->type1);
+    old2 = &(GetSubstruct(&old, old.personality, SUBSTRUCT_TYPE_2)->type2);
+    old3 = &(GetSubstruct(&old, old.personality, SUBSTRUCT_TYPE_3)->type3);
+
+    new0 = &(GetSubstruct(boxMon, personality, SUBSTRUCT_TYPE_0)->type0);
+    new1 = &(GetSubstruct(boxMon, personality, SUBSTRUCT_TYPE_1)->type1);
+    new2 = &(GetSubstruct(boxMon, personality, SUBSTRUCT_TYPE_2)->type2);
+    new3 = &(GetSubstruct(boxMon, personality, SUBSTRUCT_TYPE_3)->type3);
+
+    DecryptBoxMon(&old);
+    boxMon->personality = personality;
+    *new0 = *old0;
+    *new1 = *old1;
+    *new2 = *old2;
+    *new3 = *old3;
+    boxMon->checksum = CalculateBoxMonChecksumReencrypt(boxMon);
+
+    SetBoxMonData(boxMon, MON_DATA_IS_SHINY, &isShiny);
+    SetBoxMonData(boxMon, MON_DATA_HIDDEN_NATURE, &hiddenNature);
+    SetBoxMonData(boxMon, MON_DATA_TERA_TYPE, &teraType);
+}
+
+void HealPokemon(struct Pokemon *mon)
+{
+    u32 data;
+
+    data = GetMonData(mon, MON_DATA_MAX_HP);
+    SetMonData(mon, MON_DATA_HP, &data);
+
+    data = STATUS1_NONE;
+    SetMonData(mon, MON_DATA_STATUS, &data);
+
+    MonRestorePP(mon);
+}
+
+void HealBoxPokemon(struct BoxPokemon *boxMon)
+{
+    u32 data;
+
+    data = 0;
+    SetBoxMonData(boxMon, MON_DATA_HP_LOST, &data);
+
+    data = STATUS1_NONE;
+    SetBoxMonData(boxMon, MON_DATA_STATUS, &data);
+
+    BoxMonRestorePP(boxMon);
+}
+
+enum PokemonCry GetCryIdBySpecies(u16 species)
+{
+    species = SanitizeSpeciesId(species);
+    if (P_CRIES_ENABLED == FALSE || gSpeciesInfo[species].cryId >= CRY_COUNT || gTestRunnerHeadless)
+        return CRY_NONE;
+    return gSpeciesInfo[species].cryId;
+}
+
+u16 GetSpeciesPreEvolution(u16 species)
+{
+    int i, j;
+
+    for (i = SPECIES_BULBASAUR; i < NUM_SPECIES; i++)
+    {

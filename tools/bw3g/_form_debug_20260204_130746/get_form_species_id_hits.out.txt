@@ -1,0 +1,11 @@
+include/pokemon.h:20:#define GET_BASE_SPECIES_ID(speciesId) (GetFormSpeciesId(speciesId, 0))
+include/pokemon.h:888:u16 GetFormSpeciesId(u16 speciesId, u8 formId);
+src/pokedex_plus_hgss.c:5148:        species = GetFormSpeciesId(species, 0);
+src/pokedex_plus_hgss.c:6345:    baseFormSpecies = GetFormSpeciesId(species, 0);
+src/pokedex_plus_hgss.c:7117:            u16 formSpecies = GetFormSpeciesId(NationalPokedexNumToSpecies(sPokedexListItem->dexNum), formId);
+src/pokedex_plus_hgss.c:7121:            if (formSpecies == GetFormSpeciesId(formSpecies, 0))
+src/pokedex_plus_hgss.c:7159:    if (GetFormSpeciesId(species, 0) == SPECIES_UNOWN)
+src/pokedex_plus_hgss.c:7166:        speciesForm = GetFormSpeciesId(species, i);
+src/pokemon_sprite_visualizer.c:1458:                    modArrows->currValue = GetFormSpeciesId(species, formId + 1);
+src/pokemon_sprite_visualizer.c:1475:                    modArrows->currValue = GetFormSpeciesId(species, formId - 1);
+src/pokemon.c:6855:u16 GetFormSpeciesId(u16 speciesId, u8 formId)

@@ -1,0 +1,3 @@
+Backup: src/debug.c.bak_skip_disabled_20260204_142141
+Inserted Debug_GetNextEnabledSpecies helper.
+ERROR: couldn't find Debug_Display_SpeciesInfo(...) definition

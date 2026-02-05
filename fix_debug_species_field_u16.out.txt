@@ -1,0 +1,12 @@
+Backup created: src/debug.c.bak_fixspecies_20260204_124532
+No change needed; species already: u16
+
+Sanity check (show species line + give call):
+195:struct DebugMonData
+197:    u16 species;
+219:static EWRAM_DATA struct DebugMonData *sDebugMonData = NULL;
+1856:    u16 species;
+2196:static void ResetMonDataStruct(struct DebugMonData *sDebugMonData)
+2233:    sDebugMonData = AllocZeroed(sizeof(struct DebugMonData));
+2268:    sDebugMonData = AllocZeroed(sizeof(struct DebugMonData));
+2368:            ScriptGiveMon(sDebugMonData->species, gTasks[taskId].tInput, ITEM_NONE);

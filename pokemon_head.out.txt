@@ -1,0 +1,400 @@
+#include "global.h"
+#include "malloc.h"
+#include "apprentice.h"
+#include "battle.h"
+#include "battle_ai_switch_items.h"
+#include "battle_anim.h"
+#include "battle_controllers.h"
+#include "battle_message.h"
+#include "battle_pike.h"
+#include "battle_pyramid.h"
+#include "battle_setup.h"
+#include "battle_tower.h"
+#include "battle_z_move.h"
+#include "data.h"
+#include "daycare.h"
+#include "dexnav.h"
+#include "event_data.h"
+#include "event_object_movement.h"
+#include "evolution_scene.h"
+#include "field_player_avatar.h"
+#include "field_specials.h"
+#include "field_weather.h"
+#include "fishing.h"
+#include "follower_npc.h"
+#include "graphics.h"
+#include "item.h"
+#include "caps.h"
+#include "link.h"
+#include "main.h"
+#include "move_relearner.h"
+#include "overworld.h"
+#include "m4a.h"
+#include "party_menu.h"
+#include "pokedex.h"
+#include "pokeblock.h"
+#include "pokemon.h"
+#include "pokemon_animation.h"
+#include "pokemon_icon.h"
+#include "pokemon_summary_screen.h"
+#include "pokemon_storage_system.h"
+#include "random.h"
+#include "recorded_battle.h"
+#include "regions.h"
+#include "rtc.h"
+#include "sound.h"
+#include "string_util.h"
+#include "strings.h"
+#include "task.h"
+#include "test_runner.h"
+#include "text.h"
+#include "trainer_hill.h"
+#include "util.h"
+#include "constants/abilities.h"
+#include "constants/battle_frontier.h"
+#include "constants/battle_move_effects.h"
+#include "constants/battle_script_commands.h"
+#include "constants/battle_partner.h"
+#include "constants/battle_string_ids.h"
+#include "constants/cries.h"
+#include "constants/event_objects.h"
+#include "constants/form_change_types.h"
+#include "constants/item_effects.h"
+#include "constants/items.h"
+#include "constants/layouts.h"
+#include "constants/moves.h"
+#include "constants/regions.h"
+#include "constants/songs.h"
+#include "constants/trainers.h"
+#include "constants/union_room.h"
+#include "constants/weather.h"
+
+extern const u8 *const gBw3gSpeciesNames[NUM_SPECIES];
+
+
+#define FRIENDSHIP_EVO_THRESHOLD ((P_FRIENDSHIP_EVO_THRESHOLD >= GEN_8) ? 160 : 220)
+
+struct SpeciesItem
+{
+    u16 species;
+    u16 item;
+};
+
+static u16 CalculateBoxMonChecksum(struct BoxPokemon *boxMon);
+static u16 CalculateBoxMonChecksumDecrypt(struct BoxPokemon *boxMon);
+static u16 CalculateBoxMonChecksumReencrypt(struct BoxPokemon *boxMon);
+static union PokemonSubstruct *GetSubstruct(struct BoxPokemon *boxMon, u32 personality, enum SubstructType substructType);
+static void EncryptBoxMon(struct BoxPokemon *boxMon);
+static void DecryptBoxMon(struct BoxPokemon *boxMon);
+static void Task_PlayMapChosenOrBattleBGM(u8 taskId);
+void TrySpecialOverworldEvo();
+
+EWRAM_DATA static u8 sLearningMoveTableID = 0;
+EWRAM_DATA u8 gPlayerPartyCount = 0;
+EWRAM_DATA u8 gEnemyPartyCount = 0;
+EWRAM_DATA struct Pokemon gPlayerParty[PARTY_SIZE] = {0};
+EWRAM_DATA struct Pokemon gEnemyParty[PARTY_SIZE] = {0};
+EWRAM_DATA struct SpriteTemplate gMultiuseSpriteTemplate = {0};
+EWRAM_DATA static struct MonSpritesGfxManager *sMonSpritesGfxManagers[MON_SPR_GFX_MANAGERS_COUNT] = {NULL};
+EWRAM_DATA static u8 sTriedEvolving = 0;
+EWRAM_DATA u16 gFollowerSteps = 0;
+
+#include "data/abilities.h"
+#if P_TUTOR_MOVES_ARRAY
+#include "data/tutor_moves.h"
+#endif // P_TUTOR_MOVES_ARRAY
+
+// Used in an unreferenced function in RS.
+// Unreferenced here and in FRLG.
+struct CombinedMove
+{
+    u16 move1;
+    u16 move2;
+    u16 newMove;
+};
+
+static const struct CombinedMove sCombinedMoves[2] =
+{
+    {MOVE_EMBER, MOVE_GUST, MOVE_HEAT_WAVE},
+    {0xFFFF, 0xFFFF, 0xFFFF}
+};
+
+// NOTE: The order of the elements in the array below is irrelevant.
+// To reorder the pokedex, see the values in include/constants/pokedex.h.
+
+#define HOENN_TO_NATIONAL(name)     [HOENN_DEX_##name - 1] = NATIONAL_DEX_##name
+
+// Assigns all Hoenn Dex Indexes to a National Dex Index
+static const enum NationalDexOrder sHoennToNationalOrder[HOENN_DEX_COUNT - 1] =
+{
+    HOENN_TO_NATIONAL(TREECKO),
+    HOENN_TO_NATIONAL(GROVYLE),
+    HOENN_TO_NATIONAL(SCEPTILE),
+    HOENN_TO_NATIONAL(TORCHIC),
+    HOENN_TO_NATIONAL(COMBUSKEN),
+    HOENN_TO_NATIONAL(BLAZIKEN),
+    HOENN_TO_NATIONAL(MUDKIP),
+    HOENN_TO_NATIONAL(MARSHTOMP),
+    HOENN_TO_NATIONAL(SWAMPERT),
+    HOENN_TO_NATIONAL(POOCHYENA),
+    HOENN_TO_NATIONAL(MIGHTYENA),
+    HOENN_TO_NATIONAL(ZIGZAGOON),
+    HOENN_TO_NATIONAL(LINOONE),
+#if P_NEW_EVOS_IN_REGIONAL_DEX && P_GALARIAN_FORMS
+    HOENN_TO_NATIONAL(OBSTAGOON),
+#endif
+    HOENN_TO_NATIONAL(WURMPLE),
+    HOENN_TO_NATIONAL(SILCOON),
+    HOENN_TO_NATIONAL(BEAUTIFLY),
+    HOENN_TO_NATIONAL(CASCOON),
+    HOENN_TO_NATIONAL(DUSTOX),
+    HOENN_TO_NATIONAL(LOTAD),
+    HOENN_TO_NATIONAL(LOMBRE),
+    HOENN_TO_NATIONAL(LUDICOLO),
+    HOENN_TO_NATIONAL(SEEDOT),
+    HOENN_TO_NATIONAL(NUZLEAF),
+    HOENN_TO_NATIONAL(SHIFTRY),
+    HOENN_TO_NATIONAL(TAILLOW),
+    HOENN_TO_NATIONAL(SWELLOW),
+    HOENN_TO_NATIONAL(WINGULL),
+    HOENN_TO_NATIONAL(PELIPPER),
+    HOENN_TO_NATIONAL(RALTS),
+    HOENN_TO_NATIONAL(KIRLIA),
+    HOENN_TO_NATIONAL(GARDEVOIR),
+#if P_NEW_EVOS_IN_REGIONAL_DEX && P_GEN_4_CROSS_EVOS
+    HOENN_TO_NATIONAL(GALLADE),
+#endif
+    HOENN_TO_NATIONAL(SURSKIT),
+    HOENN_TO_NATIONAL(MASQUERAIN),
+    HOENN_TO_NATIONAL(SHROOMISH),
+    HOENN_TO_NATIONAL(BRELOOM),
+    HOENN_TO_NATIONAL(SLAKOTH),
+    HOENN_TO_NATIONAL(VIGOROTH),
+    HOENN_TO_NATIONAL(SLAKING),
+    HOENN_TO_NATIONAL(ABRA),
+    HOENN_TO_NATIONAL(KADABRA),
+    HOENN_TO_NATIONAL(ALAKAZAM),
+    HOENN_TO_NATIONAL(NINCADA),
+    HOENN_TO_NATIONAL(NINJASK),
+    HOENN_TO_NATIONAL(SHEDINJA),
+    HOENN_TO_NATIONAL(WHISMUR),
+    HOENN_TO_NATIONAL(LOUDRED),
+    HOENN_TO_NATIONAL(EXPLOUD),
+    HOENN_TO_NATIONAL(MAKUHITA),
+    HOENN_TO_NATIONAL(HARIYAMA),
+    HOENN_TO_NATIONAL(GOLDEEN),
+    HOENN_TO_NATIONAL(SEAKING),
+    HOENN_TO_NATIONAL(MAGIKARP),
+    HOENN_TO_NATIONAL(GYARADOS),
+    HOENN_TO_NATIONAL(AZURILL),
+    HOENN_TO_NATIONAL(MARILL),
+    HOENN_TO_NATIONAL(AZUMARILL),
+    HOENN_TO_NATIONAL(GEODUDE),
+    HOENN_TO_NATIONAL(GRAVELER),
+    HOENN_TO_NATIONAL(GOLEM),
+    HOENN_TO_NATIONAL(NOSEPASS),
+#if P_NEW_EVOS_IN_REGIONAL_DEX && P_GEN_4_CROSS_EVOS
+    HOENN_TO_NATIONAL(PROBOPASS),
+#endif
+    HOENN_TO_NATIONAL(SKITTY),
+    HOENN_TO_NATIONAL(DELCATTY),
+    HOENN_TO_NATIONAL(ZUBAT),
+    HOENN_TO_NATIONAL(GOLBAT),
+    HOENN_TO_NATIONAL(CROBAT),
+    HOENN_TO_NATIONAL(TENTACOOL),
+    HOENN_TO_NATIONAL(TENTACRUEL),
+    HOENN_TO_NATIONAL(SABLEYE),
+    HOENN_TO_NATIONAL(MAWILE),
+    HOENN_TO_NATIONAL(ARON),
+    HOENN_TO_NATIONAL(LAIRON),
+    HOENN_TO_NATIONAL(AGGRON),
+    HOENN_TO_NATIONAL(MACHOP),
+    HOENN_TO_NATIONAL(MACHOKE),
+    HOENN_TO_NATIONAL(MACHAMP),
+    HOENN_TO_NATIONAL(MEDITITE),
+    HOENN_TO_NATIONAL(MEDICHAM),
+    HOENN_TO_NATIONAL(ELECTRIKE),
+    HOENN_TO_NATIONAL(MANECTRIC),
+    HOENN_TO_NATIONAL(PLUSLE),
+    HOENN_TO_NATIONAL(MINUN),
+    HOENN_TO_NATIONAL(MAGNEMITE),
+    HOENN_TO_NATIONAL(MAGNETON),
+#if P_NEW_EVOS_IN_REGIONAL_DEX && P_GEN_4_CROSS_EVOS
+    HOENN_TO_NATIONAL(MAGNEZONE),
+#endif
+    HOENN_TO_NATIONAL(VOLTORB),
+    HOENN_TO_NATIONAL(ELECTRODE),
+    HOENN_TO_NATIONAL(VOLBEAT),
+    HOENN_TO_NATIONAL(ILLUMISE),
+    HOENN_TO_NATIONAL(ODDISH),
+    HOENN_TO_NATIONAL(GLOOM),
+    HOENN_TO_NATIONAL(VILEPLUME),
+    HOENN_TO_NATIONAL(BELLOSSOM),
+    HOENN_TO_NATIONAL(DODUO),
+    HOENN_TO_NATIONAL(DODRIO),
+#if P_NEW_EVOS_IN_REGIONAL_DEX && P_GEN_4_CROSS_EVOS
+    HOENN_TO_NATIONAL(BUDEW),
+    HOENN_TO_NATIONAL(ROSELIA),
+    HOENN_TO_NATIONAL(ROSERADE),
+#else
+    HOENN_TO_NATIONAL(ROSELIA),
+#endif
+    HOENN_TO_NATIONAL(GULPIN),
+    HOENN_TO_NATIONAL(SWALOT),
+    HOENN_TO_NATIONAL(CARVANHA),
+    HOENN_TO_NATIONAL(SHARPEDO),
+    HOENN_TO_NATIONAL(WAILMER),
+    HOENN_TO_NATIONAL(WAILORD),
+    HOENN_TO_NATIONAL(NUMEL),
+    HOENN_TO_NATIONAL(CAMERUPT),
+    HOENN_TO_NATIONAL(SLUGMA),
+    HOENN_TO_NATIONAL(MAGCARGO),
+    HOENN_TO_NATIONAL(TORKOAL),
+    HOENN_TO_NATIONAL(GRIMER),
+    HOENN_TO_NATIONAL(MUK),
+    HOENN_TO_NATIONAL(KOFFING),
+    HOENN_TO_NATIONAL(WEEZING),
+    HOENN_TO_NATIONAL(SPOINK),
+    HOENN_TO_NATIONAL(GRUMPIG),
+    HOENN_TO_NATIONAL(SANDSHREW),
+    HOENN_TO_NATIONAL(SANDSLASH),
+    HOENN_TO_NATIONAL(SPINDA),
+    HOENN_TO_NATIONAL(SKARMORY),
+    HOENN_TO_NATIONAL(TRAPINCH),
+    HOENN_TO_NATIONAL(VIBRAVA),
+    HOENN_TO_NATIONAL(FLYGON),
+    HOENN_TO_NATIONAL(CACNEA),
+    HOENN_TO_NATIONAL(CACTURNE),
+    HOENN_TO_NATIONAL(SWABLU),
+    HOENN_TO_NATIONAL(ALTARIA),
+    HOENN_TO_NATIONAL(ZANGOOSE),
+    HOENN_TO_NATIONAL(SEVIPER),
+    HOENN_TO_NATIONAL(LUNATONE),
+    HOENN_TO_NATIONAL(SOLROCK),
+    HOENN_TO_NATIONAL(BARBOACH),
+    HOENN_TO_NATIONAL(WHISCASH),
+    HOENN_TO_NATIONAL(CORPHISH),
+    HOENN_TO_NATIONAL(CRAWDAUNT),
+    HOENN_TO_NATIONAL(BALTOY),
+    HOENN_TO_NATIONAL(CLAYDOL),
+    HOENN_TO_NATIONAL(LILEEP),
+    HOENN_TO_NATIONAL(CRADILY),
+    HOENN_TO_NATIONAL(ANORITH),
+    HOENN_TO_NATIONAL(ARMALDO),
+    HOENN_TO_NATIONAL(IGGLYBUFF),
+    HOENN_TO_NATIONAL(JIGGLYPUFF),
+    HOENN_TO_NATIONAL(WIGGLYTUFF),
+    HOENN_TO_NATIONAL(FEEBAS),
+    HOENN_TO_NATIONAL(MILOTIC),
+    HOENN_TO_NATIONAL(CASTFORM),
+    HOENN_TO_NATIONAL(STARYU),
+    HOENN_TO_NATIONAL(STARMIE),
+    HOENN_TO_NATIONAL(KECLEON),
+    HOENN_TO_NATIONAL(SHUPPET),
+    HOENN_TO_NATIONAL(BANETTE),
+    HOENN_TO_NATIONAL(DUSKULL),
+    HOENN_TO_NATIONAL(DUSCLOPS),
+#if P_NEW_EVOS_IN_REGIONAL_DEX && P_GEN_4_CROSS_EVOS
+    HOENN_TO_NATIONAL(DUSKNOIR),
+    HOENN_TO_NATIONAL(TROPIUS),
+    HOENN_TO_NATIONAL(CHINGLING),
+#else
+    HOENN_TO_NATIONAL(TROPIUS),
+#endif
+    HOENN_TO_NATIONAL(CHIMECHO),
+    HOENN_TO_NATIONAL(ABSOL),
+    HOENN_TO_NATIONAL(VULPIX),
+    HOENN_TO_NATIONAL(NINETALES),
+    HOENN_TO_NATIONAL(PICHU),
+    HOENN_TO_NATIONAL(PIKACHU),
+    HOENN_TO_NATIONAL(RAICHU),
+    HOENN_TO_NATIONAL(PSYDUCK),
+    HOENN_TO_NATIONAL(GOLDUCK),
+    HOENN_TO_NATIONAL(WYNAUT),
+    HOENN_TO_NATIONAL(WOBBUFFET),
+    HOENN_TO_NATIONAL(NATU),
+    HOENN_TO_NATIONAL(XATU),
+    HOENN_TO_NATIONAL(GIRAFARIG),
+#if P_NEW_EVOS_IN_REGIONAL_DEX && P_GEN_9_CROSS_EVOS
+    HOENN_TO_NATIONAL(FARIGIRAF),
+#endif
+    HOENN_TO_NATIONAL(PHANPY),
+    HOENN_TO_NATIONAL(DONPHAN),
+    HOENN_TO_NATIONAL(PINSIR),
+    HOENN_TO_NATIONAL(HERACROSS),
+    HOENN_TO_NATIONAL(RHYHORN),
+    HOENN_TO_NATIONAL(RHYDON),
+#if P_NEW_EVOS_IN_REGIONAL_DEX && P_GEN_4_CROSS_EVOS
+    HOENN_TO_NATIONAL(RHYPERIOR),
+#endif
+    HOENN_TO_NATIONAL(SNORUNT),
+    HOENN_TO_NATIONAL(GLALIE),
+#if P_NEW_EVOS_IN_REGIONAL_DEX && P_GEN_4_CROSS_EVOS
+    HOENN_TO_NATIONAL(FROSLASS),
+#endif
+    HOENN_TO_NATIONAL(SPHEAL),
+    HOENN_TO_NATIONAL(SEALEO),
+    HOENN_TO_NATIONAL(WALREIN),
+    HOENN_TO_NATIONAL(CLAMPERL),
+    HOENN_TO_NATIONAL(HUNTAIL),
+    HOENN_TO_NATIONAL(GOREBYSS),
+    HOENN_TO_NATIONAL(RELICANTH),
+    HOENN_TO_NATIONAL(CORSOLA),
+#if P_NEW_EVOS_IN_REGIONAL_DEX && P_GALARIAN_FORMS
+    HOENN_TO_NATIONAL(CURSOLA),
+#endif
+    HOENN_TO_NATIONAL(CHINCHOU),
+    HOENN_TO_NATIONAL(LANTURN),
+    HOENN_TO_NATIONAL(LUVDISC),
+    HOENN_TO_NATIONAL(HORSEA),
+    HOENN_TO_NATIONAL(SEADRA),
+    HOENN_TO_NATIONAL(KINGDRA),
+    HOENN_TO_NATIONAL(BAGON),
+    HOENN_TO_NATIONAL(SHELGON),
+    HOENN_TO_NATIONAL(SALAMENCE),
+    HOENN_TO_NATIONAL(BELDUM),
+    HOENN_TO_NATIONAL(METANG),
+    HOENN_TO_NATIONAL(METAGROSS),
+    HOENN_TO_NATIONAL(REGIROCK),
+    HOENN_TO_NATIONAL(REGICE),
+    HOENN_TO_NATIONAL(REGISTEEL),
+    HOENN_TO_NATIONAL(LATIAS),
+    HOENN_TO_NATIONAL(LATIOS),
+    HOENN_TO_NATIONAL(KYOGRE),
+    HOENN_TO_NATIONAL(GROUDON),
+    HOENN_TO_NATIONAL(RAYQUAZA),
+    HOENN_TO_NATIONAL(JIRACHI),
+    HOENN_TO_NATIONAL(DEOXYS),
+};
+
+const struct SpindaSpot gSpindaSpotGraphics[] =
+{
+    {.x = 16, .y =  7, .image = INCBIN_U16("graphics/pokemon/spinda/spots/spot_0.1bpp")},
+    {.x = 40, .y =  8, .image = INCBIN_U16("graphics/pokemon/spinda/spots/spot_1.1bpp")},
+    {.x = 22, .y = 25, .image = INCBIN_U16("graphics/pokemon/spinda/spots/spot_2.1bpp")},
+    {.x = 34, .y = 26, .image = INCBIN_U16("graphics/pokemon/spinda/spots/spot_3.1bpp")}
+};
+
+// In Battle Palace, moves are chosen based on the pokemons nature rather than by the player
+// Moves are grouped into "Attack", "Defense", or "Support" (see PALACE_MOVE_GROUP_*)
+// Each nature has a certain percent chance of selecting a move from a particular group
+// and a separate percent chance for each group when at or below 50% HP
+// The table below doesn't list percentages for Support because you can subtract the other two
+// Support percentages are listed in comments off to the side instead
+#define PALACE_STYLE(atk, def, atkLow, defLow) {atk, atk + def, atkLow, atkLow + defLow}
+
+const struct NatureInfo gNaturesInfo[NUM_NATURES] =
+{
+    [NATURE_HARDY] =
+    {
+        .name = COMPOUND_STRING("Hardy"),
+        .statUp = STAT_ATK,
+        .statDown = STAT_ATK,
+        .backAnim = 0,
+        .pokeBlockAnim = {ANIM_HARDY, AFFINE_NONE},
+        .natureGirlMessage = BattleFrontier_Lounge5_Text_NatureGirlAttackHighAttackLow,
+        .battlePalacePercents = PALACE_STYLE(61, 7, 61, 7), //32% support >= 50% HP, 32% support < 50% HP
+        .battlePalaceFlavorText = B_MSG_EAGER_FOR_MORE,
+        .battlePalaceSmokescreen = PALACE_TARGET_STRONGER,
+    },
+    [NATURE_LONELY] =

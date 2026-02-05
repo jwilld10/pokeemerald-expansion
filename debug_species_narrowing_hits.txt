@@ -1,0 +1,2 @@
+2220:    u8 *end = StringCopy(gStringVar1, GetSpeciesName(species));
+3119:    u8 speciesName[POKEMON_NAME_LENGTH + 1];

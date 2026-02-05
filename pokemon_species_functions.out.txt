@@ -1,0 +1,174 @@
+1005:    SetMonData(mon, MON_DATA_STATUS, &arg);
+1006:    SetMonData(mon, MON_DATA_LEVEL, &arg);
+1007:    SetMonData(mon, MON_DATA_HP, &arg);
+1008:    SetMonData(mon, MON_DATA_MAX_HP, &arg);
+1009:    SetMonData(mon, MON_DATA_ATK, &arg);
+1010:    SetMonData(mon, MON_DATA_DEF, &arg);
+1011:    SetMonData(mon, MON_DATA_SPEED, &arg);
+1012:    SetMonData(mon, MON_DATA_SPATK, &arg);
+1013:    SetMonData(mon, MON_DATA_SPDEF, &arg);
+1015:    SetMonData(mon, MON_DATA_MAIL, &arg);
+1032:void CreateMon(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV, u8 hasFixedPersonality, u32 fixedPersonality, u8 otIdType, u32 fixedOtId)
+1037:    SetMonData(mon, MON_DATA_LEVEL, &level);
+1039:    SetMonData(mon, MON_DATA_MAIL, &mail);
+1224:void CreateMonWithNature(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV, u8 nature)
+1234:    CreateMon(mon, species, level, fixedIV, TRUE, personality, OT_ID_PLAYER_ID, 0);
+1237:void CreateMonWithGenderNatureLetter(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV, u8 gender, u8 nature, u8 unownLetter)
+1264:    CreateMon(mon, species, level, fixedIV, TRUE, personality, OT_ID_PLAYER_ID, 0);
+1279:    CreateMon(mon, species, level, USE_RANDOM_IVS, TRUE, personality, OT_ID_PRESET, otId);
+1282:void CreateMonWithIVsPersonality(struct Pokemon *mon, u16 species, u8 level, u32 ivs, u32 personality)
+1284:    CreateMon(mon, species, level, 0, TRUE, personality, OT_ID_PLAYER_ID, 0);
+1285:    SetMonData(mon, MON_DATA_IVS, &ivs);
+1289:void CreateMonWithIVsOTID(struct Pokemon *mon, u16 species, u8 level, u8 *ivs, u32 otId)
+1291:    CreateMon(mon, species, level, 0, FALSE, 0, OT_ID_PRESET, otId);
+1292:    SetMonData(mon, MON_DATA_HP_IV, &ivs[STAT_HP]);
+1293:    SetMonData(mon, MON_DATA_ATK_IV, &ivs[STAT_ATK]);
+1294:    SetMonData(mon, MON_DATA_DEF_IV, &ivs[STAT_DEF]);
+1295:    SetMonData(mon, MON_DATA_SPEED_IV, &ivs[STAT_SPEED]);
+1296:    SetMonData(mon, MON_DATA_SPATK_IV, &ivs[STAT_SPATK]);
+1297:    SetMonData(mon, MON_DATA_SPDEF_IV, &ivs[STAT_SPDEF]);
+1301:void CreateMonWithEVSpread(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV, u8 evSpread)
+1308:    CreateMon(mon, species, level, fixedIV, FALSE, 0, OT_ID_PLAYER_ID, 0);
+1326:            SetMonData(mon, MON_DATA_HP_EV + i, &evAmount);
+1340:    CreateMon(mon, src->species, src->level, 0, TRUE, src->personality, OT_ID_PRESET, src->otId);
+1345:    SetMonData(mon, MON_DATA_PP_BONUSES, &src->ppBonuses);
+1346:    SetMonData(mon, MON_DATA_HELD_ITEM, &src->heldItem);
+1347:    SetMonData(mon, MON_DATA_FRIENDSHIP, &src->friendship);
+1361:    SetMonData(mon, MON_DATA_LANGUAGE, &language);
+1362:    SetMonData(mon, MON_DATA_NICKNAME, nickname);
+1363:    SetMonData(mon, MON_DATA_HP_EV, &src->hpEV);
+1364:    SetMonData(mon, MON_DATA_ATK_EV, &src->attackEV);
+1365:    SetMonData(mon, MON_DATA_DEF_EV, &src->defenseEV);
+1366:    SetMonData(mon, MON_DATA_SPEED_EV, &src->speedEV);
+1367:    SetMonData(mon, MON_DATA_SPATK_EV, &src->spAttackEV);
+1368:    SetMonData(mon, MON_DATA_SPDEF_EV, &src->spDefenseEV);
+1370:    SetMonData(mon, MON_DATA_ABILITY_NUM, &value);
+1372:    SetMonData(mon, MON_DATA_HP_IV, &value);
+1374:    SetMonData(mon, MON_DATA_ATK_IV, &value);
+1376:    SetMonData(mon, MON_DATA_DEF_IV, &value);
+1378:    SetMonData(mon, MON_DATA_SPEED_IV, &value);
+1380:    SetMonData(mon, MON_DATA_SPATK_IV, &value);
+1382:    SetMonData(mon, MON_DATA_SPDEF_IV, &value);
+1402:    CreateMon(mon, src->species, level, 0, TRUE, src->personality, OT_ID_PRESET, src->otId);
+1407:    SetMonData(mon, MON_DATA_PP_BONUSES, &src->ppBonuses);
+1408:    SetMonData(mon, MON_DATA_HELD_ITEM, &src->heldItem);
+1409:    SetMonData(mon, MON_DATA_FRIENDSHIP, &src->friendship);
+1423:    SetMonData(mon, MON_DATA_LANGUAGE, &language);
+1424:    SetMonData(mon, MON_DATA_NICKNAME, nickname);
+1425:    SetMonData(mon, MON_DATA_HP_EV, &src->hpEV);
+1426:    SetMonData(mon, MON_DATA_ATK_EV, &src->attackEV);
+1427:    SetMonData(mon, MON_DATA_DEF_EV, &src->defenseEV);
+1428:    SetMonData(mon, MON_DATA_SPEED_EV, &src->speedEV);
+1429:    SetMonData(mon, MON_DATA_SPATK_EV, &src->spAttackEV);
+1430:    SetMonData(mon, MON_DATA_SPDEF_EV, &src->spDefenseEV);
+1432:    SetMonData(mon, MON_DATA_ABILITY_NUM, &value);
+1434:    SetMonData(mon, MON_DATA_HP_IV, &value);
+1436:    SetMonData(mon, MON_DATA_ATK_IV, &value);
+1438:    SetMonData(mon, MON_DATA_DEF_IV, &value);
+1440:    SetMonData(mon, MON_DATA_SPEED_IV, &value);
+1442:    SetMonData(mon, MON_DATA_SPATK_IV, &value);
+1444:    SetMonData(mon, MON_DATA_SPDEF_IV, &value);
+1458:    CreateMon(mon,
+1467:    SetMonData(mon, MON_DATA_HELD_ITEM, &src->party[monId].item);
+1473:        SetMonData(mon, MON_DATA_HP_EV + i, &evAmount);
+1476:    SetMonData(mon, MON_DATA_LANGUAGE, &language);
+1477:    SetMonData(mon, MON_DATA_OT_NAME, GetApprenticeNameInLanguage(src->id, language));
+1481:void CreateMonWithEVSpreadNatureOTID(struct Pokemon *mon, u16 species, u8 level, u8 nature, u8 fixedIV, u8 evSpread, u32 otId)
+1494:    CreateMon(mon, species, level, fixedIV, TRUE, i, OT_ID_PRESET, otId);
+1508:            SetMonData(mon, MON_DATA_HP_EV + i, &evAmount);
+1556:    CreateMon(mon, species, level, fixedIV, hasFixedPersonality, fixedPersonality, otIdType, fixedOtId);
+1557:    SetMonData(mon, MON_DATA_MODERN_FATEFUL_ENCOUNTER, &isModernFatefulEncounter);
+1603:        SetMonData(&gEnemyParty[0], MON_DATA_HELD_ITEM, heldItem);
+1654:    SetMonData(mon, MON_DATA_LEVEL, &level);
+1682:        SetMonData(mon, MON_DATA_MAX_HP + i, &n);
+1703:    SetMonData(mon, MON_DATA_MAX_HP, &newMaxHP);
+1719:    SetMonData(mon, MON_DATA_HP, &currentHP);
+1730:    SetMonData(dest, MON_DATA_MAIL, &value);
+1734:    SetMonData(dest, MON_DATA_HP, &value);
+1804:    SetMonData(mon, MON_DATA_MOVE1 + slot, &move);
+1806:    SetMonData(mon, MON_DATA_PP1 + slot, &pp);
+1816:    SetMonData(mon, MON_DATA_MOVE1 + slot, &move);
+1817:    SetMonData(mon, MON_DATA_PP1 + slot, &finalPP);
+1958:        SetMonData(mon, MON_DATA_MOVE1 + i, &moves[i]);
+1959:        SetMonData(mon, MON_DATA_PP1 + i, &pp[i]);
+1962:    SetMonData(mon, MON_DATA_PP_BONUSES, &ppBonuses);
+2124:        speciesTag = SanitizeSpeciesId(speciesTag);
+2808:void SetMonData(struct Pokemon *mon, s32 field, const void *dataArg)
+3219:    SetMonData(mon, MON_DATA_OT_NAME, gSaveBlock2Ptr->playerName);
+3220:    SetMonData(mon, MON_DATA_OT_GENDER, &gSaveBlock2Ptr->playerGender);
+3221:    SetMonData(mon, MON_DATA_OT_ID, gSaveBlock2Ptr->playerTrainerId);
+3404:            CreateMon(&gEnemyParty[i],
+3413:            SetMonData(&gEnemyParty[i], MON_DATA_HELD_ITEM, &gBattleResources->secretBase->party.heldItems[i]);
+3416:                SetMonData(&gEnemyParty[i], MON_DATA_HP_EV + j, &gBattleResources->secretBase->party.EVs[i]);
+3420:                SetMonData(&gEnemyParty[i], MON_DATA_MOVE1 + j, &gBattleResources->secretBase->party.moves[i * MAX_MON_MOVES + j]);
+3422:                SetMonData(&gEnemyParty[i], MON_DATA_PP1 + j, &pp);
+3465:    species = SanitizeSpeciesId(species);
+3482:    species = SanitizeSpeciesId(species);
+3490:    species = SanitizeSpeciesId(species);
+3498:    return gSpeciesInfo[SanitizeSpeciesId(species)].height;
+3503:    return gSpeciesInfo[SanitizeSpeciesId(species)].weight;
+3508:    return gSpeciesInfo[SanitizeSpeciesId(species)].types[slot];
+3513:    return gSpeciesInfo[SanitizeSpeciesId(species)].abilities[slot];
+3518:    return gSpeciesInfo[SanitizeSpeciesId(species)].baseHP;
+3523:    return gSpeciesInfo[SanitizeSpeciesId(species)].baseAttack;
+3528:    return gSpeciesInfo[SanitizeSpeciesId(species)].baseDefense;
+3533:    return gSpeciesInfo[SanitizeSpeciesId(species)].baseSpAttack;
+3538:    return gSpeciesInfo[SanitizeSpeciesId(species)].baseSpDefense;
+3543:    return gSpeciesInfo[SanitizeSpeciesId(species)].baseSpeed;
+3568:    const struct LevelUpMove *learnset = gSpeciesInfo[SanitizeSpeciesId(species)].levelUpLearnset;
+3576:    const u16 *learnset = gSpeciesInfo[SanitizeSpeciesId(species)].teachableLearnset;
+3584:    const u16 *learnset = gSpeciesInfo[SanitizeSpeciesId(species)].eggMoveLearnset;
+3592:    const struct Evolution *evolutions = gSpeciesInfo[SanitizeSpeciesId(species)].evolutions;
+3600:    const u16 *formTable = gSpeciesInfo[SanitizeSpeciesId(species)].formSpeciesIdTable;
+3608:    const struct FormChange *formChanges = gSpeciesInfo[SanitizeSpeciesId(species)].formChangeTable;
+3624:    SetMonData(mon, MON_DATA_PP_BONUSES, &ppBonuses);
+3707:        SetMonData(mon, MON_DATA_FRIENDSHIP, &friendship);                                              \
+3813:                    SetMonData(mon, MON_DATA_EXP, &dataUnsigned);
+3846:                    SetMonData(mon, MON_DATA_PP_BONUSES, &dataUnsigned);
+3850:                    SetMonData(mon, MON_DATA_PP1 + moveIndex, &dataUnsigned);
+3923:                        SetMonData(mon, sGetMonDataEVConstants[temp1], &dataSigned);
+3970:                            SetMonData(mon, MON_DATA_HP, &dataUnsigned);
+3991:                                    SetMonData(mon, MON_DATA_PP1 + temp2, &dataUnsigned);
+4009:                                SetMonData(mon, MON_DATA_PP1 + moveIndex, &dataUnsigned);
+4111:                        SetMonData(mon, sGetMonDataEVConstants[temp1 + 2], &dataSigned);
+4130:                            SetMonData(mon, MON_DATA_PP_BONUSES, &dataUnsigned);
+4133:                            SetMonData(mon, MON_DATA_PP1 + moveIndex, &dataUnsigned);
+4177:        SetMonData(mon, MON_DATA_STATUS, &status);
+4730:                SetMonData(mon, MON_DATA_HELD_ITEM, &heldItem);
+4779:            if (SanitizeSpeciesId(evolutions[i].targetSpecies) == SPECIES_NONE)
+4809:            if (SanitizeSpeciesId(evolutions[i].targetSpecies) == SPECIES_NONE)
+4834:            if (SanitizeSpeciesId(evolutions[i].targetSpecies) == SPECIES_NONE)
+4862:            if (SanitizeSpeciesId(evolutions[i].targetSpecies) == SPECIES_NONE)
+4887:            if (SanitizeSpeciesId(evolutions[i].targetSpecies) == SPECIES_NONE)
+4911:            if (SanitizeSpeciesId(evolutions[i].targetSpecies) == SPECIES_NONE)
+4952:        if (SanitizeSpeciesId(evolutions[i].targetSpecies) == SPECIES_NONE)
+4982:    return GET_BASE_SPECIES_ID(species);
+5005:    species = SanitizeSpeciesId(species);
+5133:        SetMonData(mon, MON_DATA_NICKNAME, GetSpeciesName(newSpecies));
+5271:        SetMonData(mon, MON_DATA_FRIENDSHIP, &friendship);
+5402:        SetMonData(mon, MON_DATA_HP_EV + i, &evs[i]);
+5448:            SetMonData(&party[rnd], MON_DATA_POKERUS, &rnd2);
+5527:                SetMonData(&gPlayerParty[i], MON_DATA_POKERUS, &pokerus);
+5550:                            SetMonData(&party[i - 1], MON_DATA_POKERUS, &curPokerus);
+5553:                            SetMonData(&party[i + 1], MON_DATA_POKERUS, &curPokerus);
+5571:        SetMonData(mon, MON_DATA_EXP, &expPoints);
+5579:        SetMonData(mon, MON_DATA_LEVEL, &nextLevel);
+5638:                    if (move == MOVE_TERA_BLAST && GET_BASE_SPECIES_ID(species) == SPECIES_TERAPAGOS)
+5640:                    if (GET_BASE_SPECIES_ID(species) == SPECIES_PYUKUMUKU && (move == MOVE_HIDDEN_POWER || move == MOVE_RETURN || move == MOVE_FRUSTRATION))
+6212:    species = SanitizeSpeciesId(species);
+6391:                    SetMonData(&gEnemyParty[i], MON_DATA_HELD_ITEM, &sAlteringCaveWildMonHeldItems[alteringCaveId].item);
+6399:                        SetMonData(&gEnemyParty[i], MON_DATA_HELD_ITEM, &gSpeciesInfo[species].itemCommon);
+6401:                        SetMonData(&gEnemyParty[i], MON_DATA_HELD_ITEM, &gSpeciesInfo[species].itemRare);
+6409:                    SetMonData(&gEnemyParty[i], MON_DATA_HELD_ITEM, &gSpeciesInfo[species].itemCommon);
+6416:                        SetMonData(&gEnemyParty[i], MON_DATA_HELD_ITEM, &gSpeciesInfo[species].itemCommon);
+6418:                        SetMonData(&gEnemyParty[i], MON_DATA_HELD_ITEM, &gSpeciesInfo[species].itemRare);
+6718:struct MonSpritesGfxManager *CreateMonSpritesGfxManager(u8 managerId, u8 mode)
+7012:            SetMonData(mon, MON_DATA_DAYS_SINCE_FORM_CHANGE, &formChanges[i].param1);
+7184:        SetMonData(&party[monId], MON_DATA_SPECIES, &targetSpecies);
+7192:u16 SanitizeSpeciesId(u16 species)
+7316:    SetMonData(mon, MON_DATA_HP, &data);
+7319:    SetMonData(mon, MON_DATA_STATUS, &data);
+7339:    species = SanitizeSpeciesId(species);
+7356:            if (SanitizeSpeciesId(evolutions[j].targetSpecies) == species)
+7385:        SetMonData(mon, MON_DATA_DAYS_SINCE_FORM_CHANGE, &daysSinceFormChange);
+7393:                SetMonData(mon, MON_DATA_SPECIES, &targetSpecies);

@@ -3599,7 +3599,7 @@ const u16 *GetSpeciesFormTable(u16 species)
 {
     const u16 *formTable = gSpeciesInfo[SanitizeSpeciesId(species)].formSpeciesIdTable;
     if (formTable == NULL)
-        return gSpeciesInfo[SPECIES_NONE].formSpeciesIdTable;
+        return NULL;
     return formTable;
 }
 

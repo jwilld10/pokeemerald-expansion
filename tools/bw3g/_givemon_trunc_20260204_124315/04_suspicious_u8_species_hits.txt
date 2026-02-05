@@ -1,0 +1,3 @@
+=== Suspicious: u8 species in give-mon related code ===
+src/apprentice.c:204:    u8 species[APPRENTICE_SPECIES_COUNT];
+

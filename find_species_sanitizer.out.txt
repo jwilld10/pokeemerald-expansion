@@ -1,0 +1,727 @@
+src/mail.c:476:    if (species > SPECIES_NONE && species < NUM_SPECIES)
+src/battle_anim_dark.c:403:    sprite->data[5] = (sprite->data[5] + 3) & 0xFF;
+src/fldeff_misc.c:670:    s16 mb = MapGridGetMetatileBehaviorAt(gPlayerFacingPosition.x, gPlayerFacingPosition.y) & 0xFFF;
+src/pokemon_icon.c:158:    species = SanitizeSpeciesId(species);
+src/pokemon_icon.c:161:    if (species >= SPECIES_SNIVY_BW3G && species <= SPECIES_GENESIS_MON_BW3G)
+src/pokemon_icon.c:194:    species = SanitizeSpeciesId(species);
+src/pokemon_icon.c:195:    if (species >= SPECIES_SNIVY_BW3G && species <= SPECIES_GENESIS_MON_BW3G)
+src/pokemon_icon.c:206:    species = SanitizeSpeciesId(species);
+src/pokemon_icon.c:222:    species = SanitizeSpeciesId(species);
+src/pokemon_icon.c:262:    palIndex = gSpeciesInfo[SanitizeSpeciesId(species)].iconPalIndex;
+src/pokemon_icon.c:269:    u8 palIndex = gSpeciesInfo[SanitizeSpeciesId(species)].iconPalIndex;
+src/pokemon_icon.c:277:    species = SanitizeSpeciesId(species);
+src/pokemon_icon.c:299:    palIndex = gSpeciesInfo[SanitizeSpeciesId(species)].iconPalIndex;
+src/pokemon_icon.c:306:    palIndex = gSpeciesInfo[SanitizeSpeciesId(species)].iconPalIndex;
+src/pokemon_icon.c:323:    if (species >= SPECIES_SNIVY_BW3G && species <= SPECIES_GENESIS_MON_BW3G)
+src/pokemon_icon.c:355:    species = SanitizeSpeciesId(species);
+src/pokemon_icon.c:356:    if (species >= SPECIES_SNIVY_BW3G && species <= SPECIES_GENESIS_MON_BW3G)
+src/pokemon_icon.c:358:    return gSpeciesInfo[SanitizeSpeciesId(species)].iconPalIndex;
+src/pokemon_icon.c:363:    species = SanitizeSpeciesId(species);
+src/pokemon_icon.c:364:    if (species >= SPECIES_SNIVY_BW3G && species <= SPECIES_GENESIS_MON_BW3G)
+src/pokemon_icon.c:366:    return gSpeciesInfo[SanitizeSpeciesId(species)].iconPalIndex;
+src/pokemon_icon.c:371:    species = SanitizeSpeciesId(species);
+src/pokemon_icon.c:372:    if (species >= SPECIES_SNIVY_BW3G && species <= SPECIES_GENESIS_MON_BW3G)
+src/pokemon_icon.c:375:    u16 swPalIndex = gSpeciesInfo[SanitizeSpeciesId(species)].iconPalIndex;
+src/pokemon_icon.c:379:    return gMonIconPaletteTable[gSpeciesInfo[SanitizeSpeciesId(species)].iconPalIndex].data;
+src/pokemon_icon.c:405:            sprite->animDelayCounter = sprite->anims[sprite->animNum][sprite->animCmdIndex].frame.duration & 0xFF;
+src/pokemon_size_record.c:60:    u32 hibyte = ((attackIV ^ defenseIV) * hpIV) ^ (personality & 0xFF);
+src/item_use.c:452:        if (events->bgEvents[i].kind == BG_EVENT_HIDDEN_ITEM && !FlagGet(events->bgEvents[i].bgUnion.hiddenItem.hiddenItemId + FLAG_HIDDEN_ITEMS_START))
+src/naming_screen.c:846:    *vOffsets[sNamingScreen->bgToHide] = Sin((task->tFrameCount + 128) & 0xFF, 40);
+src/naming_screen.c:868:    *vOffsets[sNamingScreen->bgToHide] = Sin((task->tFrameCount + 128) & 0xFF, 40);
+src/naming_screen.c:1011:#define sFlashing   data[4] & 0xFF00
+src/naming_screen.c:1546:    sNamingScreen->state = STATE_START_PAGE_SWAP;
+src/naming_screen.c:1613:        task->tKeyboardEvent = INPUT_START;
+src/naming_screen.c:2057:    SetGpuReg(REG_OFFSET_BG1CNT, GetGpuReg(REG_OFFSET_BG1CNT) & 0xFFFC);
+src/naming_screen.c:2059:    SetGpuReg(REG_OFFSET_BG2CNT, GetGpuReg(REG_OFFSET_BG2CNT) & 0xFFFC);
+src/roulette.c:4465:        if (betSlotId && (rand % 256) < 192)
+src/slot_machine.c:1364:            sSlotMachine->state = SLOTTASK_START_SPIN;
+src/slot_machine.c:1386:            sSlotMachine->state = SLOTTASK_START_SPIN;
+src/slot_machine.c:1440:        sSlotMachine->state = SLOTTASK_START_RT_SPIN;
+src/slot_machine.c:1591:            sSlotMachine->state = SLOTTASK_START_SPIN;
+src/slot_machine.c:1614:            sSlotMachine->state = SLOTTASK_START_SPIN;
+src/slot_machine.c:1633:            sSlotMachine->state = SLOTTASK_START_SPIN;
+src/slot_machine.c:3594:        task->tState++; // RT_TASK_WAIT_START_PIKA
+src/script_pokemon_util.c:298:        if (gSpeciesInfo[SanitizeSpeciesId(GetMonData(&gPlayerParty[partyIndex], MON_DATA_SPECIES))].isMythical)
+src/script_pokemon_util.c:429:    targetSpecies = GetFormChangeTargetSpecies(&mon, FORM_CHANGE_ITEM_HOLD, 0);
+src/contest_util.c:1461:    if (numStars & 0xFFFF)
+src/contest_util.c:1488:    if (numHearts & 0xFFFF)
+src/contest_util.c:1617:            gSprites[spriteId].data[2] = (Random() % 256) + 48;
+src/contest_util.c:1720:        if ((barLength & 0xFF) > 0x7F)
+src/contest_util.c:1725:        if ((barLength & 0xFF) > 0x7F)
+src/contest_util.c:1773:                if ((target & 0xFFFF) > 0x7FFF)
+src/contest_util.c:1795:                if ((target & 0xFFFF) > 0x7FFF)
+src/contest_util.c:2287:    gSaveBlock1Ptr->vars[VAR_OBJ_GFX_ID_0 - VARS_START] = gContestMons[0].trainerGfxId;
+src/contest_util.c:2288:    gSaveBlock1Ptr->vars[VAR_OBJ_GFX_ID_1 - VARS_START] = gContestMons[1].trainerGfxId;
+src/contest_util.c:2289:    gSaveBlock1Ptr->vars[VAR_OBJ_GFX_ID_2 - VARS_START] = gContestMons[2].trainerGfxId;
+src/contest_util.c:2377:    for (i = 0; i < NUM_CONTEST_WINNERS - MUSEUM_CONTEST_WINNERS_START; i++)
+src/contest_util.c:2379:        if (gSaveBlock1Ptr->contestWinners[MUSEUM_CONTEST_WINNERS_START + i].species)
+src/battle_dome.c:4045:        if (species >= NUM_SPECIES / 20) // At least 5% of all mons can learn this move
+src/battle_anim_utility_funcs.c:637:    selectedPalettes = GetBattlePalettesMask(TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE) & 0xFFFF;
+src/gpu_regs.c:73:        vcount = REG_VCOUNT & 0xFF;
+src/trainer_pokemon_sprites.c:186:    species = SanitizeSpeciesId(species);
+src/pokenav_main_menu.c:172:    [POKENAV_GFX_PARTY_MENU - POKENAV_GFX_SUBMENUS_START] = {
+src/pokenav_main_menu.c:176:    [POKENAV_GFX_SEARCH_MENU - POKENAV_GFX_SUBMENUS_START] = {
+src/pokenav_main_menu.c:180:    [POKENAV_GFX_COOL_MENU - POKENAV_GFX_SUBMENUS_START] = {
+src/pokenav_main_menu.c:184:    [POKENAV_GFX_BEAUTY_MENU - POKENAV_GFX_SUBMENUS_START] = {
+src/pokenav_main_menu.c:188:    [POKENAV_GFX_CUTE_MENU - POKENAV_GFX_SUBMENUS_START] = {
+src/pokenav_main_menu.c:192:    [POKENAV_GFX_SMART_MENU - POKENAV_GFX_SUBMENUS_START] = {
+src/pokenav_main_menu.c:196:    [POKENAV_GFX_TOUGH_MENU - POKENAV_GFX_SUBMENUS_START] = {
+src/pokenav_main_menu.c:663:        LoadLeftHeaderGfxForSubMenu(menuGfxId - POKENAV_GFX_SUBMENUS_START);
+src/pokenav_main_menu.c:703:    if (menuGfxId >= POKENAV_GFX_MENUS_END - POKENAV_GFX_SUBMENUS_START)
+src/main.c:235:    u16 gpuReg = (GetGpuReg(REG_OFFSET_DISPSTAT) & 0xFF) | (150 << 8);
+src/fishing.c:364:    task->tStep = FISHING_START_ENCOUNTER;
+src/pokemon_jump.c:525:    return gSpeciesInfo[SanitizeSpeciesId(species)].pokemonJumpType;
+src/pokemon_jump.c:2158:    return (quantity << 12) | (itemId & 0xFFF);
+src/pokemon_jump.c:2164:    *itemId = data & 0xFFF;
+src/title_screen.c:816:        if ((gMPlayInfo_BGM.status & 0xFFFF) == 0)
+src/libisagbprn.c:61:    nData = (pPrint->m_nPut & 1) ? (nData & 0xFF) | (cChr << 8) : (nData & 0xFF00) | cChr;
+src/libisagbprn.c:76:    if (pPrint->m_nPut == ((pPrint->m_nGet - 1) & 0xFFFF))
+src/contest_ai.c:1637:    if ((Random() & 0xFF) < eContestAI.vars[gAIScriptPtr[1]])
+src/contest_ai.c:1639:    if ((Random() & 0xFF) < gAIScriptPtr[1])
+src/contest_ai.c:1649:    if (((Random()) & 0xFF) > eContestAI.vars[gAIScriptPtr[1]])
+src/contest_ai.c:1651:    if (((Random()) & 0xFF) > gAIScriptPtr[1])
+src/battle_pyramid_bag.c:1617:    CreateSwapLineSprites(&gPyramidBagMenu->spriteIds[PBAG_SPRITE_SWAP_LINE_START], NUM_SWAP_LINE_SPRITES);
+src/battle_pyramid_bag.c:1622:    SetSwapLineSpritesInvisibility(&gPyramidBagMenu->spriteIds[PBAG_SPRITE_SWAP_LINE_START], NUM_SWAP_LINE_SPRITES, invisible);
+src/battle_pyramid_bag.c:1627:    UpdateSwapLineSpritesPos(&gPyramidBagMenu->spriteIds[PBAG_SPRITE_SWAP_LINE_START], NUM_SWAP_LINE_SPRITES | SWAP_LINE_HAS_MARGIN, 120, (y + 1) * 16);
+src/battle_anim_mons.c:146:    species = SanitizeSpeciesId(species);
+src/battle_anim_mons.c:186:            species = SanitizeSpeciesId(species);
+src/battle_anim_mons.c:2107:        species = SanitizeSpeciesId(species);
+src/battle_anim_mons.c:2129:        species = SanitizeSpeciesId(species);
+src/mystery_gift_menu.c:1198:            data->state = MG_STATE_CLIENT_LINK_START;
+src/mystery_gift_menu.c:1203:            data->state = MG_STATE_CLIENT_LINK_START;
+src/mystery_gift_menu.c:1542:            data->state = MG_STATE_SERVER_LINK_START;
+src/evolution_scene.c:1578:    gTasks[taskId].data[0] = (gTasks[taskId].data[0] + 5) & 0xFF;
+src/evolution_scene.c:1579:    gTasks[taskId].data[1] = (gTasks[taskId].data[0] + 0x80) & 0xFF;
+src/decoration.c:2008:    return gTilesetPointer_SecretBaseRedCave->metatiles[tile] & 0xFFF;
+src/pokenav_menu_handler_gfx.c:180:static const u16 sOptionsLabelGfx_RegionMap[] = {0x000, PALTAG_OPTIONS_DEFAULT - PALTAG_OPTIONS_START};
+src/pokenav_menu_handler_gfx.c:181:static const u16 sOptionsLabelGfx_Condition[] = {0x020, PALTAG_OPTIONS_BLUE - PALTAG_OPTIONS_START};
+src/pokenav_menu_handler_gfx.c:182:static const u16 sOptionsLabelGfx_MatchCall[] = {0x040, PALTAG_OPTIONS_RED - PALTAG_OPTIONS_START};
+src/pokenav_menu_handler_gfx.c:183:static const u16 sOptionsLabelGfx_Ribbons[]   = {0x060, PALTAG_OPTIONS_PINK - PALTAG_OPTIONS_START};
+src/pokenav_menu_handler_gfx.c:184:static const u16 sOptionsLabelGfx_SwitchOff[] = {0x080, PALTAG_OPTIONS_BEIGE - PALTAG_OPTIONS_START};
+src/pokenav_menu_handler_gfx.c:185:static const u16 sOptionsLabelGfx_Party[]     = {0x0A0, PALTAG_OPTIONS_BLUE - PALTAG_OPTIONS_START};
+src/pokenav_menu_handler_gfx.c:186:static const u16 sOptionsLabelGfx_Search[]    = {0x0C0, PALTAG_OPTIONS_BLUE - PALTAG_OPTIONS_START};
+src/pokenav_menu_handler_gfx.c:187:static const u16 sOptionsLabelGfx_Cool[]      = {0x0E0, PALTAG_OPTIONS_RED - PALTAG_OPTIONS_START};
+src/pokenav_menu_handler_gfx.c:188:static const u16 sOptionsLabelGfx_Beauty[]    = {0x100, PALTAG_OPTIONS_BLUE - PALTAG_OPTIONS_START};
+src/pokenav_menu_handler_gfx.c:189:static const u16 sOptionsLabelGfx_Cute[]      = {0x120, PALTAG_OPTIONS_PINK - PALTAG_OPTIONS_START};
+src/pokenav_menu_handler_gfx.c:190:static const u16 sOptionsLabelGfx_Smart[]     = {0x140, PALTAG_OPTIONS_DEFAULT - PALTAG_OPTIONS_START};
+src/pokenav_menu_handler_gfx.c:191:static const u16 sOptionsLabelGfx_Tough[]     = {0x160, PALTAG_OPTIONS_DEFAULT - PALTAG_OPTIONS_START};
+src/pokenav_menu_handler_gfx.c:192:static const u16 sOptionsLabelGfx_Cancel[]    = {0x180, PALTAG_OPTIONS_BEIGE - PALTAG_OPTIONS_START};
+src/pokenav_menu_handler_gfx.c:871:                gfx->iconSprites[i][j]->oam.paletteNum = IndexOfSpritePaletteTag((*optionGfx)[1] + PALTAG_OPTIONS_START);
+src/ereader_helpers.c:379:    return (gSaveBlock1Ptr->trainerHill.unused + 1) % 256;
+src/berry_blender.c:1907:    u32 var1 = (sBerryBlender->arrowPos + 0x1800) & 0xFFFF;
+src/berry_blender.c:1950:    u32 var1 = (sBerryBlender->arrowPos + 0x1800) & 0xFFFF;
+src/berry_blender.c:3174:        x = gSineTable[(rand & 0xFF) + 64] / 4;
+src/berry_blender.c:3175:        y = gSineTable[(rand & 0xFF)] / 4;
+src/menu.c:1994:            ptr[(i * 32) + j] = (ptr[(i * 32) + j] & 0xFFF) | (palette << 12);
+src/pokeball.c:775:    switch (sprite->data[3] & 0xFF)
+src/pokeball.c:846:    switch (sprite->data[3] & 0xFF)
+src/pokeball.c:1201:#define HIBYTE(x) (((x) >> 8) & 0xFF)
+src/pokeball.c:1213:        if ((sprite->oam.affineParam & 0xFF00) == 0)
+src/pokeball.c:1246:            sprite->sBattler = sprite->oam.affineParam & 0xFF;
+src/field_effect_helpers.c:524:                && mapNum == (sprite->sMapNum & 0xFF)
+src/battle_transition.c:1983:        end = (gScanlineEffectRegBuffers[0][sTransitionData->tWipeCurrY]) & 0xFF;
+src/battle_transition.c:3192:    if ((task->tSinIndex & 0xFF) <= 128)
+src/battle_transition.c:3202:    task->tRadius += Sin(index & 0xFF, amplitude);
+src/battle_transition.c:3374:        line->state = SPIRAL_OUTWARD_START;
+src/battle_transition.c:3389:                line->state = SPIRAL_OUTWARD_START;
+src/battle_transition.c:3400:                line->state = SPIRAL_INWARD_START;
+src/battle_transition.c:3920:        s16 r4 = gScanlineEffectRegBuffers[0][sTransitionData->tWipeCurrY] & 0xFF;
+src/battle_transition.c:4154:        array[i] = sinAdd + Sin(index & 0xFF, amplitude);
+src/librfu_rfu.c:1477:        slotStatus_NI->send.state = SLOT_STATE_SEND_START;
+src/librfu_rfu.c:2095:     || (llsf_NI->slotState == LCOM_NI_START && state == SLOT_STATE_SEND_START)
+src/librfu_rfu.c:2107:            if (NI_comm->state == SLOT_STATE_SEND_START)
+src/librfu_rfu.c:2117:                if (NI_comm->state == SLOT_STATE_SEND_START)
+src/librfu_rfu.c:2181:    else if (llsf_NI->slotState == LCOM_NI_START)
+src/librfu_rfu.c:2190:            if (slotStatus_NI->recv.state != SLOT_STATE_RECV_START)
+src/librfu_rfu.c:2254:            NI_comm->state = SLOT_STATE_RECV_START;
+src/field_control_avatar.c:449:        gSpecialVar_0x8004 = ((u32)bgEvent->bgUnion.script >> 16) + FLAG_HIDDEN_ITEMS_START;
+src/battle_anim_fight.c:751:        sprite->data[3] = (sprite->data[3] + 3) & 0xFF;
+src/battle_anim_fight.c:1061:        sprite->data[1] = (sprite->data[1] + 40) & 0xFF;
+src/battle_anim_ice.c:676:        sprite->data[7] = (sprite->data[7] + sprite->data[4]) & 0xFF;
+src/battle_anim_ice.c:846:        sprite->data[0] = (sprite->data[0] + 16) & 0xFF;
+src/battle_anim_ice.c:949:    sprite->data[7] = (sprite->data[7] + sprite->data[6]) & 0xFF;
+src/battle_anim_ice.c:1079:        sprite->data[5] = (sprite->data[5] + 3) & 0xFF;
+src/battle_anim_ice.c:1351:    switch (sprite->data[7] & 0xFF)
+src/battle_anim_ice.c:1358:            sprite->data[5] = (sprite->data[5] - 8) & 0xFF;
+src/battle_anim_ice.c:1360:            sprite->data[5] = (sprite->data[5] + 8) & 0xFF;
+src/battle_anim_ice.c:1388:            sprite->data[5] = (sprite->data[5] + 2) & 0xFF;
+src/battle_anim_ice.c:1405:            sprite->data[5] = (sprite->data[5] + 4) & 0xFF;
+src/battle_anim_ice.c:1415:            sprite->data[5] = (sprite->data[5] - 4) & 0xFF;
+src/battle_anim_ice.c:1693:    randA = (Random2() & 0xFF) + 256;
+src/secret_base.c:272:    behavior = MapGridGetMetatileBehaviorAt(x, y) & 0xFFF;
+src/secret_base.c:1721:            mixers[0].version = gLinkPlayers[linkId1].version & 0xFF;   \
+src/secret_base.c:1724:            mixers[1].version = gLinkPlayers[linkId2].version & 0xFF;   \
+src/secret_base.c:1727:            mixers[2].version = gLinkPlayers[linkId3].version & 0xFF;   \
+src/pokemon_summary_screen.c:3740:        trainerId = gLinkPlayers[multiID].trainerId & 0xFFFF;
+src/pokemon_summary_screen.c:3746:        trainerId = GetPlayerIDAsU32() & 0xFFFF;
+src/pokemon_summary_screen.c:3751:    if (gender != sum->OTGender || trainerId != (sum->OTID & 0xFFFF) || StringCompareWithoutExtCtrlCodes(gStringVar1, sum->OTName))
+src/battle_anim_normal.c:379:    sprite->data[0] = (sprite->data[0] + sprite->data[1]) & 0xFF;
+src/battle_anim_normal.c:489:    sprite->data[0] = sprite->data[1] & 0xFF;
+src/battle_anim_normal.c:617:    gTasks[taskId].tPalSelectorLo = selectedPalettes & 0xFF;
+src/battle_anim_normal.c:805:    gTasks[taskId].data[0] = gTasks[taskId].data[1] & 0xFF;
+src/clock.c:87:        u32 targetSpecies = GetFormChangeTargetSpecies(mon, FORM_CHANGE_TIME_OF_DAY, 0);
+src/battle_controller_safari.c:348:        *(&gBattleStruct->abilityPreventingSwitchout) = (gBattleResources->bufferA[battler][3] & 0xFF) | (gBattleResources->bufferA[battler][7] << 8);
+src/battle_anim_throw.c:1200:#define DIRECTION(state)   (state & 0xFF)
+src/battle_anim_throw.c:1320:#define STATE(state)       (state & 0xFF)
+src/battle_anim_throw.c:1749:    sprite->sDy = (sprite->sDy + 0x800) & 0xFF;
+src/battle_anim_throw.c:1750:    sprite->sDx = (sprite->sDx + 0x680) & 0xFF;
+src/battle_anim_throw.c:2047:    sprite->data[0] = (sprite->data[0] + sprite->data[4]) & 0xFF;
+src/battle_anim_throw.c:2089:    sprite->data[0] = (sprite->data[0] + 6) & 0xFF;
+src/battle_anim_throw.c:2177:    sprite->data[0] = (sprite->data[0] + 10) & 0xFF;
+src/battle_anim_throw.c:2445:                LoadCompressedSpriteSheetUsingHeap(&gBattleAnimPicTable[ANIM_TAG_GOLD_STARS - ANIM_SPRITES_START]);
+src/battle_anim_throw.c:2446:                LoadSpritePalette(&gBattleAnimPaletteTable[ANIM_TAG_GOLD_STARS - ANIM_SPRITES_START]);
+src/battle_anim_throw.c:2600:    LoadCompressedSpriteSheetUsingHeap(&gBattleAnimPicTable[ANIM_TAG_POKEBLOCK - ANIM_SPRITES_START]);
+src/battle_anim_throw.c:2601:    LoadSpritePalette(&gBattleAnimPaletteTable[ANIM_TAG_POKEBLOCK - ANIM_SPRITES_START]);
+src/battle_anim_throw.c:2738:    switch (sprite->data[3] & 0xFF)
+src/list_menu.c:467:        ListMenuRemoveCursorObject(list->taskId, list->template.cursorKind - CURSOR_OBJECT_START);
+src/list_menu.c:658:            list->taskId = ListMenuAddCursorObject(list, CURSOR_RED_OUTLINE - CURSOR_OBJECT_START);
+src/list_menu.c:662:                                   CURSOR_RED_OUTLINE - CURSOR_OBJECT_START);
+src/list_menu.c:666:            list->taskId = ListMenuAddCursorObject(list, CURSOR_RED_ARROW - CURSOR_OBJECT_START);
+src/list_menu.c:670:                                   CURSOR_RED_ARROW - CURSOR_OBJECT_START);
+src/list_menu.c:1212:    case CURSOR_RED_OUTLINE - CURSOR_OBJECT_START:
+src/list_menu.c:1215:    case CURSOR_RED_ARROW - CURSOR_OBJECT_START:
+src/list_menu.c:1224:    case CURSOR_RED_OUTLINE - CURSOR_OBJECT_START:
+src/list_menu.c:1227:    case CURSOR_RED_ARROW - CURSOR_OBJECT_START:
+src/list_menu.c:1237:    case CURSOR_RED_OUTLINE - CURSOR_OBJECT_START:
+src/list_menu.c:1240:    case CURSOR_RED_ARROW - CURSOR_OBJECT_START:
+src/pokedex_cry_screen.c:563:    x = gSineTable[((sCryMeterNeedle->rotation + 0x7F) & 0xFF)];
+src/pokedex_cry_screen.c:564:    y = gSineTable[((sCryMeterNeedle->rotation + 0x7F) & 0xFF) + 64];
+src/pokedex_cry_screen.c:571:    u16 rotation = (MIN_NEEDLE_POS - offset) & 0xFF;
+src/match_call.c:171:#define TEXT_ID(topic, id) (((topic) << 8) | ((id) & 0xFF))
+src/match_call.c:1665:    id = (sMatchCallTrainers[matchCallId].generalTextId & 0xFF) - 1;
+src/match_call.c:1899:    otId = GetTrainerId(gSaveBlock2Ptr->playerTrainerId) & 0xFFFF;
+src/time_events.c:48:        if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) && (GetMonData(&gPlayerParty[i], MON_DATA_PERSONALITY) & 0xFFFF) == rnd)
+src/rom_header_gf.c:120:    .pokedexVar = VAR_NATIONAL_DEX - VARS_START,
+src/battle_anim_dragon.c:512:        sprite->data[6] = (sprite->data[6] - sprite->data[5]) & 0xFF;
+src/battle_anim_dragon.c:528:        sprite->data[6] = (sprite->data[6] - sprite->data[5]) & 0xFF;
+src/battle_anim_dragon.c:628:        sineIndex = (sineIndex + 8) & 0xFF;
+src/battle_anim_dragon.c:631:    task->data[5] = (task->data[5] + 9) & 0xFF;
+src/field_specials.c:3908:#define FANCLUB_BITFIELD (gSaveBlock1Ptr->vars[VAR_FANCLUB_FAN_COUNTER - VARS_START])
+src/field_specials.c:3922:    gSaveBlock1Ptr->vars[VAR_FANCLUB_FAN_COUNTER - VARS_START] = 0;
+src/field_specials.c:3923:    gSaveBlock1Ptr->vars[VAR_FANCLUB_LOSE_FAN_TIMER - VARS_START] = 0;
+src/field_specials.c:3931:        gSaveBlock1Ptr->vars[VAR_FANCLUB_LOSE_FAN_TIMER - VARS_START] = gSaveBlock2Ptr->playTimeHours;
+src/field_specials.c:3941:        gSaveBlock1Ptr->vars[VAR_FANCLUB_LOSE_FAN_TIMER - VARS_START] = gSaveBlock2Ptr->playTimeHours;
+src/field_specials.c:4091:                gSaveBlock1Ptr->vars[VAR_FANCLUB_LOSE_FAN_TIMER - VARS_START] = gSaveBlock2Ptr->playTimeHours;
+src/field_specials.c:4098:            else if (gSaveBlock2Ptr->playTimeHours - gSaveBlock1Ptr->vars[VAR_FANCLUB_LOSE_FAN_TIMER - VARS_START] < 12)
+src/field_specials.c:4103:            gSaveBlock1Ptr->vars[VAR_FANCLUB_LOSE_FAN_TIMER - VARS_START] += 12;
+src/braille.c:123:            textPrinter->state = RENDER_STATE_SCROLL_START;
+src/sprite.c:383:        sSpriteOrder[i] = spritePriorities[i] & 0xFF;
+src/sprite.c:392:        if (AddSpriteToOamBuffer(&gSprites[spritePriorities[i] & 0xFF], &oamIndex))
+src/bg.c:584:            temp2 = sGpuBgConfigs2[2].bg_x & 0xFFFF;
+src/bg.c:598:            temp2 = sGpuBgConfigs2[3].bg_x & 0xFFFF;
+src/bg.c:664:            temp2 = sGpuBgConfigs2[2].bg_y & 0xFFFF;
+src/bg.c:678:            temp2 = sGpuBgConfigs2[3].bg_y & 0xFFFF;
+src/bg.c:735:            temp2 = sGpuBgConfigs2[2].bg_y & 0xFFFF;
+src/bg.c:749:            temp2 = sGpuBgConfigs2[3].bg_y & 0xFFFF;
+src/bg.c:1175:        var = ((*src + tileOffset) & 0xFFF) + ((palette1 + palette2) << 12);
+src/contest_link.c:87:    for (i = 0; i < gNumLinkContestPlayers && (u32)(gLinkPlayers[i].version & 0xFF) - 1 > VERSION_RUBY - 1; i++)
+src/rayquaza_scene.c:1498:    StartSpriteAnim(&gSprites[data[0] & 0xFF], 2);
+src/rayquaza_scene.c:1500:    StartSpriteAnim(&gSprites[data[1] & 0xFF], 4);
+src/rayquaza_scene.c:1502:    StartSpriteAnim(&gSprites[data[2] & 0xFF], 6);
+src/rayquaza_scene.c:1504:    StartSpriteAnim(&gSprites[data[3] & 0xFF], 8);
+src/rayquaza_scene.c:1518:        gSprites[sprite->data[0] & 0xFF].x++;
+src/rayquaza_scene.c:1520:        gSprites[data[1] & 0xFF].x++;
+src/rayquaza_scene.c:1522:        gSprites[data[2] & 0xFF].x++;
+src/rayquaza_scene.c:1524:        gSprites[data[3] & 0xFF].x++;
+src/rayquaza_scene.c:1526:        gSprites[data[4] & 0xFF].x++;
+src/rayquaza_scene.c:1529:    switch (gSprites[data[2] & 0xFF].animCmdIndex)
+src/rayquaza_scene.c:1534:        gSprites[data[0] & 0xFF].y2 = 0;
+src/rayquaza_scene.c:1536:        gSprites[data[1] & 0xFF].y2 = 0;
+src/rayquaza_scene.c:1538:        gSprites[data[2] & 0xFF].y2 = 0;
+src/rayquaza_scene.c:1540:        gSprites[data[3] & 0xFF].y2 = 0;
+src/rayquaza_scene.c:1542:        gSprites[data[4] & 0xFF].y2 = 0;
+src/rayquaza_scene.c:1548:        gSprites[data[0] & 0xFF].y2 = 1;
+src/rayquaza_scene.c:1550:        gSprites[data[1] & 0xFF].y2 = 1;
+src/rayquaza_scene.c:1552:        gSprites[data[2] & 0xFF].y2 = 1;
+src/rayquaza_scene.c:1554:        gSprites[data[3] & 0xFF].y2 = 1;
+src/rayquaza_scene.c:1556:        gSprites[data[4] & 0xFF].y2 = 1;
+src/rayquaza_scene.c:1561:        gSprites[data[0] & 0xFF].y2 = 2;
+src/rayquaza_scene.c:1563:        gSprites[data[1] & 0xFF].y2 = 2;
+src/rayquaza_scene.c:1565:        gSprites[data[4] & 0xFF].y2 = 2;
+src/rayquaza_scene.c:1902:    StartSpriteAnim(&gSprites[data[0] & 0xFF], 2);
+src/rayquaza_scene.c:1904:    StartSpriteAnim(&gSprites[data[1] & 0xFF], 4);
+src/rayquaza_scene.c:1906:    StartSpriteAnim(&gSprites[data[2] & 0xFF], 6);
+src/rayquaza_scene.c:1908:    StartSpriteAnim(&gSprites[data[3] & 0xFF], 8);
+src/rayquaza_scene.c:1922:        gSprites[sprite->data[0] & 0xFF].x++;
+src/rayquaza_scene.c:1924:        gSprites[data[1] & 0xFF].x++;
+src/rayquaza_scene.c:1926:        gSprites[data[2] & 0xFF].x++;
+src/rayquaza_scene.c:1928:        gSprites[data[3] & 0xFF].x++;
+src/rayquaza_scene.c:1930:        gSprites[data[4] & 0xFF].x++;
+src/rayquaza_scene.c:1933:    switch (gSprites[data[2] & 0xFF].animCmdIndex)
+src/rayquaza_scene.c:1938:        gSprites[data[0] & 0xFF].y2 = 0;
+src/rayquaza_scene.c:1940:        gSprites[data[1] & 0xFF].y2 = 0;
+src/rayquaza_scene.c:1942:        gSprites[data[2] & 0xFF].y2 = 0;
+src/rayquaza_scene.c:1944:        gSprites[data[3] & 0xFF].y2 = 0;
+src/rayquaza_scene.c:1946:        gSprites[data[4] & 0xFF].y2 = 0;
+src/rayquaza_scene.c:1952:        gSprites[data[0] & 0xFF].y2 = 1;
+src/rayquaza_scene.c:1954:        gSprites[data[1] & 0xFF].y2 = 1;
+src/rayquaza_scene.c:1956:        gSprites[data[2] & 0xFF].y2 = 1;
+src/rayquaza_scene.c:1958:        gSprites[data[3] & 0xFF].y2 = 1;
+src/rayquaza_scene.c:1960:        gSprites[data[4] & 0xFF].y2 = 1;
+src/rayquaza_scene.c:1965:        gSprites[data[0] & 0xFF].y2 = 2;
+src/rayquaza_scene.c:1967:        gSprites[data[1] & 0xFF].y2 = 2;
+src/rayquaza_scene.c:1969:        gSprites[data[4] & 0xFF].y2 = 2;
+src/rayquaza_scene.c:1981:        gSprites[sprite->data[0] & 0xFF].y += 8;
+src/rayquaza_scene.c:1983:        gSprites[data[1] & 0xFF].y += 8;
+src/rayquaza_scene.c:1985:        gSprites[data[2] & 0xFF].y += 8;
+src/rayquaza_scene.c:1987:        gSprites[data[3] & 0xFF].y += 8;
+src/rayquaza_scene.c:1989:        gSprites[data[4] & 0xFF].y += 8;
+src/starter_choose.c:659:    if (sprite->x > STARTER_PKMN_POS_X)
+src/starter_choose.c:661:    if (sprite->x < STARTER_PKMN_POS_X)
+src/starter_choose.c:663:    if (sprite->y > STARTER_PKMN_POS_Y)
+src/starter_choose.c:665:    if (sprite->y < STARTER_PKMN_POS_Y)
+src/pokenav_ribbons_summary.c:295:        u32 ribbonPos = list->selectedPos - GIFT_RIBBON_START_POS;
+src/pokenav_ribbons_summary.c:323:        list->selectedPos = ribbonPos + GIFT_RIBBON_START_POS;
+src/pokenav_ribbons_summary.c:348:    if (list->selectedPos < GIFT_RIBBON_START_POS)
+src/pokenav_ribbons_summary.c:483:        list->selectedPos = GIFT_RIBBON_START_POS;
+src/pokenav_ribbons_summary.c:514:        return list->giftRibbonIds[ribbonPos - GIFT_RIBBON_START_POS];
+src/text.c:680:    *(dest)++ = ((sFontHalfRowLookupTable[sFontHalfRowOffsets[temp & 0xFF]]) << 16) | (sFontHalfRowLookupTable[sFontHalfRowOffsets[temp >> 8]]);
+src/text.c:683:    *(dest++) = ((sFontHalfRowLookupTable[sFontHalfRowOffsets[temp & 0xFF]]) << 16) | (sFontHalfRowLookupTable[sFontHalfRowOffsets[temp >> 8]]);
+src/text.c:686:    *(dest++) = ((sFontHalfRowLookupTable[sFontHalfRowOffsets[temp & 0xFF]]) << 16) | (sFontHalfRowLookupTable[sFontHalfRowOffsets[temp >> 8]]);
+src/text.c:689:    *(dest++) = ((sFontHalfRowLookupTable[sFontHalfRowOffsets[temp & 0xFF]]) << 16) | (sFontHalfRowLookupTable[sFontHalfRowOffsets[temp >> 8]]);
+src/text.c:692:    *(dest++) = ((sFontHalfRowLookupTable[sFontHalfRowOffsets[temp & 0xFF]]) << 16) | (sFontHalfRowLookupTable[sFontHalfRowOffsets[temp >> 8]]);
+src/text.c:695:    *(dest++) = ((sFontHalfRowLookupTable[sFontHalfRowOffsets[temp & 0xFF]]) << 16) | (sFontHalfRowLookupTable[sFontHalfRowOffsets[temp >> 8]]);
+src/text.c:698:    *(dest++) = ((sFontHalfRowLookupTable[sFontHalfRowOffsets[temp & 0xFF]]) << 16) | (sFontHalfRowLookupTable[sFontHalfRowOffsets[temp >> 8]]);
+src/text.c:701:    *(dest++) = ((sFontHalfRowLookupTable[sFontHalfRowOffsets[temp & 0xFF]]) << 16) | (sFontHalfRowLookupTable[sFontHalfRowOffsets[temp >> 8]]);
+src/text.c:1325:            textPrinter->state = RENDER_STATE_SCROLL_START;
+src/link_rfu_3.c:599:            total += (i + 1 + sSequenceArrayValOffset) & 0xFF;
+src/field_weather_effect.c:1402:    gWeatherPtr->fogHScrollPosX = (gSpriteCoordOffsetX - gWeatherPtr->fogHScrollOffset) & 0xFF;
+src/field_weather_effect.c:1435:    gWeatherPtr->fogHScrollPosX = (gSpriteCoordOffsetX - gWeatherPtr->fogHScrollOffset) & 0xFF;
+src/field_weather_effect.c:1837:    gWeatherPtr->fogDBaseSpritesX = (gSpriteCoordOffsetX - gWeatherPtr->fogDXOffset) & 0xFF;
+src/field_weather_effect.c:2061:    gWeatherPtr->sandstormBaseSpritesX = (gSpriteCoordOffsetX + (gWeatherPtr->sandstormXOffset >> 8)) & 0xFF;
+src/field_weather_effect.c:2247:    sprite->tWaveIndex = (sprite->tWaveIndex + 10) & 0xFF;
+src/berry_crush.c:532:    [STATE_RESULTS_PRESSES - RESULTS_STATE_START] = {
+src/berry_crush.c:541:    [STATE_RESULTS_RANDOM - RESULTS_STATE_START] = {
+src/berry_crush.c:550:    [STATE_RESULTS_CRUSHING - RESULTS_STATE_START] = {
+src/berry_crush.c:1080:    presses = MathUtil_Div32(presses, time) & 0xFFFF;
+src/berry_crush.c:1338:    game->depth = CRUSHER_START_Y;
+src/berry_crush.c:1726:        memcpy(&template, &sWindowTemplates_Results[game->gameState - RESULTS_STATE_START], sizeof(struct WindowTemplate));
+src/berry_crush.c:1817:                if (((tPressingSpeeds(i) & 0xFF) >> (7 - j)) & 1)
+src/berry_crush.c:1957:    game->depth = CRUSHER_START_Y;
+src/battle_anim_ghost.c:315:    sprite->data[5] = (sprite->data[5] + 5) & 0xFF;
+src/battle_anim_ghost.c:334:    sprite->data[5] = (sprite->data[5] + 5) & 0xFF;
+src/battle_anim_ghost.c:363:    if ((sprite->data[7]++ & 0xFF) == 0)
+src/battle_anim_ghost.c:396:    sprite->data[0] = (sprite->data[0] + 19) & 0xFF;
+src/battle_anim_ghost.c:1211:    sprite->data[0] = (sprite->data[0] + 6) & 0xFF;
+src/battle_anim_ghost.c:1226:        coeffA = sprite->data[6] & 0xFF;
+src/battle_anim_ghost.c:1288:                gSprites[spriteId].data[2] = (i * 42) & 0xFF;
+src/battle_anim_ghost.c:1375:    sprite->data[6] = (sprite->data[5] * 8) & 0xFF;
+src/union_room.c:661:                data->state = LL_STATE_TRY_START_ACTIVITY;
+src/union_room.c:1115:                data->state = LG_STATE_READY_START_ACTIVITY;
+src/union_room.c:2583:                uroom->state = UR_STATE_WAIT_FOR_START_MENU;
+src/union_room.c:2791:                    uroom->state = UR_STATE_PRINT_START_ACTIVITY_MSG;
+src/union_room.c:2892:            uroom->state = UR_STATE_START_ACTIVITY_FREE_UROOM;
+src/union_room.c:2964:                    uroom->state = UR_STATE_PRINT_START_ACTIVITY_MSG;
+src/union_room.c:2976:                uroom->state = UR_STATE_PRINT_START_ACTIVITY_MSG;
+src/union_room.c:3012:        uroom->state = UR_STATE_START_ACTIVITY_WAIT_FOR_LINK;
+src/union_room.c:3016:            uroom->state = UR_STATE_START_ACTIVITY_FREE_UROOM;
+src/union_room.c:3025:        uroom->state = UR_STATE_START_ACTIVITY_FADE;
+src/union_room.c:3029:        uroom->state = UR_STATE_START_ACTIVITY;
+src/field_door.c:292:        CpuFastCopy(gfx->tiles + frame->offset, (void *)(VRAM + TILE_OFFSET_4BPP(DOOR_TILE_START_SIZE2)), 16 * TILE_SIZE_4BPP);
+src/field_door.c:294:        CpuFastCopy(gfx->tiles + frame->offset, (void *)(VRAM + TILE_OFFSET_4BPP(DOOR_TILE_START_SIZE1)), 8 * TILE_SIZE_4BPP);
+src/mauville_old_man.c:509:            song->state = SOUND_STATE_START;
+src/mauville_old_man.c:572:                    song->state = SOUND_STATE_START;
+src/battle_script_commands.c:9109:    if (gBattle_BG2_X - 16 < LEVEL_UP_BANNER_START)
+src/battle_script_commands.c:9507:            && GetFormIdFromFormSpeciesId(gBattleMons[battler].species) < GetFormIdFromFormSpeciesId(SPECIES_MINIOR_CORE_RED)); // Minior is not in core form
+src/battle_script_commands.c:15505:            if (SanitizeSpeciesId(evolutions[i].targetSpecies) == SPECIES_NONE)
+src/librfu_intr.c:66:        if ((regSIODATA32 & 0xFFFF0000) == 0x99660000)
+src/librfu_intr.c:336:        if ((gSTWIStatus->timerActive & 0xFF) == 1)
+src/m4a.c:238:            if (track->flags & MPT_FLG_START)
+src/m4a.c:620:        || ((!mplayInfo->songHeader || !(mplayInfo->tracks[0].flags & MPT_FLG_START))
+src/m4a.c:643:            track->flags = MPT_FLG_EXIST | MPT_FLG_START;
+src/m4a.c:985:        if (channels->statusFlags & SOUND_CHANNEL_SF_START)
+src/map_name_popup.c:598:    for (i = 0; i < 1 + TILE_TOP_EDGE_END - TILE_TOP_EDGE_START; i++)
+src/map_name_popup.c:610:    for (i = 0; i < 1 + TILE_BOT_EDGE_END - TILE_BOT_EDGE_START; i++)
+src/union_room_player_avatar.c:399:                                           id - UR_SPRITE_START_ID,
+src/union_room_player_avatar.c:403:        SetVirtualObjectInvisibility(id - UR_SPRITE_START_ID, TRUE);
+src/union_room_player_avatar.c:441:    return IsVirtualObjectInvisible(UR_PLAYER_SPRITE_ID(leaderId, memberId) - UR_SPRITE_START_ID);
+src/union_room_player_avatar.c:450:        SetVirtualObjectInvisibility(id - UR_SPRITE_START_ID, FALSE);
+src/union_room_player_avatar.c:451:        SetVirtualObjectSpriteAnim(id - UR_SPRITE_START_ID, UNION_ROOM_SPAWN_IN);
+src/union_room_player_avatar.c:453:    SetVirtualObjectGraphics(id - UR_SPRITE_START_ID, graphicsId);
+src/union_room_player_avatar.c:462:    SetVirtualObjectSpriteAnim(UR_PLAYER_SPRITE_ID(leaderId, memberId) - UR_SPRITE_START_ID, UNION_ROOM_SPAWN_OUT);
+src/union_room_player_avatar.c:474:    if (IsVirtualObjectInvisible(UR_PLAYER_SPRITE_ID(leaderId, 0) - UR_SPRITE_START_ID) == TRUE)
+src/union_room_player_avatar.c:574:            if (IsVirtualObjectInvisible(id - UR_SPRITE_START_ID))
+src/union_room_player_avatar.c:576:            if (IsVirtualObjectAnimating(id - UR_SPRITE_START_ID))
+src/union_room_player_avatar.c:593:    TurnVirtualObject(MAX_RFU_PLAYERS * leaderId - UR_SPRITE_START_ID + memberId, newDirection);
+src/union_room_player_avatar.c:595:    // TurnVirtualObject(UR_PLAYER_SPRITE_ID(leaderId, memberId) - UR_SPRITE_START_ID, newDirection);
+src/fldeff_cut.c:566:    sprite->data[2] = (sprite->data[2] + 8) & 0xFF;
+src/trainer_card.c:348:    bgVOffset = gScanlineEffectRegBuffers[1][REG_VCOUNT & 0xFF];
+src/trainer_card.c:710:    trainerCard->hofDebutMinutes = (playTime >> 8) & 0xFF;
+src/trainer_card.c:711:    trainerCard->hofDebutSeconds = playTime & 0xFF;
+src/decompress.c:26:#define TABLE_READ_SYMBOL(tableVal)((tableVal & 0xFF) >> 3)
+src/decompress.c:27:#define TABLE_READ_Y(tableVal)((tableVal >> 8) & 0xFF)
+src/decompress.c:1129:    species = SanitizeSpeciesId(species);
+src/battle_controller_player.c:1845:    u8 version = gLinkPlayers[multiplayerId].version & 0xFF;
+src/battle_controller_player.c:2157:        *(&gBattleStruct->abilityPreventingSwitchout) = (gBattleResources->bufferA[battler][3] & 0xFF) | (gBattleResources->bufferA[battler][7] << 8);
+src/pokenav.c:14:#define LOOPED_TASK_PRIMARY_ID(taskId) (taskId & 0xFFFF)
+src/pokenav.c:54:    [POKENAV_MAIN_MENU - POKENAV_MENU_IDS_START] =
+src/pokenav.c:64:    [POKENAV_MAIN_MENU_CURSOR_ON_MAP - POKENAV_MENU_IDS_START] =
+src/pokenav.c:74:    [POKENAV_CONDITION_MENU - POKENAV_MENU_IDS_START] =
+src/pokenav.c:84:    [POKENAV_CONDITION_SEARCH_MENU - POKENAV_MENU_IDS_START] =
+src/pokenav.c:94:    [POKENAV_MAIN_MENU_CURSOR_ON_MATCH_CALL - POKENAV_MENU_IDS_START] =
+src/pokenav.c:104:    [POKENAV_MAIN_MENU_CURSOR_ON_RIBBONS - POKENAV_MENU_IDS_START] =
+src/pokenav.c:114:    [POKENAV_REGION_MAP - POKENAV_MENU_IDS_START] =
+src/pokenav.c:124:    [POKENAV_CONDITION_GRAPH_PARTY - POKENAV_MENU_IDS_START] =
+src/pokenav.c:134:    [POKENAV_CONDITION_SEARCH_RESULTS - POKENAV_MENU_IDS_START] =
+src/pokenav.c:144:    [POKENAV_CONDITION_GRAPH_SEARCH - POKENAV_MENU_IDS_START] =
+src/pokenav.c:154:    [POKENAV_RETURN_CONDITION_SEARCH - POKENAV_MENU_IDS_START] =
+src/pokenav.c:164:    [POKENAV_MATCH_CALL - POKENAV_MENU_IDS_START] =
+src/pokenav.c:174:    [POKENAV_RIBBONS_MON_LIST - POKENAV_MENU_IDS_START] =
+src/pokenav.c:184:    [POKENAV_RIBBONS_SUMMARY_SCREEN - POKENAV_MENU_IDS_START] =
+src/pokenav.c:194:    [POKENAV_RIBBONS_RETURN_TO_MON_LIST - POKENAV_MENU_IDS_START] =
+src/pokenav.c:508:    u32 index = menuId - POKENAV_MENU_IDS_START;
+src/debug.c:1403:    u32 maxSb1Size = SECTOR_DATA_SIZE * (SECTOR_ID_SAVEBLOCK1_END - SECTOR_ID_SAVEBLOCK1_START + 1);
+src/debug.c:1431:    u32 maxPkmnStorageSize = SECTOR_DATA_SIZE * (SECTOR_ID_PKMN_STORAGE_END - SECTOR_ID_PKMN_STORAGE_START + 1);
+src/debug.c:1478:    u32 currROMSizeB = __rom_end - (const u8 *)ROM_START;
+src/debug.c:3163:                species = (species < NUM_SPECIES - 1) ? species + 1 : 1;
+src/debug.c:3257:static const u8 *const sBGMNames[END_MUS - START_MUS + 1];
+src/debug.c:3365:        bgmName = sBGMNames[gTasks[taskId].tInput - START_MUS];
+src/debug.c:3920:#define X(songId) [songId - START_MUS] = sBGMName_##songId,
+src/debug.c:3921:static const u8 *const sBGMNames[END_MUS - START_MUS + 1] =
+src/ereader_screen.c:409:            data->state = ER_STATE_START;
+src/ereader_screen.c:414:            data->state = ER_STATE_LOAD_CARD_START;
+src/ereader_screen.c:502:            data->state = ER_STATE_START;
+src/ereader_screen.c:506:            data->state = ER_STATE_START;
+src/ereader_screen.c:510:            data->state = ER_STATE_START;
+src/tv.c:2342:            if (shows[showIdx].common.kind == TVSHOW_FRONTIER && (playerId & 0xFF) == shows[showIdx].common.trainerIdLo && ((playerId >> 8) & 0xFF) == shows[showIdx].common.trainerIdHi)
+src/tv.c:2802:         && (playerId & 0xFF) == shows[i].common.trainerIdLo
+src/tv.c:2803:         && ((playerId >> 8) & 0xFF) == shows[i].common.trainerIdHi)
+src/tv.c:3544:    if ((linkTrainerId & 0xFF) == src->common.trainerIdLo
+src/tv.c:3545:    && ((linkTrainerId >> 8) & 0xFF) == src->common.trainerIdHi)
+src/tv.c:3550:    src->common.srcTrainerIdLo = linkTrainerId & 0xFF;
+src/tv.c:3561:    if ((linkTrainerId & 0xFF) == src->common.srcTrainerIdLo
+src/tv.c:3562:    && ((linkTrainerId >> 8) & 0xFF) == src->common.srcTrainerIdHi)
+src/tv.c:3565:    if ((linkTrainerId & 0xFF) == src->common.trainerIdLo
+src/tv.c:3566:    && ((linkTrainerId >> 8) & 0xFF) == src->common.trainerIdHi)
+src/tv.c:3571:    src->common.srcTrainerId2Lo = linkTrainerId & 0xFF;
+src/tv.c:3582:    if ((linkTrainerId & 0xFF) == src->common.trainerIdLo
+src/tv.c:3583:    && ((linkTrainerId >> 8) & 0xFF) == src->common.trainerIdHi)
+src/tv.c:3588:    src->common.srcTrainerIdLo = linkTrainerId & 0xFF;
+src/link_rfu_2.c:2585:            gSaveBlock2Ptr->playerTrainerId[i] = Random() % 256;
+src/battle_anim_fire.c:797:        sprite->data[7] = (sprite->data[7] + 20) & 0xFF;
+src/battle_anim_fire.c:814:    sprite->data[7] = (sprite->data[7] + 20) & 0xFF;
+src/battle_anim_fire.c:866:    sprite->data[1] = (sprite->data[1] + 10) & 0xFF;
+src/battle_anim_fire.c:1233:        sprite->data[2] = (sprite->data[2] + 4) & 0xFF;
+src/battle_anim_fire.c:1243:        sprite->data[2] = (sprite->data[2] + 4) & 0xFF;
+src/battle_anim_fire.c:1274:        sprite->data[5] = (sprite->data[5] + 4) & 0xFF;
+src/battle_anim_fire.c:1308:    sprite->data[1] = (sprite->data[1] + 7) & 0xFF;
+src/battle_anim_ground.c:766:    newTask->data[2] = (64 - GetBattlerSpriteCoord(battler, BATTLER_COORD_Y_PIC_OFFSET)) & 0xFF;
+src/battle_gfx_sfx_util.c:1256:    u16 transformSpecies = SanitizeSpeciesId(gBattleSpritesDataPtr->battlerData[battler].transformSpecies);
+src/battle_gfx_sfx_util.c:1329:        if (gSpeciesInfo[SanitizeSpeciesId(species)].suppressEnemyShadow == FALSE)
+src/battle_gfx_sfx_util.c:1354:        if (gSpeciesInfo[SanitizeSpeciesId(species)].enemyMonElevation != 0)
+src/battle_anim.c:1176:            dest[j + i * 32] = ((dest[j + i * 32] & 0xFFF) | paletteNum) + offset;
+src/pokemon_animation.c:695:        s16 var = (sprite->data[2] * 512 / 40) % 256;
+src/pokemon_animation.c:720:        sprite->x2 = Sin((sprite->data[2] * 128 / 40) % 256, 6) * sign;
+src/pokemon_animation.c:737:        sprite->x2 = Sin((sprite->data[2] * 384 / sprite->data[0]) % 256, 6);
+src/pokemon_animation.c:762:        sprite->y2 = -(Sin((sprite->data[2] * 384 / sprite->data[0]) % 256, 6));
+src/pokemon_animation.c:865:        s16 index = (sprite->data[2] * 256 / 40) % 256;
+src/pokemon_animation.c:949:        sprite->x2 = Sin(counter % 256, sprite->data[7]);
+src/pokemon_animation.c:974:        sprite->y2 = Sin(counter % 256, 3);
+src/pokemon_animation.c:1006:        index = sprite->data[2] % 256;
+src/pokemon_animation.c:1049:            sprite->data[6] = Sin(sprite->data[2] % 256, 4096);
+src/pokemon_animation.c:1113:        s16 index = (sprite->data[2] + 192) % 256;
+src/pokemon_animation.c:1460:        sprite->data[4] = (sprite->data[4] + 128 / sprite->data[0]) & 0xFF;
+src/pokemon_animation.c:1494:        sprite->data[4] = (sprite->data[4] + sprite->data[6]) & 0xFF;
+src/pokemon_animation.c:2045:    sprite->y2 = -(Sin((sprite->data[6] * 2) & 0xFF, 8));
+src/pokemon_animation.c:2779:            sprite->x2 = Sin((sprite->data[2] * 128 / 40) % 256, 16) * sign;
+src/pokemon_animation.c:2784:            sprite->x2 = -(Sin((sprite->data[2] * 128 / 40) % 256, 16)) * sign;
+src/pokemon_animation.c:2881:        sprite->y2 = Sin(sprite->data[7] % 256, 8);
+src/pokemon_animation.c:3015:        sprite->x2 = Sin(sprite->data[7] % 256, sprite->data[4]);
+src/pokemon_animation.c:3050:        sprite->x2 = Sin(sprite->data[7] % 256, sprite->data[4]);
+src/pokemon_animation.c:3093:        sprite->x2 = Sin(sprite->data[7] % 256, 8);
+src/pokemon_animation.c:3123:        sprite->x2 = -(Sin((sprite->data[7] % 256) / 2, 16));
+src/pokemon_animation.c:3125:        scale = -(Sin((sprite->data[7] % 256) / 2, 64));
+src/pokemon_animation.c:3153:        sprite->x2 = -(Sin(sprite->data[7] % 256 , 8));
+src/pokemon_animation.c:3155:        scale = Sin((sprite->data[7] % 256) / 2, 96);
+src/pokemon_animation.c:3480:        sprite->y2 = Sin((counter + 192) % 256, sprite->data[7]) + sprite->data[7];
+src/pokemon_animation.c:3567:            index1 = sprite->data[7] & 0xFF;
+src/pokemon_animation.c:3628:            index1 = sprite->data[7] & 0xFF;
+src/pokemon_animation.c:3682:        sprite->y2 = Sin((var8 + 192) % 256, var7) + var7;
+src/pokemon_animation.c:3735:        sprite->x2 = Sin((sprite->data[2] * 128 / 40) % 256, 9) * sign;
+src/pokemon_animation.c:3756:        sprite->x2 = Sin((sprite->data[2] * 128 / 40) % 256, 12) * sign;
+src/pokemon_animation.c:3827:            index1 = sprite->data[7] & 0xFF;
+src/pokemon_animation.c:4247:        sprite->y2 = Sin((sprite->data[7] + 192) % 256, sprite->data[4]);
+src/pokemon_animation.c:4327:            sprite->y2 = -(Sin(sprite->data[7] % 256, 8));
+src/pokemon_animation.c:4569:        s16 index = ((u16)(sprite->data[2] % sprite->data[6] * 256) / sprite->data[6]) % 256;
+src/pokemon_animation.c:4942:            sprite->x2 = sign * Sin((sprite->data[5] * 384 / sprite->data[0]) % 256, 6);
+src/party_menu.c:6764:    u32 targetSpecies = GetFormChangeTargetSpecies(mon, FORM_CHANGE_ITEM_USE, gSpecialVar_ItemId);
+src/party_menu.c:6813:    u32 targetSpecies = GetFormChangeTargetSpecies(mon, FORM_CHANGE_ITEM_USE_MULTICHOICE, gSpecialVar_ItemId);
+src/party_menu.c:6906:    u32 targetSpecies = GetFormChangeTargetSpecies(mon, FORM_CHANGE_ITEM_HOLD, 0);
+src/pokemon_storage_system.c:3426:            sStorage->wallpaperSetId -= MENU_WALLPAPER_SETS_START;
+src/pokemon_storage_system.c:3460:            sStorage->wallpaperId -= MENU_WALLPAPERS_START;
+src/pokemon_storage_system.c:4341:    case MENU_SCENERY_1 - MENU_WALLPAPER_SETS_START:
+src/pokemon_storage_system.c:4347:    case MENU_SCENERY_2 - MENU_WALLPAPER_SETS_START:
+src/pokemon_storage_system.c:4353:    case MENU_SCENERY_3 - MENU_WALLPAPER_SETS_START:
+src/pokemon_storage_system.c:4359:    case MENU_ETCETERA - MENU_WALLPAPER_SETS_START:
+src/pokemon_storage_system.c:6910:    u16 targetSpecies = GetFormChangeTargetSpeciesBoxMon(boxMon, method, 0);
+src/battle_intro.c:186:        if ((gBattle_WIN0V & 0xFF00) == 0)
+src/battle_intro.c:235:        if ((gBattle_WIN0V & 0xFF00) == 0x3000)
+src/battle_intro.c:262:        if (gBattle_WIN0V & 0xFF00)
+src/battle_intro.c:345:        if ((gBattle_WIN0V & 0xFF00) == 0x3000)
+src/battle_intro.c:373:        if (gBattle_WIN0V & 0xFF00)
+src/battle_intro.c:440:        if ((gBattle_WIN0V & 0xFF00) == 0x3000)
+src/battle_intro.c:463:        if (gBattle_WIN0V & 0xFF00)
+src/battle_intro.c:536:        if ((gBattle_WIN0V & 0xFF00) == 0x3000)
+src/battle_intro.c:545:        if (gBattle_WIN0V & 0xFF00)
+src/battle_intro.c:598:        if ((gBattle_WIN0V & 0xFF00) != 0x100)
+src/battle_intro.c:601:        if ((gBattle_WIN0V & 0xFF00) == 0x2000)
+src/battle_intro.c:609:        if ((gBattle_WIN0V & 0xFF00) != 0x4C00)
+src/battle_intro.c:623:        if ((gBattle_WIN0V & 0xFF00) != 0x5000)
+src/battle_anim_effects_1.c:3292:        sprite->data[5] = (sprite->data[5] + sprite->data[4]) & 0xFF;
+src/battle_anim_effects_1.c:3374:        sprite->data[5] = (sprite->data[5] + 15) & 0xFF;
+src/battle_anim_effects_1.c:3442:    sprite->data[5] = Random2() & 0xFF;
+src/battle_anim_effects_1.c:3729:            sprite->data[3] = (sprite->data[0] + sprite->data[3]) % 256;
+src/battle_anim_effects_1.c:3900:        sprite->data[5] = (sprite->data[5] + 5) & 0xFF;
+src/battle_anim_effects_1.c:4495:    sprite->y2 = Sin((sprite->data[0] * 20) & 0xFF, sprite->data[2]);
+src/battle_anim_effects_1.c:4517:    s16 currentTime = sprite->data[7] & 0xFF;
+src/battle_anim_effects_1.c:4792:        sprite->data[1] = (gTrickBagCoordinates[sprite->data[0]][0] * gTrickBagCoordinates[sprite->data[0]][2] + sprite->data[1]) & 0xFF;
+src/battle_anim_effects_1.c:5131:    sprite->data[0] = (sprite->data[3] * a) & 0xFF;
+src/battle_anim_effects_1.c:5467:    sprite->data[0] = (sprite->data[0] + sprite->data[1]) & 0xFF;
+src/battle_anim_effects_1.c:6522:    int a = GetBattlePalettesMask(TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE) & 0xFFFF;
+src/battle_anim_effects_1.c:7036:        sprite->sSinIndex = (sprite->sSinIndex + sprite->sSinIndexMod) & 0xFF;
+src/battle_anim_effects_1.c:7235:        sprite->data[2] = (sprite->data[2] + 16) & 0xFF;
+src/battle_anim_effects_1.c:7299:        sprite->data[5] = (sprite->data[5] + 8) & 0xFF;
+src/battle_controller_link_opponent.c:299:            if ((gLinkPlayers[GetBattlerMultiplayerId(battler)].version & 0xFF) == VERSION_FIRE_RED
+src/battle_controller_link_opponent.c:300:            || (gLinkPlayers[GetBattlerMultiplayerId(battler)].version & 0xFF) == VERSION_LEAF_GREEN)
+src/battle_controller_link_opponent.c:307:            else if ((gLinkPlayers[GetBattlerMultiplayerId(battler)].version & 0xFF) == VERSION_RUBY
+src/battle_controller_link_opponent.c:308:                     || (gLinkPlayers[GetBattlerMultiplayerId(battler)].version & 0xFF) == VERSION_SAPPHIRE)
+src/battle_controller_link_opponent.c:328:        else if ((gLinkPlayers[GetMultiplayerId() ^ BIT_SIDE].version & 0xFF) == VERSION_FIRE_RED
+src/battle_controller_link_opponent.c:329:                 || (gLinkPlayers[GetMultiplayerId() ^ BIT_SIDE].version & 0xFF) == VERSION_LEAF_GREEN)
+src/battle_controller_link_opponent.c:336:        else if ((gLinkPlayers[GetMultiplayerId() ^ BIT_SIDE].version & 0xFF) == VERSION_RUBY
+src/battle_controller_link_opponent.c:337:                 || (gLinkPlayers[GetMultiplayerId() ^ BIT_SIDE].version & 0xFF) == VERSION_SAPPHIRE)
+src/pokemon.c:1455:    u32 personality = ((gApprentices[src->id].otId >> 8) | ((gApprentices[src->id].otId & 0xFF) << 8))
+src/pokemon.c:2069:    if (gSpeciesInfo[species].genderRatio > (personality & 0xFF))
+src/pokemon.c:2085:    if (gSpeciesInfo[species].genderRatio > (personality & 0xFF))
+src/pokemon.c:2124:        speciesTag = SanitizeSpeciesId(speciesTag);
+src/pokemon.c:3465:    species = SanitizeSpeciesId(species);
+src/pokemon.c:3468:    if (species < NUM_SPECIES
+src/pokemon.c:3482:    species = SanitizeSpeciesId(species);
+src/pokemon.c:3490:    species = SanitizeSpeciesId(species);
+src/pokemon.c:3498:    return gSpeciesInfo[SanitizeSpeciesId(species)].height;
+src/pokemon.c:3503:    return gSpeciesInfo[SanitizeSpeciesId(species)].weight;
+src/pokemon.c:3508:    return gSpeciesInfo[SanitizeSpeciesId(species)].types[slot];
+src/pokemon.c:3513:    return gSpeciesInfo[SanitizeSpeciesId(species)].abilities[slot];
+src/pokemon.c:3518:    return gSpeciesInfo[SanitizeSpeciesId(species)].baseHP;
+src/pokemon.c:3523:    return gSpeciesInfo[SanitizeSpeciesId(species)].baseAttack;
+src/pokemon.c:3528:    return gSpeciesInfo[SanitizeSpeciesId(species)].baseDefense;
+src/pokemon.c:3533:    return gSpeciesInfo[SanitizeSpeciesId(species)].baseSpAttack;
+src/pokemon.c:3538:    return gSpeciesInfo[SanitizeSpeciesId(species)].baseSpDefense;
+src/pokemon.c:3543:    return gSpeciesInfo[SanitizeSpeciesId(species)].baseSpeed;
+src/pokemon.c:3568:    const struct LevelUpMove *learnset = gSpeciesInfo[SanitizeSpeciesId(species)].levelUpLearnset;
+src/pokemon.c:3576:    const u16 *learnset = gSpeciesInfo[SanitizeSpeciesId(species)].teachableLearnset;
+src/pokemon.c:3584:    const u16 *learnset = gSpeciesInfo[SanitizeSpeciesId(species)].eggMoveLearnset;
+src/pokemon.c:3592:    const struct Evolution *evolutions = gSpeciesInfo[SanitizeSpeciesId(species)].evolutions;
+src/pokemon.c:3600:    const u16 *formTable = gSpeciesInfo[SanitizeSpeciesId(species)].formSpeciesIdTable;
+src/pokemon.c:3608:    const struct FormChange *formChanges = gSpeciesInfo[SanitizeSpeciesId(species)].formChangeTable;
+src/pokemon.c:4779:            if (SanitizeSpeciesId(evolutions[i].targetSpecies) == SPECIES_NONE)
+src/pokemon.c:4809:            if (SanitizeSpeciesId(evolutions[i].targetSpecies) == SPECIES_NONE)
+src/pokemon.c:4834:            if (SanitizeSpeciesId(evolutions[i].targetSpecies) == SPECIES_NONE)
+src/pokemon.c:4862:            if (SanitizeSpeciesId(evolutions[i].targetSpecies) == SPECIES_NONE)
+src/pokemon.c:4887:            if (SanitizeSpeciesId(evolutions[i].targetSpecies) == SPECIES_NONE)
+src/pokemon.c:4911:            if (SanitizeSpeciesId(evolutions[i].targetSpecies) == SPECIES_NONE)
+src/pokemon.c:4952:        if (SanitizeSpeciesId(evolutions[i].targetSpecies) == SPECIES_NONE)
+src/pokemon.c:4976:    while (species < (NUM_SPECIES) && gSpeciesInfo[species].natDexNum != nationalNum)
+src/pokemon.c:5005:    species = SanitizeSpeciesId(species);
+src/pokemon.c:6064:        if (species <= HOENN_DEX_COUNT)
+src/pokemon.c:6212:    species = SanitizeSpeciesId(species);
+src/pokemon.c:6855:u16 GetFormSpeciesId(u16 speciesId, u8 formId)
+src/pokemon.c:6863:u8 GetFormIdFromFormSpeciesId(u16 formSpeciesId)
+src/pokemon.c:6879:u32 GetFormChangeTargetSpecies(struct Pokemon *mon, enum FormChanges method, u32 arg)
+src/pokemon.c:6881:    return GetFormChangeTargetSpeciesBoxMon(&mon->box, method, arg);
+src/pokemon.c:6885:u32 GetFormChangeTargetSpeciesBoxMon(struct BoxPokemon *boxMon, enum FormChanges method, u32 arg)
+src/pokemon.c:7167:    u32 targetSpecies = GetFormChangeTargetSpecies(&party[monId], method, 0);
+src/pokemon.c:7192:u16 SanitizeSpeciesId(u16 species)
+src/pokemon.c:7339:    species = SanitizeSpeciesId(species);
+src/pokemon.c:7356:            if (SanitizeSpeciesId(evolutions[j].targetSpecies) == species)
+src/pokemon.c:7389:            u32 targetSpecies = GetFormChangeTargetSpecies(mon, FORM_CHANGE_DAYS_PASSED, 0);
+src/battle_util.c:709:            if (speedVar > (Random() & 0xFF))
+src/battle_util.c:741:            if (speedVar > (Random() & 0xFF))
+src/battle_util.c:747:            if (speedVar > (Random() & 0xFF))
+src/battle_util.c:7917:             && SanitizeSpeciesId(evolutions[i].targetSpecies) != SPECIES_NONE)
+src/battle_util.c:9338:        targetSpecies = GetFormChangeTargetSpecies(&party[monId], method, 0);
+src/battle_util.c:9507:            if (species == SPECIES_TERAPAGOS_STELLAR || (species >= SPECIES_OGERPON_TEAL_TERA && species <= SPECIES_OGERPON_CORNERSTONE_TERA))
+src/battle_controllers.c:930:    gBattleResources->transferBuffer[2] = (move & 0xFF00) >> 8;
+src/battle_controllers.c:933:    gBattleResources->transferBuffer[5] = (movePower & 0xFF00) >> 8;
+src/battle_controllers.c:937:    gBattleResources->transferBuffer[9] = (dmg & 0xFF000000) >> 24;
+src/battle_controllers.c:943:        gBattleResources->transferBuffer[13] = (gBattleWeather & 0xFF00) >> 8;
+src/battle_controllers.c:964:    gBattleResources->transferBuffer[3] = (stringID & 0xFF00) >> 8;
+src/battle_controllers.c:996:    gBattleResources->transferBuffer[3] = (stringID & 0xFF00) >> 8;
+src/battle_controllers.c:1023:    gBattleResources->transferBuffer[3] = (itemId & 0xFF00) >> 8;
+src/battle_controllers.c:1068:    gBattleResources->transferBuffer[3] = abilityId & 0xFF;
+src/battle_controllers.c:1069:    gBattleResources->transferBuffer[7] = (abilityId >> 8) & 0xFF;
+src/battle_controllers.c:1091:    gBattleResources->transferBuffer[3] = ((s16)hpValue & 0xFF00) >> 8;
+src/battle_controllers.c:1102:    gBattleResources->transferBuffer[5] = (expPoints & 0xFF000000) >> 24;
+src/battle_controllers.c:1112:    gBattleResources->transferBuffer[4] = (status & 0xFF000000) >> 24;
+src/battle_controllers.c:1123:    gBattleResources->transferBuffer[5] = (status & 0xFF000000) >> 24;
+src/battle_controllers.c:1141:    gBattleResources->transferBuffer[3] = (size & 0xFF00) >> 8;
+src/battle_controllers.c:1155:    gBattleResources->transferBuffer[4] = ((u32)(dst) & 0xFF000000) >> 24;
+src/battle_controllers.c:1157:    gBattleResources->transferBuffer[6] = (size & 0xFF00) >> 8;
+src/battle_controllers.c:1169:    gBattleResources->transferBuffer[2] = (songId & 0xFF00) >> 8;
+src/battle_controllers.c:1184:    gBattleResources->transferBuffer[2] = (size & 0xFF00) >> 8;
+src/battle_controllers.c:1197:    gBattleResources->transferBuffer[5] = (ret32 & 0xFF000000) >> 24;
+src/battle_controllers.c:1219:    gBattleResources->transferBuffer[2] = (ret & 0xFF00) >> 8;
+src/battle_controllers.c:1228:    gBattleResources->transferBuffer[2] = (ret & 0xFF00) >> 8;
+src/battle_controllers.c:1255:    gBattleResources->transferBuffer[2] = (songId & 0xFF00) >> 8;
+src/battle_controllers.c:1264:    gBattleResources->transferBuffer[2] = (songId & 0xFF00) >> 8;
+src/battle_controllers.c:1339:    gBattleResources->transferBuffer[3] = (argument & 0xFF00) >> 8;
+src/battle_controllers.c:1593:        dst[3] = (data32 & 0xFF000000) >> 24;
+src/battle_controllers.c:1607:        dst[3] = (data32 & 0xFF000000) >> 24;
+src/link.c:294:        gSaveBlock2Ptr->playerTrainerId[i] = Random() % 256;
+src/link.c:582:                        if ((linkPlayer->version & 0xFF) == VERSION_RUBY || (linkPlayer->version & 0xFF) == VERSION_SAPPHIRE)
+src/link.c:745:        if ((gLinkPlayers[i].version & 0xFF) == version1
+src/link.c:746:         || (gLinkPlayers[i].version & 0xFF) == version2)
+src/easy_chat.c:2286:            sEasyChatScreen->inputState = INPUTSTATE_START_CONFIRM_LYRICS;
+src/easy_chat.c:4336:    y = (scrollOffset * 16 + 96) & 0xFF;
+src/easy_chat.c:4366:    y = (scrollOffset * 16 + 96) & 0xFF;
+src/field_screen_effect.c:751:        task->tState = DOORWARP_START_WALK_UP;
+src/field_screen_effect.c:1160:    u8 lo = REG_BLDALPHA & 0xFF;
+src/walda_phrase.c:185:    if (TID_CHECK_LO != (BG_COLOR_HI ^ FG_COLOR_HI ^ PATTERN_ID ^ (trainerId & 0xFF)))
+src/battle_anim_electric.c:793:        sprite->data[7] = (sprite->data[7] + sprite->data[6]) & 0xFF;
+src/battle_anim_electric.c:858:    sprite->data[7] = (sprite->data[7] + sprite->data[6]) & 0xFF;
+src/battle_anim_status_effects.c:367:    sprite->data[0] = (sprite->data[0] + 8) & 0xFF;
+src/record_mixing.c:794:        version = gLinkPlayers[i].version & 0xFF;
+src/battle_anim_effects_2.c:3142:    sprite->data[1] = (sprite->data[1] + 7) & 0xFF;
+src/battle_anim_effects_2.c:3258:        sprite->data[5] = (sprite->data[5] + 4) & 0xFF;
+src/battle_anim_effects_2.c:3279:        sprite->data[3] = (sprite->data[3] + 3) & 0xFF;
+src/battle_anim_effects_2.c:3304:    sprite->data[3] = (sprite->data[3] + 3) & 0xFF;
+src/battle_anim_effects_2.c:3508:    sprite->data[1] = (sprite->data[1] + 9) & 0xFF;
+src/battle_anim_effects_2.c:3596:    var0 = (sprite->data[0] * 10) & 0xFF;
+src/battle_anim_effects_2.c:3616:    sprite->data[3] = (sprite->data[3] + 3) & 0xFF;
+src/battle_anim_effects_2.c:3637:        sprite->data[3] = (sprite->data[3] + 3) & 0xFF;
+src/battle_anim_effects_2.c:3661:    sprite->data[1] = (sprite->data[0] * 4) % 256;
+src/battle_anim_effects_2.c:3815:    sprite->data[6] = (sprite->data[6] + 10) & 0xFF;
+src/contest_painting.c:532:    gImageProcessingContext.personality = gContestPaintingWinner->personality % 256;
+src/daycare.c:262:    u32 newSpecies = GetFormChangeTargetSpecies(mon, FORM_CHANGE_DEPOSIT, 0);
+src/daycare.c:354:    newSpecies = GetFormChangeTargetSpecies(&pokemon, FORM_CHANGE_WITHDRAW, 0);
+src/daycare.c:514:                if (SanitizeSpeciesId(evolutions[k].targetSpecies) == species)
+src/daycare.c:1168:    if (daycare->offspringPersonality == 0 && validEggs == DAYCARE_MON_COUNT && (daycare->mons[1].steps & 0xFF) == 0xFF)
+src/save.c:82:STATIC_ASSERT(sizeof(struct SaveBlock1) <= SECTOR_DATA_SIZE * (SECTOR_ID_SAVEBLOCK1_END - SECTOR_ID_SAVEBLOCK1_START + 1), SaveBlock1FreeSpace);
+src/save.c:83:STATIC_ASSERT(sizeof(struct PokemonStorage) <= SECTOR_DATA_SIZE * (SECTOR_ID_PKMN_STORAGE_END - SECTOR_ID_PKMN_STORAGE_START + 1), PokemonStorageFreeSpace);
+src/save.c:409:    if (ProgramFlashByte(sector, SECTOR_SIGNATURE_OFFSET, SECTOR_SIGNATURE & 0xFF))
+src/save.c:457:    if (ProgramFlashByte(sector, SECTOR_SIGNATURE_OFFSET, SECTOR_SIGNATURE & 0xFF))
+src/region_map.c:192:#define MARINE_CAVE_COORD(location) (ABNORMAL_WEATHER_##location - MARINE_CAVE_LOCATIONS_START)
+src/region_map.c:1277:    idx -= MARINE_CAVE_LOCATIONS_START;
+src/battle_anim_effects_3.c:1726:    var0 = (sprite->data[0] * 20) & 0xFF;
+src/battle_anim_effects_3.c:1730:    sprite->y2 = Sin(var0 & 0xFF, 5) + (sprite->data[4] / 2);
+src/battle_anim_effects_3.c:1954:    sprite->data[1] = (sprite->data[1] + sprite->data[2]) & 0xFF;
+src/battle_anim_effects_3.c:3143:        sprite->y2 = Sin(sprite->data[0] & 0xFF, 16);
+src/battle_anim_effects_3.c:3153:        sprite->y2 = Cos(sprite->data[0] & 0xFF, 16);
+src/battle_anim_effects_3.c:3356:    rand2 = Random2() & 0xFF;
+src/battle_anim_effects_3.c:3468:    sprite->data[1] = (sprite->data[1] + 9) & 0xFF;
+src/battle_anim_effects_3.c:3675:        task->data[1] = (task->data[1] + 2) & 0xFF;
+src/battle_anim_effects_3.c:3687:            sineIndex = (sineIndex + 10) & 0xFF;
+src/battle_anim_effects_3.c:3835:    index = (sprite->data[0] * 8) & 0xFF;
+src/field_effect.c:2425:    if (task->tHideFollower == START_MOVEMENT)
+src/field_effect.c:2930:    vertLo = (task->tWinVert & 0xFF);
+src/pokedex_plus_hgss.c:3061:    if (species >= NATIONAL_DEX_COUNT || sPokedexView->pokedexList[species].dexNum == 0xFFFF)
+src/pokedex_plus_hgss.c:5148:        species = GetFormSpeciesId(species, 0);
+src/pokedex_plus_hgss.c:6345:    baseFormSpecies = GetFormSpeciesId(species, 0);
+src/pokedex_plus_hgss.c:6728:                    GetMapName(gStringVar2, Overworld_GetMapHeaderByGroupAndId(evolutions[i].params[j].arg1 >> 8, evolutions[i].params[j].arg1 & 0xFF)->regionMapSectionId, 0);
+src/pokedex_plus_hgss.c:7117:            u16 formSpecies = GetFormSpeciesId(NationalPokedexNumToSpecies(sPokedexListItem->dexNum), formId);
+src/pokedex_plus_hgss.c:7121:            if (formSpecies == GetFormSpeciesId(formSpecies, 0))
+src/pokedex_plus_hgss.c:7159:    if (GetFormSpeciesId(species, 0) == SPECIES_UNOWN)
+src/pokedex_plus_hgss.c:7166:        speciesForm = GetFormSpeciesId(species, i);
+src/battle_tower.c:3011:                personality = (personality & 0xFFFFFF00) | GeneratePersonalityForGender(MON_MALE, partyData[i].species);
+src/battle_tower.c:3013:                personality = (personality & 0xFFFFFF00) | GeneratePersonalityForGender(MON_FEMALE, partyData[i].species);
+src/battle_ai_util.c:2140:        else if (Random() % 256 < 100)
+src/intro.c:1557:        if ((sprite->sSinXIdx & 0xFF) == 64)
+src/intro.c:1614:            if (sprite->sMoveTimer & 0xFF00)
+src/intro.c:1625:            if (sprite->sMoveTimer & 0xFF00)
+src/intro.c:1642:            if (sprite->sMoveTimer & 0xFF00)
+src/intro.c:1705:            if ((sprite->sSinIdx & 0xFF) < 64)
+src/intro.c:1711:                if ((sprite->sSinIdx & 0xFF) == 64)
+src/intro.c:1962:        tZoom = Sin((tTrigIdx & 0xFF00) >> 8, 64) + 256;
+src/intro.c:2029:        sprite->y -= (sprite->sSpeed & 0xFF00) >> 8;
+src/intro.c:2295:            sprite->sSinIdx = (sprite->sSinIdx + 11) & 0xFF;
+src/intro.c:3270:        sprite->x2 = (sprite->sLetterX & 0xFF00) >> 8;
+src/dexnav.c:608:    s16 topX = gSaveBlock1Ptr->pos.x - SCANSTART_X + (smallScan * 5);
+src/dexnav.c:609:    s16 topY = gSaveBlock1Ptr->pos.y - SCANSTART_Y + (smallScan * 5);
+src/dexnav.c:708:        topX = gSaveBlock1Ptr->pos.x - SCANSTART_X + (smallScan * 5);
+src/event_data.c:60:    memset(&gSaveBlock1Ptr->flags[TEMP_FLAGS_START / 8], 0, TEMP_FLAGS_SIZE);
+src/event_data.c:61:    memset(&gSaveBlock1Ptr->vars[TEMP_VARS_START - VARS_START], 0, TEMP_VARS_SIZE);
+src/event_data.c:71:    memset(&gSaveBlock1Ptr->flags[DAILY_FLAGS_START / 8], 0, DAILY_FLAGS_SIZE);
+src/event_data.c:188:        return &gSaveBlock1Ptr->vars[id - VARS_START];
+src/event_data.c:191:        return &sTestVars[id - TESTING_VARS_START];
+src/event_data.c:194:        return gSpecialVars[id - SPECIAL_VARS_START];
+src/event_data.c:235:        return &sTestFlags[(id - TESTING_FLAGS_START) / 8];
+src/event_data.c:238:        return &sSpecialFlags[(id - SPECIAL_FLAGS_START) / 8];
+src/vs_seeker.c:242:        if ((gSaveBlock1Ptr->trainerRematchStepCounter & 0xFF) < VSSEEKER_RECHARGE_STEPS)
+src/vs_seeker.c:248:        if (((gSaveBlock1Ptr->trainerRematchStepCounter >> 8) & 0xFF) < VSSEEKER_RECHARGE_STEPS)
+src/vs_seeker.c:250:            x = (((gSaveBlock1Ptr->trainerRematchStepCounter >> 8) & 0xFF) + 1);
+src/vs_seeker.c:251:            gSaveBlock1Ptr->trainerRematchStepCounter = (gSaveBlock1Ptr->trainerRematchStepCounter & 0xFF) | (x << 8);
+src/vs_seeker.c:253:        if (((gSaveBlock1Ptr->trainerRematchStepCounter >> 8) & 0xFF) == VSSEEKER_RECHARGE_STEPS)
+src/battle_anim_water.c:919:    gBattleAnimArgs[7] = (gBattleAnimArgs[7] + 3) & 0xFF;
+src/battle_anim_water.c:971:    if ((gBattleAnimArgs[5] & 0xFF00) == 0)
+src/battle_anim_water.c:1016:    sprite->data[0] = (sprite->data[0] + 11) & 0xFF;
+src/battle_anim_water.c:1253:    randData = (Random2() & 0xFF) | 256;
+src/battle_anim_water.c:1597:    task->tSineTableIndex = (task->tSineTableIndex + 39) & 0xFF;
+src/battle_anim_water.c:1807:    sprite->data[5] = (sprite->data[5] + sprite->data[1]) & 0xFF;
+src/battle_anim_bug.c:286:    sprite->data[6] = (sprite->data[6] + 13) & 0xFF;
+src/pokemon_sprite_visualizer.c:725:    u16 species = SanitizeSpeciesId(data->currentmonId);
+src/pokemon_sprite_visualizer.c:742:    u16 species = SanitizeSpeciesId(data->currentmonId);
+src/pokemon_sprite_visualizer.c:756:    species = SanitizeSpeciesId(species);
+src/pokemon_sprite_visualizer.c:842:    u16 species = SanitizeSpeciesId(data->currentmonId);
+src/pokemon_sprite_visualizer.c:1046:    u16 species = SanitizeSpeciesId(data->currentmonId);
+src/pokemon_sprite_visualizer.c:1274:            species = SanitizeSpeciesId(data->currentmonId);
+src/pokemon_sprite_visualizer.c:1394:    u16 species = SanitizeSpeciesId(data->currentmonId);
+src/pokemon_sprite_visualizer.c:1407:    u16 species = SanitizeSpeciesId(data->currentmonId);
+src/pokemon_sprite_visualizer.c:1453:            u8 formId = GetFormIdFromFormSpeciesId(species);
+src/pokemon_sprite_visualizer.c:1458:                    modArrows->currValue = GetFormSpeciesId(species, formId + 1);
+src/pokemon_sprite_visualizer.c:1475:                    modArrows->currValue = GetFormSpeciesId(species, formId - 1);
+src/pokemon_sprite_visualizer.c:1497:    u16 species = SanitizeSpeciesId(data->currentmonId);
+src/pokemon_sprite_visualizer.c:1668:    u16 species = SanitizeSpeciesId(data->currentmonId);
+src/pokemon_sprite_visualizer.c:1945:    u16 species = SanitizeSpeciesId(data->currentmonId);
+src/contest.c:4888:    gTasks[taskId].data[10] = gTasks[taskId].data[10] & 0xFF;
+src/contest.c:4918:    gTasks[taskId].data[10] = gTasks[taskId].data[10] & 0xFF;
+src/contest.c:5384:    if (species >= NUM_SPECIES)
+src/contest.c:5751:            gContestResources->tv[contestant].winnerFlags |= CONTESTLIVE_FLAG_STARTLED_OTHER;
+src/contest.c:5752:            gContestResources->tv[i].winnerFlags |= CONTESTLIVE_FLAG_GOT_STARTLED;
+src/event_object_movement.c:2022:    if ((graphicsInfo->tileTag == 0 && species < NUM_SPECIES) || (graphicsInfo->tileTag != TAG_NONE && species >= NUM_SPECIES))
+src/event_object_movement.c:4263:        sprite->sTypeFuncId = BERRYTREEFUNC_SPARKLE_START;
+src/event_object_movement.c:5517:        && (Random() & 0xFFFF) < 18 && GetLocalWildMon(FALSE))
+src/event_object_movement.c:5529:    u8 frames = sprite->data[7] & 0xFF;
+src/event_object_movement.c:5577:    sprite->data[7] = (sprite->data[7] & 0xFF00) | frames;
+src/event_object_movement.c:9891:    u16 tmp3 = (16 - ((((u32)tmp2 + 8) & 0xFF) >> 4)) * 2;
+src/data/region_map/region_map_sections.constants.json.txt:20:#define KANTO_MAPSEC_COUNT (KANTO_MAPSEC_END - KANTO_MAPSEC_START + 1)
+src/data/battle_anim.h:1885:    [ANIM_TAG_HEART_STAMP - ANIM_SPRITES_START] = {gBattleAnimSpritePal_HeartStamp, ANIM_TAG_HEART_STAMP},
+src/egg_hatch.c:742:        sprite->sSinIdx = (sprite->sSinIdx + 20) & 0xFF;
+src/egg_hatch.c:767:            sprite->sSinIdx = (sprite->sSinIdx + 20) & 0xFF;
+src/egg_hatch.c:795:            sprite->sSinIdx = (sprite->sSinIdx + 20) & 0xFF;
+src/pokedex.c:2775:    if (species >= NATIONAL_DEX_COUNT || sPokedexView->pokedexList[species].dexNum == 0xFFFF)
+src/pokedex.c:4821:    footprintGfx = gSpeciesInfo[SanitizeSpeciesId(species)].footprint;
+src/battle_anim_flying.c:625:    data->unk2 = gBattleAnimArgs[2] & 0xFF;
+src/battle_anim_flying.c:626:    data->unkA = (gBattleAnimArgs[2] >> 8) & 0xFF;
+src/battle_anim_flying.c:685:        if (data->unk1-- % 256 == 0)
+src/battle_anim_flying.c:914:            data->unk2 = (data->unk2 - (data->unk4 & 0x7FFF)) & 0xFF;
+src/battle_anim_flying.c:916:            data->unk2 = (data->unk2 + (data->unk4 & 0x7FFF)) & 0xFF;
+src/trade.c:898:        sTradeMenu->callbackId = CB_WAIT_TO_START_TRADE;
+src/trade.c:911:            sTradeMenu->callbackId = CB_WAIT_TO_START_RFU_TRADE;
+src/trade.c:916:            sTradeMenu->callbackId = CB_START_LINK_TRADE;
+src/trade.c:1263:            sTradeMenu->callbackId = CB_WAIT_TO_START_TRADE;
+src/trade.c:1337:            sTradeMenu->linkData[0] = LINKCMD_START_TRADE;
+src/trade.c:1342:            sTradeMenu->callbackId = CB_FADE_TO_START_TRADE;
+src/trade.c:1771:        sTradeMenu->callbackId = CB_START_LINK_TRADE;
+src/trade.c:2406:    if ((partner->version & 0xFF) != VERSION_RUBY &&
+src/trade.c:2407:        (partner->version & 0xFF) != VERSION_SAPPHIRE)
+src/trade.c:2454:        version = (gLinkPlayers[GetMultiplayerId() ^ 1].version & 0xFF);
+src/trade.c:2587:        version = gLinkPlayers[i].version & 0xFF;
+src/dodrio_berry_picking.c:3120:    if (packet->id == PACKET_READY_START)
+src/battle_anim_rock.c:505:    sprite->data[5] = (sprite->data[5] + sprite->data[2]) & 0xFF;
+src/battle_anim_poison.c:684:    sprite->data[0] = (sprite->data[0] + 0xB) & 0xFF;
+src/battle_main.c:991:            for (i = 0; i < 2 && (gLinkPlayers[i].version & 0xFF) == VERSION_EMERALD; i++);
+src/battle_main.c:1695:            for (id = 0; id < MAX_LINK_PLAYERS && (gLinkPlayers[id].version & 0xFF) == VERSION_EMERALD; id++);
+src/battle_main.c:1932:                personalityValue = (personalityValue & 0xFFFFFF00) | GeneratePersonalityForGender(MON_MALE, partyData[monIndex].species);
+src/battle_main.c:1934:                personalityValue = (personalityValue & 0xFFFFFF00) | GeneratePersonalityForGender(MON_FEMALE, partyData[monIndex].species);
+src/battle_main.c:1936:                personalityValue = (personalityValue & 0xFFFFFF00) | GeneratePersonalityForGender(Random() & 1 ? MON_MALE : MON_FEMALE, partyData[monIndex].species);
+src/battle_main.c:2092:        sprite->x = sprite->data[1] + ((sprite->data[2] & 0xFF00) >> 8);
+src/battle_main.c:2094:        sprite->x = sprite->data[1] - ((sprite->data[2] & 0xFF00) >> 8);
+src/battle_main.c:2272:            for (i = 0; i < battlerCount && (gLinkPlayers[i].version & 0xFF) == VERSION_EMERALD; i++);
+src/battle_main.c:2715:    species = SanitizeSpeciesId(species);
+src/battle_main.c:2912:    sprite->sSinIndex = (sprite->sSinIndex + sprite->sDelta) & 0xFF;
+src/battle_main.c:3761:                gBattleStruct->startingStatus = VarGet(B_VAR_STARTING_STATUS);
+src/battle_main.c:3762:                gBattleStruct->startingStatusTimer = VarGet(B_VAR_STARTING_STATUS_TIMER);
+src/battle_interface.c:1649:    sprite->data[3] = var2 & 0xFFF0;
+src/battle_interface.c:1692:    sprite->data[3] = var2 & 0xFFF0;
+src/battle_interface.c:2187:        if (newValue == Q_24_8_TO_INT(*currValue) && (*currValue & 0xFF) == 0)
+src/battle_interface.c:2215:            if ((*currValue & 0xFF) > 0)
+src/recorded_battle.c:234:        if ((gLinkPlayers[i].version & 0xFF) != VERSION_EMERALD)

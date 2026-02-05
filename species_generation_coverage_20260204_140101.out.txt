@@ -1,0 +1,1395 @@
+== Key sizes from build ==
+-rw-r--r-- 1 jwilld10 jwilld10 256K Feb  4 12:01 build/emerald/src/item.o
+-rw-r--r-- 1 jwilld10 jwilld10 262K Feb  4 12:01 build/emerald/src/move.o
+-rw-r--r-- 1 jwilld10 jwilld10 7.1M Feb  4 13:12 build/emerald/src/pokemon.o
+
+== Species headers / include structure (where gens are pulled in) ==
+src/data/pokemon/species_info/gen_6_families.h:158:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 265 : 239,
+src/data/pokemon/species_info/gen_6_families.h:217:#if P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_6_families.h:269:#endif //P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_6_families.h:424:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 267 : 240,
+src/data/pokemon/species_info/gen_6_families.h:487:#if P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_6_families.h:540:#endif //P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_6_families.h:694:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 265 : 239,
+src/data/pokemon/species_info/gen_6_families.h:756:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 265 : 239,
+src/data/pokemon/species_info/gen_6_families.h:818:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 320 : 288,
+src/data/pokemon/species_info/gen_6_families.h:878:#if P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_6_families.h:932:#endif //P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_6_families.h:1463:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 206 : 185,                            \
+src/data/pokemon/species_info/gen_6_families.h:1868:#if P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_6_families.h:1921:#endif //P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_6_families.h:2185:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 276 : 248,                \
+src/data/pokemon/species_info/gen_6_families.h:2282:#if P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_6_families.h:2335:#endif //P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_6_families.h:3043:#define AEGISLASH_MAIN_STAT (P_UPDATED_STATS >= GEN_8 ? 140 : 150)
+src/data/pokemon/species_info/gen_6_families.h:3055:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 250 : 234,
+src/data/pokemon/species_info/gen_6_families.h:3128:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 250 : 234,
+src/data/pokemon/species_info/gen_6_families.h:3129:    #if P_UPDATED_EVS >= GEN_7
+src/data/pokemon/species_info/gen_6_families.h:3617:#if P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_6_families.h:3670:#endif //P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_6_families.h:3815:#if P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_6_families.h:3868:#endif //P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_6_families.h:4016:#if P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_6_families.h:4069:#endif //P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_6_families.h:4658:    #if P_UPDATED_EGG_GROUPS >= GEN_8
+src/data/pokemon/species_info/gen_6_families.h:4716:#if P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_6_families.h:4769:#endif //P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_6_families.h:5072:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 300 : 270,
+src/data/pokemon/species_info/gen_6_families.h:6019:#if P_UPDATED_EGG_GROUPS >= GEN_8
+src/data/pokemon/species_info/gen_6_families.h:6234:#if P_UPDATED_EGG_GROUPS >= GEN_8
+src/data/pokemon/species_info/gen_6_families.h:6393:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 340 : 306,
+src/data/pokemon/species_info/gen_6_families.h:6457:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 340 : 306,
+src/data/pokemon/species_info/gen_6_families.h:6523:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 340 : 306,
+src/data/pokemon/species_info/gen_6_families.h:6597:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 300 : 270,
+src/data/pokemon/species_info/gen_6_families.h:6662:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 300 : 270,
+src/data/pokemon/species_info/gen_6_families.h:6727:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 243 : 219,
+src/data/pokemon/species_info/gen_6_families.h:6792:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 243 : 219,
+src/data/pokemon/species_info/gen_6_families.h:6857:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 354 : 319,
+src/data/pokemon/species_info/gen_6_families.h:6920:#if P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_6_families.h:6974:#endif //P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_6_families.h:6988:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 300 : 270,
+src/data/pokemon/species_info/gen_6_families.h:7062:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 350 : 315,
+src/data/pokemon/species_info/gen_6_families.h:7137:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 300 : 270,
+src/data/pokemon/species_info/gen_6_families.h:7216:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 300 : 270,
+src/data/pokemon/species_info/gen_6_families.h:7220:        .friendship = P_UPDATED_FRIENDSHIP >= GEN_8 ? STANDARD_FRIENDSHIP : 100,
+src/data/pokemon/species_info/gen_6_families.h:7290:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 300 : 270,
+src/data/pokemon/species_info/gen_7_families.h:154:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 265 : 239,
+src/data/pokemon/species_info/gen_7_families.h:419:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 265 : 239,
+src/data/pokemon/species_info/gen_7_families.h:613:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 265 : 239,
+src/data/pokemon/species_info/gen_7_families.h:818:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 243 : 218,
+src/data/pokemon/species_info/gen_7_families.h:1215:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 250 : 225,
+src/data/pokemon/species_info/gen_7_families.h:3697:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 255 : 230,
+src/data/pokemon/species_info/gen_7_families.h:4377:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 285 : 257,                    \
+src/data/pokemon/species_info/gen_7_families.h:5211:#if P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_7_families.h:5265:#endif //P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_7_families.h:5484:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 300 : 270,
+src/data/pokemon/species_info/gen_7_families.h:5616:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 285 : 257,
+src/data/pokemon/species_info/gen_7_families.h:5692:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 285 : 257,
+src/data/pokemon/species_info/gen_7_families.h:5764:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 285 : 257,
+src/data/pokemon/species_info/gen_7_families.h:5838:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 285 : 257,
+src/data/pokemon/species_info/gen_7_families.h:6051:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 340 : 306,
+src/data/pokemon/species_info/gen_7_families.h:6117:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 340 : 306,
+src/data/pokemon/species_info/gen_7_families.h:6186:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 285 : 257,
+src/data/pokemon/species_info/gen_7_families.h:6254:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 285 : 257,
+src/data/pokemon/species_info/gen_7_families.h:6322:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 285 : 257,
+src/data/pokemon/species_info/gen_7_families.h:6389:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 285 : 257,
+src/data/pokemon/species_info/gen_7_families.h:6456:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 285 : 257,
+src/data/pokemon/species_info/gen_7_families.h:6525:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 285 : 257,
+src/data/pokemon/species_info/gen_7_families.h:6593:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 285 : 257,
+src/data/pokemon/species_info/gen_7_families.h:6660:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 300 : 270,
+src/data/pokemon/species_info/gen_7_families.h:6731:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 340 : 306,
+src/data/pokemon/species_info/gen_7_families.h:6801:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 340 : 306,
+src/data/pokemon/species_info/gen_7_families.h:6873:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 377 : 339,
+src/data/pokemon/species_info/gen_7_families.h:6953:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 300 : 270,
+src/data/pokemon/species_info/gen_7_families.h:7020:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 300 : 270,
+src/data/pokemon/species_info/gen_7_families.h:7089:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 300 : 270,
+src/data/pokemon/species_info/gen_7_families.h:7163:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 210 : 189,
+src/data/pokemon/species_info/gen_7_families.h:7229:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 270 : 243,
+src/data/pokemon/species_info/gen_7_families.h:7296:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 285 : 257,
+src/data/pokemon/species_info/gen_7_families.h:7363:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 285 : 257,
+src/data/pokemon/species_info/gen_7_families.h:7430:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 300 : 270,
+src/data/pokemon/species_info/gen_7_families.h:7497:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 150 : 135,
+src/data/pokemon/species_info/gen_7_families.h:7562:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 300 : 270,
+src/data/pokemon/species_info/gen_7_families.h:7630:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 300 : 270,
+src/data/pokemon/species_info/gen_8_families.h:2470:                            #if P_GEN_9_CROSS_EVOS
+src/data/pokemon/species_info/gen_8_families.h:2723:#if P_GEN_9_CROSS_EVOS
+src/data/pokemon/species_info/gen_8_families.h:2849:#endif //P_GEN_9_CROSS_EVOS
+src/data/pokemon/species_info/gen_8_families.h:5248:#if P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_8_families.h:5302:#endif //P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_8_families.h:6469:    #if P_GEN_9_CROSS_EVOS
+src/data/pokemon/species_info/gen_8_families.h:6534:#if P_GEN_9_CROSS_EVOS
+src/data/pokemon/species_info/gen_8_families.h:6597:#endif //P_GEN_9_CROSS_EVOS
+src/data/pokemon/species_info/gen_8_families.h:6800:        .baseAttack    = P_UPDATED_STATS >= GEN_9 ? 120 : 130,
+src/data/pokemon/species_info/gen_8_families.h:6807:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_9) ? 330 : 335,
+src/data/pokemon/species_info/gen_8_families.h:6867:        .baseAttack    = P_UPDATED_STATS >= GEN_9 ? 150 : 170,
+src/data/pokemon/species_info/gen_8_families.h:6874:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_9) ? 350 : 360,
+src/data/pokemon/species_info/gen_8_families.h:6937:        .baseAttack    = P_UPDATED_STATS >= GEN_9 ? 120 : 130,
+src/data/pokemon/species_info/gen_8_families.h:6944:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_9) ? 330 : 335,
+src/data/pokemon/species_info/gen_8_families.h:7005:        .baseAttack    = P_UPDATED_STATS >= GEN_9 ? 120 : 130,
+src/data/pokemon/species_info/gen_8_families.h:7006:        .baseDefense   = P_UPDATED_STATS >= GEN_9 ? 140 : 145,
+src/data/pokemon/species_info/gen_8_families.h:7009:        .baseSpDefense = P_UPDATED_STATS >= GEN_9 ? 140 : 145,
+src/data/pokemon/species_info/gen_8_families.h:7012:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_9) ? 350 : 360,
+src/data/pokemon/species_info/gen_2_families.h:86:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 142 : 141,
+src/data/pokemon/species_info/gen_2_families.h:154:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_2_families.h:156:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_2_families.h:232:#if P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_2_families.h:286:#endif //P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_2_families.h:300:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 62 : 65,
+src/data/pokemon/species_info/gen_2_families.h:439:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_2_families.h:441:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_2_families.h:582:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 63 : 66,
+src/data/pokemon/species_info/gen_2_families.h:654:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 142 : 143,
+src/data/pokemon/species_info/gen_2_families.h:723:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_2_families.h:725:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_2_families.h:791:#if P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_2_families.h:845:#endif //P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_2_families.h:859:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 43 : 57,
+src/data/pokemon/species_info/gen_2_families.h:929:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 145 : 116,
+src/data/pokemon/species_info/gen_2_families.h:997:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 52 : 58,
+src/data/pokemon/species_info/gen_2_families.h:1071:        .baseSpAttack  = P_UPDATED_STATS >= GEN_7 ? 86 : 76,
+src/data/pokemon/species_info/gen_2_families.h:1075:    #if P_UPDATED_EXP_YIELDS >= GEN_7
+src/data/pokemon/species_info/gen_2_families.h:1077:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_2_families.h:1149:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 53 : 54,
+src/data/pokemon/species_info/gen_2_families.h:1232:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 137 : 134,
+src/data/pokemon/species_info/gen_2_families.h:1316:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 50 : 54,
+src/data/pokemon/species_info/gen_2_families.h:1387:        .baseSpDefense = P_UPDATED_STATS >= GEN_7 ? 70 : 60,
+src/data/pokemon/species_info/gen_2_families.h:1390:    #if P_UPDATED_EXP_YIELDS >= GEN_7
+src/data/pokemon/species_info/gen_2_families.h:1392:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_2_families.h:1466:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 66 : 90,
+src/data/pokemon/species_info/gen_2_families.h:1538:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 161 : 156,
+src/data/pokemon/species_info/gen_2_families.h:1600:#define TOGEPI_FAMILY_TYPE1 (P_UPDATED_TYPES >= GEN_6 ? TYPE_FAIRY : TYPE_NORMAL)
+src/data/pokemon/species_info/gen_2_families.h:1612:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 49 : 74,
+src/data/pokemon/species_info/gen_2_families.h:1682:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 142 : 114,
+src/data/pokemon/species_info/gen_2_families.h:1738:    #if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:1743:#if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:1754:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_2_families.h:1756:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_2_families.h:1823:#endif //P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:1837:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 64 : 73,
+src/data/pokemon/species_info/gen_2_families.h:1909:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 165 : 171,
+src/data/pokemon/species_info/gen_2_families.h:1994:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 56 : 59,
+src/data/pokemon/species_info/gen_2_families.h:2068:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 128 : 117,
+src/data/pokemon/species_info/gen_2_families.h:2132:        .baseDefense   = P_UPDATED_STATS >= GEN_6 ? 85 : 75,
+src/data/pokemon/species_info/gen_2_families.h:2138:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_2_families.h:2140:    #elif P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_2_families.h:2142:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_2_families.h:2217:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 305 : 275,
+src/data/pokemon/species_info/gen_2_families.h:2278:#if P_GEN_3_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:2287:    #if P_UPDATED_TYPES >= GEN_6
+src/data/pokemon/species_info/gen_2_families.h:2293:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 38 : 33,
+src/data/pokemon/species_info/gen_2_families.h:2355:#endif //P_GEN_3_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:2365:    #if P_UPDATED_TYPES >= GEN_6
+src/data/pokemon/species_info/gen_2_families.h:2371:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 88 : 58,
+src/data/pokemon/species_info/gen_2_families.h:2436:        .baseSpAttack  = P_UPDATED_STATS >= GEN_6 ? 60 : 50,
+src/data/pokemon/species_info/gen_2_families.h:2438:    #if P_UPDATED_TYPES >= GEN_6
+src/data/pokemon/species_info/gen_2_families.h:2444:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_2_families.h:2446:    #elif P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_2_families.h:2448:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_2_families.h:2514:#if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:2525:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 58 : 68,
+src/data/pokemon/species_info/gen_2_families.h:2585:#endif //P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:2597:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 144 : 135,
+src/data/pokemon/species_info/gen_2_families.h:2683:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 50 : 74,
+src/data/pokemon/species_info/gen_2_families.h:2690:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_2_families.h:2758:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 119 : 136,
+src/data/pokemon/species_info/gen_2_families.h:2765:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_2_families.h:2833:        .baseSpDefense = P_UPDATED_STATS >= GEN_6 ? 95 : 85,
+src/data/pokemon/species_info/gen_2_families.h:2836:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_2_families.h:2838:    #elif P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_2_families.h:2840:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_2_families.h:2851:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_2_families.h:2921:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 72 : 94,
+src/data/pokemon/species_info/gen_2_families.h:2989:    #if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:2994:#if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:3005:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 169 : 186,
+src/data/pokemon/species_info/gen_2_families.h:3074:#endif //P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:3088:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 36 : 52,
+src/data/pokemon/species_info/gen_2_families.h:3095:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_2_families.h:3164:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 149 : 146,
+src/data/pokemon/species_info/gen_2_families.h:3171:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_2_families.h:3237:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 78 : 147,
+src/data/pokemon/species_info/gen_2_families.h:3238:        .evYield_Speed = (P_UPDATED_EVS >= GEN_4) ? 1 : 2,
+src/data/pokemon/species_info/gen_2_families.h:3314:    #if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:3319:#if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:3330:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 180 : 198,
+src/data/pokemon/species_info/gen_2_families.h:3411:#endif //P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:3425:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 42 : 52,
+src/data/pokemon/species_info/gen_2_families.h:3508:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 151 : 137,
+src/data/pokemon/species_info/gen_2_families.h:3721:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 81 : 107,
+src/data/pokemon/species_info/gen_2_families.h:3728:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_2_families.h:3794:    #if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:3799:#if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:3810:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 177 : 187,
+src/data/pokemon/species_info/gen_2_families.h:3867:#endif //P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:3881:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 87 : 147,
+src/data/pokemon/species_info/gen_2_families.h:3882:        .evYield_SpAttack = (P_UPDATED_EVS >= GEN_4) ? 0 : 1,
+src/data/pokemon/species_info/gen_2_families.h:3946:    #if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:3951:#if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:3962:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 173 : 187,
+src/data/pokemon/species_info/gen_2_families.h:4027:#endif //P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:4041:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 118 : 61,                                         \
+src/data/pokemon/species_info/gen_2_families.h:4126:#if P_GEN_3_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:4137:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 52 : 44,
+src/data/pokemon/species_info/gen_2_families.h:4198:#endif //P_GEN_3_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:4210:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 142 : 177,
+src/data/pokemon/species_info/gen_2_families.h:4299:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 159 : 149,
+src/data/pokemon/species_info/gen_2_families.h:4368:    #if P_GEN_9_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:4373:#if P_GEN_9_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:4436:#endif //P_GEN_9_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:4450:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 58 : 60,
+src/data/pokemon/species_info/gen_2_families.h:4524:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 163 : 118,
+src/data/pokemon/species_info/gen_2_families.h:4594:    #if P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_2_families.h:4596:    #elif P_UPDATED_EXP_YIELDS >= GEN_4
+src/data/pokemon/species_info/gen_2_families.h:4658:    #if P_GEN_9_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:4664:#if P_GEN_9_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:4792:#endif //P_GEN_9_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:4806:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 86 : 108,
+src/data/pokemon/species_info/gen_2_families.h:4875:    #if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:4881:#if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:4892:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 179 : 192,
+src/data/pokemon/species_info/gen_2_families.h:4950:#endif //P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:4962:    #if P_UPDATED_TYPES >= GEN_6
+src/data/pokemon/species_info/gen_2_families.h:4968:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 60 : 63,
+src/data/pokemon/species_info/gen_2_families.h:5034:    #if P_UPDATED_TYPES >= GEN_6
+src/data/pokemon/species_info/gen_2_families.h:5040:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 158 : 178,
+src/data/pokemon/species_info/gen_2_families.h:5047:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_2_families.h:5106:        .baseDefense   = P_UPDATED_STATS >= GEN_7 ? 85 : 75,
+src/data/pokemon/species_info/gen_2_families.h:5112:    #if P_UPDATED_EXP_YIELDS >= GEN_7
+src/data/pokemon/species_info/gen_2_families.h:5114:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_2_families.h:5330:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 177 : 80,
+src/data/pokemon/species_info/gen_2_families.h:5340:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_2_families.h:5407:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 175 : 200,
+src/data/pokemon/species_info/gen_2_families.h:5565:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 86 : 132,
+src/data/pokemon/species_info/gen_2_families.h:5640:    #if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:5646:#if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:5657:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 179 : 199,
+src/data/pokemon/species_info/gen_2_families.h:5727:#endif //P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:5889:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 66 : 124,
+src/data/pokemon/species_info/gen_2_families.h:5897:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_2_families.h:5963:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 175 : 189,
+src/data/pokemon/species_info/gen_2_families.h:5970:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_2_families.h:6034:    #if P_GEN_8_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:6040:#if P_GEN_8_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:6160:#endif //P_GEN_8_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:6174:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 50 : 78,
+src/data/pokemon/species_info/gen_2_families.h:6237:        .baseHP        = P_UPDATED_STATS >= GEN_7 ? 60 : 50,
+src/data/pokemon/species_info/gen_2_families.h:6241:        .baseSpAttack  = P_UPDATED_STATS >= GEN_7 ? 90 : 80,
+src/data/pokemon/species_info/gen_2_families.h:6245:    #if P_UPDATED_EXP_YIELDS >= GEN_7
+src/data/pokemon/species_info/gen_2_families.h:6247:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_2_families.h:6323:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 50 : 78,
+src/data/pokemon/species_info/gen_2_families.h:6330:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_2_families.h:6397:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 158 : 160,
+src/data/pokemon/species_info/gen_2_families.h:6405:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_2_families.h:6471:    #if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:6476:#if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:6487:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_2_families.h:6489:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_2_families.h:6560:#endif //P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:6566:        .baseHP        = P_UPDATED_STATS >= GEN_7 ? 65 : 55,
+src/data/pokemon/species_info/gen_2_families.h:6568:        .baseDefense   = P_UPDATED_STATS >= GEN_7 ? 95 : 85,
+src/data/pokemon/species_info/gen_2_families.h:6571:        .baseSpDefense = P_UPDATED_STATS >= GEN_7 ? 95 : 85,
+src/data/pokemon/species_info/gen_2_families.h:6574:    #if P_UPDATED_EXP_YIELDS >= GEN_7
+src/data/pokemon/species_info/gen_2_families.h:6576:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_2_families.h:6788:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 60 : 78,
+src/data/pokemon/species_info/gen_2_families.h:6795:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_2_families.h:6861:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 168 : 164,
+src/data/pokemon/species_info/gen_2_families.h:6869:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_2_families.h:6950:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 116 : 183,
+src/data/pokemon/species_info/gen_2_families.h:7010:#if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:7021:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 69 : 108,
+src/data/pokemon/species_info/gen_2_families.h:7080:#endif //P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:7084:        .baseHP        = P_UPDATED_STATS >= GEN_7 ? 85 : 65,
+src/data/pokemon/species_info/gen_2_families.h:7092:    #if P_UPDATED_EXP_YIELDS >= GEN_7
+src/data/pokemon/species_info/gen_2_families.h:7094:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_2_families.h:7231:#if P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_2_families.h:7285:#endif //P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_2_families.h:7299:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 66 : 114,
+src/data/pokemon/species_info/gen_2_families.h:7367:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 175 : 204,
+src/data/pokemon/species_info/gen_2_families.h:7519:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 66 : 124,
+src/data/pokemon/species_info/gen_2_families.h:7592:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 175 : 189,
+src/data/pokemon/species_info/gen_2_families.h:7675:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 163 : 165,
+src/data/pokemon/species_info/gen_2_families.h:7682:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_2_families.h:7734:    #if P_GEN_8_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:7739:#if P_GEN_8_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:7803:#endif //P_GEN_8_CROSS_EVOS
+src/data/pokemon/species_info/gen_2_families.h:7817:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 88 : 106,
+src/data/pokemon/species_info/gen_2_families.h:7824:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_2_families.h:7893:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 172 : 200,
+src/data/pokemon/species_info/gen_2_families.h:7902:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_2_families.h:7968:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_2_families.h:7970:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_2_families.h:7982:    #if P_UPDATED_ABILITIES >= GEN_7
+src/data/pokemon/species_info/gen_2_families.h:8050:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_2_families.h:8052:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_2_families.h:8064:    #if P_UPDATED_ABILITIES >= GEN_7
+src/data/pokemon/species_info/gen_2_families.h:8131:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_2_families.h:8133:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_2_families.h:8145:    #if P_UPDATED_ABILITIES >= GEN_7
+src/data/pokemon/species_info/gen_2_families.h:8212:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 60 : 67,
+src/data/pokemon/species_info/gen_2_families.h:8349:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_2_families.h:8351:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_2_families.h:8426:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 350 : 315,
+src/data/pokemon/species_info/gen_2_families.h:8497:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_2_families.h:8499:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_2_families.h:8586:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_2_families.h:8588:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_2_families.h:8666:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_2_families.h:8668:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_5_families.h:17:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 300 : 270,
+src/data/pokemon/species_info/gen_5_families.h:230:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 264 : 238,
+src/data/pokemon/species_info/gen_5_families.h:440:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 264 : 238,
+src/data/pokemon/species_info/gen_5_families.h:519:#if P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_5_families.h:573:#endif //P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_5_families.h:731:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 264 : 238,
+src/data/pokemon/species_info/gen_5_families.h:1145:        .baseAttack    = P_UPDATED_STATS >= GEN_6 ? 110 : 100,
+src/data/pokemon/species_info/gen_5_families.h:1152:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_5_families.h:1154:    #elif P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_5_families.h:2062:        .baseAttack    = P_UPDATED_STATS >= GEN_6 ? 115 : 105,
+src/data/pokemon/species_info/gen_5_families.h:2069:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_5_families.h:2071:    #elif P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_5_families.h:2313:    #if P_UPDATED_ABILITIES >= GEN_7
+src/data/pokemon/species_info/gen_5_families.h:2389:    #if P_UPDATED_ABILITIES >= GEN_7
+src/data/pokemon/species_info/gen_5_families.h:2455:        .baseSpDefense = P_UPDATED_STATS >= GEN_6 ? 80 : 70,
+src/data/pokemon/species_info/gen_5_families.h:2458:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_5_families.h:2460:    #elif P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_5_families.h:2473:    #if P_UPDATED_ABILITIES >= GEN_7
+src/data/pokemon/species_info/gen_5_families.h:2531:        .baseHP        = P_UPDATED_STATS >= GEN_7 ? 65 : 55,
+src/data/pokemon/species_info/gen_5_families.h:2539:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_7) ? 65 : 63,
+src/data/pokemon/species_info/gen_5_families.h:2831:#if P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_5_families.h:2885:#endif //P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_5_families.h:3188:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 253 : 227,
+src/data/pokemon/species_info/gen_5_families.h:3387:        .baseAttack    = P_UPDATED_STATS >= GEN_6 ? 95 : 85,
+src/data/pokemon/species_info/gen_5_families.h:3394:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_5_families.h:3396:    #elif P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_5_families.h:3753:        .baseSpDefense = P_UPDATED_STATS >= GEN_6 ? 80 : 70,
+src/data/pokemon/species_info/gen_5_families.h:3756:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_5_families.h:3758:    #elif P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_5_families.h:3840:    #if P_UPDATED_ABILITIES >= GEN_6
+src/data/pokemon/species_info/gen_5_families.h:3918:    #if P_UPDATED_ABILITIES >= GEN_6
+src/data/pokemon/species_info/gen_5_families.h:3979:        .baseAttack    = P_UPDATED_STATS >= GEN_6 ? 100 : 90,
+src/data/pokemon/species_info/gen_5_families.h:3986:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_5_families.h:3988:    #elif P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_5_families.h:4000:    #if P_UPDATED_ABILITIES >= GEN_6
+src/data/pokemon/species_info/gen_5_families.h:4055:#if P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_5_families.h:4108:#endif //P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_5_families.h:4112:#define COTTONEE_FAMILY_TYPE2 (P_UPDATED_TYPES >= GEN_6 ? TYPE_FAIRY : TYPE_GRASS)
+src/data/pokemon/species_info/gen_5_families.h:4954:        .baseDefense   = P_UPDATED_STATS >= GEN_6 ? 80 : 70,
+src/data/pokemon/species_info/gen_5_families.h:4960:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_5_families.h:4962:    #elif P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_5_families.h:5575:        .baseAttack    = P_UPDATED_STATS >= GEN_7 ? 105 : 95,
+src/data/pokemon/species_info/gen_5_families.h:5582:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_7) ? 170 : 166,
+src/data/pokemon/species_info/gen_5_families.h:5786:#if P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_5_families.h:5841:#endif //P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_5_families.h:7131:    #if P_UPDATED_ABILITIES >= GEN_6
+src/data/pokemon/species_info/gen_5_families.h:7205:    #if P_UPDATED_ABILITIES >= GEN_6
+src/data/pokemon/species_info/gen_5_families.h:7272:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 245 : 221,
+src/data/pokemon/species_info/gen_5_families.h:7279:    #if P_UPDATED_ABILITIES >= GEN_6
+src/data/pokemon/species_info/gen_5_families.h:7488:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 245 : 221,
+src/data/pokemon/species_info/gen_5_families.h:7709:    #if P_UPDATED_ABILITIES >= GEN_7
+src/data/pokemon/species_info/gen_5_families.h:7785:    #if P_UPDATED_ABILITIES >= GEN_7
+src/data/pokemon/species_info/gen_5_families.h:7850:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 268 : 241,
+src/data/pokemon/species_info/gen_5_families.h:7858:    #if P_UPDATED_ABILITIES >= GEN_7
+src/data/pokemon/species_info/gen_5_families.h:9279:    #if P_UPDATED_ABILITIES >= GEN_6
+src/data/pokemon/species_info/gen_5_families.h:9490:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 260 : 234,
+src/data/pokemon/species_info/gen_5_families.h:9716:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 258 : 232,
+src/data/pokemon/species_info/gen_5_families.h:9779:#if P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_5_families.h:9832:#endif //P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_5_families.h:9995:    #if P_UPDATED_ABILITIES >= GEN_6
+src/data/pokemon/species_info/gen_5_families.h:10070:    #if P_UPDATED_ABILITIES >= GEN_6
+src/data/pokemon/species_info/gen_5_families.h:10137:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 260 : 234,
+src/data/pokemon/species_info/gen_5_families.h:10144:    #if P_UPDATED_ABILITIES >= GEN_6
+src/data/pokemon/species_info/gen_5_families.h:10201:#if P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_5_families.h:10255:#endif //P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_5_families.h:10404:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 270 : 243,
+src/data/pokemon/species_info/gen_5_families.h:10481:    #if P_UPDATED_ABILITIES >= GEN_7
+src/data/pokemon/species_info/gen_5_families.h:10540:        .baseAttack    = P_UPDATED_STATS >= GEN_7 ? 130 : 110,
+src/data/pokemon/species_info/gen_5_families.h:10547:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_7) ? 177 : 170,
+src/data/pokemon/species_info/gen_5_families.h:10554:    #if P_UPDATED_ABILITIES >= GEN_7
+src/data/pokemon/species_info/gen_5_families.h:10613:        .baseHP        = P_UPDATED_STATS >= GEN_7 ? 80 : 70,
+src/data/pokemon/species_info/gen_5_families.h:10615:        .baseDefense   = P_UPDATED_STATS >= GEN_7 ? 50 : 30,
+src/data/pokemon/species_info/gen_5_families.h:10621:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_7) ? 180 : 170,
+src/data/pokemon/species_info/gen_5_families.h:11458:    #if P_GEN_9_CROSS_EVOS
+src/data/pokemon/species_info/gen_5_families.h:11463:#if P_GEN_9_CROSS_EVOS
+src/data/pokemon/species_info/gen_5_families.h:11526:#endif //P_GEN_9_CROSS_EVOS
+src/data/pokemon/species_info/gen_5_families.h:12246:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 300 : 270,
+src/data/pokemon/species_info/gen_5_families.h:12398:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 275 : 248,
+src/data/pokemon/species_info/gen_5_families.h:12471:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 290 : 261,
+src/data/pokemon/species_info/gen_5_families.h:12542:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 290 : 261,
+src/data/pokemon/species_info/gen_5_families.h:12617:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 290 : 261,
+src/data/pokemon/species_info/gen_5_families.h:12687:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 290 : 261,
+src/data/pokemon/species_info/gen_5_families.h:12778:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 290 : 261,
+src/data/pokemon/species_info/gen_5_families.h:12853:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 290 : 261,
+src/data/pokemon/species_info/gen_5_families.h:12944:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 290 : 261,
+src/data/pokemon/species_info/gen_5_families.h:13031:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 340 : 306,
+src/data/pokemon/species_info/gen_5_families.h:13102:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 340 : 306,
+src/data/pokemon/species_info/gen_5_families.h:13173:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 300 : 270,
+src/data/pokemon/species_info/gen_5_families.h:13264:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 300 : 270,
+src/data/pokemon/species_info/gen_5_families.h:13339:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 330 : 297,
+src/data/pokemon/species_info/gen_5_families.h:13415:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 350 : 315,
+src/data/pokemon/species_info/gen_5_families.h:13487:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 350 : 315,
+src/data/pokemon/species_info/gen_5_families.h:13562:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 290 : 261,
+src/data/pokemon/species_info/gen_5_families.h:13633:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 290 : 261,
+src/data/pokemon/species_info/gen_5_families.h:13699:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 300 : 270,
+src/data/pokemon/species_info/gen_5_families.h:13781:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 300 : 270,
+src/data/pokemon/species_info/gen_5_families.h:13863:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 300 : 270,                    \
+src/data/pokemon/species_info/gen_4_families.h:86:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 142 : 141,
+src/data/pokemon/species_info/gen_4_families.h:155:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_4_families.h:157:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_4_families.h:231:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 62 : 65,
+src/data/pokemon/species_info/gen_4_families.h:376:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_4_families.h:378:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_4_families.h:453:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 63 : 66,
+src/data/pokemon/species_info/gen_4_families.h:460:    #if P_UPDATED_ABILITIES >= GEN_9
+src/data/pokemon/species_info/gen_4_families.h:526:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 142 : 143,
+src/data/pokemon/species_info/gen_4_families.h:533:    #if P_UPDATED_ABILITIES >= GEN_9
+src/data/pokemon/species_info/gen_4_families.h:604:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_4_families.h:606:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_4_families.h:617:    #if P_UPDATED_ABILITIES >= GEN_9
+src/data/pokemon/species_info/gen_4_families.h:683:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 49 : 56,
+src/data/pokemon/species_info/gen_4_families.h:690:    #if P_UPDATED_ABILITIES >= GEN_6
+src/data/pokemon/species_info/gen_4_families.h:771:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 119 : 113,
+src/data/pokemon/species_info/gen_4_families.h:848:        .baseSpDefense = P_UPDATED_STATS >= GEN_6 ? 60 : 50,
+src/data/pokemon/species_info/gen_4_families.h:851:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_4_families.h:853:    #elif P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_4_families.h:855:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_4_families.h:938:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 50 : 58,
+src/data/pokemon/species_info/gen_4_families.h:1024:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 144 : 116,
+src/data/pokemon/species_info/gen_4_families.h:1106:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 39 : 54,
+src/data/pokemon/species_info/gen_4_families.h:1202:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 134 : 159,
+src/data/pokemon/species_info/gen_4_families.h:1289:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 53 : 60,
+src/data/pokemon/species_info/gen_4_families.h:1371:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 127 : 117,
+src/data/pokemon/species_info/gen_4_families.h:1451:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_4_families.h:1453:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_4_families.h:1541:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 70 : 99,
+src/data/pokemon/species_info/gen_4_families.h:1609:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 173 : 199,
+src/data/pokemon/species_info/gen_4_families.h:1680:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 70 : 99,
+src/data/pokemon/species_info/gen_4_families.h:1749:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 173 : 199,
+src/data/pokemon/species_info/gen_4_families.h:1818:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 45 : 61,
+src/data/pokemon/species_info/gen_4_families.h:1887:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 45 : 61,
+src/data/pokemon/species_info/gen_4_families.h:1956:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 45 : 61,
+src/data/pokemon/species_info/gen_4_families.h:2025:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 148 : 159,
+src/data/pokemon/species_info/gen_4_families.h:2091:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 148 : 159,
+src/data/pokemon/species_info/gen_4_families.h:2157:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 148 : 159,
+src/data/pokemon/species_info/gen_4_families.h:2224:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 148 : 159,            \
+src/data/pokemon/species_info/gen_4_families.h:2293:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 49 : 63,
+src/data/pokemon/species_info/gen_4_families.h:2379:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 166 : 188,
+src/data/pokemon/species_info/gen_4_families.h:2457:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 142 : 120,
+src/data/pokemon/species_info/gen_4_families.h:2544:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 66 : 75,
+src/data/pokemon/species_info/gen_4_families.h:2624:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 173 : 178,
+src/data/pokemon/species_info/gen_4_families.h:2707:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 55 : 68,
+src/data/pokemon/species_info/gen_4_families.h:2784:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 158 : 133,
+src/data/pokemon/species_info/gen_4_families.h:2857:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 158 : 133,
+src/data/pokemon/species_info/gen_4_families.h:2923:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 65 : 73,
+src/data/pokemon/species_info/gen_4_families.h:2989:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 65 : 73,
+src/data/pokemon/species_info/gen_4_families.h:3055:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 166 : 176,
+src/data/pokemon/species_info/gen_4_families.h:3119:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 166 : 176,
+src/data/pokemon/species_info/gen_4_families.h:3185:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 70 : 127,
+src/data/pokemon/species_info/gen_4_families.h:3257:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 174 : 204,
+src/data/pokemon/species_info/gen_4_families.h:3331:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 70 : 84,
+src/data/pokemon/species_info/gen_4_families.h:3399:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 168 : 178,
+src/data/pokemon/species_info/gen_4_families.h:3540:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 62 : 71,
+src/data/pokemon/species_info/gen_4_families.h:3609:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 158 : 183,
+src/data/pokemon/species_info/gen_4_families.h:3682:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 66 : 79,
+src/data/pokemon/species_info/gen_4_families.h:3753:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 168 : 209,
+src/data/pokemon/species_info/gen_4_families.h:3822:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 60 : 72,
+src/data/pokemon/species_info/gen_4_families.h:3899:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 175 : 188,
+src/data/pokemon/species_info/gen_4_families.h:3973:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 144 : 107,
+src/data/pokemon/species_info/gen_4_families.h:4057:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 170 : 168,
+src/data/pokemon/species_info/gen_4_families.h:4128:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 60 : 67,
+src/data/pokemon/species_info/gen_4_families.h:4290:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_4_families.h:4292:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_4_families.h:4380:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 350 : 315,
+src/data/pokemon/species_info/gen_4_families.h:4451:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 57 : 72,
+src/data/pokemon/species_info/gen_4_families.h:4521:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 184 : 204,
+src/data/pokemon/species_info/gen_4_families.h:4663:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 66 : 95,
+src/data/pokemon/species_info/gen_4_families.h:4747:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 184 : 198,
+src/data/pokemon/species_info/gen_4_families.h:4827:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 66 : 114,
+src/data/pokemon/species_info/gen_4_families.h:4910:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 175 : 204,
+src/data/pokemon/species_info/gen_4_families.h:4986:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 60 : 83,
+src/data/pokemon/species_info/gen_4_families.h:5070:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 172 : 181,
+src/data/pokemon/species_info/gen_4_families.h:5155:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 159 : 164,
+src/data/pokemon/species_info/gen_4_families.h:5236:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 66 : 90,
+src/data/pokemon/species_info/gen_4_families.h:5323:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 161 : 156,
+src/data/pokemon/species_info/gen_4_families.h:5408:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 67 : 131,
+src/data/pokemon/species_info/gen_4_families.h:5491:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 173 : 214,
+src/data/pokemon/species_info/gen_4_families.h:5649:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 154 : 132,
+src/data/pokemon/species_info/gen_4_families.h:5712:#if P_UPDATED_EXP_YIELDS >= GEN_7
+src/data/pokemon/species_info/gen_4_families.h:5714:#elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_4_families.h:5728:    #if P_UPDATED_TYPES >= GEN_5
+src/data/pokemon/species_info/gen_4_families.h:5803:    #if P_UPDATED_TYPES >= GEN_5
+src/data/pokemon/species_info/gen_4_families.h:5879:    #if P_UPDATED_TYPES >= GEN_5
+src/data/pokemon/species_info/gen_4_families.h:5953:    #if P_UPDATED_TYPES >= GEN_5
+src/data/pokemon/species_info/gen_4_families.h:6052:    #if P_UPDATED_TYPES >= GEN_5
+src/data/pokemon/species_info/gen_4_families.h:6133:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_4_families.h:6135:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_4_families.h:6212:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_4_families.h:6214:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_4_families.h:6297:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_4_families.h:6299:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_4_families.h:6376:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_4_families.h:6378:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_4_families.h:6523:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_4_families.h:6525:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_4_families.h:6670:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_4_families.h:6672:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_4_families.h:6747:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_4_families.h:6749:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_4_families.h:6813:#if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_4_families.h:6815:#elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_4_families.h:6974:        .baseDefense   = P_UPDATED_STATS >= GEN_9 ? 110 : 120,
+src/data/pokemon/species_info/gen_4_families.h:6977:        .baseSpDefense = P_UPDATED_STATS >= GEN_9 ? 120 : 130,
+src/data/pokemon/species_info/gen_4_families.h:6980:    #if P_UPDATED_EXP_YIELDS >= GEN_9
+src/data/pokemon/species_info/gen_4_families.h:6982:    #elif P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_4_families.h:6984:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_4_families.h:7063:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_4_families.h:7065:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_4_families.h:7140:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_4_families.h:7142:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_4_families.h:7219:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_4_families.h:7221:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_4_families.h:7290:#if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_4_families.h:7292:#elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_4_families.h:7383:    #if P_UPDATED_EVS >= GEN_5
+src/data/pokemon/species_info/gen_4_families.h:7453:#if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_4_families.h:7455:#elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_4_families.h:7460:#if P_ARCEUS_UNIQUE_FORM_ICONS >= GEN_9
+src/data/pokemon/species_info/gen_3_families.h:17:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 62 : 65,
+src/data/pokemon/species_info/gen_3_families.h:88:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 142 : 141,
+src/data/pokemon/species_info/gen_3_families.h:158:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_3_families.h:160:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:234:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 315 : 284,
+src/data/pokemon/species_info/gen_3_families.h:305:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 62 : 65,
+src/data/pokemon/species_info/gen_3_families.h:471:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_3_families.h:473:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:562:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 315 : 284,
+src/data/pokemon/species_info/gen_3_families.h:633:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 62 : 65,
+src/data/pokemon/species_info/gen_3_families.h:704:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 142 : 143,
+src/data/pokemon/species_info/gen_3_families.h:778:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_3_families.h:780:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:856:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 318 : 286,
+src/data/pokemon/species_info/gen_3_families.h:927:    #if P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_3_families.h:929:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:940:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:1006:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 147 : 128,
+src/data/pokemon/species_info/gen_3_families.h:1013:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:1081:    #if P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_3_families.h:1083:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:1096:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:1165:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 147 : 128,
+src/data/pokemon/species_info/gen_3_families.h:1174:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:1441:    #if P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_3_families.h:1443:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:1519:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_4) ? 72 : 71,
+src/data/pokemon/species_info/gen_3_families.h:1585:        .baseSpAttack  = P_UPDATED_STATS >= GEN_6 ? 100 : 90,
+src/data/pokemon/species_info/gen_3_families.h:1589:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_3_families.h:1591:    #elif P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_3_families.h:1593:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:1685:    #if P_UPDATED_EXP_YIELDS >= GEN_7
+src/data/pokemon/species_info/gen_3_families.h:1687:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:1763:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_3_families.h:1765:    #elif P_UPDATED_EXP_YIELDS >= GEN_7
+src/data/pokemon/species_info/gen_3_families.h:1767:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:1769:    #elif P_UPDATED_EXP_YIELDS >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:1869:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 44 : 74,
+src/data/pokemon/species_info/gen_3_families.h:1939:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 119 : 141,
+src/data/pokemon/species_info/gen_3_families.h:2011:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_3_families.h:2013:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:2104:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 44 : 74,
+src/data/pokemon/species_info/gen_3_families.h:2180:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 119 : 141,
+src/data/pokemon/species_info/gen_3_families.h:2268:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_3_families.h:2270:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:2282:    #if P_UPDATED_ABILITIES >= GEN_9
+src/data/pokemon/species_info/gen_3_families.h:2361:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 54 : 59,
+src/data/pokemon/species_info/gen_3_families.h:2432:        .baseSpAttack  = P_UPDATED_STATS >= GEN_7 ? 75 : 50,
+src/data/pokemon/species_info/gen_3_families.h:2436:    #if P_UPDATED_EXP_YIELDS >= GEN_7
+src/data/pokemon/species_info/gen_3_families.h:2438:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:2511:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 54 : 64,
+src/data/pokemon/species_info/gen_3_families.h:2519:    #if P_UPDATED_ABILITIES >= GEN_7
+src/data/pokemon/species_info/gen_3_families.h:2582:        .baseSpAttack  = P_UPDATED_STATS >= GEN_7 ? 95 : 85,
+src/data/pokemon/species_info/gen_3_families.h:2586:    #if P_UPDATED_EXP_YIELDS >= GEN_7
+src/data/pokemon/species_info/gen_3_families.h:2588:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:2600:    #if P_UPDATED_ABILITIES >= GEN_7
+src/data/pokemon/species_info/gen_3_families.h:2663:#define RALTS_FAMILY_TYPE2 (P_UPDATED_TYPES >= GEN_6 ? TYPE_FAIRY : TYPE_PSYCHIC)
+src/data/pokemon/species_info/gen_3_families.h:2665:#if P_UPDATED_EGG_GROUPS >= GEN_8
+src/data/pokemon/species_info/gen_3_families.h:2681:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 40 : 70,
+src/data/pokemon/species_info/gen_3_families.h:2750:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 97 : 140,
+src/data/pokemon/species_info/gen_3_families.h:2806:                            #if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_3_families.h:2822:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_3_families.h:2824:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:2898:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 309 : 278,
+src/data/pokemon/species_info/gen_3_families.h:2957:#if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_3_families.h:2968:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_3_families.h:2970:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:2981:    #if P_UPDATED_ABILITIES >= GEN_9
+src/data/pokemon/species_info/gen_3_families.h:3047:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 309 : 278,
+src/data/pokemon/species_info/gen_3_families.h:3105:#endif //P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_3_families.h:3119:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 54 : 63,
+src/data/pokemon/species_info/gen_3_families.h:3186:        .baseSpeed     = P_UPDATED_STATS >= GEN_7 ? 80 : 60,
+src/data/pokemon/species_info/gen_3_families.h:3187:        .baseSpAttack  = P_UPDATED_STATS >= GEN_7 ? 100 : 80,
+src/data/pokemon/species_info/gen_3_families.h:3191:    #if P_UPDATED_EXP_YIELDS >= GEN_7
+src/data/pokemon/species_info/gen_3_families.h:3193:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:3275:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 59 : 65,
+src/data/pokemon/species_info/gen_3_families.h:3284:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:3359:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 161 : 165,
+src/data/pokemon/species_info/gen_3_families.h:3368:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:3436:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 56 : 83,
+src/data/pokemon/species_info/gen_3_families.h:3508:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 154 : 126,
+src/data/pokemon/species_info/gen_3_families.h:3580:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_3_families.h:3582:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:3659:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 53 : 65,
+src/data/pokemon/species_info/gen_3_families.h:3719:                            #if P_SHEDINJA_BALL >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:3736:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 160 : 155,
+src/data/pokemon/species_info/gen_3_families.h:3819:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 83 : 95,
+src/data/pokemon/species_info/gen_3_families.h:3891:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 48 : 68,
+src/data/pokemon/species_info/gen_3_families.h:4034:        .baseSpDefense = P_UPDATED_STATS >= GEN_6 ? 73 : 63,
+src/data/pokemon/species_info/gen_3_families.h:4037:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_3_families.h:4039:    #elif P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_3_families.h:4041:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:4114:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 47 : 87,
+src/data/pokemon/species_info/gen_3_families.h:4190:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 166 : 184,
+src/data/pokemon/species_info/gen_3_families.h:4261:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 75 : 108,
+src/data/pokemon/species_info/gen_3_families.h:4322:    #if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_3_families.h:4328:#if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_3_families.h:4339:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 184 : 198,
+src/data/pokemon/species_info/gen_3_families.h:4400:#endif //P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_3_families.h:4414:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 52 : 65,
+src/data/pokemon/species_info/gen_3_families.h:4421:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:4482:        .baseSpeed     = P_UPDATED_STATS >= GEN_7 ? 90 : 70,
+src/data/pokemon/species_info/gen_3_families.h:4487:    #if P_UPDATED_EXP_YIELDS >= GEN_7
+src/data/pokemon/species_info/gen_3_families.h:4489:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:4501:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:4567:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 133 : 98,
+src/data/pokemon/species_info/gen_3_families.h:4576:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:4717:    #if P_UPDATED_TYPES >= GEN_6
+src/data/pokemon/species_info/gen_3_families.h:4723:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 133 : 98,
+src/data/pokemon/species_info/gen_3_families.h:4873:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 66 : 96,
+src/data/pokemon/species_info/gen_3_families.h:4945:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 151 : 152,
+src/data/pokemon/species_info/gen_3_families.h:5016:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_3_families.h:5018:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:5093:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 315 : 284,
+src/data/pokemon/species_info/gen_3_families.h:5165:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 56 : 91,
+src/data/pokemon/species_info/gen_3_families.h:5247:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 144 : 153,
+src/data/pokemon/species_info/gen_3_families.h:5405:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 59 : 104,
+src/data/pokemon/species_info/gen_3_families.h:5476:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 166 : 168,
+src/data/pokemon/species_info/gen_3_families.h:5618:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 142 : 120,
+src/data/pokemon/species_info/gen_3_families.h:5626:    #if P_UPDATED_ABILITIES >= GEN_6
+src/data/pokemon/species_info/gen_3_families.h:5695:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 142 : 120,
+src/data/pokemon/species_info/gen_3_families.h:5703:    #if P_UPDATED_ABILITIES >= GEN_6
+src/data/pokemon/species_info/gen_3_families.h:5766:        .baseDefense   = P_UPDATED_STATS >= GEN_7 ? 75 : 55,
+src/data/pokemon/species_info/gen_3_families.h:5769:        .baseSpDefense = P_UPDATED_STATS >= GEN_7 ? 85 : 75,
+src/data/pokemon/species_info/gen_3_families.h:5772:    #if P_UPDATED_EXP_YIELDS >= GEN_7
+src/data/pokemon/species_info/gen_3_families.h:5774:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:5845:        .baseDefense   = P_UPDATED_STATS >= GEN_7 ? 75 : 55,
+src/data/pokemon/species_info/gen_3_families.h:5848:        .baseSpDefense = P_UPDATED_STATS >= GEN_7 ? 85 : 75,
+src/data/pokemon/species_info/gen_3_families.h:5851:    #if P_UPDATED_EXP_YIELDS >= GEN_7
+src/data/pokemon/species_info/gen_3_families.h:5853:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:5865:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:5924:#if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_3_families.h:5935:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 56 : 68,
+src/data/pokemon/species_info/gen_3_families.h:5995:#endif //P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_3_families.h:6007:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 140 : 152,
+src/data/pokemon/species_info/gen_3_families.h:6008:        .evYield_SpAttack = (P_UPDATED_EVS >= GEN_4) ? 2 : 1,
+src/data/pokemon/species_info/gen_3_families.h:6078:    #if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_3_families.h:6083:#if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_3_families.h:6088:        .baseDefense   = P_UPDATED_STATS >= GEN_6 ? 65 : 55,
+src/data/pokemon/species_info/gen_3_families.h:6094:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_3_families.h:6096:    #elif P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_3_families.h:6098:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:6172:#endif //P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_3_families.h:6186:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 60 : 75,
+src/data/pokemon/species_info/gen_3_families.h:6272:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 163 : 168,
+src/data/pokemon/species_info/gen_3_families.h:6357:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 61 : 88,
+src/data/pokemon/species_info/gen_3_families.h:6433:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 161 : 175,
+src/data/pokemon/species_info/gen_3_families.h:6583:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 80 : 137,
+src/data/pokemon/species_info/gen_3_families.h:6656:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 175 : 206,
+src/data/pokemon/species_info/gen_3_families.h:6726:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 61 : 88,
+src/data/pokemon/species_info/gen_3_families.h:6733:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:6814:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 161 : 175,
+src/data/pokemon/species_info/gen_3_families.h:6822:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:6978:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 165 : 161,
+src/data/pokemon/species_info/gen_3_families.h:6986:    #if P_UPDATED_ABILITIES >= GEN_7
+src/data/pokemon/species_info/gen_3_families.h:7055:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 66 : 89,
+src/data/pokemon/species_info/gen_3_families.h:7132:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 165 : 164,
+src/data/pokemon/species_info/gen_3_families.h:7204:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 126 : 85,
+src/data/pokemon/species_info/gen_3_families.h:7211:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:7275:#if P_UPDATED_EGG_GROUPS >= GEN_8
+src/data/pokemon/species_info/gen_3_families.h:7291:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 58 : 73,
+src/data/pokemon/species_info/gen_3_families.h:7363:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 119 : 126,
+src/data/pokemon/species_info/gen_3_families.h:7436:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_3_families.h:7438:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:7517:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 67 : 97,
+src/data/pokemon/species_info/gen_3_families.h:7595:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 166 : 177,
+src/data/pokemon/species_info/gen_3_families.h:7679:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 62 : 74,
+src/data/pokemon/species_info/gen_3_families.h:7753:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 172 : 188,
+src/data/pokemon/species_info/gen_3_families.h:7898:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 160 : 165,
+src/data/pokemon/species_info/gen_3_families.h:7974:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 160 : 165,
+src/data/pokemon/species_info/gen_3_families.h:8043:        .baseHP        = P_UPDATED_STATS >= GEN_7 ? 90 : 70,
+src/data/pokemon/species_info/gen_3_families.h:8051:    #if P_UPDATED_EXP_YIELDS >= GEN_7
+src/data/pokemon/species_info/gen_3_families.h:8053:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:8123:        .baseHP        = P_UPDATED_STATS >= GEN_7 ? 90 : 70,
+src/data/pokemon/species_info/gen_3_families.h:8131:    #if P_UPDATED_EXP_YIELDS >= GEN_7
+src/data/pokemon/species_info/gen_3_families.h:8133:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:8211:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 58 : 92,
+src/data/pokemon/species_info/gen_3_families.h:8218:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:8295:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 164 : 158,
+src/data/pokemon/species_info/gen_3_families.h:8302:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:8378:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 62 : 111,
+src/data/pokemon/species_info/gen_3_families.h:8451:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 164 : 161,
+src/data/pokemon/species_info/gen_3_families.h:8522:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 60 : 58,
+src/data/pokemon/species_info/gen_3_families.h:8596:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 175 : 189,
+src/data/pokemon/species_info/gen_3_families.h:8671:    #if P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:8673:    #elif P_UPDATED_EXP_YIELDS >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:8749:    #if P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:8751:    #elif P_UPDATED_EXP_YIELDS >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:8829:    #if P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:8831:    #elif P_UPDATED_EXP_YIELDS >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:8908:    #if P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:8910:    #elif P_UPDATED_EXP_YIELDS >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:8985:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 40 : 61,
+src/data/pokemon/species_info/gen_3_families.h:8992:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:9065:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 189 : 213,
+src/data/pokemon/species_info/gen_3_families.h:9072:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:9156:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 147 : 145,
+src/data/pokemon/species_info/gen_3_families.h:9235:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 147 : 145,
+src/data/pokemon/species_info/gen_3_families.h:9316:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 147 : 145,
+src/data/pokemon/species_info/gen_3_families.h:9395:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 147 : 145,
+src/data/pokemon/species_info/gen_3_families.h:9477:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 154 : 132,
+src/data/pokemon/species_info/gen_3_families.h:9484:    #if P_UPDATED_ABILITIES >= GEN_6
+src/data/pokemon/species_info/gen_3_families.h:9554:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 59 : 97,
+src/data/pokemon/species_info/gen_3_families.h:9562:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:9633:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 159 : 179,
+src/data/pokemon/species_info/gen_3_families.h:9641:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:9787:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 59 : 97,
+src/data/pokemon/species_info/gen_3_families.h:9788:        .evYield_Defense = (P_UPDATED_EVS >= GEN_4) ? 0 : 1,
+src/data/pokemon/species_info/gen_3_families.h:9796:    #if P_UPDATED_ABILITIES >= GEN_6
+src/data/pokemon/species_info/gen_3_families.h:9865:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 159 : 179,
+src/data/pokemon/species_info/gen_3_families.h:9867:        .evYield_SpDefense = (P_UPDATED_EVS >= GEN_4) ? 1 : 2,
+src/data/pokemon/species_info/gen_3_families.h:9874:    #if P_UPDATED_ABILITIES >= GEN_6
+src/data/pokemon/species_info/gen_3_families.h:9929:    #if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_3_families.h:9935:#if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_3_families.h:9946:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_3_families.h:9948:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:9961:    #if P_UPDATED_ABILITIES >= GEN_6
+src/data/pokemon/species_info/gen_3_families.h:10022:#endif //P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_3_families.h:10036:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 161 : 169,
+src/data/pokemon/species_info/gen_3_families.h:10043:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:10102:#if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_3_families.h:10113:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 57 : 74,
+src/data/pokemon/species_info/gen_3_families.h:10177:#endif //P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_3_families.h:10181:        .baseHP        = P_UPDATED_STATS >= GEN_7 ? 75 : 65,
+src/data/pokemon/species_info/gen_3_families.h:10183:        .baseDefense   = P_UPDATED_STATS >= GEN_7 ? 80 : 70,
+src/data/pokemon/species_info/gen_3_families.h:10186:        .baseSpDefense = P_UPDATED_STATS >= GEN_7 ? 90 : 80,
+src/data/pokemon/species_info/gen_3_families.h:10189:    #if P_UPDATED_EXP_YIELDS >= GEN_7
+src/data/pokemon/species_info/gen_3_families.h:10191:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:10274:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 163 : 174,
+src/data/pokemon/species_info/gen_3_families.h:10281:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:10426:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 60 : 74,
+src/data/pokemon/species_info/gen_3_families.h:10434:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:10491:                            #if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_3_families.h:10507:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 168 : 187,
+src/data/pokemon/species_info/gen_3_families.h:10514:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:10643:#if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_3_families.h:10654:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 168 : 187,
+src/data/pokemon/species_info/gen_3_families.h:10714:#if P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_3_families.h:10767:#endif //P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_3_families.h:10768:#endif //P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_3_families.h:10782:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 58 : 75,
+src/data/pokemon/species_info/gen_3_families.h:10789:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:10861:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 144 : 128,
+src/data/pokemon/species_info/gen_3_families.h:10868:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:10935:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_3_families.h:10937:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:10948:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_3_families.h:11016:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 69 : 142,
+src/data/pokemon/species_info/gen_3_families.h:11092:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 170 : 178,
+src/data/pokemon/species_info/gen_3_families.h:11163:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 170 : 178,
+src/data/pokemon/species_info/gen_3_families.h:11235:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 170 : 198,
+src/data/pokemon/species_info/gen_3_families.h:11322:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 116 : 110,
+src/data/pokemon/species_info/gen_3_families.h:11395:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 60 : 89,
+src/data/pokemon/species_info/gen_3_families.h:11467:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 147 : 144,
+src/data/pokemon/species_info/gen_3_families.h:11538:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_3_families.h:11540:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:11618:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 350 : 315,
+src/data/pokemon/species_info/gen_3_families.h:11690:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 60 : 103,
+src/data/pokemon/species_info/gen_3_families.h:11764:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 147 : 153,
+src/data/pokemon/species_info/gen_3_families.h:11835:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_3_families.h:11837:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:11914:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 350 : 315,
+src/data/pokemon/species_info/gen_3_families.h:11986:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_3_families.h:11988:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:12066:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_3_families.h:12068:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:12145:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_3_families.h:12147:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:12225:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_3_families.h:12227:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:12306:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 350 : 315,
+src/data/pokemon/species_info/gen_3_families.h:12380:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_3_families.h:12382:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:12461:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 350 : 315,
+src/data/pokemon/species_info/gen_3_families.h:12535:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_3_families.h:12537:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:12616:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 385 : 347,
+src/data/pokemon/species_info/gen_3_families.h:12690:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_3_families.h:12692:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:12771:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 385 : 347,
+src/data/pokemon/species_info/gen_3_families.h:12845:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_3_families.h:12847:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:12929:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 390 : 351,
+src/data/pokemon/species_info/gen_3_families.h:13005:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_3_families.h:13007:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_3_families.h:13083:#if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_3_families.h:13085:#elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:87:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 142 : 141,
+src/data/pokemon/species_info/gen_1_families.h:147:#if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:149:#elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:249:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 313 : 281,
+src/data/pokemon/species_info/gen_1_families.h:376:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 60 : 50,
+src/data/pokemon/species_info/gen_1_families.h:380:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 62 : 65,
+src/data/pokemon/species_info/gen_1_families.h:445:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 80 : 65,
+src/data/pokemon/species_info/gen_1_families.h:508:#define CHARIZARD_SP_ATK (P_UPDATED_STATS >= GEN_2 ? 109 : 85)
+src/data/pokemon/species_info/gen_1_families.h:510:#if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:512:#elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:597:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 317 : 285,
+src/data/pokemon/species_info/gen_1_families.h:664:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 317 : 285,
+src/data/pokemon/species_info/gen_1_families.h:791:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 64 : 50,
+src/data/pokemon/species_info/gen_1_families.h:794:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 63 : 66,
+src/data/pokemon/species_info/gen_1_families.h:861:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 80 : 65,
+src/data/pokemon/species_info/gen_1_families.h:864:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 142 : 143,
+src/data/pokemon/species_info/gen_1_families.h:923:#define BLASTOISE_SP_DEF (P_UPDATED_STATS >= GEN_2 ? 105 : 85)
+src/data/pokemon/species_info/gen_1_families.h:925:#if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:927:#elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:1015:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 315 : 284,
+src/data/pokemon/species_info/gen_1_families.h:1145:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 39 : 53,
+src/data/pokemon/species_info/gen_1_families.h:1277:#if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:1279:#elif P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_1_families.h:1281:#elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:1293:        .baseSpAttack  = P_UPDATED_STATS >= GEN_6 ? 90 : 80,
+src/data/pokemon/species_info/gen_1_families.h:1389:        .baseSpAttack  = P_UPDATED_STATS >= GEN_6 ? 90 : 80,
+src/data/pokemon/species_info/gen_1_families.h:1456:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 39 : 52,
+src/data/pokemon/species_info/gen_1_families.h:1530:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 72 : 71,
+src/data/pokemon/species_info/gen_1_families.h:1601:        .baseAttack    = P_UPDATED_STATS >= GEN_6 ? 90 : 80,
+src/data/pokemon/species_info/gen_1_families.h:1605:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 80 : 45,
+src/data/pokemon/species_info/gen_1_families.h:1608:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:1610:    #elif P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_1_families.h:1612:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:1693:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 248 : 223,
+src/data/pokemon/species_info/gen_1_families.h:1767:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 50 : 55,
+src/data/pokemon/species_info/gen_1_families.h:1774:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:1841:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 122 : 113,
+src/data/pokemon/species_info/gen_1_families.h:1848:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:1911:        .baseSpeed     = P_UPDATED_STATS >= GEN_6 ? 101 : 91,
+src/data/pokemon/species_info/gen_1_families.h:1916:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:1918:    #elif P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_1_families.h:1920:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:1931:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:1998:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 290 : 261,
+src/data/pokemon/species_info/gen_1_families.h:2066:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 35 : 25,
+src/data/pokemon/species_info/gen_1_families.h:2069:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 51 : 57,
+src/data/pokemon/species_info/gen_1_families.h:2150:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 70 : 50,
+src/data/pokemon/species_info/gen_1_families.h:2153:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 145 : 116,
+src/data/pokemon/species_info/gen_1_families.h:2442:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 52 : 58,
+src/data/pokemon/species_info/gen_1_families.h:2513:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 155 : 162,
+src/data/pokemon/species_info/gen_1_families.h:2587:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 54 : 40,
+src/data/pokemon/species_info/gen_1_families.h:2590:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 58 : 62,
+src/data/pokemon/species_info/gen_1_families.h:2656:        .baseAttack    = P_UPDATED_STATS >= GEN_7 ? 95 : 85,
+src/data/pokemon/species_info/gen_1_families.h:2660:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 79 : 65,
+src/data/pokemon/species_info/gen_1_families.h:2663:    #if P_UPDATED_EXP_YIELDS >= GEN_7
+src/data/pokemon/species_info/gen_1_families.h:2665:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:2728:#if P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:2739:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 41 : 42,
+src/data/pokemon/species_info/gen_1_families.h:2866:#endif //P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:2868:#define PIKACHU_DEFENSE (P_UPDATED_STATS >= GEN_6 ? 40 : 30)
+src/data/pokemon/species_info/gen_1_families.h:2869:#define PIKACHU_SP_DEF (P_UPDATED_STATS >= GEN_6 || P_UPDATED_STATS == GEN_1 ? 50 : 40)
+src/data/pokemon/species_info/gen_1_families.h:2871:#if P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_1_families.h:2873:#elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:2886:        .baseSpDefense = P_UPDATED_STATS >= GEN_6 || P_UPDATED_STATS == GEN_1 ? 50 : 40,
+src/data/pokemon/species_info/gen_1_families.h:3806:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 151 : 86,
+src/data/pokemon/species_info/gen_1_families.h:3875:#if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:3877:#elif P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_1_families.h:3879:#elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:3890:        .baseSpeed     = P_UPDATED_STATS >= GEN_6 ? 110 : 100,
+src/data/pokemon/species_info/gen_1_families.h:3892:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 80 : 90,
+src/data/pokemon/species_info/gen_1_families.h:3977:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 243 : 218,
+src/data/pokemon/species_info/gen_1_families.h:4042:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 20 : 30,
+src/data/pokemon/species_info/gen_1_families.h:4046:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 60 : 93,
+src/data/pokemon/species_info/gen_1_families.h:4115:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 45 : 55,
+src/data/pokemon/species_info/gen_1_families.h:4119:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 158 : 163,
+src/data/pokemon/species_info/gen_1_families.h:4328:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 55 : 59,
+src/data/pokemon/species_info/gen_1_families.h:4335:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:4408:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 128 : 117,
+src/data/pokemon/species_info/gen_1_families.h:4415:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:4472:        .baseAttack    = P_UPDATED_STATS >= GEN_6 ? 92 : 82,
+src/data/pokemon/species_info/gen_1_families.h:4476:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 85 : 75,
+src/data/pokemon/species_info/gen_1_families.h:4479:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:4481:    #elif P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_1_families.h:4483:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:4494:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:4557:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 55 : 60,
+src/data/pokemon/species_info/gen_1_families.h:4564:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:4630:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 128 : 118,
+src/data/pokemon/species_info/gen_1_families.h:4637:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:4695:        .baseAttack    = P_UPDATED_STATS >= GEN_6 ? 102 : 92,
+src/data/pokemon/species_info/gen_1_families.h:4698:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 85 : 75,
+src/data/pokemon/species_info/gen_1_families.h:4702:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:4704:    #elif P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_1_families.h:4706:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:4717:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:4775:#if P_UPDATED_TYPES >= GEN_6
+src/data/pokemon/species_info/gen_1_families.h:4781:#if P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:4792:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 44 : 37,
+src/data/pokemon/species_info/gen_1_families.h:4800:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:4857:#endif //P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:4866:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 65 : 60,
+src/data/pokemon/species_info/gen_1_families.h:4869:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 113 : 68,
+src/data/pokemon/species_info/gen_1_families.h:4877:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:4939:        .baseSpAttack  = P_UPDATED_STATS >= GEN_6 ? 95 : 85,
+src/data/pokemon/species_info/gen_1_families.h:4940:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 90 : 85,
+src/data/pokemon/species_info/gen_1_families.h:4943:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:4945:    #elif P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_1_families.h:4947:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:4959:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:5016:#if P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_1_families.h:5069:#endif //P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_1_families.h:5079:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 50 : 65,
+src/data/pokemon/species_info/gen_1_families.h:5083:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 60 : 63,
+src/data/pokemon/species_info/gen_1_families.h:5152:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 81 : 100,
+src/data/pokemon/species_info/gen_1_families.h:5156:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 177 : 178,
+src/data/pokemon/species_info/gen_1_families.h:5357:#if P_UPDATED_TYPES >= GEN_6
+src/data/pokemon/species_info/gen_1_families.h:5363:#if P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:5374:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 42 : 39,
+src/data/pokemon/species_info/gen_1_families.h:5381:    #if P_UPDATED_ABILITIES >= GEN_6
+src/data/pokemon/species_info/gen_1_families.h:5439:#endif //P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:5447:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 45 : 25,
+src/data/pokemon/species_info/gen_1_families.h:5451:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 95 : 76,
+src/data/pokemon/species_info/gen_1_families.h:5459:    #if P_UPDATED_ABILITIES >= GEN_6
+src/data/pokemon/species_info/gen_1_families.h:5517:#if P_UPDATED_STATS >= GEN_6
+src/data/pokemon/species_info/gen_1_families.h:5519:#elif P_UPDATED_STATS >= GEN_2
+src/data/pokemon/species_info/gen_1_families.h:5535:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:5537:    #elif P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_1_families.h:5539:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:5551:    #if P_UPDATED_ABILITIES >= GEN_6
+src/data/pokemon/species_info/gen_1_families.h:5616:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 30 : 40,
+src/data/pokemon/species_info/gen_1_families.h:5620:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 49 : 54,
+src/data/pokemon/species_info/gen_1_families.h:5709:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 65 : 75,
+src/data/pokemon/species_info/gen_1_families.h:5713:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 159 : 171,
+src/data/pokemon/species_info/gen_1_families.h:5798:    #if P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:5803:#if P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:5814:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:5816:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:5891:#endif //P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:5902:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 65 : 75,
+src/data/pokemon/species_info/gen_1_families.h:5905:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 64 : 78,
+src/data/pokemon/species_info/gen_1_families.h:5976:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 75 : 85,
+src/data/pokemon/species_info/gen_1_families.h:5979:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 138 : 132,
+src/data/pokemon/species_info/gen_1_families.h:6051:                            #if P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:6063:        .baseSpAttack  = P_UPDATED_STATS >= GEN_6 ? 110 : 100,
+src/data/pokemon/species_info/gen_1_families.h:6064:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 90 : 100,
+src/data/pokemon/species_info/gen_1_families.h:6067:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:6069:    #elif P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_1_families.h:6071:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:6145:#if P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:6150:        .baseDefense   = P_UPDATED_STATS >= GEN_6 ? 95 : 85,
+src/data/pokemon/species_info/gen_1_families.h:6156:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:6158:    #elif P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_1_families.h:6160:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:6234:#endif //P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:6244:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 45 : 55,
+src/data/pokemon/species_info/gen_1_families.h:6248:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 57 : 70,
+src/data/pokemon/species_info/gen_1_families.h:6257:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:6333:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 60 : 80,
+src/data/pokemon/species_info/gen_1_families.h:6337:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 142 : 128,
+src/data/pokemon/species_info/gen_1_families.h:6347:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:6414:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 55 : 40,
+src/data/pokemon/species_info/gen_1_families.h:6417:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 61 : 75,
+src/data/pokemon/species_info/gen_1_families.h:6424:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:6491:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 75 : 90,
+src/data/pokemon/species_info/gen_1_families.h:6494:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 158 : 138,
+src/data/pokemon/species_info/gen_1_families.h:6503:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:6585:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 35 : 45,
+src/data/pokemon/species_info/gen_1_families.h:6589:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 53 : 81,
+src/data/pokemon/species_info/gen_1_families.h:6654:        .baseAttack    = P_UPDATED_STATS >= GEN_7 ? 100 : 80,
+src/data/pokemon/species_info/gen_1_families.h:6657:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 50 : 70,
+src/data/pokemon/species_info/gen_1_families.h:6661:    #if P_UPDATED_EXP_YIELDS >= GEN_7
+src/data/pokemon/species_info/gen_1_families.h:6663:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:6873:#if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:6889:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 58 : 69,
+src/data/pokemon/species_info/gen_1_families.h:6965:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 154 : 148,
+src/data/pokemon/species_info/gen_1_families.h:6973:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:7306:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 58 : 69,
+src/data/pokemon/species_info/gen_1_families.h:7364:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 65 : 50,
+src/data/pokemon/species_info/gen_1_families.h:7368:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 64 : 80,
+src/data/pokemon/species_info/gen_1_families.h:7435:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 95 : 80,
+src/data/pokemon/species_info/gen_1_families.h:7439:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 175 : 174,
+src/data/pokemon/species_info/gen_1_families.h:7507:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 45 : 35,
+src/data/pokemon/species_info/gen_1_families.h:7510:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 61 : 74,
+src/data/pokemon/species_info/gen_1_families.h:7517:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:7584:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 70 : 60,
+src/data/pokemon/species_info/gen_1_families.h:7587:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 159 : 149,
+src/data/pokemon/species_info/gen_1_families.h:7594:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:7651:    #if P_GEN_9_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:7656:#if P_GEN_9_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:7720:#endif //P_GEN_9_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:7730:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 70 : 50,
+src/data/pokemon/species_info/gen_1_families.h:7734:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 70 : 91,
+src/data/pokemon/species_info/gen_1_families.h:7804:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 100 : 80,
+src/data/pokemon/species_info/gen_1_families.h:7808:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 194 : 213,
+src/data/pokemon/species_info/gen_1_families.h:8011:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 60 : 77,
+src/data/pokemon/species_info/gen_1_families.h:8081:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 135 : 131,
+src/data/pokemon/species_info/gen_1_families.h:8142:                            #if P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:8152:        .baseAttack    = P_UPDATED_STATS >= GEN_6 ? 95 : 85,
+src/data/pokemon/species_info/gen_1_families.h:8156:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 90 : 70,
+src/data/pokemon/species_info/gen_1_families.h:8159:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:8161:    #elif P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_1_families.h:8163:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:8225:#if P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:8236:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:8238:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:8317:#endif //P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:8328:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 55 : 105,
+src/data/pokemon/species_info/gen_1_families.h:8331:    #if P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:8333:    #elif P_UPDATED_EXP_YIELDS >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:8406:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 70 : 120,
+src/data/pokemon/species_info/gen_1_families.h:8409:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 140 : 145,
+src/data/pokemon/species_info/gen_1_families.h:8483:#if P_UPDATED_STATS >= GEN_6
+src/data/pokemon/species_info/gen_1_families.h:8485:#elif P_UPDATED_STATS >= GEN_2
+src/data/pokemon/species_info/gen_1_families.h:8501:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:8503:    #elif P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_1_families.h:8505:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:8590:        .baseSpDefense = P_UPDATED_STATS >= GEN_7 ? 105 : 95,
+src/data/pokemon/species_info/gen_1_families.h:8593:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:8595:    #elif P_UPDATED_EXP_YIELDS >= GEN_7
+src/data/pokemon/species_info/gen_1_families.h:8671:    #if P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:8673:    #elif P_UPDATED_EXP_YIELDS >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:8685:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:8750:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 60 : 50,
+src/data/pokemon/species_info/gen_1_families.h:8753:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 142 : 146,
+src/data/pokemon/species_info/gen_1_families.h:8761:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:8818:#if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:8820:#elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:8833:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 85 : 65,
+src/data/pokemon/species_info/gen_1_families.h:8844:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:8912:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 85 : 65,
+src/data/pokemon/species_info/gen_1_families.h:8923:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:8977:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 30 : 70,
+src/data/pokemon/species_info/gen_1_families.h:8980:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 60 : 84,
+src/data/pokemon/species_info/gen_1_families.h:9046:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 45 : 85,
+src/data/pokemon/species_info/gen_1_families.h:9049:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 137 : 151,
+src/data/pokemon/species_info/gen_1_families.h:9113:#if P_UPDATED_STATS >= GEN_6
+src/data/pokemon/species_info/gen_1_families.h:9115:#elif P_UPDATED_STATS >= GEN_2
+src/data/pokemon/species_info/gen_1_families.h:9131:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:9133:    #elif P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_1_families.h:9135:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:9203:#if P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_1_families.h:9257:#endif //P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_1_families.h:9267:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 50 : 100,
+src/data/pokemon/species_info/gen_1_families.h:9271:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 67 : 105,
+src/data/pokemon/species_info/gen_1_families.h:9339:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 80 : 120,
+src/data/pokemon/species_info/gen_1_families.h:9343:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 180 : 205,
+src/data/pokemon/species_info/gen_1_families.h:9415:    #if P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:9417:    #elif P_UPDATED_EXP_YIELDS >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:9493:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 137 : 134,
+src/data/pokemon/species_info/gen_1_families.h:9559:        .baseAttack    = P_UPDATED_STATS >= GEN_6 ? 120 : 110,
+src/data/pokemon/species_info/gen_1_families.h:9563:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 65 : 55,
+src/data/pokemon/species_info/gen_1_families.h:9566:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:9568:    #elif P_UPDATED_EXP_YIELDS >= GEN_6
+src/data/pokemon/species_info/gen_1_families.h:9570:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:9783:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 248 : 223,
+src/data/pokemon/species_info/gen_1_families.h:9852:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 82 : 152,
+src/data/pokemon/species_info/gen_1_families.h:9922:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 175 : 192,
+src/data/pokemon/species_info/gen_1_families.h:10126:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 63 : 99,
+src/data/pokemon/species_info/gen_1_families.h:10185:                            #if P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:10198:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 100 : 80,
+src/data/pokemon/species_info/gen_1_families.h:10202:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 172 : 164,
+src/data/pokemon/species_info/gen_1_families.h:10261:#if P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:10272:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 172 : 164,
+src/data/pokemon/species_info/gen_1_families.h:10273:        .evYield_SpDefense = (P_UPDATED_EVS >= GEN_8) ? 2 : 3,
+src/data/pokemon/species_info/gen_1_families.h:10330:#endif //P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:10469:                            #if P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:10542:#if P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:10607:#endif //P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:10612:#define MAGNEMITE_FAMILY_TYPE2 (P_UPDATED_TYPES >= GEN_2 ? TYPE_STEEL : TYPE_ELECTRIC)
+src/data/pokemon/species_info/gen_1_families.h:10621:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 55 : 95,
+src/data/pokemon/species_info/gen_1_families.h:10624:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 65 : 89,
+src/data/pokemon/species_info/gen_1_families.h:10693:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 70 : 120,
+src/data/pokemon/species_info/gen_1_families.h:10696:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 163 : 161,
+src/data/pokemon/species_info/gen_1_families.h:10757:    #if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:10763:#if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:10774:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:10776:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:10840:#endif //P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:10847:        .baseAttack    = P_UPDATED_STATS >= GEN_7 ? 90 : 65,
+src/data/pokemon/species_info/gen_1_families.h:10851:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 62 : 58,
+src/data/pokemon/species_info/gen_1_families.h:10854:    #if P_UPDATED_EXP_YIELDS >= GEN_7
+src/data/pokemon/species_info/gen_1_families.h:10856:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:11078:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 62 : 96,
+src/data/pokemon/species_info/gen_1_families.h:11158:        .baseSpeed     = P_UPDATED_STATS >= GEN_7 ? 110 : 100,
+src/data/pokemon/species_info/gen_1_families.h:11163:    #if P_UPDATED_EXP_YIELDS >= GEN_7
+src/data/pokemon/species_info/gen_1_families.h:11165:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:11253:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 45 : 70,
+src/data/pokemon/species_info/gen_1_families.h:11257:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 65 : 100,
+src/data/pokemon/species_info/gen_1_families.h:11264:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:11327:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 70 : 95,
+src/data/pokemon/species_info/gen_1_families.h:11331:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 166 : 176,
+src/data/pokemon/species_info/gen_1_families.h:11338:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:11401:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 50 : 40,
+src/data/pokemon/species_info/gen_1_families.h:11404:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 65 : 90,
+src/data/pokemon/species_info/gen_1_families.h:11474:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 100 : 65,
+src/data/pokemon/species_info/gen_1_families.h:11477:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 175 : 157,
+src/data/pokemon/species_info/gen_1_families.h:11687:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 25 : 45,
+src/data/pokemon/species_info/gen_1_families.h:11690:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 61 : 97,
+src/data/pokemon/species_info/gen_1_families.h:11699:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:11764:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 45 : 85,
+src/data/pokemon/species_info/gen_1_families.h:11767:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 184 : 203,
+src/data/pokemon/species_info/gen_1_families.h:11776:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:11840:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 35 : 100,
+src/data/pokemon/species_info/gen_1_families.h:11843:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 62 : 95,
+src/data/pokemon/species_info/gen_1_families.h:11914:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 55 : 115,
+src/data/pokemon/species_info/gen_1_families.h:11917:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 142 : 126,
+src/data/pokemon/species_info/gen_1_families.h:11980:#define GENGAR_SP_DEF (P_UPDATED_STATS >= GEN_2 ? 75 : 130)
+src/data/pokemon/species_info/gen_1_families.h:11982:#if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:11984:#elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:11990:#if P_UPDATED_ABILITIES >= GEN_7
+src/data/pokemon/species_info/gen_1_families.h:12076:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 300 : 270,
+src/data/pokemon/species_info/gen_1_families.h:12203:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 45 : 30,
+src/data/pokemon/species_info/gen_1_families.h:12206:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 77 : 108,
+src/data/pokemon/species_info/gen_1_families.h:12261:    #if P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:12267:#if P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:12278:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 179 : 196,
+src/data/pokemon/species_info/gen_1_families.h:12424:#endif //P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:12434:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 43 : 90,
+src/data/pokemon/species_info/gen_1_families.h:12438:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 66 : 102,
+src/data/pokemon/species_info/gen_1_families.h:12445:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:12511:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 73 : 115,
+src/data/pokemon/species_info/gen_1_families.h:12515:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 169 : 165,
+src/data/pokemon/species_info/gen_1_families.h:12522:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:12606:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 65 : 115,
+src/data/pokemon/species_info/gen_1_families.h:12678:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 166 : 206,
+src/data/pokemon/species_info/gen_1_families.h:12749:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 166 : 206,
+src/data/pokemon/species_info/gen_1_families.h:12810:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 66 : 103,
+src/data/pokemon/species_info/gen_1_families.h:12877:        .baseSpeed     = P_UPDATED_STATS >= GEN_7 ? 150 : 140,
+src/data/pokemon/species_info/gen_1_families.h:12882:    #if P_UPDATED_EXP_YIELDS >= GEN_7
+src/data/pokemon/species_info/gen_1_families.h:12884:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:13090:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 45 : 60,
+src/data/pokemon/species_info/gen_1_families.h:13093:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 65 : 98,
+src/data/pokemon/species_info/gen_1_families.h:13168:    #if P_UPDATED_STATS >= GEN_7
+src/data/pokemon/species_info/gen_1_families.h:13170:    #elif P_UPDATED_STATS >= GEN_2
+src/data/pokemon/species_info/gen_1_families.h:13177:    #if P_UPDATED_EXP_YIELDS >= GEN_7
+src/data/pokemon/species_info/gen_1_families.h:13179:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:13318:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 50 : 40,
+src/data/pokemon/species_info/gen_1_families.h:13321:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 64 : 87,
+src/data/pokemon/species_info/gen_1_families.h:13395:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 80 : 50,
+src/data/pokemon/species_info/gen_1_families.h:13398:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 149 : 124,
+src/data/pokemon/species_info/gen_1_families.h:13592:#if P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:13603:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 42 : 91,
+src/data/pokemon/species_info/gen_1_families.h:13610:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:13666:#endif //P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:13675:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 110 : 35,
+src/data/pokemon/species_info/gen_1_families.h:13678:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 159 : 139,
+src/data/pokemon/species_info/gen_1_families.h:13685:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:13746:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 110 : 35,
+src/data/pokemon/species_info/gen_1_families.h:13749:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 159 : 140,
+src/data/pokemon/species_info/gen_1_families.h:13756:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:13818:#if P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:13829:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 159 : 138,
+src/data/pokemon/species_info/gen_1_families.h:13836:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:13891:#endif //P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:13902:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 75 : 60,
+src/data/pokemon/species_info/gen_1_families.h:13905:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 77 : 127,
+src/data/pokemon/species_info/gen_1_families.h:13961:    #if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:13966:#if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:13977:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 180 : 193,
+src/data/pokemon/species_info/gen_1_families.h:14040:#endif //P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:14051:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 45 : 60,
+src/data/pokemon/species_info/gen_1_families.h:14054:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 68 : 114,
+src/data/pokemon/species_info/gen_1_families.h:14062:    #if P_UPDATED_ABILITIES >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:14129:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 70 : 85,
+src/data/pokemon/species_info/gen_1_families.h:14132:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 172 : 173,
+src/data/pokemon/species_info/gen_1_families.h:14140:    #if P_UPDATED_ABILITIES >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:14281:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 69 : 135,
+src/data/pokemon/species_info/gen_1_families.h:14365:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 170 : 204,
+src/data/pokemon/species_info/gen_1_families.h:14432:    #if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:14438:#if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:14449:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:14451:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:14526:#endif //P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:14530:#if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:14541:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 110 : 255,
+src/data/pokemon/species_info/gen_1_families.h:14601:#endif //P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:14609:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 35 : 105,
+src/data/pokemon/species_info/gen_1_families.h:14613:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 395 : 255,
+src/data/pokemon/species_info/gen_1_families.h:14670:    #if P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:14675:#if P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:14686:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:14688:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:14693:        .evYield_HP = (P_UPDATED_EVS >= GEN_4) ? 3 : 2,
+src/data/pokemon/species_info/gen_1_families.h:14749:#endif //P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:14760:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 40 : 100,
+src/data/pokemon/species_info/gen_1_families.h:14763:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 87 : 166,
+src/data/pokemon/species_info/gen_1_families.h:14770:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:14823:    #if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:14828:#if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:14839:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 187 : 211,
+src/data/pokemon/species_info/gen_1_families.h:14910:#endif //P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:14921:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 80 : 40,
+src/data/pokemon/species_info/gen_1_families.h:14924:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 172 : 175,
+src/data/pokemon/species_info/gen_1_families.h:15065:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 25 : 70,
+src/data/pokemon/species_info/gen_1_families.h:15068:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 59 : 83,
+src/data/pokemon/species_info/gen_1_families.h:15076:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:15141:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 45 : 95,
+src/data/pokemon/species_info/gen_1_families.h:15144:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 154 : 155,
+src/data/pokemon/species_info/gen_1_families.h:15153:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:15207:    #if P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:15213:#if P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:15224:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:15226:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:15240:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:15295:#endif //P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:15305:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 35 : 50,
+src/data/pokemon/species_info/gen_1_families.h:15309:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 64 : 111,
+src/data/pokemon/species_info/gen_1_families.h:15394:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 65 : 80,
+src/data/pokemon/species_info/gen_1_families.h:15398:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 158 : 170,
+src/data/pokemon/species_info/gen_1_families.h:15480:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 55 : 70,
+src/data/pokemon/species_info/gen_1_families.h:15483:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 68 : 106,
+src/data/pokemon/species_info/gen_1_families.h:15553:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 85 : 100,
+src/data/pokemon/species_info/gen_1_families.h:15556:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 182 : 207,
+src/data/pokemon/species_info/gen_1_families.h:15619:#if P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_1_families.h:15674:#endif //P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_1_families.h:15678:#if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:15687:    #if P_UPDATED_TYPES >= GEN_6
+src/data/pokemon/species_info/gen_1_families.h:15693:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 62 : 78,
+src/data/pokemon/species_info/gen_1_families.h:15700:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:15759:#endif //P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:15768:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 120 : 100,
+src/data/pokemon/species_info/gen_1_families.h:15769:    #if P_UPDATED_TYPES >= GEN_6
+src/data/pokemon/species_info/gen_1_families.h:15775:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 161 : 136,
+src/data/pokemon/species_info/gen_1_families.h:15978:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 80 : 55,
+src/data/pokemon/species_info/gen_1_families.h:15981:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 100 : 187,
+src/data/pokemon/species_info/gen_1_families.h:15988:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:16058:    #if P_GEN_2_CROSS_EVOS || P_GEN_8_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:16060:                            #if P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:16063:                            #if P_GEN_8_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:16067:                            #if P_GEN_8_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:16074:#if P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:16085:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 175 : 200,
+src/data/pokemon/species_info/gen_1_families.h:16092:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:16228:#endif //P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:16230:#if P_GEN_8_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:16293:#endif //P_GEN_8_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:16297:#if P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:16308:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 61 : 87,
+src/data/pokemon/species_info/gen_1_families.h:16315:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:16370:#endif //P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:16378:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 115 : 95,
+src/data/pokemon/species_info/gen_1_families.h:16382:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 159 : 137,
+src/data/pokemon/species_info/gen_1_families.h:16389:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:16447:#if P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:16458:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 72 : 106,
+src/data/pokemon/species_info/gen_1_families.h:16518:#endif //P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:16526:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 95 : 85,
+src/data/pokemon/species_info/gen_1_families.h:16530:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 172 : 156,
+src/data/pokemon/species_info/gen_1_families.h:16589:    #if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:16595:#if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:16606:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:16608:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:16669:#endif //P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:16673:#if P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:16684:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 73 : 117,
+src/data/pokemon/species_info/gen_1_families.h:16745:#endif //P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:16753:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 100 : 85,
+src/data/pokemon/species_info/gen_1_families.h:16757:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 173 : 167,
+src/data/pokemon/species_info/gen_1_families.h:16812:    #if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:16818:#if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:16829:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:16831:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:16892:#endif //P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:16903:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 70 : 55,
+src/data/pokemon/species_info/gen_1_families.h:16906:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 175 : 200,
+src/data/pokemon/species_info/gen_1_families.h:16913:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:17052:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 40 : 70,
+src/data/pokemon/species_info/gen_1_families.h:17056:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 172 : 211,
+src/data/pokemon/species_info/gen_1_families.h:17064:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:17329:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 15 : 20,
+src/data/pokemon/species_info/gen_1_families.h:17333:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 40 : 20,
+src/data/pokemon/species_info/gen_1_families.h:17417:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 60 : 100,
+src/data/pokemon/species_info/gen_1_families.h:17421:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 189 : 214,
+src/data/pokemon/species_info/gen_1_families.h:17572:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 85 : 95,
+src/data/pokemon/species_info/gen_1_families.h:17576:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 187 : 219,
+src/data/pokemon/species_info/gen_1_families.h:17644:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 85 : 95,
+src/data/pokemon/species_info/gen_1_families.h:17648:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 187 : 219,
+src/data/pokemon/species_info/gen_1_families.h:17711:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 101 : 61,
+src/data/pokemon/species_info/gen_1_families.h:17774:#define EEVEE_SP_ATK (P_UPDATED_STATS >= GEN_2 ? 45 : 65)
+src/data/pokemon/species_info/gen_1_families.h:17776:#if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:17792:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 65 : 92,
+src/data/pokemon/species_info/gen_1_families.h:17861:                            #if P_GEN_6_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:17864:                            #if P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:17868:                            #if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:17888:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 65 : 92,
+src/data/pokemon/species_info/gen_1_families.h:18020:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 95 : 110,
+src/data/pokemon/species_info/gen_1_families.h:18023:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 184 : 196,
+src/data/pokemon/species_info/gen_1_families.h:18086:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 95 : 110,
+src/data/pokemon/species_info/gen_1_families.h:18089:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 184 : 197,
+src/data/pokemon/species_info/gen_1_families.h:18151:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 95 : 110,
+src/data/pokemon/species_info/gen_1_families.h:18155:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 184 : 198,
+src/data/pokemon/species_info/gen_1_families.h:18211:#if P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:18222:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 184 : 197,
+src/data/pokemon/species_info/gen_1_families.h:18289:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 184 : 197,
+src/data/pokemon/species_info/gen_1_families.h:18344:#endif //P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:18346:#if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:18357:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 184 : 196,
+src/data/pokemon/species_info/gen_1_families.h:18424:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 184 : 196,
+src/data/pokemon/species_info/gen_1_families.h:18480:#endif //P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:18482:#if P_GEN_6_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:18550:#endif //P_GEN_6_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:18560:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 85 : 75,
+src/data/pokemon/species_info/gen_1_families.h:18564:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 79 : 130,
+src/data/pokemon/species_info/gen_1_families.h:18571:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:18624:    #if P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:18630:#if P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:18648:    #if P_UPDATED_ABILITIES >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:18703:    #if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:18709:#if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:18720:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:18722:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:18784:#endif //P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:18785:#endif //P_GEN_2_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:18796:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 55 : 90,
+src/data/pokemon/species_info/gen_1_families.h:18799:    #if P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:18801:    #elif P_UPDATED_EXP_YIELDS >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:18876:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 70 : 115,
+src/data/pokemon/species_info/gen_1_families.h:18879:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 173 : 199,
+src/data/pokemon/species_info/gen_1_families.h:18945:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 55 : 45,
+src/data/pokemon/species_info/gen_1_families.h:18949:    #if P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:18951:    #elif P_UPDATED_EXP_YIELDS >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:19025:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 65 : 70,
+src/data/pokemon/species_info/gen_1_families.h:19029:    #if P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:19031:    #elif P_UPDATED_EXP_YIELDS >= GEN_4
+src/data/pokemon/species_info/gen_1_families.h:19102:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 75 : 60,
+src/data/pokemon/species_info/gen_1_families.h:19105:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 180 : 202,
+src/data/pokemon/species_info/gen_1_families.h:19240:#if P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:19251:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 78 : 94,
+src/data/pokemon/species_info/gen_1_families.h:19311:#endif //P_GEN_4_CROSS_EVOS
+src/data/pokemon/species_info/gen_1_families.h:19320:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 110 : 65,
+src/data/pokemon/species_info/gen_1_families.h:19323:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 189 : 154,
+src/data/pokemon/species_info/gen_1_families.h:19393:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 110 : 65,
+src/data/pokemon/species_info/gen_1_families.h:19396:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 189 : 154,
+src/data/pokemon/species_info/gen_1_families.h:19455:        .baseSpAttack  = P_UPDATED_STATS >= GEN_2 ? 95 : 125,
+src/data/pokemon/species_info/gen_1_families.h:19459:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:19461:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:19606:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 90 : 125,
+src/data/pokemon/species_info/gen_1_families.h:19609:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:19611:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:19622:    #if P_UPDATED_ABILITIES >= GEN_6
+src/data/pokemon/species_info/gen_1_families.h:19759:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 85 : 125,
+src/data/pokemon/species_info/gen_1_families.h:19762:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:19764:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:19939:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 60 : 67,
+src/data/pokemon/species_info/gen_1_families.h:20009:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 147 : 144,
+src/data/pokemon/species_info/gen_1_families.h:20079:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:20081:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:20146:#if P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_1_families.h:20200:#endif //P_GEN_9_MEGA_EVOLUTIONS
+src/data/pokemon/species_info/gen_1_families.h:20211:        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 90 : 154,
+src/data/pokemon/species_info/gen_1_families.h:20214:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:20216:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info/gen_1_families.h:20292:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 390 : 351,
+src/data/pokemon/species_info/gen_1_families.h:20363:        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 390 : 351,
+src/data/pokemon/species_info/gen_1_families.h:20438:    #if P_UPDATED_EXP_YIELDS >= GEN_8
+src/data/pokemon/species_info/gen_1_families.h:20440:    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+src/data/pokemon/species_info.h:6:#include "species_info/shared_dex_text.h"
+src/data/pokemon/species_info.h:7:#include "species_info/shared_front_pic_anims.h"
+src/data/pokemon/species_info.h:22:#if B_ENEMY_MON_SHADOW_STYLE >= GEN_4 && P_GBA_STYLE_SPECIES_GFX == FALSE
+src/data/pokemon/species_info.h:167:    #include "species_info/gen_1_families.h"
+src/data/pokemon/species_info.h:168:    #include "species_info/gen_2_families.h"
+src/data/pokemon/species_info.h:169:    #include "species_info/gen_3_families.h"
+src/data/pokemon/species_info.h:170:    #include "species_info/gen_4_families.h"
+src/data/pokemon/species_info.h:171:    #include "species_info/gen_5_families.h"
+src/data/pokemon/species_info.h:172:    #include "species_info/gen_6_families.h"
+src/data/pokemon/species_info.h:173:    #include "species_info/gen_7_families.h"
+src/data/pokemon/species_info.h:174:    #include "species_info/gen_8_families.h"
+src/data/pokemon/species_info.h:175:    #include "species_info/gen_9_families.h"
+src/data/pokemon/species_info.h:176:#include "species_info/bw3g_families.h"
+src/data/pokemon/species_info.h:177:    #include "spaceworld_generated/spaceworld_species_info.h"
+
+== Rough count of GEN_ constants in species.h ==
+GEN_ markers in species.h: 0

@@ -1,0 +1,22 @@
+Backup: src/debug.c.bak_enabled_list_20260204_143153
+Inserted enabled species list helpers.
+Added tEnabledIdx task field define.
+Patched species init assignments: 1
+Injected snap-before-display at 1 call site(s).
+Patched commit assignment: 1
+OK: wrote patched debug.c
+
+Rebuild:
+tools/scaninc/scaninc -M build/emerald/src/debug.d -I include -I tools/agbcc/include src/debug.c
+/usr/lib/gcc/arm-none-eabi/13.2.1/cc1 -quiet <flags> -o build/emerald/src/debug.o src/debug.c
+Memory region         Used Size  Region Size  %age Used
+           EWRAM:      227876 B       256 KB     86.93%
+           IWRAM:       28688 B        32 KB     87.55%
+             ROM:    20400364 B        32 MB     60.80%
+cd build/emerald && arm-none-eabi-ld -Map ../../pokeemerald.map --print-memory-usage --gc-sections -T ../../ld_script_modern.ld -o ../../pokeemerald.elf <objs> <libs> | cat
+tools/gbafix/gbafix pokeemerald.elf -t"POKEMON EMER" -cBPEE -m01 -r0 --silent
+arm-none-eabi-objcopy -O binary pokeemerald.elf pokeemerald.gba
+tools/gbafix/gbafix pokeemerald.gba -p --silent
+
+DONE. Debug species menu should no longer show disabled ???? entries.
+Revert: cp -a 'src/debug.c.bak_enabled_list_20260204_143153' 'src/debug.c' && make -j

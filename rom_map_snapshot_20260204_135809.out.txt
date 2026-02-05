@@ -1,0 +1,19 @@
+== Linked object sizes (map/tileset heavy) ==
+-rw-r--r-- 1 jwilld10 jwilld10 886K Feb  4 12:01 build/emerald/data/maps.o
+-rw-r--r-- 1 jwilld10 jwilld10 368K Feb  4 12:01 build/emerald/data/map_events.o
+-rw-r--r-- 1 jwilld10 jwilld10 718K Feb  4 12:01 build/emerald/src/tilesets.o
+-rw-r--r-- 1 jwilld10 jwilld10 2.3M Feb  4 12:01 build/emerald/data/event_scripts.o
+-rw-r--r-- 1 jwilld10 jwilld10 65K Feb  4 12:01 build/emerald/src/field_specials.o
+-rw-r--r-- 1 jwilld10 jwilld10 53K Feb  4 12:01 build/emerald/src/scrcmd.o
+-rw-r--r-- 1 jwilld10 jwilld10 56K Feb  4 12:01 build/emerald/src/wild_encounter.o
+
+== Raw folder sizes (maps/tilesets) ==
+16M	data/maps
+14M	data/tilesets
+5.8M	data/layouts
+
+== Count of maps (rough) ==
+data/maps files: 2546
+data/layouts files: 886
+
+DONE. WROTE: rom_map_snapshot_20260204_135809.out.txt

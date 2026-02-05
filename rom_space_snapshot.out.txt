@@ -1,0 +1,73 @@
+== Build memory report (from last link) ==
+
+== Folder sizes (top level) ==
+292K	graphics/trade
+292K	graphics/trainer_card
+296K	graphics/types
+316K	graphics/text_window
+336K	graphics/roulette
+360K	graphics/battle_frontier
+388K	graphics/mail
+428K	graphics/door_anims
+460K	graphics/contest
+464K	graphics/balls
+472K	graphics/slot_machine
+540K	graphics/battle_transitions
+544K	graphics/rayquaza_scene
+584K	graphics/fonts
+716K	graphics/decorations
+736K	graphics/pokedex
+740K	graphics/battle_environment
+768K	graphics/battle_interface
+808K	graphics/field_effects
+964K	graphics/intro
+1.1M	graphics/berries
+1.2M	graphics/pokenav
+1.7M	graphics/trainers
+1.9M	graphics/pokemon_storage
+3.2M	graphics/object_events
+9.1M	graphics/battle_anims
+13M	graphics/items
+18M	graphics/bw3g
+47M	graphics/spaceworld
+135M	graphics/pokemon
+
+== Pokemon graphics sizes by major group (if present) ==
+135M	graphics/pokemon
+18M	graphics/bw3g
+47M	graphics/spaceworld
+68K	graphics/pokemon/icon_palettes
+
+== Largest compiled objects (from build dir, if present) ==
+   107.2 KB  build/emerald/src/trade.o
+   110.2 KB  build/emerald/src/battle_anim_new.o
+   112.2 KB  build/emerald/src/battle_transition.o
+   117.5 KB  build/emerald/src/easy_chat.o
+   120.0 KB  build/emerald/src/party_menu.o
+   126.0 KB  build/emerald/src/pokemon_storage_system.o
+   136.5 KB  build/emerald/src/bw3g_mon_icons.o
+   160.7 KB  build/emerald/data/multiboot_pokemon_colosseum.o
+   173.0 KB  build/emerald/src/battle_util.o
+   187.9 KB  build/emerald/src/bard_music.o
+   194.2 KB  build/emerald/src/trainer_slide.o
+   227.6 KB  build/emerald/src/battle_tower.o
+   238.9 KB  build/emerald/src/data.o
+   241.4 KB  build/emerald/data/battle_scripts_1.o
+   250.6 KB  build/emerald/src/battle_script_commands.o
+   255.1 KB  build/emerald/src/item.o
+   261.6 KB  build/emerald/src/move.o
+   266.4 KB  build/emerald/src/bw3g_pokemon_pics.o
+   270.6 KB  build/emerald/src/pokemon_icon.o
+   367.1 KB  build/emerald/data/map_events.o
+   418.9 KB  build/emerald/src/data/graphics/spaceworld_pokemon_gfx.o
+   423.9 KB  build/emerald/src/fonts.o
+   532.2 KB  build/emerald/data/battle_anim_scripts.o
+   717.2 KB  build/emerald/src/tilesets.o
+   825.2 KB  build/emerald/src/event_object_movement.o
+   885.2 KB  build/emerald/data/maps.o
+   979.3 KB  build/emerald/src/graphics.o
+  2291.5 KB  build/emerald/data/event_scripts.o
+  7213.3 KB  build/emerald/src/pokemon.o
+  9313.4 KB  build/emerald/data/sound_data.o
+
+DONE.

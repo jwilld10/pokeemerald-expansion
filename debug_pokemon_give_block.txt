@@ -1,0 +1,206 @@
+    sDebugMonData->isShiny          = FALSE;
+    sDebugMonData->nature           = 0;
+    sDebugMonData->abilityNum       = 0;
+    sDebugMonData->teraType         = TYPE_NONE;
+    sDebugMonData->dynamaxLevel     = 0;
+    sDebugMonData->gmaxFactor       = FALSE;
+    for (u32 i = 0; i < NUM_STATS; i++)
+    {
+        sDebugMonData->monIVs[i] = 0;
+        sDebugMonData->monEVs[i] = 0;
+    }
+}
+
+#define tIsComplex  data[5]
+#define tSpriteId   data[6]
+#define tIterator   data[7]
+
+static void Debug_Display_SpeciesInfo(u32 species, u32 digit, u8 windowId)
+{
+    StringCopy(gStringVar2, gText_DigitIndicator[digit]);
+    u8 *end = StringCopy(gStringVar1, GetSpeciesName(species));
+    WrapFontIdToFit(gStringVar1, end, DEBUG_MENU_FONT, WindowWidthPx(windowId));
+    StringCopyPadded(gStringVar1, gStringVar1, CHAR_SPACE, 15);
+    ConvertIntToDecimalStringN(gStringVar3, species, STR_CONV_MODE_LEADING_ZEROS, DEBUG_NUMBER_DIGITS_ITEMS);
+    StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("Species: {STR_VAR_3}\n{STR_VAR_1}{CLEAR_TO 90}\n\n{STR_VAR_2}{CLEAR_TO 90}"));
+    AddTextPrinterParameterized(windowId, DEBUG_MENU_FONT, gStringVar4, 0, 0, 0, NULL);
+}
+
+static void DebugAction_Give_PokemonSimple(u8 taskId)
+{
+    u8 windowId;
+
+    //Mon data struct
+    sDebugMonData = AllocZeroed(sizeof(struct DebugMonData));
+    ResetMonDataStruct(sDebugMonData);
+
+    //Window initialization
+    ClearStdWindowAndFrame(gTasks[taskId].tWindowId, TRUE);
+    RemoveWindow(gTasks[taskId].tWindowId);
+
+    HideMapNamePopUpWindow();
+    LoadMessageBoxAndBorderGfx();
+    windowId = AddWindow(&sDebugMenuWindowTemplateExtra);
+    DrawStdWindowFrame(windowId, FALSE);
+
+    CopyWindowToVram(windowId, COPYWIN_FULL);
+
+    // Display initial Pokémon
+    Debug_Display_SpeciesInfo(sDebugMonData->species, 0, windowId);
+
+    //Set task data
+    gTasks[taskId].func = DebugAction_Give_Pokemon_SelectId;
+    gTasks[taskId].tSubWindowId = windowId;
+    gTasks[taskId].tInput = sDebugMonData->species;
+    gTasks[taskId].tDigit = 0;
+    gTasks[taskId].tIsComplex = FALSE;
+
+    FreeMonIconPalettes();
+    LoadMonIconPalette(gTasks[taskId].tInput);
+    gTasks[taskId].tSpriteId = CreateMonIcon(gTasks[taskId].tInput, SpriteCB_MonIcon, DEBUG_NUMBER_ICON_X, DEBUG_NUMBER_ICON_Y, 4, 0);
+    gSprites[gTasks[taskId].tSpriteId].oam.priority = 0;
+}
+
+static void DebugAction_Give_PokemonComplex(u8 taskId)
+{
+    u8 windowId;
+
+    //Mon data struct
+    sDebugMonData = AllocZeroed(sizeof(struct DebugMonData));
+    ResetMonDataStruct(sDebugMonData);
+
+    //Window initialization
+    ClearStdWindowAndFrame(gTasks[taskId].tWindowId, TRUE);
+    RemoveWindow(gTasks[taskId].tWindowId);
+
+    HideMapNamePopUpWindow();
+    LoadMessageBoxAndBorderGfx();
+    windowId = AddWindow(&sDebugMenuWindowTemplateExtra);
+    DrawStdWindowFrame(windowId, FALSE);
+
+    CopyWindowToVram(windowId, COPYWIN_FULL);
+
+    // Display initial Pokémon
+    Debug_Display_SpeciesInfo(sDebugMonData->species, 0, windowId);
+
+    gTasks[taskId].func = DebugAction_Give_Pokemon_SelectId;
+    gTasks[taskId].tSubWindowId = windowId;
+    gTasks[taskId].tInput = 1;
+    gTasks[taskId].tDigit = 0;
+    gTasks[taskId].tIsComplex = TRUE;
+
+    FreeMonIconPalettes();
+    LoadMonIconPalette(gTasks[taskId].tInput);
+    gTasks[taskId].tSpriteId = CreateMonIcon(gTasks[taskId].tInput, SpriteCB_MonIcon, DEBUG_NUMBER_ICON_X, DEBUG_NUMBER_ICON_Y, 4, 0);
+    gSprites[gTasks[taskId].tSpriteId].oam.priority = 0;
+    gTasks[taskId].tIterator = 0;
+}
+
+static void Debug_Display_Level(u32 level, u32 digit, u8 windowId)
+{
+    StringCopy(gStringVar2, gText_DigitIndicator[digit]);
+    ConvertIntToDecimalStringN(gStringVar1, level, STR_CONV_MODE_LEADING_ZEROS, 3);
+    StringCopyPadded(gStringVar1, gStringVar1, CHAR_SPACE, 15);
+    StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("Level:{CLEAR_TO 90}\n{STR_VAR_1}{CLEAR_TO 90}\n{CLEAR_TO 90}\n{STR_VAR_2}{CLEAR_TO 90}"));
+    AddTextPrinterParameterized(windowId, DEBUG_MENU_FONT, gStringVar4, 0, 0, 0, NULL);
+}
+
+static void DebugAction_Give_Pokemon_SelectId(u8 taskId)
+{
+    if (JOY_NEW(DPAD_ANY))
+    {
+        PlaySE(SE_SELECT);
+        Debug_HandleInput_Numeric(taskId, 1, NUM_SPECIES - 1, DEBUG_NUMBER_DIGITS_ITEMS);
+        Debug_Display_SpeciesInfo(gTasks[taskId].tInput, gTasks[taskId].tDigit, gTasks[taskId].tSubWindowId);
+        FreeAndDestroyMonIconSprite(&gSprites[gTasks[taskId].tSpriteId]);
+        FreeMonIconPalettes();
+        LoadMonIconPalette(gTasks[taskId].tInput);
+        gTasks[taskId].tSpriteId = CreateMonIcon(gTasks[taskId].tInput, SpriteCB_MonIcon, DEBUG_NUMBER_ICON_X, DEBUG_NUMBER_ICON_Y, 4, 0);
+        gSprites[gTasks[taskId].tSpriteId].oam.priority = 0;
+    }
+
+    if (JOY_NEW(A_BUTTON))
+    {
+        sDebugMonData->species = gTasks[taskId].tInput;
+        gTasks[taskId].tInput = 1;
+        gTasks[taskId].tDigit = 0;
+
+        Debug_Display_Level(gTasks[taskId].tInput, gTasks[taskId].tDigit, gTasks[taskId].tSubWindowId);
+
+        gTasks[taskId].func = DebugAction_Give_Pokemon_SelectLevel;
+    }
+    else if (JOY_NEW(B_BUTTON))
+    {
+        PlaySE(SE_SELECT);
+        Free(sDebugMonData);
+        FreeMonIconPalettes();
+        FreeAndDestroyMonIconSprite(&gSprites[gTasks[taskId].tSpriteId]);
+        DebugAction_DestroyExtraWindow(taskId);
+    }
+}
+
+static void Debug_Display_TrueFalse(bool32 value, u8 windowId, const u8 *titleStr)
+{
+    static const u8 *txtStr;
+    txtStr = value ? sDebugText_True : sDebugText_False;
+    StringCopyPadded(gStringVar2, txtStr, CHAR_SPACE, 15);
+    ConvertIntToDecimalStringN(gStringVar3, value, STR_CONV_MODE_LEADING_ZEROS, 0);
+    StringCopyPadded(gStringVar3, gStringVar3, CHAR_SPACE, 15);
+    StringExpandPlaceholders(gStringVar4, titleStr);
+    AddTextPrinterParameterized(windowId, DEBUG_MENU_FONT, gStringVar4, 0, 0, 0, NULL);
+}
+
+static void DebugAction_Give_Pokemon_SelectLevel(u8 taskId)
+{
+    if (JOY_NEW(DPAD_ANY))
+    {
+        PlaySE(SE_SELECT);
+        Debug_HandleInput_Numeric(taskId, 1, MAX_LEVEL, 3);
+        Debug_Display_Level(gTasks[taskId].tInput, gTasks[taskId].tDigit, gTasks[taskId].tSubWindowId);
+    }
+
+    if (JOY_NEW(A_BUTTON))
+    {
+        FreeMonIconPalettes();
+        FreeAndDestroyMonIconSprite(&gSprites[gTasks[taskId].tSpriteId]);
+        if (gTasks[taskId].tIsComplex == FALSE)
+        {
+            PlaySE(MUS_LEVEL_UP);
+            ScriptGiveMon(sDebugMonData->species, gTasks[taskId].tInput, ITEM_NONE);
+            // Set flag for user convenience
+            FlagSet(FLAG_SYS_POKEMON_GET);
+            Free(sDebugMonData);
+            DebugAction_DestroyExtraWindow(taskId);
+        }
+        else
+        {
+            sDebugMonData->level = gTasks[taskId].tInput;
+            gTasks[taskId].tInput = 0;
+            gTasks[taskId].tDigit = 0;
+            Debug_Display_TrueFalse(gTasks[taskId].tInput, gTasks[taskId].tSubWindowId, sDebugText_PokemonShiny);
+            gTasks[taskId].func = DebugAction_Give_Pokemon_SelectShiny;
+        }
+    }
+    else if (JOY_NEW(B_BUTTON))
+    {
+        PlaySE(SE_SELECT);
+        Free(sDebugMonData);
+        FreeMonIconPalettes();
+        FreeAndDestroyMonIconSprite(&gSprites[gTasks[taskId].tSpriteId]);
+        DebugAction_DestroyExtraWindow(taskId);
+    }
+}
+
+static void Debug_Display_Nature(u32 natureId, u32 digit, u8 windowId)
+{
+    StringCopy(gStringVar2, gText_DigitIndicator[digit]);
+    ConvertIntToDecimalStringN(gStringVar3, natureId, STR_CONV_MODE_LEADING_ZEROS, 2);
+    StringCopyPadded(gStringVar3, gStringVar3, CHAR_SPACE, 15);
+    StringCopy(gStringVar1, gNaturesInfo[natureId].name);
+    StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("Nature ID: {STR_VAR_3}{CLEAR_TO 90}\n{STR_VAR_1}{CLEAR_TO 90}\n{CLEAR_TO 90}\n{STR_VAR_2}{CLEAR_TO 90}"));
+    AddTextPrinterParameterized(windowId, DEBUG_MENU_FONT, gStringVar4, 0, 0, 0, NULL);
+}
+
+static void DebugAction_Give_Pokemon_SelectShiny(u8 taskId)
+{
+    if (JOY_NEW(DPAD_ANY))

@@ -1,0 +1,48 @@
+== BW3G species truncation fix (timestamp: 20260204_125639) ==
+
+== Step 1: Show likely truncation hits (u8 species, casts, & 0xFF, etc.) ==
+
+---- src/debug.c ----
+2907:    if (abilityNum == 0xFF || GetAbilityBySpecies(species, abilityNum) == ABILITY_NONE)
+
+---- src/script_pokemon_util.c ----
+
+---- src/mystery_event_script.c ----
+
+---- src/pokemon.c ----
+1455:    u32 personality = ((gApprentices[src->id].otId >> 8) | ((gApprentices[src->id].otId & 0xFF) << 8))
+2069:    if (gSpeciesInfo[species].genderRatio > (personality & 0xFF))
+2085:    if (gSpeciesInfo[species].genderRatio > (personality & 0xFF))
+
+== Step 2: Back up files we might patch ==
+Backup: src/debug.c.bak_bw3g_species_u8fix_20260204_125639
+Backup: src/script_pokemon_util.c.bak_bw3g_species_u8fix_20260204_125639
+Backup: src/mystery_event_script.c.bak_bw3g_species_u8fix_20260204_125639
+Backup: src/pokemon.c.bak_bw3g_species_u8fix_20260204_125639
+
+== Step 3: Apply safe patches ==
+
+== Step 4: Show post-patch diff summary (only relevant lines) ==
+
+== Step 5: Rebuild ==
+tools/scaninc/scaninc -M build/emerald/src/script_pokemon_util.d -I include -I tools/agbcc/include src/script_pokemon_util.c
+python3 tools/learnset_helpers/make_teachables.py tools/learnset_helpers/build/all_learnables.json
+tools/scaninc/scaninc -M build/emerald/src/mystery_event_script.d -I include -I tools/agbcc/include src/mystery_event_script.c
+tools/scaninc/scaninc -M build/emerald/src/debug.d -I include -I tools/agbcc/include src/debug.c
+tools/scaninc/scaninc -M build/emerald/src/pokemon.d -I include -I tools/agbcc/include src/pokemon.c
+/usr/lib/gcc/arm-none-eabi/13.2.1/cc1 -quiet <flags> -o build/emerald/src/debug.o src/debug.c
+/usr/lib/gcc/arm-none-eabi/13.2.1/cc1 -quiet <flags> -o build/emerald/src/mystery_event_script.o src/mystery_event_script.c
+/usr/lib/gcc/arm-none-eabi/13.2.1/cc1 -quiet <flags> -o build/emerald/src/pokemon.o src/pokemon.c
+/usr/lib/gcc/arm-none-eabi/13.2.1/cc1 -quiet <flags> -o build/emerald/src/script_pokemon_util.o src/script_pokemon_util.c
+Memory region         Used Size  Region Size  %age Used
+           EWRAM:      227972 B       256 KB     86.96%
+           IWRAM:       28680 B        32 KB     87.52%
+             ROM:    26146100 B        32 MB     77.92%
+cd build/emerald && arm-none-eabi-ld -Map ../../pokeemerald.map --print-memory-usage --gc-sections -T ../../ld_script_modern.ld -o ../../pokeemerald.elf <objs> <libs> | cat
+tools/gbafix/gbafix pokeemerald.elf -t"POKEMON EMER" -cBPEE -m01 -r0 --silent
+arm-none-eabi-objcopy -O binary pokeemerald.elf pokeemerald.gba
+tools/gbafix/gbafix pokeemerald.gba -p --silent
+
+DONE.
+If anything went wrong, restore backups like:
+  cp -a src/debug.c.bak_bw3g_species_u8fix_20260204_125639 src/debug.c

@@ -1,0 +1,7 @@
+total 20
+drwxr-xr-x 2 jwilld10 jwilld10 4096 Feb  4 13:10 .
+drwxr-xr-x 5 jwilld10 jwilld10 4096 Feb  4 13:10 ..
+-rw-r--r-- 1 jwilld10 jwilld10 1402 Feb  4 13:10 form_table_arrays_hits.out.txt
+-rw-r--r-- 1 jwilld10 jwilld10  266 Feb  4 13:10 get_species_form_table_body.out.txt
+-rw-r--r-- 1 jwilld10 jwilld10 1402 Feb  4 13:10 get_species_form_table_hits.out.txt
+-rw-r--r-- 1 jwilld10 jwilld10    0 Feb  4 13:10 ls.txt

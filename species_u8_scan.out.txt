@@ -1,0 +1,476 @@
+===== Searching for u8 species storage =====
+
+src/battle_dome.c:2131:    u8 baseStat = gSpeciesInfo[fmon->species].base;                                                 \
+src/pokemon_icon.c:146:u8 CreateMonIcon(u16 species, void (*callback)(struct Sprite *), s16 x, s16 y, u8 subpriority, u32 personality)
+src/pokemon_icon.c:179:u8 CreateMonIconNoPersonality(u16 species, void (*callback)(struct Sprite *), s16 x, s16 y, u8 subpriority)
+src/pokemon_icon.c:229:static const u8 *GetBw3gMonIconTiles(u16 species)
+src/pokemon_icon.c:241:const u8 *GetMonIconPtr(u16 species, u32 personality)
+src/pokemon_icon.c:269:    u8 palIndex = gSpeciesInfo[SanitizeSpeciesId(species)].iconPalIndex;
+src/pokemon_icon.c:315:const u8 *GetMonIconTiles(u16 species, u32 personality)
+src/pokemon_icon.c:353:u8 GetValidMonIconPalIndex(u16 species)
+src/pokemon_icon.c:361:u8 GetMonIconPaletteIndexFromSpecies(u16 species)
+src/pokemon_size_record.c:117:static u8 CompareMonSize(u16 species, u16 *sizeRecord)
+src/evolution_scene.c:62:static void EvoScene_DoMonAnimAndCry(u8 monSpriteId, u16 speciesId);
+src/evolution_scene.c:1694:static void EvoScene_DoMonAnimAndCry(u8 monSpriteId, u16 speciesId)
+src/battle_pike.c:86:static u8 SpeciesToPikeMonId(u16 species);
+src/battle_pike.c:1638:static u8 SpeciesToPikeMonId(u16 species)
+include/script_pokemon_util.h:5:u8 ScriptGiveEgg(u16 species);
+include/script_pokemon_util.h:7:void CreateScriptedDoubleWildMon(u16 species, u8 level, u16 item, u16 species2, u8 level2, u16 item2);
+src/pokeball.c:1315:void CreatePokeballSpriteToReleaseMon(u8 monSpriteId, u8 monPalNum, u8 x, u8 y, u8 oamPriority, u8 subpriority, u8 delay, u32 fadePalettes, u16 species)
+src/script_pokemon_util.c:64:u8 ScriptGiveEgg(u16 species)
+src/script_pokemon_util.c:130:void CreateScriptedDoubleWildMon(u16 species1, u8 level1, u16 item1, u16 species2, u8 level2, u16 item2)
+src/script_pokemon_util.c:335:static u32 ScriptGiveMonParameterized(u8 side, u8 slot, u16 species, u8 level, u16 item, enum PokeBall ball, u8 nature, u8 abilityNum, u8 gender, u8 *evs, u8 *ivs, u16 *moves, enum ShinyMode shinyMode, bool8 gmaxFactor, enum Type teraType, u8 dmaxLevel)
+src/script_pokemon_util.c:341:    u8 genderRatio = gSpeciesInfo[species].genderRatio;
+src/strings.c:975:const u8 gText_FrontierFacilityTotalCaughtSpeciesBanned[] = _(" and {STR_VAR_2} of the POKéMON species\nyou caught are inelegible");
+src/frontier_util.c:2017:static void AppendIfValid(u16 species, u16 heldItem, u16 hp, u8 lvlMode, u8 monLevel, u16 *speciesArray, u16 *itemsArray, u8 *count)
+src/battle_anim_mons.c:141:u8 GetBattlerYDelta(u8 battler, u16 species)
+src/battle_anim_mons.c:179:u8 GetBattlerElevation(u8 battler, u16 species)
+src/battle_anim_mons.c:193:u8 GetBattlerSpriteFinal_Y(u8 battler, u16 species, bool8 a3)
+src/battle_anim_mons.c:2040:u8 CreateAdditionalMonSpriteForMoveAnim(u16 species, bool8 isBackpic, u8 id, s16 x, s16 y, u8 subpriority, u32 personality, bool8 isShiny, u32 battler)
+src/battle_anim_mons.c:2244:u8 CreateInvisibleSpriteCopy(int battler, u8 spriteId, int species)
+src/menu.c:2200:static void UNUSED LoadMonIconPalAtOffset(u8 palOffset, u16 speciesId)
+src/menu.c:2205:static void UNUSED DrawMonIconAtPos(u8 windowId, u16 speciesId, u32 personality, u16 x, u16 y)
+src/match_call.c:1831:    const u8 *speciesName;
+src/starter_choose.c:47:static u8 CreatePokemonFrontSprite(u16 species, u8 x, u8 y);
+src/starter_choose.c:574:    const u8 *speciesName;
+src/starter_choose.c:629:static u8 CreatePokemonFrontSprite(u16 species, u8 x, u8 y)
+src/tv.c:1249:void PutBattleUpdateOnTheAir(u8 opponentLinkPlayerId, u16 move, u16 speciesPlayer, u16 speciesOpponent)
+src/tv.c:3157:static void GetNicknameSubstring(u8 varIdx, u8 whichPosition, u8 charParam, u16 whichString, u16 species, TVShow *show)
+src/battle_gfx_sfx_util.c:1162:        u8 size = gSpeciesInfo[species].enemyShadowSize;
+src/battle_gfx_sfx_util.c:1311:void SetBattlerShadowSpriteCallback(u8 battler, u16 species)
+src/debug.c:2220:    u8 *end = StringCopy(gStringVar1, GetSpeciesName(species));
+src/debug.c:3119:    u8 speciesName[POKEMON_NAME_LENGTH + 1];
+src/wild_encounter.c:53:static u8 GetMaxLevelOfSpeciesInWildTable(const struct WildPokemon *wildMon, u16 species, enum WildPokemonArea area);
+src/wild_encounter.c:1148:static u8 GetMaxLevelOfSpeciesInWildTable(const struct WildPokemon *wildMon, u16 species, enum WildPokemonArea area)
+src/party_menu.c:2548:static void DisplayPartyPokemonGender(u8 gender, u16 species, u8 *nickname, struct PartyMenuBox *menuBox)
+src/party_menu.c:6209:u8 IsFusionMon(u16 species)
+src/pokemon.c:1045:    u8 speciesName[POKEMON_NAME_LENGTH + 1];
+src/pokemon.c:1677:        u8 baseStat = GetSpeciesBaseStat(species, i);
+src/pokemon.c:2075:u8 GetGenderFromSpeciesAndPersonality(u16 species, u32 personality)
+src/pokemon.c:3463:const u8 *GetSpeciesName(u16 species)
+src/pokemon.c:3480:const u8 *GetSpeciesCategory(u16 species)
+src/pokemon.c:3488:const u8 *GetSpeciesPokedexDescription(u16 species)
+src/pokemon.c:5598:u8 CanLearnTeachableMove(u16 species, u16 move)
+src/pokemon.c:6043:u8 GetLevelUpMovesBySpecies(u16 species, u16 *moves)
+src/pokemon_storage_system.c:8510:        const u8 *iconGfx = GetMonIconPtr(species, personality);
+src/pokemon_storage_system.c:8511:        u8 index = GetValidMonIconPalIndex(species) + 8;
+src/pokemon_storage_system.c:9566:void CreateBoxMonAt(u8 boxId, u8 boxPosition, u16 species, u8 level, u8 fixedIV, u8 hasFixedPersonality, u32 personality, u8 otIDType, u32 otID)
+src/international_string_util.c:87:    u8 *str = StringCopy(dest, GetSpeciesCategory(species));
+src/pokedex_plus_hgss.c:576:static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 depth, u32 *depth_i, u32 alreadyPrintedIcons[], u32 *icon_depth_i, u32 numLines);
+src/pokedex_plus_hgss.c:577:static u8 PrintPreEvolutions(u8 taskId, u16 species);
+src/pokedex_plus_hgss.c:589:static void PrintForms(u8 taskId, u16 species);
+src/pokedex_plus_hgss.c:601:u32 GetSpeciesNameWidthInChars(const u8 *speciesName);
+src/pokedex_plus_hgss.c:3625:            statValue = *((u8*)(&gSpeciesInfo[species]) + sBaseStatOffsets[i]);
+src/pokedex_plus_hgss.c:4359:static void PrintCurrentSpeciesTypeInfo(u8 newEntry, u16 species)
+src/pokedex_plus_hgss.c:6286:static void HandlePreEvolutionSpeciesPrint(u8 taskId, u16 preSpecies, u16 species, u8 base_x, u8 base_y, u8 base_y_offset, u8 base_i)
+src/pokedex_plus_hgss.c:6328:static u8 PrintPreEvolutions(u8 taskId, u16 species)
+src/pokedex_plus_hgss.c:6475:u32 GetSpeciesNameWidthInChars(const u8 *speciesName)
+src/pokedex_plus_hgss.c:6494:static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 depth, u32 *depth_i, u32 alreadyPrintedIcons[], u32 *icon_depth_i, u32 numLines)
+src/pokedex_plus_hgss.c:7144:static void PrintForms(u8 taskId, u16 species)
+src/daycare.c:791:u8 GetEggMovesBySpecies(u16 species, u16 *eggMoves)
+src/field_effect.c:955:u8 CreateMonSprite_PicBox(u16 species, s16 x, s16 y, u8 subpriority)
+src/field_effect.c:965:u8 CreateMonSprite_FieldMove(u16 species, bool8 isShiny, u32 personality, s16 x, s16 y, u8 subpriority)
+src/field_effect.c:3174:static u8 InitFieldMoveMonSprite(u32 species, bool8 isShiny, u32 personality)
+src/pokemon_sprite_visualizer.c:752:static u8 GetBattlerSpriteFinal_YCustom(u16 species, s8 offset_picCoords, s8 offset_elevation)
+src/pokemon_sprite_visualizer.c:1453:            u8 formId = GetFormIdFromFormSpeciesId(species);
+src/contest.c:3215:static u8 CreateContestantSprite(u16 species, bool8 isShiny, u32 personality, u32 index)
+src/roamer.c:100:static void CreateInitialRoamerMon(u8 index, u16 species, u8 level)
+src/event_object_movement.c:1847:    u8 paletteNum = LoadDynamicFollowerPalette(species, shiny, female);
+include/field_effect.h:50:u8 CreateMonSprite_PicBox(u16 species, s16 x, s16 y, u8 subpriority);
+src/evolution_graphics.c:415:u8 EvolutionSparkles_SprayAndFlash(u16 species)
+src/evolution_graphics.c:466:u8 EvolutionSparkles_SprayAndFlash_Trade(u16 species)
+include/tv.h:46:void PutBattleUpdateOnTheAir(u8 opponentLinkPlayerId, u16 move, u16 speciesPlayer, u16 speciesOpponent);
+src/dexnav.c:149:static u8 DexNavGetAbilityNum(u16 species, u8 searchLevel);
+src/dexnav.c:151:static u8 DexNavTryGenerateMonLevel(u16 species, enum EncounterType environment);
+src/dexnav.c:152:static u8 GetEncounterLevelFromMapData(u16 species, enum EncounterType environment);
+src/dexnav.c:810:static u8 GetSearchLevel(u16 species)
+src/dexnav.c:824:    u8 searchLevel = GetSearchLevel(species);
+src/dexnav.c:1250:static u8 DexNavTryGenerateMonLevel(u16 species, enum EncounterType environment)
+src/dexnav.c:1252:    u8 levelBase = GetEncounterLevelFromMapData(species, environment);
+src/dexnav.c:1350:static u8 DexNavGetAbilityNum(u16 species, u8 searchLevel)
+src/dexnav.c:1511:static u8 GetEncounterLevelFromMapData(u16 species, enum EncounterType environment)
+include/battle_anim.h:140:u8 CreateInvisibleSpriteCopy(int battler, u8 spriteId, int species);
+include/battle_anim.h:163:u8 CreateAdditionalMonSpriteForMoveAnim(u16 species, bool8 isBackpic, u8 id, s16 x, s16 y, u8 subpriority, u32 personality, bool8 isShiny, u32 battler);
+include/battle_anim.h:391:u8 GetBattlerSpriteFinal_Y(u8 battler, u16 species, bool8 a3);
+include/pokemon.h:443:    u8 speciesName[POKEMON_NAME_LENGTH + 1];
+include/pokemon.h:748:u8 GetGenderFromSpeciesAndPersonality(u16 species, u32 personality);
+include/pokemon.h:784:const u8 *GetSpeciesName(u16 species);
+include/pokemon.h:785:const u8 *GetSpeciesCategory(u16 species);
+include/pokemon.h:786:const u8 *GetSpeciesPokedexDescription(u16 species);
+include/pokemon.h:842:u8 CanLearnTeachableMove(u16 species, u16 move);
+include/pokemon.h:851:u8 GetLevelUpMovesBySpecies(u16 species, u16 *moves);
+src/apprentice.c:204:    u8 species[APPRENTICE_SPECIES_COUNT];
+src/apprentice.c:464:static u16 GetDefaultMove(u8 monId, u8 speciesArrayId, u8 moveSlot)
+src/egg_hatch.c:423:static u8 EggHatchCreateMonSprite(u8 useAlt, u8 state, u8 partyId, u16 *speciesLoc)
+src/pokedex.c:4028:u8 DisplayCaughtMonDexPage(u16 species, bool32 isShiny, u32 personality)
+src/pokedex.c:4814:void DrawFootprint(u8 windowId, u16 species)
+include/pokemon_icon.h:6:const u8 *GetMonIconTiles(u16 species, u32 personality);
+include/pokemon_icon.h:8:u8 GetValidMonIconPalIndex(u16 species);
+include/pokemon_icon.h:9:const u8 *GetMonIconPtr(u16 species, u32 personality);
+include/pokemon_icon.h:17:u8 CreateMonIconNoPersonality(u16 species, void (*callback)(struct Sprite *), s16 x, s16 y, u8 subpriority);
+include/pokemon_icon.h:20:u8 CreateMonIcon(u16 species, void (*callback)(struct Sprite *), s16 x, s16 y, u8 subpriority, u32 personality);
+include/pokemon_icon.h:26:u8 GetMonIconPaletteIndexFromSpecies(u16 species);
+include/daycare.h:35:u8 GetEggMovesBySpecies(u16 species, u16 *eggMoves);
+include/global.h:549:    /*0xB4*/ u8 speciesIds[MULTI_PARTY_SIZE];
+include/pokeball.h:55:void CreatePokeballSpriteToReleaseMon(u8 monSpriteId, u8 monPalNum, u8 x, u8 y, u8 oamPriority, u8 subpriority, u8 delay, u32 fadePalettes, u16 species);
+include/pokedex.h:10:u8 DisplayCaughtMonDexPage(u16 species, bool32 isShiny, u32 personality);
+include/pokedex.h:13:void DrawFootprint(u8 windowId, u16 species);
+include/trainer_pools.h:59:    u8 speciesClause:1;
+include/battle_gfx_sfx_util.h:38:void SetBattlerShadowSpriteCallback(u8 battler, u16 species);
+include/evolution_graphics.h:9:u8 EvolutionSparkles_SprayAndFlash(u16 species);
+include/evolution_graphics.h:10:u8 EvolutionSparkles_SprayAndFlash_Trade(u16 species);
+include/pokemon_storage_system.h:52:void CreateBoxMonAt(u8 boxId, u8 boxPosition, u16 species, u8 level, u8 fixedIV, u8 hasFixedPersonality, u32 personality, u8 otIDType, u32 otID);
+
+===== Searching struct members named species =====
+
+include/global.tv.h:35:        /*0x02*/ u16 species;
+include/global.tv.h:46:        /*0x02*/ u16 species;
+include/global.tv.h:57:        /*0x02*/ u16 species;
+include/global.tv.h:74:        /*0x06*/ u16 species;
+include/global.tv.h:84:        /*0x02*/ u16 species;
+include/global.tv.h:99:        /*0x02*/ u16 species;
+include/global.tv.h:117:        /*0x0A*/ u16 species;
+include/global.tv.h:214:        /*0x10*/ u16 species;
+include/global.tv.h:240:        /*0x0C*/ u16 species;
+include/global.tv.h:255:        /*0x04*/ u16 species;
+include/global.tv.h:269:        /*0x08*/ u16 species;
+include/global.tv.h:358:        /*0x08*/ u16 species;
+include/global.tv.h:384:        /*0x06*/ u16 species;
+include/global.tv.h:481:        /*0x0C*/ u16 species;
+src/mail.c:448:    u16 species;
+src/battle_anim_dark.c:917:    u16 species;
+src/battle_anim_dark.c:950:        species = gContestResources->moveAnim->species;
+include/battle.h:281:    u16 species;
+src/pokemon_icon.c:209:    return species;
+include/battle_main.h:12:    /*0x00*/ u16 species;
+src/berry.c:2266:    u16 species;
+include/battle_z_move.h:10:    u16 species;
+src/pokenav_conditions.c:526:    u16 boxId, monId, species;
+src/script_pokemon_util.c:616:        u16 species;
+src/contest_util.c:882:    u16 species;
+src/contest_util.c:893:        species = gContestMons[i].species;
+src/contest_util.c:903:        gMultiuseSpriteTemplate.paletteTag = species;
+src/contest_util.c:905:        gSprites[spriteId].data[1] = species;
+src/contest_util.c:1125:    int i, species;
+src/contest_util.c:1129:        species = gContestMons[i].species;
+src/contest_util.c:1660:    gTasks[taskId].tSpecies = gContestMons[monIndex].species;
+src/contest_util.c:2131:    gSpecialVar_0x8004 = gContestMons[gSpecialVar_0x8006].species;
+src/contest_util.c:2571:    u16 species;
+src/contest_util.c:2582:        species = gContestMons[gSpecialVar_0x8006].species;
+src/contest_util.c:2587:        gTasks[taskId].data[1] = species;
+src/contest_util.c:2592:        gMultiuseSpriteTemplate.paletteTag = species;
+include/union_room.h:143:    u16 species;
+src/battle_dome.c:2010:            species[j] = gFacilityTrainerMons[monId].species;
+src/battle_dome.c:5151:                targetSpecies = gFacilityTrainerMons[DOME_MONS[loserTournamentId][k]].species;
+src/battle_dome.c:5804:            species[j] = gFacilityTrainerMons[monId].species;
+src/battle_dome.c:5910:    int species;
+src/battle_dome.c:5954:                species = gFacilityTrainerMons[DOME_MONS[tournamentId1][monId1]].species;
+src/battle_dome.c:5972:                species = gFacilityTrainerMons[DOME_MONS[tournamentId2][monId1]].species;
+src/pokemon_jump.c:3827:        monInfo->species = packet.species;
+src/battle_pike.c:37:    u16 species;
+src/battle_pike.c:884:    u16 species;
+src/battle_anim_mons.c:90:    u16 species;
+src/battle_anim_mons.c:117:                species = gContestResources->moveAnim->species;
+src/battle_anim_mons.c:220:    u16 species;
+src/battle_anim_mons.c:230:                species = gContestResources->moveAnim->species;
+src/battle_anim_mons.c:268:    u16 species;
+src/battle_anim_mons.c:1868:    u16 species;
+src/battle_anim_mons.c:1877:                species = gContestResources->moveAnim->species;
+src/battle_anim_mons.c:2088:    u16 species;
+src/battle_anim_mons.c:2104:            species = gContestResources->moveAnim->species;
+src/battle_ai_main.c:347:        gBattleStruct->prevTurnSpecies[opposingBattler] = gBattleMons[opposingBattler].species;
+src/battle_ai_main.c:376:            gBattleStruct->prevTurnSpecies[battler] = gBattleMons[battler].species;
+src/battle_ai_main.c:437:    aiMon->species = bMon->species;
+include/global.h:323:    u16 species;
+include/global.h:348:    u16 species;
+include/global.h:683:    /*0x08*/ u16 species;
+include/global.h:830:    u16 species;
+include/global.h:844:    /*0x1E*/ u16 species;
+src/battle_pyramid.c:49:    u16 species;
+src/battle_pyramid.c:1402:    u16 species;
+include/contest.h:90:    u16 species;
+include/contest.h:127:    u16 species;
+include/data.h:65:    u16 species;
+src/mystery_event_script.c:317:    u16 species;
+include/global.fieldmap.h:220:    /*0x04*/ u16 graphicsId; // 12 bits for species; high 4 bits for form
+src/pokeball.c:1329:    gSprites[monSpriteId].sSpecies = species;
+src/battle_anim_utility_funcs.c:21:    u16 species;
+src/battle_anim_utility_funcs.c:276:    u16 species;
+src/battle_anim_utility_funcs.c:319:        species = gContestResources->moveAnim->species;
+src/battle_anim_utility_funcs.c:454:        sAnimStatsChangeData->species = gContestResources->moveAnim->species;
+src/battle_anim_utility_funcs.c:800:    u16 species;
+src/battle_anim_utility_funcs.c:833:        species = gContestResources->moveAnim->species;
+include/battle_message.h:205:    textVar[2] = species;                                       \
+src/union_room.c:2768:        uroom->playerSendBuffer[1] = sUnionRoomTrade.species;
+src/union_room.c:4376:    u16 species;
+src/union_room.c:4379:    u16 cur_species;
+src/union_room.c:4389:        species = trade->species;
+src/battle_debug.c:1073:                species = aiMons[i].species;
+src/wild_encounter.c:582:    u16 wildMonSpecies = wildMonInfo->wildPokemon[wildMonIndex].species;
+src/wild_encounter.c:968:    u16 species;
+src/wild_encounter.c:977:        species = sWildFeebas.species;
+src/wild_encounter.c:1015:        return landMonsInfo->wildPokemon[ChooseWildMonIndex_Land()].species;
+src/wild_encounter.c:1020:        return waterMonsInfo->wildPokemon[ChooseWildMonIndex_Water()].species;
+src/wild_encounter.c:1025:        return landMonsInfo->wildPokemon[ChooseWildMonIndex_Land()].species;
+src/wild_encounter.c:1030:        return waterMonsInfo->wildPokemon[ChooseWildMonIndex_Water()].species;
+src/wild_encounter.c:1046:            return waterMonsInfo->wildPokemon[ChooseWildMonIndex_Water()].species;
+src/reshow_battle_screen.c:136:            u16 species;
+src/reshow_battle_screen.c:317:            gSprites[gBattlerSpriteIds[battler]].data[2] = species;
+src/reshow_battle_screen.c:353:            gSprites[gBattlerSpriteIds[battler]].data[2] = species;
+src/hall_of_fame.c:592:    gSprites[spriteId].tSpecies = currMon->species;
+src/battle_controller_player.c:1448:    u16 species;
+src/battle_controller_player.c:1671:    u32 speciesId = gBattleMons[battler].species;
+include/pokemon.h:361:    /*0x00*/ u16 species;
+src/link_rfu_2.c:2080:    gHostRfuGameData.tradeSpecies = species;
+src/frontier_util.c:45:    u16 species;
+src/frontier_util.c:2028:    for (i = 0; i < *count && speciesArray[i] != species; i++)
+src/frontier_util.c:2041:    speciesArray[*count] = species;
+src/frontier_util.c:2138:                    partyBanned[totalPartyBanned] = species;
+src/frontier_util.c:2627:    return sFrontierBrainsMons[facility][symbol][monId].species;
+src/battle_anim.c:384:            gAnimBattlerSpecies[i] = gContestResources->moveAnim->species;
+src/battle_factory_screen.c:1860:    u16 species;
+src/battle_factory_screen.c:1977:    u16 species;
+src/battle_factory_screen.c:2016:    u16 species;
+src/battle_factory_screen.c:2238:    u32 species = gFacilityTrainerMons[monId].species;
+src/battle_factory_screen.c:3757:    u16 species;
+src/battle_factory_screen.c:3857:    u16 species;
+src/battle_factory_screen.c:3891:    u16 species;
+src/battle_factory_screen.c:3917:    u16 species;
+src/battle_factory_screen.c:4058:    u16 species;
+src/battle_factory_screen.c:4274:    u16 species;
+src/pokemon.c:79:    u16 species;
+src/pokemon.c:2403:            retVal = IsBadEgg(boxMon) ? SPECIES_EGG : GetSubstruct0(boxMon)->species;
+src/pokemon.c:2574:            retVal = GetSubstruct0(boxMon)->species;
+src/pokemon.c:4413:    return species;
+src/pokemon.c:4969:    u16 species;
+src/pokemon.c:6065:            return species;
+src/pokemon.c:6369:        u16 species;
+src/pokemon.c:6889:    u32 targetSpecies = species;
+src/pokemon.c:7197:        return species;
+src/pokemon.c:7466:    return species;
+src/battle_tent.c:324:                    currSpecies = gFacilityTrainerMons[monSetId].species;
+src/battle_tent.c:346:        species[i] = gFacilityTrainerMons[monSetId].species;
+src/battle_tent.c:424:        species[i] = gFacilityTrainerMons[sRandMonId].species;
+include/battle_controllers.h:205:    u16 species;
+src/battle_setup.c:538:    u16 species;
+src/pokemon_summary_screen.c:135:        u16 species; // 0x0
+src/battle_ai_util.c:294:        gAiThinkingStruct->saved[battlerId].species = gBattleMons[battlerId].species;
+src/battle_ai_util.c:407:        species = gBattleMons[battlerId].species;
+src/battle_ai_util.c:452:        gBattleMons[battlerId].species = gAiThinkingStruct->saved[battlerId].species;
+src/field_specials.c:1270:    u16 species;
+src/battle_anim_sound_tasks.c:141:            species = gContestResources->moveAnim->species;
+src/battle_anim_sound_tasks.c:186:            species = gContestResources->moveAnim->species;
+src/battle_anim_sound_tasks.c:219:    gTasks[taskId].data[1] = species;
+src/battle_anim_sound_tasks.c:294:    u16 species;
+src/battle_anim_sound_tasks.c:301:        species = gContestResources->moveAnim->species;
+src/battle_anim_sound_tasks.c:305:    gTasks[taskId].tSpecies = species;
+include/wild_encounter.h:21:    u16 species;
+src/battle_dynamax.c:29:    u16 species;
+src/battle_dynamax.c:240:    u32 species = gBattleMons[battler].species;
+src/battle_dynamax.c:241:    u32 targetSpecies = species;
+src/pokenav_ribbons_summary.c:949:    u16 species;
+src/match_call.c:1803:                species[numSpecies] = gWildMonHeaders[i].encounterTypes[timeOfDay].landMonsInfo->wildPokemon[slot].species;
+src/match_call.c:1811:                species[numSpecies] = gWildMonHeaders[i].encounterTypes[timeOfDay].waterMonsInfo->wildPokemon[slot].species;
+src/pokedex_cry_screen.c:47:    u16 species;
+src/pokedex_cry_screen.c:337:                sDexCryScreen->species = species;
+src/battle_factory.c:373:        species[i] = gFacilityTrainerMons[monId].species;
+src/battle_factory.c:516:                    currSpecies = gFacilityTrainerMons[monId].species;
+src/battle_factory.c:538:        species[i] = gFacilityTrainerMons[monId].species;
+src/battle_factory.c:562:        u32 species = gFacilityTrainerMons[gFrontierTempParty[i]].species;
+src/battle_factory.c:751:        species[i] = gFacilityTrainerMons[monId].species;
+src/pokedex_area_screen.c:87:    /*0x00E*/ u16 species;
+src/pokedex_area_screen.c:718:    sPokedexAreaScreen->species = species;
+src/tv.c:71:    u16 species;
+src/tv.c:192:    u16 species;
+src/tv.c:1394:        show->contestLiveUpdates.losingSpecies = gContestMons[loser].species;
+src/tv.c:1419:        show2->bravoTrainer.species = show->bravoTrainer.species;
+src/tv.c:1553:    gSaveBlock1Ptr->outbreakPokemonSpecies = show->massOutbreak.species;
+src/tv.c:1653:                show->massOutbreak.species = sPokeOutbreakSpeciesList[outbreakIdx].species;
+src/tv.c:1772:    sPokemonAnglerSpecies = species;
+src/tv.c:1808:            show2->worldOfMasters.species = show->worldOfMasters.species;
+src/tv.c:2074:    show->secretBaseVisit.species = sTV_SecretBaseVisitMonsTemp[j].species;
+src/tv.c:2188:        show->battleSeminar.species = species;
+src/tv.c:3053:    return species;
+src/tv.c:3059:    u16 initSpecies = species;
+src/tv.c:3072:            return species;
+src/tv.c:3075:    return species;
+src/tv.c:3612:    u16 species;
+src/tv.c:3631:            species = (&gSaveBlock1Ptr->tvShows[i])->fanclubLetter.species;
+src/tv.c:3635:            species = (&gSaveBlock1Ptr->tvShows[i])->fanclubOpinions.species;
+src/tv.c:3639:            species = (&gSaveBlock1Ptr->tvShows[i])->dummy.species;
+src/tv.c:3643:            species = (&gSaveBlock1Ptr->tvShows[i])->nameRaterShow.species;
+src/tv.c:3649:            species = (&gSaveBlock1Ptr->tvShows[i])->bravoTrainer.species;
+src/tv.c:3653:            species = (&gSaveBlock1Ptr->tvShows[i])->bravoTrainerTower.species;
+src/tv.c:3659:            species = (&gSaveBlock1Ptr->tvShows[i])->pokemonToday.species;
+src/tv.c:3663:            species = (&gSaveBlock1Ptr->tvShows[i])->pokemonTodayFailed.species;
+src/tv.c:3669:            species = (&gSaveBlock1Ptr->tvShows[i])->pokemonAngler.species;
+src/tv.c:3673:            species = (&gSaveBlock1Ptr->tvShows[i])->worldOfMasters.species;
+src/tv.c:3685:            species = (&gSaveBlock1Ptr->tvShows[i])->secretBaseVisit.species;
+src/tv.c:3689:            species = (&gSaveBlock1Ptr->tvShows[i])->battleSeminar.species;
+src/battle_ai_switch_items.c:897:        u16 species;
+src/trade.c:152:    u16 species;
+src/trade.c:2794:        sTradeAnim->monSpecies[whichParty] = species;
+src/trade.c:4594:    mail->species = trade->species;
+src/scrcmd.c:2311:            gSpecialVar_0x8004 = species;
+src/battle_script_commands.c:2011:    u32 species = gBattleMons[battler].species;
+src/battle_script_commands.c:2396:            GetBattlerPartyState(battler)->changedSpecies = gBattleMons[battler].species;
+src/battle_script_commands.c:2599:            GetBattlerPartyState(gBattlerTarget)->changedSpecies = gBattleMons[gBattlerTarget].species;
+src/battle_script_commands.c:5395:        GetBattlerPartyState(gBattlerAttacker)->changedSpecies = gBattleMons[gBattlerAttacker].species;
+src/battle_script_commands.c:5733:                GetBattlerPartyState(battlerAtk)->changedSpecies = gBattleMons[battlerAtk].species;
+src/battle_tv.c:701:                playerBestSpecies = species;
+src/battle_tv.c:717:                    opponentBestSpecies = species;
+src/battle_tv.c:724:                opponentBestSpecies = species;
+src/battle_controller_opponent.c:503:                speciesAttacker = gBattleMons[battler].species;
+src/battle_controller_opponent.c:504:                speciesTarget = gBattleMons[GetBattlerAtPosition(BATTLE_PARTNER(battler))].species;
+src/pokeblock_feed.c:58:    u16 species;
+src/pokeblock_feed.c:653:    u16 species;
+src/pokeblock_feed.c:844:    sPokeblockFeed->species = species;
+src/pokeblock_feed.c:847:    gSprites[spriteId].sSpecies = species;
+src/battle_util.c:2939:                    gBattleStruct->beatUpSpecies[gMultiHitCounter] = species;
+src/battle_util.c:4611:                gBattleStruct->battlerState[partner].commanderSpecies = gBattleMons[battler].species;
+src/battle_util.c:9174:    u32 species = gBattleMons[battler].species;
+src/battle_util.c:9175:    u32 targetSpecies = species;
+src/battle_util.c:9344:            GetBattlerPartyState(battler)->changedSpecies = gBattleMons[battler].species;
+src/battle_util.c:9414:    u16 species = gBattleMons[battler].species;
+src/battle_util.c:9437:    return gBattleMons[battler].species;
+src/evolution_graphics.c:418:    gTasks[taskId].tSpecies = species;
+src/evolution_graphics.c:469:    gTasks[taskId].tSpecies = species;
+src/debug.c:197:    u16 species;
+src/debug.c:1856:    u16 species;
+src/debug.c:2253:    gTasks[taskId].tInput = sDebugMonData->species;
+src/debug.c:2840:    u16 species     = sDebugMonData->species;
+src/pokemon_storage_system.c:4437:    u16 species;
+src/pokemon_storage_system.c:5118:    sStorage->iconSpeciesList[i] = species;
+src/pokemon_storage_system.c:5183:    gSprites[spriteId].data[0] = species;
+src/pokemon_storage_system.c:10065:    sStorage->displayMonSpecies = species;
+src/battle_anim_effects_3.c:3501:    u16 species;
+src/battle_anim_effects_3.c:5367:    u16 species;
+src/battle_anim_effects_3.c:5395:            species = gContestResources->moveAnim->species;
+src/party_menu.c:6578:                    task->firstFusion = species;
+src/party_menu.c:6598:                    task->firstFusion = species;
+src/party_menu.c:7248:    u32 species;
+src/battle_tower.c:2208:        u16 apprenticeSpecies = gSaveBlock2Ptr->apprentices[trainerId - TRAINER_RECORD_MIXING_APPRENTICE].party[i].species;
+src/battle_tower.c:2408:            species = gFacilityTrainerMons[monId].species;
+src/battle_tower.c:2413:            species = gSaveBlock2Ptr->frontier.towerRecords[trainerId - TRAINER_RECORD_MIXING_FRIEND].party[gFrontierTempParty[gSpecialVar_0x8005 + 1]].species;
+src/battle_tower.c:2420:            species = gSaveBlock2Ptr->apprentices[trainerId - TRAINER_RECORD_MIXING_APPRENTICE].party[gFrontierTempParty[gSpecialVar_0x8005 - 1]].species;
+src/script_menu.c:976:        gTasks[taskId].tMonSpecies = species;
+src/trainer_pools.c:175:    u16 chosenSpecies = trainer->party[monIndex].species;
+src/trainer_pools.c:203:            u16 currentSpecies = trainer->party[poolIndexArray[currIndex]].species;
+src/dexnav.c:89:    u16 species;
+src/dexnav.c:823:    u16 species = sDexNavSearchDataPtr->species;
+src/dexnav.c:879:    sDexNavSearchDataPtr->species = species;
+src/dexnav.c:955:    u16 species = sDexNavSearchDataPtr->species;
+src/dexnav.c:1026:    u16 species = sDexNavSearchDataPtr->species;
+src/dexnav.c:1128:        gDexNavSpecies = sDexNavSearchDataPtr->species;
+src/dexnav.c:1731:    u16 i, species;
+src/dexnav.c:1741:            species = landMonsInfo->wildPokemon[i].species;
+src/dexnav.c:1766:    u16 species;
+src/dexnav.c:1776:            species = waterMonsInfo->wildPokemon[i].species;
+src/dexnav.c:1799:    u16 species;
+src/dexnav.c:1809:            species = hiddenMonsInfo->wildPokemon[i].species;
+src/dexnav.c:1941:    u16 species;
+src/dexnav.c:1963:            species = landMonsInfo->wildPokemon[i].species;
+src/dexnav.c:1965:                sDexNavUiDataPtr->landSpecies[grassIndex++] = landMonsInfo->wildPokemon[i].species;
+src/dexnav.c:1974:            species = waterMonsInfo->wildPokemon[i].species;
+src/dexnav.c:1976:                sDexNavUiDataPtr->waterSpecies[waterIndex++] = waterMonsInfo->wildPokemon[i].species;
+src/dexnav.c:1985:            species = hiddenMonsInfo->wildPokemon[i].species;
+src/dexnav.c:1987:                sDexNavUiDataPtr->hiddenSpecies[hiddenIndex++] = hiddenMonsInfo->wildPokemon[i].species;
+src/dexnav.c:2006:    u16 species;
+src/dexnav.c:2041:    u16 species;
+src/dexnav.c:2067:    return species;
+src/dexnav.c:2361:    u16 species;
+src/dexnav.c:2492:            gSpecialVar_0x8000 = species;
+src/dexnav.c:2526:        u16 species;
+src/dexnav.c:2549:                species = hiddenMonsInfo->wildPokemon[index].species;
+src/dexnav.c:2555:                species = gWildMonHeaders[headerId].encounterTypes[timeOfDay].landMonsInfo->wildPokemon[ChooseWildMonIndex_Land()].species;
+src/dexnav.c:2567:                    species = hiddenMonsInfo->wildPokemon[index].species;
+src/dexnav.c:2573:                    species = gWildMonHeaders[headerId].encounterTypes[timeOfDay].waterMonsInfo->wildPokemon[ChooseWildMonIndex_Water()].species;
+src/dexnav.c:2595:        sDexNavSearchDataPtr->species = species;
+src/dexnav.c:2659:    u16 species = sDexNavSearchDataPtr->species;
+src/battle_controllers.c:1946:    u16 species;
+src/battle_controllers.c:1977:    gSprites[gBattlerSpriteIds[battler]].data[2] = species;
+src/battle_controllers.c:2292:    gSprites[gBattlerSpriteIds[battler]].data[2] = species;
+src/battle_interface.c:1717:    u32 windowId, spriteTileNum, species;
+src/battle_interface.c:2016:            u16 species;
+src/daycare.c:345:    u32 species;
+src/daycare.c:383:    return species;
+src/daycare.c:390:    return species;
+src/daycare.c:530:    return species;
+src/daycare.c:774:    u16 species;
+src/daycare.c:1079:    u16 species;
+src/battle_main.c:2707:    u16 species;
+src/battle_main.c:4295:                        moveInfo.species = gBattleMons[battler].species;
+src/battle_main.c:5873:        species = gBattleMons[battler].species;
+src/apprentice.c:316:    u16 species;
+src/apprentice.c:566:            u16 species;
+src/egg_hatch.c:63:    u16 species;
+src/egg_hatch.c:315:    u16 species;
+src/egg_hatch.c:365:    enum NationalDexOrder species;
+src/egg_hatch.c:452:            *speciesLoc = species;
+src/egg_hatch.c:609:    u16 species;
+src/egg_hatch.c:785:            u16 UNUSED species;
+src/field_effect.c:3185:    sprite->sSpecies = species;
+src/pokedex.c:4037:    gTasks[taskId].tSpecies = species;
+src/pokedex.c:4206:    u16 species;
+src/pokedex.c:4945:    u16 species;
+src/easy_chat.c:5538:    const u16 *species;
+src/mail_data.c:49:    u16 species;
+src/mail_data.c:88:        return species;
+src/mail_data.c:91:    return species;
+src/pokemon_sprite_visualizer.c:1217:    u16 species;
+src/pokemon_sprite_visualizer.c:1286:            gMultiuseSpriteTemplate.paletteTag = species;
+src/pokemon_sprite_visualizer.c:1981:    gMultiuseSpriteTemplate.paletteTag = species;
+src/roamer.c:106:    ROAMER(index)->species = species;
+src/pokedex_plus_hgss.c:342:    u16 species;
+src/pokedex_plus_hgss.c:4101:    u16 species;
+src/pokedex_plus_hgss.c:4132:            sPokedexView->formSpecies = species;
+src/pokedex_plus_hgss.c:4223:        u16 species;
+src/pokedex_plus_hgss.c:4411:    u16 species;
+src/pokedex_plus_hgss.c:4794:    sPokedexView->sPokemonStats.species             = species;
+src/pokedex_plus_hgss.c:5153:        u16 preSpecies = species;
+src/pokedex_plus_hgss.c:6016:    u16 species;
+src/pokedex_plus_hgss.c:7840:    u16 species;
+src/contest.c:3231:    gSprites[spriteId].data[2] = species;
+src/contest.c:5386:    return species;
+src/contest.c:5643:        gSaveBlock1Ptr->contestWinners[id].species = gContestMons[i].species;
+src/contest.c:5663:        gCurContestWinner.species = gContestMons[i].species;
+src/event_object_movement.c:2170:    return species;
+src/event_object_movement.c:2208:    u32 species;
+src/event_object_movement.c:2425:    u32 species;
+
+===== Searching SetMonData / CreateMon usage =====
+
+src/field_weather.c:254:            SetMonData(mon, MON_DATA_SPECIES, &targetSpecies);
+src/evolution_scene.c:565:            SetMonData(&gPlayerParty[gPlayerPartyCount], MON_DATA_SPECIES, &evolutions[i].targetSpecies);
+src/evolution_scene.c:779:            SetMonData(mon, MON_DATA_SPECIES, (void *)(&gTasks[taskId].tPostEvoSpecies));
+src/evolution_scene.c:1202:            SetMonData(mon, MON_DATA_SPECIES, (&gTasks[taskId].tPostEvoSpecies));
+src/clock.c:92:            SetMonData(mon, MON_DATA_SPECIES, &targetSpecies);
+src/script_pokemon_util.c:431:        SetMonData(&mon, MON_DATA_SPECIES, &targetSpecies);
+src/battle_util.c:9347:        SetMonData(&party[monId], MON_DATA_SPECIES, &targetSpecies);
+src/battle_util.c:9379:            SetMonData(&party[monId], MON_DATA_SPECIES, &changedSpecies);
+src/party_menu.c:6434:        SetMonData(mon, MON_DATA_SPECIES, &targetSpecies);
+src/party_menu.c:6686:        SetMonData(mon, MON_DATA_SPECIES, &targetSpecies);
+src/party_menu.c:6910:        SetMonData(mon, MON_DATA_SPECIES, &targetSpecies);
+src/battle_controllers.c:1717:            SetMonData(&party[monId], MON_DATA_SPECIES, &battlePokemon->species);
+src/battle_controllers.c:1752:        SetMonData(&party[monId], MON_DATA_SPECIES, &gBattleResources->bufferA[battler][3]);
+src/battle_script_commands.c:9646:        BtlController_EmitSetMonData(battler, B_COMM_TO_CONTROLLER, REQUEST_SPECIES_BATTLE, 1u << gBattlerPartyIndexes[battler], sizeof(gBattleMons[battler].species), &gBattleMons[battler].species);
+src/battle_script_commands.c:17291:        BtlController_EmitSetMonData(battler, B_COMM_TO_CONTROLLER, REQUEST_SPECIES_BATTLE, 1u << gBattlerPartyIndexes[battler], sizeof(gBattleMons[battler].species), &gBattleMons[battler].species);
+src/battle_pyramid.c:1482:    SetMonData(&gEnemyParty[0], MON_DATA_SPECIES, &species);
+src/battle_pyramid.c:1584:    SetMonData(&gEnemyParty[0], MON_DATA_SPECIES, &wildMons[id].species);
+src/daycare.c:265:        SetMonData(mon, MON_DATA_SPECIES, &newSpecies);
+src/daycare.c:357:        SetMonData(&pokemon, MON_DATA_SPECIES, &newSpecies);
+src/pokemon.c:7184:        SetMonData(&party[monId], MON_DATA_SPECIES, &targetSpecies);
+src/pokemon.c:7393:                SetMonData(mon, MON_DATA_SPECIES, &targetSpecies);
+src/trade.c:1168:                        SetMonData(mon, MON_DATA_NICKNAME, GetSpeciesName(SPECIES_SHEDINJA));
+
+===== Searching ScriptGiveMon pipeline =====
+
+src/script_pokemon_util.c:335:static u32 ScriptGiveMonParameterized(u8 side, u8 slot, u16 species, u8 level, u16 item, enum PokeBall ball, u8 nature, u8 abilityNum, u8 gender, u8 *evs, u8 *ivs, u16 *moves, enum ShinyMode shinyMode, bool8 gmaxFactor, enum Type teraType, u8 dmaxLevel)
+src/script_pokemon_util.c:479:u32 ScriptGiveMon(u16 species, u8 level, u16 item)
+src/script_pokemon_util.c:483:                                MAX_PER_STAT_IVS + 1, MAX_PER_STAT_IVS + 1, MAX_PER_STAT_IVS + 1};  // ScriptGiveMonParameterized won't touch the stats' IV.
+src/script_pokemon_util.c:486:    return ScriptGiveMonParameterized(0, PARTY_SIZE, species, level, item, ITEM_POKE_BALL, NUM_NATURES, NUM_ABILITY_PERSONALITY, MON_GENDERLESS, evs, ivs, moves, SHINY_MODE_RANDOM, FALSE, NUMBER_OF_MON_TYPES, 0);
+src/script_pokemon_util.c:574:    gSpecialVar_Result = ScriptGiveMonParameterized(side, slot, species, level, item, ball, nature, abilityNum, gender, evs, ivs, moves, shinyMode, gmaxFactor, teraType, dmaxLevel);
+src/debug.c:2368:            ScriptGiveMon(sDebugMonData->species, gTasks[taskId].tInput, ITEM_NONE);
+src/battle_setup.c:881:    ScriptGiveMon(starterMon, 5, ITEM_NONE);
+
+DONE

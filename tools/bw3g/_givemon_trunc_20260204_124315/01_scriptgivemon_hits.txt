@@ -1,0 +1,6 @@
+=== ScriptGiveMon hits (declaration/definition/calls) ===
+include/script_pokemon_util.h:4:u32 ScriptGiveMon(u16 species, u8 level, u16 item);
+src/script_pokemon_util.c:479:u32 ScriptGiveMon(u16 species, u8 level, u16 item)
+src/battle_setup.c:881:    ScriptGiveMon(starterMon, 5, ITEM_NONE);
+src/debug.c:2368:            ScriptGiveMon(sDebugMonData->species, gTasks[taskId].tInput, ITEM_NONE);
+
